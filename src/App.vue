@@ -23,7 +23,10 @@
                        <form class="bit-gap-2 bit-mt-4 bit-px-4">
                         <h3 class="text-widget">Login to Access </h3>
                        <p>Don't have an account? <a>sign up here</a></p>
-                       <div class="divider">
+                       <div class="bit-mb-3">
+
+                       </div>
+                       <div class="divider bit-mb-3">
                         <div class="divider-text">Or Sign up through email</div>
                          </div>
                         <div class="bit-mb-3">
@@ -34,7 +37,7 @@
                         </div>
                         <div class="bit-mb-3">
                           <div class="bit-form-check">
-                            <input class="bit-form-check-input" type="checkbox" value="" id="defaultCheck3" checked="">
+                            <input class="bit-form-check-input" type="checkbox" value="" id="defaultCheck3">
                             <label class="bit-form-check-label"> I agree to the Terms and Conditions </label>
                           </div>
                         </div>
