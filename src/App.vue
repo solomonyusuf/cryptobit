@@ -19,12 +19,13 @@
             <div class="bit-col-md-5 bit-col-sm-12">
                 <div class="bit-row bit-justify-content-center">
                   <div class="container-xxl bit-mt-4 bit-mb-4">
-                      <h3 class="text-widget">Login to Access </h3>
+                      
+                       <form class="bit-gap-2 bit-mt-4">
+                        <h3 class="text-widget">Login to Access </h3>
                        <p>Don't have an account? <a>sign up here</a></p>
                        <div class="divider">
                         <div class="divider-text">Or Sign up through email</div>
-                      </div>
-                       <form class="bit-gap-2">
+                         </div>
                         <div class="bit-mb-3">
                           <input type="text" class="bit-form-control" placeholder="Enter Your Email">
                         </div>
