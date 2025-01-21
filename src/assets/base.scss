@@ -126,15 +126,26 @@ body {
   width: 66.66666667%;
 }
 
-.bit-col-md-7 {
-  flex: 0 0 auto;
-  width: 58.33333333%;
+@media (min-width: 768px) {
+  .bit-col-md-7 {
+    flex: 0 0 auto;
+    width: 58.33333333%;
+  }
+}
+@media (min-width: 576px) {
+  .col-sm-12 {
+    flex: 0 0 auto;
+    width: 100%;
+  }
 }
 
-.bit-col-md-5 {
-  flex: 0 0 auto;
-  width: 41.33333333%;
+@media (min-width: 768px) {
+  .bit-col-md-5 {
+    flex: 0 0 auto;
+    width: 41.66666667%;
+  }
 }
+
 .bit-col-md-4 {
   flex: 0 0 auto;
   width: 33.33333333%;
@@ -202,8 +213,8 @@ body {
 }
 
 .bit-form-check-input:checked {
-  background-color: #696cff;
-  border-color: #696cff;
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
   box-shadow: 0 2px 4px 0 rgba(105, 108, 255, 0.4);
   border-radius: 0.25em;
 }
@@ -282,6 +293,57 @@ hr {
   transition: all 0.2s ease-in-out;
 }
 
+.divider {
+  display: block;
+  text-align: center;
+  margin: 1rem 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.divider .divider-text {
+  position: relative;
+  display: inline-block;
+  font-size: 0.8rem;
+  padding: 0rem 1rem;
+}
+.divider .divider-text i {
+  font-size: 1rem;
+}
+.divider .divider-text:before, .divider .divider-text:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 100vw;
+  border-top: 1px solid rgba(67, 89, 113, 0.2);
+}
+.divider .divider-text:before {
+  right: 100%;
+}
+.divider .divider-text:after {
+  left: 100%;
+}
+.divider.text-start .divider-text {
+  padding-left: 0;
+}
+.divider.text-end .divider-text {
+  padding-right: 0;
+}
+.divider.text-start-center .divider-text {
+  left: -25%;
+}
+.divider.text-end-center .divider-text {
+  right: -25%;
+}
+.divider.divider-dotted .divider-text:before, .divider.divider-dotted .divider-text:after {
+  border-style: dotted;
+  border-width: 0 1px 1px;
+  border-color: rgba(67, 89, 113, 0.2);
+}
+.divider.divider-dashed .divider-text:before, .divider.divider-dashed .divider-text:after {
+  border-style: dashed;
+  border-width: 0 1px 1px;
+  border-color: rgba(67, 89, 113, 0.2);
+}
 
 .bit-mt-4 {
   margin-top: 1.5rem !important;
