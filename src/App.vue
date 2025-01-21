@@ -11,7 +11,7 @@
           <div class="bit-row">
             <div class="bit-card bit-col-md-7">
                 <div class="bit-card-body">
-                  <h1 class="text-widget bit-mt-4">Start Your Journey With a Secured Trading Ways!</h1>
+                  <h2 class="text-widget bit-mt-4">Start Your Journey With a Secured Trading Ways!</h2>
                   <h4 style="color: #a39c9c;" class="text-widget">Enter the information to know more </h4>
                   <img class="image-widget" src="/images/bg1.png"  />
                 </div>
