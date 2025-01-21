@@ -1,47 +1,49 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
+<div class="layout-container">
+   <div class="content-wrapper">
+        <div class="container-xxl bit-mt-4 bit-mb-4">
+          
+          <div class="bit-row">
+            <div class="bit-card bit-col-md-8">
+                <div class="bit-card-body">
+                  <h1 class="text-widget bit-mt-4">Start Your Journey With a Secured Trading Ways!</h1>
+                  <h4 style="color: #a39c9c;" class="text-widget">Enter the information to know more </h4>
+                  <img class="image-widget" src="/images/bg1.png"  />
+                </div>
+            </div>
+            <div class="bit-col-md-4">
 
-  <main>
-    <TheWelcome />
-  </main>
+            </div>
+          </div>
+
+        </div>
+   </div>
+</div>
+
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
-}
+<style lang="scss">
+  @import url('./assets/base.scss');
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
+  $card_color: #164fe8;
 
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
+  .bit-card{
+    background:$card_color;
+  }
+  .text-widget{
+    color:white;
   }
 
-  .logo {
-    margin: 0 2rem 0 0;
+  .image-widget{
+    flex: 0 0 auto;
+    width: 76.66666667%;
   }
 
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
 </style>
+
+ 
