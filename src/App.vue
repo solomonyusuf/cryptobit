@@ -20,7 +20,7 @@
                 <div class="bit-row bit-justify-content-center">
                   <div class="container-xxl bit-mt-4 bit-mb-4">
                       
-                       <form class="bit-gap-2 bit-mt-4">
+                       <form class="bit-gap-2 bit-mt-4 bit-px-4">
                         <h3 class="text-widget">Login to Access </h3>
                        <p>Don't have an account? <a>sign up here</a></p>
                        <div class="divider">
