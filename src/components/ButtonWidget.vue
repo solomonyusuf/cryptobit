@@ -35,16 +35,22 @@ const { title, color, image, margin, output, background, shadow, borderColor } =
     type: String as () => "button" | "submit" | "reset",
     default: "button",
   },
+  weight: {
+    type: String,
+    default: "400",
+  },
 });
 </script>
 
 <template>
   <button
+    v-if="image"
     :type="output"
     :style="{
       color,
       background,
       borderColor,
+      fontWeight: weight,
       boxShadow: shadow,
       margin,
     }"
@@ -56,6 +62,21 @@ const { title, color, image, margin, output, background, shadow, borderColor } =
       width="25px"
       class="rounded-pill button-image"
     />
+    {{ title }}
+  </button>
+  <button
+    v-if="!image"
+    :type="output"
+    :style="{
+      color,
+      background,
+      borderColor,
+      fontWeight: weight,
+      boxShadow: shadow,
+      margin,
+    }"
+    class="bit-btn bit-w-100"
+  >
     {{ title }}
   </button>
 </template>
@@ -75,6 +96,11 @@ const { title, color, image, margin, output, background, shadow, borderColor } =
   font-size: 0.9375rem;
   border-radius: 0.575rem;
   transition: all 0.2s ease-in-out;
+  display: flex;  
+  justify-content: center; 
+  align-items: center;  
+  font-weight: 700;
+  gap: 0.5rem;  
 }
 
 .bit-w-100 {

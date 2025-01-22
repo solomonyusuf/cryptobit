@@ -11,6 +11,10 @@ defineProps({
     type: String,
     default: "0.5rem",
   },
+  height: {
+    type: String,
+    default: "100vh",
+  },
   
 
 });
@@ -18,7 +22,7 @@ defineProps({
 </script>
 
 <template>
-  <div :style="{ background, borderRadius: corner }" class="bit-card bit-col-md-7 bit-col-lg-7 bit-col-sm-12">
+  <div :style="{ background, height, borderRadius: corner }" class="bit-card bit-col-md-7 bit-col-lg-7 bit-col-sm-12">
         <div class="bit-card-body bit-mb-4">
             <TextWidget
             title="Start Your Journey With a Secured Trading Ways!" 
@@ -35,6 +39,7 @@ defineProps({
             weight="500"
             />
             <ImageWidget
+            width="76.66666%"
             src="/images/bg1.png"
             />
             

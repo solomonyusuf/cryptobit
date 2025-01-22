@@ -13,6 +13,7 @@ import LinkWidget from './components/LinkWidget.vue';
          
           <div class="bit-row bit-justify-content-center">
             <CardWidget
+             height="100vh"
              background="#164fe8"
             />
             <!-- <div class="bit-card bit-col-md-7 bit-col-lg-7 bit-col-sm-12">
@@ -46,20 +47,27 @@ import LinkWidget from './components/LinkWidget.vue';
                         </div>
                        <div class="bit-mb-3">
                         <ButtonWidget 
-                        class="bit-mb-3"
+                        output="button"
                         background="#1b1c20"
+                        title="Google Account"
+                        margin="0.5rem"
+                        weight="700"
                         />
                         <ButtonWidget 
-                        class="bit-mb-3"
+                        output="button"
                         image="/images/metamask.png"
                         title="Metamask Wallet"
                         background="#1b1c20"
+                        margin="0.5rem"
+                         weight="700"
                         />
                         <ButtonWidget 
-                        class="bit-mb-3"
+                        output="button"
                         image="/images/coinbase.png"
                         title="Coinbase Wallet"
                         background="#1b1c20"
+                        margin="0.5rem"
+                         weight="700"
                         />
                        </div>
                        <div class="divider bit-mb-3">
@@ -90,7 +98,13 @@ import LinkWidget from './components/LinkWidget.vue';
                         </div>
                         </div>
                         <div class="bit-mb-3">
-                          <button type="button" class="bit-btn bit-btn-primary bit-w-100">Continue</button>
+                          <ButtonWidget 
+                              output="button"
+                              image=""
+                              title="Continue"
+                              weight="700"
+                              background="#164fe8"
+                              />
                         </div>
                        </form>
                    </div>

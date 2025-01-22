@@ -22,7 +22,7 @@ const { src, height, width, margin } = defineProps({
 </script>
 
 <template>
-  <img :src="src" :style="{height, width, margin }" class="bit-sm-col bit-lg-col" />
+  <img  :src="src" :style="{height, width, margin }" class="bit-sm-col bit-lg-col" />
 </template>
 
 <style lang="scss">
