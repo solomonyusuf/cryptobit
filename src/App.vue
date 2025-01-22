@@ -1,5 +1,5 @@
 <script setup lang="ts">
-
+ import CardWidget from './components/CardWidget.vue';
 </script>
 
 <template>
@@ -7,16 +7,19 @@
 <div class="layout-container">
    <div class="content-wrapper">
         <div class="container-xxl bit-mt-4 bit-mb-4">
-          
+         
           <div class="bit-row bit-justify-content-center">
-            <div class="bit-card bit-col-md-7 bit-col-sm-12">
-                <div class="bit-card-body">
+            <CardWidget
+             background="#164fe8"
+            />
+            <!-- <div class="bit-card bit-col-md-7 bit-col-lg-7 bit-col-sm-12">
+                <div class="bit-card-body  bit-mb-4">
                   <h2 class="text-widget bit-mt-4 fw-bold">Start Your Journey With a Secured Trading Ways!</h2>
                   <h4 style="color: #a39c9c;" class="text-widget">Enter the information to know more </h4>
                   <img class="image-widget" src="/images/bg1.png"  />
                 </div>
-            </div>
-            <div class="bit-col-md-5 bit-col-sm-12">
+            </div> -->
+            <div class="bit-col-md-5 bit-col-lg-5 bit-col-sm-12">
                 <div class="bit-row bit-justify-content-center">
                   <div class=" bit-px-4 bit-mt-4 bit-mb-4">
                       
@@ -62,23 +65,24 @@
 <style lang="scss">
   @import url('./assets/base.scss');
 
-  $card_color: #164fe8;
-
-  .bit-card{
-    background:$card_color;
-  }
+  
   .text-widget{
     color:white;
   }
   .button-image{
     height:25px;
   }
-  .image-widget{
-    flex: 0 0 auto;
-    width: 76.66666667%;
-  }
+ 
   .d-flex {
   display: flex !important;
+}
+ 
+
+@media (min-width: 992px) {
+  .bit-col-lg-5 {
+    flex: 0 0 auto;
+    width: 41.66666667%;
+  }
 }
 </style>
 

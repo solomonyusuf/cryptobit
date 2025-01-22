@@ -244,20 +244,7 @@ input, button, select, optgroup, textarea {
 .bit-gap-2 {
   gap: 0.5rem !important;
 }
-.bit-card {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-  word-wrap: break-word;
-  background-color: #fff;
-  background-clip: border-box;
-  border: 0 solid #d9dee3;
-  border-radius: 0.5rem;
-  background-clip: padding-box;
-  box-shadow: 0 2px 6px 0 rgba(67, 89, 113, 0.12);
-}
-
+ 
 hr {
   margin: 1rem 0;
   color: #d9dee3;
