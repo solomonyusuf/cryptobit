@@ -7,12 +7,12 @@ const { src, height, width, margin } = defineProps({
     default: "Start Your Journey With a Secured Trading Ways!",
   },
   height: {
-    type: Number,
-    default: 400,
+    type: String,
+    default: "55vh",
   },
   width: {
     type: String,
-    default: "76.66666667%",
+    default: "70.66666667%",
   },
   margin: {
     type: String,
@@ -22,11 +22,24 @@ const { src, height, width, margin } = defineProps({
 </script>
 
 <template>
-  <img :src="src" :height="height" :width="width" :style="{width, margin }" class="image-widget" />
+  <img :src="src" :style="{height, width, margin }" class="bit-sm-col bit-lg-col" />
 </template>
 
 <style lang="scss">
- .image-widget{
+ 
+@mixin size{
     flex: 0 0 auto;
+    width: 70.666666%;
+    height: 55vh;
+}
+@media (min-width: 992px) {
+  .bit-lg-col {
+     @include size;
   }
+}
+@media (min-width: 768px) {
+  .bit-md-col {
+    @include size;
+  }
+}
 </style>

@@ -11,21 +11,14 @@ defineProps({
     type: String,
     default: "0.5rem",
   },
-  height: {
-    type: String,
-    default: "90vh",
-  },
-  width: {
-    type: String,
-    default: "58.33333333%",
-  },
+  
 
 });
 
 </script>
 
 <template>
-  <div :style="{ background, borderRadius: corner, height, width }" class="bit-card bit-col-md-7 bit-col-lg-7 bit-col-sm-12">
+  <div :style="{ background, borderRadius: corner }" class="bit-card bit-col-md-7 bit-col-lg-7 bit-col-sm-12">
         <div class="bit-card-body bit-mb-4">
             <TextWidget
             title="Start Your Journey With a Secured Trading Ways!" 
@@ -52,13 +45,20 @@ defineProps({
 <style lang="scss">
 $card_color: #164fe8;
 
-
- //Card styles
- @media (min-width: 992px) {
-  .bit-col-lg-7 {
+@mixin size{
     flex: 0 0 auto;
     width: 58.33333333%;
     height: 90vh;
+}
+@media (min-width: 992px) {
+  .bit-col-lg-7 {
+     @include size;
+     height: 100vh;
+  }
+}
+@media (min-width: 768px) {
+  .bit-col-md-7 {
+    @include size;
   }
 }
 
@@ -71,6 +71,7 @@ $card_color: #164fe8;
   word-wrap: break-word;
   background-clip: border-box;
   border: 0 solid #d9dee3;
+  border-radius: 0.5rem;
   background-clip: padding-box;
   box-shadow: 0 2px 6px 0 rgba(67, 89, 113, 0.12);
 }
@@ -85,11 +86,6 @@ $card_color: #164fe8;
   padding-top: 1.5rem;
 }
 
-@media (min-width: 768px) {
-  .bit-col-md-7 {
-    flex: 0 0 auto;
-    width: 58.33333333%;
-  }
-}
+
 
 </style>

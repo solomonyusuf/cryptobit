@@ -1,5 +1,8 @@
 <script setup lang="ts">
- import CardWidget from './components/CardWidget.vue';
+ import ButtonWidget from './components/ButtonWidget.vue';
+import CardWidget from './components/CardWidget.vue';
+import LinkWidget from './components/LinkWidget.vue';
+ import TextWidget from './components/TextWidget.vue';
 </script>
 
 <template>
@@ -24,13 +27,40 @@
                   <div class=" bit-px-4 bit-mt-4 bit-mb-4">
                       
                        <form class="bit-mt-4">
-                        <h3 class="text-widget fw-bold">Login to Access </h3>
-                       <p>Don't have an account? <a>sign up here</a></p>
+                        <TextWidget 
+                        title="Login To Access"
+                        variation="h3"
+                        />
+                        <div class="d-flex bit-gap-2">
+                          <TextWidget
+                            title="Don't have an account?"
+                            variation="p"
+                            weight="400"
+                            color=""
+                          />
+                          <LinkWidget
+                            title="sign up here"
+                            link="google.com"
+                            color="#164fe8"
+                          />
+                        </div>
                        <div class="bit-mb-3">
-                        <button type="button" class="bit-btn btn-widget bit-w-100 d-flex bit-gap-2">
-                          <img src="/images/google.png" class="button-image rounded-pill" />
-                          Get started with Google
-                        </button>
+                        <ButtonWidget 
+                        class="bit-mb-3"
+                        background="#1b1c20"
+                        />
+                        <ButtonWidget 
+                        class="bit-mb-3"
+                        image="/images/metamask.png"
+                        title="Metamask Wallet"
+                        background="#1b1c20"
+                        />
+                        <ButtonWidget 
+                        class="bit-mb-3"
+                        image="/images/coinbase.png"
+                        title="Coinbase Wallet"
+                        background="#1b1c20"
+                        />
                        </div>
                        <div class="divider bit-mb-3">
                         <div class="divider-text">Or Sign up via email</div>
@@ -42,10 +72,22 @@
                           <input type="password" class="bit-form-control" placeholder="Enter Your Password">
                         </div>
                         <div class="bit-mb-3">
-                          <div class="bit-form-check">
+                          <div class="d-flex bit-gap-2">
+                            <div class="bit-form-check">
                             <input class="bit-form-check-input" type="checkbox" value="" id="defaultCheck3">
-                            <label class="bit-form-check-label"> I agree to the Terms and Conditions </label>
                           </div>
+                          <TextWidget
+                            title=" I agree to the"
+                            variation="p"
+                            weight="400"
+                            color=""
+                          />
+                          <LinkWidget
+                            title="Terms and Conditions"
+                            link="google.com"
+                            color="#164fe8"
+                          />
+                        </div>
                         </div>
                         <div class="bit-mb-3">
                           <button type="button" class="bit-btn bit-btn-primary bit-w-100">Continue</button>
@@ -65,13 +107,8 @@
 <style lang="scss">
   @import url('./assets/base.scss');
 
-  
-  .text-widget{
-    color:white;
-  }
-  .button-image{
-    height:25px;
-  }
+
+ 
  
   .d-flex {
   display: flex !important;
