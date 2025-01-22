@@ -1,8 +1,20 @@
 <script setup lang="ts">
- import ButtonWidget from './components/ButtonWidget.vue';
+import ButtonWidget from './components/ButtonWidget.vue';
 import CardWidget from './components/CardWidget.vue';
+import InputCheckbox from './components/InputCheckbox.vue';
+import InputWidget from './components/InputWidget.vue';
 import LinkWidget from './components/LinkWidget.vue';
- import TextWidget from './components/TextWidget.vue';
+import TextWidget from './components/TextWidget.vue';
+import { ref } from "vue";
+
+
+const checkbox = ref(false);
+const password = ref("");
+
+const handleSubmit = () => {
+  console.log("Password entered:", password.value);
+  console.log("Checkbox clicked:", checkbox.value);
+}
 </script>
 
 <template>
@@ -27,7 +39,7 @@ import LinkWidget from './components/LinkWidget.vue';
                 <div class="bit-row bit-justify-content-center">
                   <div class=" bit-px-4 bit-mt-4 bit-mb-4">
                       
-                       <form class="bit-mt-4">
+                       <form @submit.prevent="handleSubmit" class="bit-mt-4">
                         <TextWidget 
                         title="Login To Access"
                         variation="h3"
@@ -74,16 +86,21 @@ import LinkWidget from './components/LinkWidget.vue';
                         <div class="divider-text">Or Sign up via email</div>
                          </div>
                         <div class="bit-mb-3">
-                          <input type="text" class="bit-form-control" placeholder="Enter Your Email">
+                          <InputWidget 
+                            placeholder="Enter your email"
+                          />
                         </div>
                         <div class="bit-mb-3">
-                          <input type="password" class="bit-form-control" placeholder="Enter Your Password">
+                          <InputWidget 
+                            v-model="password"
+                            output="password"
+                            placeholder="Enter Your Password"/>
                         </div>
                         <div class="bit-mb-3">
                           <div class="d-flex bit-gap-2">
-                            <div class="bit-form-check">
-                            <input class="bit-form-check-input" type="checkbox" value="" id="defaultCheck3">
-                          </div>
+                          <InputCheckbox
+                           v-model="checkbox"
+                          />
                           <TextWidget
                             title=" I agree to the"
                             variation="p"
@@ -99,7 +116,7 @@ import LinkWidget from './components/LinkWidget.vue';
                         </div>
                         <div class="bit-mb-3">
                           <ButtonWidget 
-                              output="button"
+                              output="submit"
                               image=""
                               title="Continue"
                               weight="700"
