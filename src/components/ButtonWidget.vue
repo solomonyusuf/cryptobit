@@ -102,7 +102,9 @@ const { title, color, image, margin, output, background, shadow, borderColor } =
   font-weight: 700;
   gap: 0.5rem;  
 }
-
+.rounded-pill {
+  border-radius: 50rem !important;
+}
 .bit-w-100 {
   width: 100% !important;
 }
