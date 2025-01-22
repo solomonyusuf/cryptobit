@@ -39,6 +39,10 @@ const { title, color, image, margin, output, background, shadow, borderColor } =
     type: String,
     default: "400",
   },
+  onClick: {
+    type: Function,
+    required: false,
+  },
 });
 </script>
 
@@ -54,6 +58,7 @@ const { title, color, image, margin, output, background, shadow, borderColor } =
       boxShadow: shadow,
       margin,
     }"
+    @click="onClick && onClick()"
     class="bit-btn bit-w-100 d-flex bit-gap-2"
   >
     <ImageWidget
@@ -75,6 +80,7 @@ const { title, color, image, margin, output, background, shadow, borderColor } =
       boxShadow: shadow,
       margin,
     }"
+     @click="onClick && onClick()"
     class="bit-btn bit-w-100"
   >
     {{ title }}

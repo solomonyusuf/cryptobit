@@ -15,6 +15,16 @@ const handleSubmit = () => {
   console.log("Password entered:", password.value);
   console.log("Checkbox clicked:", checkbox.value);
 }
+
+const handleGoogle = () => {
+  alert("Button clicked!");
+};
+const handleMetamask = () => {
+  alert("Button clicked!");
+};
+const handleCoinbase = () => {
+  alert("Button clicked!");
+};
 </script>
 
 <template>
@@ -60,6 +70,7 @@ const handleSubmit = () => {
                        <div class="bit-mb-3">
                         <ButtonWidget 
                         output="button"
+                        :onClick="handleGoogle"
                         background="#1b1c20"
                         title="Google Account"
                         margin="0.5rem"
@@ -67,6 +78,7 @@ const handleSubmit = () => {
                         />
                         <ButtonWidget 
                         output="button"
+                        :onClick="handleMetamask"
                         image="/images/metamask.png"
                         title="Metamask Wallet"
                         background="#1b1c20"
@@ -75,6 +87,7 @@ const handleSubmit = () => {
                         />
                         <ButtonWidget 
                         output="button"
+                        :onClick="handleCoinbase"
                         image="/images/coinbase.png"
                         title="Coinbase Wallet"
                         background="#1b1c20"
