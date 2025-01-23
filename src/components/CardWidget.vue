@@ -39,7 +39,7 @@ defineProps({
             weight="500"
             />
             <ImageWidget
-            width="76.66666%"
+            width="72.66666%"
             src="/images/bg1.png"
             />
             
