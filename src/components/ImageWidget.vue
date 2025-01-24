@@ -18,6 +18,10 @@ const { src, height, width, margin } = defineProps({
     type: String,
     default: "0 1.5rem 0 0",
   },
+  onClick: {
+    type: Function,
+    default: null, 
+  },
 });
 
 const responsive = computed(() => {
@@ -30,7 +34,9 @@ const responsive = computed(() => {
 </script>
 
 <template>
-  <img :src="src" :style="responsive" class="responsive-img" />
+  <img :src="src"  
+      @click="onClick && onClick($event)" 
+      :style="responsive" class="responsive-img" />
 </template>
 
 <style lang="scss">

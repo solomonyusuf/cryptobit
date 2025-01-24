@@ -15,14 +15,17 @@ defineProps({
     type: String,
     default: "100vh",
   },
-  
+  onClick: {
+    type: Function,
+    default: null, 
+  },
 
 });
 
 </script>
 
 <template>
-  <div :style="{ background, height, borderRadius: corner }" class="bit-card bit-col-md-7 bit-col-lg-7 bit-col-sm-12">
+  <div  @click="onClick && onClick($event)" :style="{ background, height, borderRadius: corner }" class="bit-card bit-col-md-7 bit-col-lg-7 bit-col-sm-12">
         <div class="bit-card-body">
             <TextWidget
             title="Start Your Journey With a Secured Trading Ways!" 

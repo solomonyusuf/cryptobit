@@ -16,6 +16,10 @@ const handleSubmit = () => {
   console.log("Checkbox clicked:", checkbox.value);
 }
 
+ 
+const handleCard = () => {
+  alert("Card clicked!");
+};
 const handleGoogle = () => {
   alert("Button clicked!");
 };
@@ -37,6 +41,7 @@ const handleCoinbase = () => {
             <CardWidget
              height="100vh"
              background="#164fe8"
+             :onClick="handleCard"
             />
             <!-- <div class="bit-card bit-col-md-7 bit-col-lg-7 bit-col-sm-12">
                 <div class="bit-card-body  bit-mb-4">
