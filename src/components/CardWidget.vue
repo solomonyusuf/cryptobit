@@ -23,7 +23,7 @@ defineProps({
 
 <template>
   <div :style="{ background, height, borderRadius: corner }" class="bit-card bit-col-md-7 bit-col-lg-7 bit-col-sm-12">
-        <div class="bit-card-body bit-mb-4">
+        <div class="bit-card-body">
             <TextWidget
             title="Start Your Journey With a Secured Trading Ways!" 
             color="white" 
@@ -39,7 +39,7 @@ defineProps({
             weight="500"
             />
             <ImageWidget
-            width="72.66666%"
+            width="75%"
             src="/images/bg1.png"
             />
             
@@ -52,13 +52,12 @@ $card_color: #164fe8;
 
 @mixin size{
     flex: 0 0 auto;
-    width: 58.33333333%;
+    width: 76.33333333%;
     height: 90vh;
 }
 @media (min-width: 992px) {
   .bit-col-lg-7 {
      @include size;
-     height: 100vh;
   }
 }
 @media (min-width: 768px) {
@@ -72,6 +71,8 @@ $card_color: #164fe8;
   position: relative;
   display: flex;
   flex-direction: column;
+  justify-content: center; 
+  align-items: center; 
   min-width: 0;
   word-wrap: break-word;
   background-clip: border-box;
@@ -88,7 +89,7 @@ $card_color: #164fe8;
   flex: 1 1 auto;
   padding: 1.5rem 1.5rem;
   padding-top: 1.5rem;
-  padding-top: 1.5rem;
+
 }
 
 

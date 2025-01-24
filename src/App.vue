@@ -54,7 +54,7 @@ const handleCoinbase = () => {
                         title="Login To Access"
                         variation="h3"
                         />
-                        <div class="d-flex bit-gap-2">
+                        <div class="d-flex align-center bit-gap-2">
                           <TextWidget
                             title="Don't have an account?"
                             variation="p"
@@ -110,7 +110,7 @@ const handleCoinbase = () => {
                             placeholder="Enter Your Password"/>
                         </div>
                         <div class="bit-mb-3">
-                          <div class="d-flex bit-gap-2">
+                          <div class="d-flex align-center bit-gap-2">
                           <InputCheckbox
                            v-model="checkbox"
                           />

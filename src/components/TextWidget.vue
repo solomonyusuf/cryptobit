@@ -20,11 +20,11 @@ const { title, color, weight, variation, margin } = defineProps({
   },
   margin: {
     type: String,
-    default: "0, 1.5rem, 0, 0",
+    default: "0, 0, 0, 0",
   },
 });
 
-const validTags = ["h1", "h2", "h3", "h4", "h5", "h6" , "p"];
+const validTags = ["h1", "h2", "h3", "h4", "h5", "h6" , "p", "span"];
 const headerTag = computed(() => (validTags.includes(variation) ? variation : "h1"));
 </script>
 

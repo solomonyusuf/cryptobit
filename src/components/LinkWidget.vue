@@ -15,7 +15,7 @@ const { title, color, link, margin, onClick } = defineProps({
   },
   margin: {
     type: String,
-    default: "0 1.5rem 0 0",
+    default: "0, 0, 0, 0",
   },
   onClick: {
     type: Function,
