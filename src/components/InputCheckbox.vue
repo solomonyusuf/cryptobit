@@ -3,6 +3,10 @@ import { defineProps, defineEmits } from "vue";
 
 const props = defineProps({
   modelValue: Boolean, 
+  onClick: {
+    type: Function,
+    default: null, 
+  },
 });
 
 const emit = defineEmits(["update:modelValue"]);
@@ -20,6 +24,7 @@ const handleInput = (event: Event) => {
         type="checkbox"
         :checked="modelValue"
         @input="handleInput"
+        @click="onClick && onClick($event)"
       />
     </div>
   </template>

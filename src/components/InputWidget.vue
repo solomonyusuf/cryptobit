@@ -30,6 +30,10 @@ const { placeholder, output, height, width, margin } = defineProps({
     type: String,
     default: "",
   },
+  onClick: {
+    type: Function,
+    default: null, 
+  },
    
 });
 const emit = defineEmits(["update:modelValue"]);
@@ -41,7 +45,7 @@ const handleInput = (event: Event) => {
 </script>
 
 <template>
-    <input  @input="handleInput" :type="output" :style="{ margin, width, height, background, borderRadius:corner}" class="bit-form-control" :placeholder="placeholder">
+    <input @click="onClick && onClick($event)"  @input="handleInput" :type="output" :style="{ margin, width, height, background, borderRadius:corner}" class="bit-form-control" :placeholder="placeholder">
 </template>
 <style lang="scss">
 

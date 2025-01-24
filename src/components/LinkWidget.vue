@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import { computed } from "vue";
-
-const { title, color, link, margin } = defineProps({
+ 
+const { title, color, link, margin, onClick } = defineProps({
   title: {
     type: String,
     default: "sign up here",
@@ -12,11 +11,15 @@ const { title, color, link, margin } = defineProps({
   },
   link: {
     type: String,
-    default: "https://google.com",  
+    default: "https://google.com",
   },
   margin: {
     type: String,
-    default: "0 1.5rem 0 0", 
+    default: "0 1.5rem 0 0",
+  },
+  onClick: {
+    type: Function,
+    default: null, 
   },
 });
 </script>
@@ -24,7 +27,8 @@ const { title, color, link, margin } = defineProps({
 <template>
   <a 
     :href="link"
-    :style="{ color, margin }"> 
+    :style="{ color, margin }"
+    @click="onClick && onClick($event)">  
     {{ title }}
   </a>
 </template>
