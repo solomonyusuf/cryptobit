@@ -25,7 +25,8 @@ defineProps({
 </script>
 
 <template>
-  <div  @click="onClick && onClick($event)" :style="{ background, height, borderRadius: corner }" class="bit-card bit-col-md-7 bit-col-lg-7 bit-col-sm-12">
+  <div @click="onClick && onClick($event)" :style="{ background, height, borderRadius: corner }" 
+  class="bit-card bit-col-md-7 bit-col-lg-7 bit-col-sm-12 d-none d-md-block">
         <div class="bit-card-body">
             <TextWidget
             title="Start Your Journey With a Secured Trading Ways!" 
@@ -53,6 +54,14 @@ defineProps({
 <style lang="scss">
 $card_color: #164fe8;
 
+.d-none {
+  display: none !important;
+}
+@media (min-width: 768px) {
+  .d-md-block {
+    display: block !important;
+  }
+}
 @mixin size{
     flex: 0 0 auto;
     width: 76.33333333%;
@@ -94,7 +103,5 @@ $card_color: #164fe8;
   padding-top: 1.5rem;
 
 }
-
-
 
 </style>

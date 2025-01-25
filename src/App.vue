@@ -52,9 +52,9 @@ const handleCoinbase = () => {
             </div> -->
             <div class="bit-col-md-5 bit-col-lg-5 bit-col-sm-12">
                 <div class="bit-row bit-justify-content-center">
-                  <div class=" bit-px-4 bit-mt-4 bit-mb-4">
+                  <div class="bit-mt-4 bit-mb-4">
                       
-                       <form @submit.prevent="handleSubmit" class="bit-mt-4">
+                       <form  @submit.prevent="handleSubmit" class="bit-mt-4 mobile-form">
                         <TextWidget 
                         title="Login To Access"
                         variation="h3"
@@ -62,7 +62,7 @@ const handleCoinbase = () => {
                         <div class="d-flex align-center bit-gap-2">
                           <TextWidget
                             title="Don't have an account?"
-                            variation="p"
+                            variation="span"
                             weight="400"
                             color=""
                           />
@@ -118,17 +118,20 @@ const handleCoinbase = () => {
                           <div class="d-flex align-center bit-gap-2">
                           <InputCheckbox
                            v-model="checkbox"
+                            margin="0"
                           />
                           <TextWidget
                             title=" I agree to the"
                             variation="p"
                             weight="400"
                             color=""
+                            margin="0"
                           />
                           <LinkWidget
-                            title="Terms and Conditions"
+                            title="Terms & Policy"
                             link="google.com"
                             color="#164fe8"
+                             margin="0"
                           />
                         </div>
                         </div>
@@ -157,9 +160,14 @@ const handleCoinbase = () => {
   @import url('./assets/base.scss');
 
 
+  @media (max-width: 768px) {  
+  .mobile-form {
+    width: 300px;
+    margin: 0 auto;  
+  }
+}
  
- 
-  .d-flex {
+.d-flex {
   display: flex !important;
 }
  

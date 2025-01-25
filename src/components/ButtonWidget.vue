@@ -89,7 +89,7 @@ const { title, color, image, margin, output, background, shadow, borderColor } =
 
 <style lang="scss">
 .bit-btn {
-  display: inline-block;
+  display: inline-flex;
   font-weight: 400;
   line-height: 1.53;
   color: white;
@@ -102,24 +102,57 @@ const { title, color, image, margin, output, background, shadow, borderColor } =
   font-size: 0.9375rem;
   border-radius: 0.575rem;
   transition: all 0.2s ease-in-out;
-  display: flex;  
-  justify-content: center; 
-  align-items: center;  
+  justify-content: center;
+  align-items: center;
   font-weight: 700;
-  gap: 0.5rem;  
+  text-transform: none;
+  gap: 0.5rem;
+
+  /* Add responsive font size and padding */
+  @media (max-width: 576px) {
+    font-size: 0.8rem;
+    padding: 0.375rem 1rem;
+    gap: 0.3rem;
+  }
+
+  @media (min-width: 577px) and (max-width: 768px) {
+    font-size: 0.875rem;
+    padding: 0.4rem 1.125rem;
+  }
+
+  @media (min-width: 769px) {
+    font-size: 1rem;
+    padding: 0.4375rem 1.25rem;
+  }
 }
+
 .rounded-pill {
   border-radius: 50rem !important;
 }
+
 .bit-w-100 {
   width: 100% !important;
 }
 
 .bit-gap-2 {
   gap: 0.5rem !important;
+
+  @media (max-width: 576px) {
+    gap: 0.3rem !important;
+  }
 }
 
 .button-image {
   height: 25px;
+  width: auto;
+
+  @media (max-width: 576px) {
+    height: 20px;
+  }
+
+  @media (min-width: 577px) and (max-width: 768px) {
+    height: 22px;
+  }
 }
+
 </style>
