@@ -158,11 +158,7 @@ const handleCoinbase = () => {
                 </div>
             </div>
           </div>
-          <div class="bit-px-2 bit-mt-4"> 
-                <TableWidget
-                  class="bit-mt-4"
-                  />
-          </div>
+           
       </div>
 
         </div>

@@ -7,15 +7,16 @@ import ListView from './components/pages/ListView.vue';
 const router = createRouter({
   history: createWebHistory(),
   routes: [
+    
     {
       path: '/',
-      name: 'Login',
-      component: Login,
-    },
-    {
-      path: '/list',
       name: 'List',
       component: ListView,
+    },
+    {
+      path: '/login',
+      name: 'Login',
+      component: Login,
     },
   ],
 });
