@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import ButtonWidget from './components/ButtonWidget.vue';
-import CardWidget from './components/CardWidget.vue';
-import InputCheckbox from './components/InputCheckbox.vue';
-import InputWidget from './components/InputWidget.vue';
-import LinkWidget from './components/LinkWidget.vue';
-import TextWidget from './components/TextWidget.vue';
+import ButtonWidget from './components/widgets/ButtonWidget.vue';
+import CardWidget from './components/widgets/CardWidget.vue';
+import InputCheckbox from './components/widgets/InputCheckbox.vue';
+import InputWidget from './components/widgets/InputWidget.vue';
+import LinkWidget from './components/widgets/LinkWidget.vue';
+import TextWidget from './components/widgets/TextWidget.vue';
 import { ref } from "vue";
 
 
