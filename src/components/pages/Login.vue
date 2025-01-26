@@ -5,6 +5,7 @@ import InputCheckbox from '../widgets/InputCheckbox.vue';
 import InputWidget from '../widgets/InputWidget.vue';
 import LinkWidget from '../widgets/LinkWidget.vue';
 import TextWidget from '../widgets/TextWidget.vue';
+import TableWidget from '../widgets/TableWidge.vue'
 import { ref } from "vue";
 
 
@@ -157,10 +158,16 @@ const handleCoinbase = () => {
                 </div>
             </div>
           </div>
+          <div class="bit-px-2 bit-mt-4"> 
+                <TableWidget
+                  class="bit-mt-4"
+                  />
+          </div>
+      </div>
 
         </div>
    </div>
-</div>
+ 
 
 </template>
 
