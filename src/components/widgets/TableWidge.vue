@@ -126,13 +126,13 @@ const tableStyles = computed(() => ({
                         <td>
                           <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="avatar avatar-xs pull-up" title="" data-bs-original-title="Lilian Fuller">
-                              <img src="../assets/img/avatars/5.png" alt="Avatar" class="rounded-circle">
+                              <img src=" " alt="Avatar" class="rounded-circle">
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="avatar avatar-xs pull-up" title="" data-bs-original-title="Sophia Wilkerson">
-                              <img src="../assets/img/avatars/6.png" alt="Avatar" class="rounded-circle">
+                              <img src="" alt="Avatar" class="rounded-circle">
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="avatar avatar-xs pull-up" title="" data-bs-original-title="Christina Parker">
-                              <img src="../assets/img/avatars/7.png" alt="Avatar" class="rounded-circle">
+                              <img src="" alt="Avatar" class="rounded-circle">
                             </li>
                           </ul>
                         </td>
@@ -155,13 +155,13 @@ const tableStyles = computed(() => ({
                         <td>
                           <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="avatar avatar-xs pull-up" title="" data-bs-original-title="Lilian Fuller">
-                              <img src="../assets/img/avatars/5.png" alt="Avatar" class="rounded-circle">
+                              <img src=" " alt="Avatar" class="rounded-circle">
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="avatar avatar-xs pull-up" title="" data-bs-original-title="Sophia Wilkerson">
-                              <img src="../assets/img/avatars/6.png" alt="Avatar" class="rounded-circle">
+                              <img src="" alt="Avatar" class="rounded-circle">
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="avatar avatar-xs pull-up" title="" data-bs-original-title="Christina Parker">
-                              <img src="../assets/img/avatars/7.png" alt="Avatar" class="rounded-circle">
+                              <img src="" alt="Avatar" class="rounded-circle">
                             </li>
                           </ul>
                         </td>
@@ -184,13 +184,13 @@ const tableStyles = computed(() => ({
                         <td>
                           <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="avatar avatar-xs pull-up" title="" data-bs-original-title="Lilian Fuller">
-                              <img src="../assets/img/avatars/5.png" alt="Avatar" class="rounded-circle">
+                              <img src=" " alt="Avatar" class="rounded-circle">
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="avatar avatar-xs pull-up" title="" data-bs-original-title="Sophia Wilkerson">
-                              <img src="../assets/img/avatars/6.png" alt="Avatar" class="rounded-circle">
+                              <img src="" alt="Avatar" class="rounded-circle">
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="avatar avatar-xs pull-up" title="" data-bs-original-title="Christina Parker">
-                              <img src="../assets/img/avatars/7.png" alt="Avatar" class="rounded-circle">
+                              <img src="" alt="Avatar" class="rounded-circle">
                             </li>
                           </ul>
                         </td>
@@ -215,13 +215,13 @@ const tableStyles = computed(() => ({
                         <td>
                           <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="avatar avatar-xs pull-up" title="" data-bs-original-title="Lilian Fuller">
-                              <img src="../assets/img/avatars/5.png" alt="Avatar" class="rounded-circle">
+                              <img src=" " alt="Avatar" class="rounded-circle">
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="avatar avatar-xs pull-up" title="" data-bs-original-title="Sophia Wilkerson">
-                              <img src="../assets/img/avatars/6.png" alt="Avatar" class="rounded-circle">
+                              <img src="" alt="Avatar" class="rounded-circle">
                             </li>
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="avatar avatar-xs pull-up" title="" data-bs-original-title="Christina Parker">
-                              <img src="../assets/img/avatars/7.png" alt="Avatar" class="rounded-circle">
+                              <img src="" alt="Avatar" class="rounded-circle">
                             </li>
                           </ul>
                         </td>
