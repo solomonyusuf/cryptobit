@@ -1,11 +1,24 @@
 {
-  "files": [],
-  "references": [
-    {
-      "path": "./tsconfig.node.json"
-    },
-    {
-      "path": "./tsconfig.app.json"
+  "compilerOptions": {
+    "target": "ESNext", // Targets the latest ECMAScript features
+    "module": "ESNext", // Use ES modules
+    "moduleResolution": "Node", // Resolves modules like Node.js
+    "strict": true, // Enable all strict type-checking options
+    "jsx": "preserve", // Preserves JSX in `.vue` files
+    "types": ["vite/client"], // Includes Vite-specific types
+    "skipLibCheck": true, // Skip type checking of declaration files
+    "esModuleInterop": true, // Ensures compatibility with CommonJS modules
+    "forceConsistentCasingInFileNames": true, // Enforces consistent casing in import paths
+    "baseUrl": ".", // Sets the base URL for resolving paths
+    "paths": {
+      "@/*": ["src/*"] // Enables `@` alias for the `src` directory
     }
-  ]
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue"
+  ],
+  "exclude": ["node_modules"]
 }

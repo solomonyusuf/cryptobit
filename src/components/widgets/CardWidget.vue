@@ -52,6 +52,7 @@ defineProps({
 </template>
 
 <style lang="scss">
+
 $card_color: #164fe8;
 
 .d-none {

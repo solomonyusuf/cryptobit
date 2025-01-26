@@ -4,3 +4,8 @@ declare module '*.vue' {
     const component: DefineComponent<{}, {}, any>
     export default component
 }
+declare var process: {
+    env: {
+      BASE_URL: string;
+    };
+  };
