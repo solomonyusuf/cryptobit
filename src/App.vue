@@ -52,7 +52,7 @@ const handleCoinbase = () => {
             </div> -->
             <div class="bit-col-md-5 bit-col-lg-5 bit-col-sm-12">
                 <div class="bit-row bit-justify-content-center">
-                  <div class="bit-mt-4 bit-mb-4">
+                  <div class="bit-px-2 bit-mt-4 bit-mb-4">
                       
                        <form  @submit.prevent="handleSubmit" class="bit-mt-4 mobile-form">
                         <TextWidget 
