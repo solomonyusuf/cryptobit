@@ -2,11 +2,23 @@
 import { computed, ref } from 'vue';
 import TextWidget from './TextWidget.vue';
 
+
 interface Tab {
   id: string;
   label: string;
-  content: string;
+  content: TableContent;
 }
+
+interface TableColumn {
+  title: string;
+  subTitle: string;
+}
+
+interface TableContent {
+  columns: TableColumn[];
+  rows: string[][];
+}
+
 
 const props = defineProps({
   title: { type: String, default: 'Assets' },
@@ -21,6 +33,7 @@ const props = defineProps({
   hoverColor: { type: String, default: '#697a8d' },
   hoverBg: { type: String, default: 'rgba(67, 89, 113, 0.06)' },
   borderColor: { type: String, default: '#fffff' },
+  subHeadingColor: { type: String, default: 'gray' },
   border: { type: String, default: '1px solid #d9dee3' },
   fontColor: { type: String, default: 'white' },
   onClick: {
@@ -34,8 +47,24 @@ const props = defineProps({
         {
           id: "overview",
           label: "Overview",
-          content:
-            "Icing pastry pudding oat cake. Lemon drops cotton candy caramels cake caramels sesame snaps powder. Bear claw candy topping.",
+          content:  {
+                      columns: [ 
+                          { title : "Assets", subTitle: ""},
+                          { title : "Price", subTitle: "Current"}, 
+                          { title : "Price", subTitle: "24H Change"}, 
+                          { title : "Price", subTitle: "7D Change"}, 
+                          { title : "Price", subTitle: "30D Change"}, 
+                          { title : "Price", subTitle: "30D TL"}, 
+                          { title : "Marketcap", subTitle: "Current"},
+                          { title : "Real Volume", subTitle: "24H"},
+                          { title : "Sector", subTitle: ""}
+                      ],
+                      rows: [
+                        ["Row 1, Cell 1", "Row 1, Cell 2", "Row 1, Cell 3"],
+                        ["Row 2, Cell 1", "Row 2, Cell 2", "Row 2, Cell 3"]
+                      ] 
+                    }
+           
         },
         {
           id: "long-term",
@@ -157,9 +186,9 @@ const tableStyles = computed(() => ({
                   </div>
                 </div>
                 <div class="card tab-container" :style="{border, background:tableBgColor}">
-                  <!-- Tabs navigation -->
+                  
                    <div style="border-bottom: 1px solid;" class="d-flex justify-content-between align-items-center">
-                    <ul class="nav" role="tablist">
+                    <ul class="nav" :style="{ color:fontColor}" role="tablist">
                       <li v-for="tab in props.tabs" :key="tab.id" class="nav-item">
                         <a
                           href="#"
@@ -179,7 +208,7 @@ const tableStyles = computed(() => ({
                       </div>
                     </div>
                   </div>
-                    <!-- Tabs content -->
+                     
                     <div class="tab-content">
                       <div
                         v-for="tab in props.tabs"
@@ -193,15 +222,19 @@ const tableStyles = computed(() => ({
                               <thead>
                                 <tr>
                                   <th></th>
-                                  <th>Assets</th>
-                                  <th>Price</th>
-                                  <th>Price</th>
-                                  <th>Price</th>
-                                  <th>Price</th>
-                                  <th>Price</th>
-                                  <th>Marketcap</th>
-                                  <th>Real Volume</th>
-                                  <th>Sector</th>
+                                  <th
+                                    v-for="(col, index) in props.tabs[0].content.columns"
+                                    :key="index"
+                                    class="border border-gray-300 px-4 py-2 text-left"
+                                  >
+                                    <div>
+                                      <div class="font-bold" :style="{color: fontColor}">{{ col.title }}</div>
+                                      <div v-if="col.subTitle" :style="{color:subHeadingColor}" class="text-sm">
+                                        {{ col.subTitle }}
+                                      </div>
+                                    </div>
+                                  </th>
+                                   
                                 </tr>
                               </thead>
                               <tbody>
@@ -351,7 +384,7 @@ const tableStyles = computed(() => ({
                             
                             </table>
                           </div>
-                        <p>{{ tab.content }}</p>
+                         
                       </div>
                     </div>
                 </div>
