@@ -156,9 +156,9 @@ const tableStyles = computed(() => ({
 
                   </div>
                 </div>
-                <div class="tab-container">
+                <div class="card tab-container" :style="{border, background:tableBgColor}">
                   <!-- Tabs navigation -->
-                   <div class="d-flex gap-6">
+                   <div style="border-bottom: 1px solid;" class="d-flex gap-6">
                     <ul class="nav" role="tablist">
                       <li v-for="tab in props.tabs" :key="tab.id" class="nav-item">
                         <a
