@@ -1,6 +1,12 @@
 <script setup lang="ts">
-import { computed } from 'vue';
+import { computed, ref } from 'vue';
 import TextWidget from './TextWidget.vue';
+
+interface Tab {
+  id: string;
+  label: string;
+  content: string;
+}
 
 const props = defineProps({
   title: { type: String, default: 'Assets' },
@@ -21,7 +27,49 @@ const props = defineProps({
     type: Function,
     default: null,
   },
+  activeTab: { type: String, default: 'overview' }, 
+  tabs: {
+      type: Array as () => Tab[],
+      default: () => [
+        {
+          id: "overview",
+          label: "Overview",
+          content:
+            "Icing pastry pudding oat cake. Lemon drops cotton candy caramels cake caramels sesame snaps powder. Bear claw candy topping.",
+        },
+        {
+          id: "long-term",
+          label: "Long-Term ROI",
+          content:
+            "Donut dragée jelly pie halvah. Danish gingerbread bonbon cookie wafer candy oat cake ice cream.",
+        },
+        {
+          id: "calender",
+          label: "Calender Years ROI",
+          content:
+            "Oat cake chupa chups dragée donut toffee. Sweet cotton candy jelly beans macaroon gummies cupcake gummi bears cake chocolate.",
+        },
+        {
+          id: "volume",
+          label: "Volume",
+          content:
+            "Oat cake chupa chups dragée donut toffee. Sweet cotton candy jelly beans macaroon gummies cupcake gummi bears cake chocolate.",
+        },
+        {
+          id: "classification",
+          label: "Classifications",
+          content:
+            "Oat cake chupa chups dragée donut toffee. Sweet cotton candy jelly beans macaroon gummies cupcake gummi bears cake chocolate.",
+        },
+      ]},
 });
+
+const currentTab = ref(props.activeTab);
+
+const activateTab = (tabId: string) => {
+  currentTab.value = tabId;
+};
+
 
 const tableStyles = computed(() => ({
   title: props.title,
@@ -108,20 +156,61 @@ const tableStyles = computed(() => ({
 
                   </div>
                 </div>
+                <div class="tab-container">
+                  <!-- Tabs navigation -->
+                   <div class="d-flex gap-6">
+                    <ul class="nav" role="tablist">
+                      <li v-for="tab in props.tabs" :key="tab.id" class="nav-item">
+                        <a
+                          href="#"
+                          class="nav-link"
+                          :class="{ active: currentTab === tab.id }"
+                          @click.prevent="activateTab(tab.id)"
+                        >
+                          {{ tab.label }}
+                        </a>
+                      </li>
+                    </ul>
+                    <div class="d-flex mt-2 gap-3"> 
+                      <label class="">33,380 Assets</label>
+                      <label>Group Assets</label>
+                      <div class=" form-check form-switch">
+                          <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                      </div>
+                    </div>
+                  </div>
+                    <!-- Tabs content -->
+                    <div class="tab-content">
+                      <div
+                        v-for="tab in props.tabs"
+                        :key="tab.id"
+                        class="tab-pane"
+                        :class="{ active: currentTab === tab.id }"
+                      >
+                      
                 <div class="table-responsive text-nowrap">
-                  <table class="table mb-5" :style="tableStyles">
+                  <table class="table mb-5 col-xl-12" :style="tableStyles">
                     <thead>
                       <tr>
-                        <th>Project</th>
-                        <th>Client</th>
-                        <th>Users</th>
-                        <th>Status</th>
-                        <th>Actions</th>
+                        <th>Assets</th>
+                        <th>Price</th>
+                        <th>Price</th>
+                        <th>Price</th>
+                        <th>Price</th>
+                        <th>Price</th>
+                        <th>Marketcap</th>
+                        <th>Real Volume</th>
+                        <th>Sector</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
                         <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>Angular Project</strong></td>
+                        <td>Albert Cook</td>
+                        <td>Albert Cook</td>
+                        <td>Albert Cook</td>
+                        <td>Albert Cook</td>
+                        <td>Albert Cook</td>
                         <td>Albert Cook</td>
                         <td>
                           <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
@@ -152,6 +241,11 @@ const tableStyles = computed(() => ({
                       <tr>
                         <td><i class="fab fa-react fa-lg text-info me-3"></i> <strong>React Project</strong></td>
                         <td>Barry Hunter</td>
+                        <td>Albert Cook</td>
+                        <td>Albert Cook</td>
+                        <td>Albert Cook</td>
+                        <td>Albert Cook</td>
+                        <td>Albert Cook</td>
                         <td>
                           <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="avatar avatar-xs pull-up" title="" data-bs-original-title="Lilian Fuller">
@@ -181,6 +275,11 @@ const tableStyles = computed(() => ({
                       <tr>
                         <td><i class="fab fa-vuejs fa-lg text-success me-3"></i> <strong>VueJs Project</strong></td>
                         <td>Trevor Baker</td>
+                        <td>Albert Cook</td>
+                        <td>Albert Cook</td>
+                        <td>Albert Cook</td>
+                        <td>Albert Cook</td>
+                        <td>Albert Cook</td>
                         <td>
                           <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="avatar avatar-xs pull-up" title="" data-bs-original-title="Lilian Fuller">
@@ -212,6 +311,11 @@ const tableStyles = computed(() => ({
                           <i class="fab fa-bootstrap fa-lg text-primary me-3"></i> <strong>Bootstrap Project</strong>
                         </td>
                         <td>Jerry Milton</td>
+                        <td>Albert Cook</td>
+                        <td>Albert Cook</td>
+                        <td>Albert Cook</td>
+                        <td>Albert Cook</td>
+                        <td>Albert Cook</td>
                         <td>
                           <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
                             <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="avatar avatar-xs pull-up" title="" data-bs-original-title="Lilian Fuller">
@@ -241,6 +345,10 @@ const tableStyles = computed(() => ({
                     </tbody>
                   
                   </table>
+                </div>
+                        <p>{{ tab.content }}</p>
+                      </div>
+                    </div>
                 </div>
               </div>
   </template>
@@ -9334,6 +9442,9 @@ button.list-group-item-gray.active {
 .gap-5 {
   gap: 3rem !important;
 }
+.gap-6 {
+  gap: 4rem !important;
+}
 
 .justify-content-start {
   justify-content: flex-start !important;
@@ -16659,5 +16770,29 @@ html:not(.layout-footer-fixed) .content-wrapper {
 }
 .footer.bg-light hr {
   border-color: rgba(105, 122, 141, 0.0783835294);
+}
+.nav-link {
+  position: relative;
+  display: inline-block;
+  padding: 8px 16px;
+  color: #697a8d;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-link.active {
+  color: #007bff; /* Active text color */
+}
+
+.nav-link.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;  
+  background-color: #007bff;  
+  border-radius: 3px;  
+  transition: width 0.3s;
 }
 </style>
