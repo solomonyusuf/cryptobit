@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import TableWidget from '../widgets/TableWidge.vue'
+import TableWidget from '../widgets/TableWidget.vue'
 
 </script>
 

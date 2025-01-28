@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue';
 import TextWidget from './TextWidget.vue';
+import LineChartWidget from './LineChartWidget.vue';
 
 
 interface Tab {
@@ -15,6 +16,7 @@ interface TableColumn {
 }
 
 interface TableContent {
+  subject : String;
   columns: TableColumn[];
   rows: string[][];
 }
@@ -48,6 +50,7 @@ const props = defineProps({
           id: "overview",
           label: "Overview",
           content:  {
+                      subject: "Assets",
                       columns: [ 
                           { title : "Assets", subTitle: ""},
                           { title : "Price", subTitle: "Current"}, 
@@ -63,6 +66,7 @@ const props = defineProps({
                         ["Row 1, Cell 1", "Row 1, Cell 2", "Row 1, Cell 3"],
                         ["Row 2, Cell 1", "Row 2, Cell 2", "Row 2, Cell 3"]
                       ] 
+
                     }
            
         },
@@ -124,15 +128,15 @@ const tableStyles = computed(() => ({
                 <div class="mb-3">
                   <div class="row flex-nowrap mb-2  justify-content-start">
                    <div class="col-3 d-flex align-items-center">
-                    <div class="input-group input-group-merge">
-                        <span  :style="{background:tableBgColor}" id="basic-icon-default-phone2" class="input-group-text">
+                    <div class="input-group input-group-merge border-0">
+                        <span  :style="{background:tableBgColor}" class="input-group-text border-0">
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
                             <circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2" fill="none"/>
                             <line x1="16.5" y1="16.5" x2="22" y2="22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                           </svg>
 
                         </span>
-                        <input type="text" :style="{background:tableBgColor}" class="form-control phone-mask" placeholder="Search Assets...">
+                        <input type="text" :style="{background:tableBgColor}" class="form-control border-0" placeholder="Search Assets...">
                       </div>
                   </div>
                 <div class="col">
@@ -210,16 +214,13 @@ const tableStyles = computed(() => ({
                         </a>
                       </li>
                     </ul>
-                    <div class="d-flex mt-3 gap-3 px-3"> 
-                      
-                      <div class="">33,380 Assets</div>
-                      
-                      <label>Group Assets</label>
-                      <div class=" form-check form-switch">
-                          <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                    <div class="d-flex gap-2 px-3">
+                      <div class="box px-2 py-3">33,380 Assets</div>
+                      <label class="py-3">Group Assets</label>
+                      <div class="form-check form-switch py-3">
+                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
                       </div>
-
-                      <img src="/images/download.png" style="height:20px;" />
+                      <img src="/images/download.png" style="height:24px;" class=" px-2 mt-3">
                     </div>
                   </div>
                      
@@ -234,12 +235,14 @@ const tableStyles = computed(() => ({
                           <div class="table-responsive text-nowrap">
                             <table class="table mb-5 col-xl-12" :style="tableStyles">
                               <thead>
-                                <tr class="">
+                                <tr style="border-color:#384351;">
                                   <th class="sticky-column"></th>
                                   <th
                                     v-for="(col, index) in props.tabs[0].content.columns"
+                                    v-if="props.tabs[0].content.subject === props.tabs[0].content.columns[0].title"                       
                                     :key="index"
-                                    class="border-0 px-4 py-2 text-capitalize text-left"
+                                    style="border-color:#384351;"
+                                    class="sticky-column border-0 px-4 py-2 text-capitalize text-left"
                                   >
                                     <div>
                                       <div class="font-bold" :style="{color: fontColor}">{{ col.title }}</div>
@@ -253,136 +256,26 @@ const tableStyles = computed(() => ({
                                 </tr>
                               </thead>
                               <tbody>
-                                <tr>
-                                  <td  class="sticky-column">1</td>
-                                  <td  class="sticky-column"><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>Angular Project</strong></td>
-                                  <td>Albert Cook</td>
-                                  <td>Albert Cook</td>
-                                  <td>Albert Cook</td>
-                                  <td>Albert Cook</td>
-                                  <td>Albert Cook</td>
-                                  <td>Albert Cook</td>
-                                  <td>
-                                    <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
-                                      <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="avatar avatar-xs pull-up" title="" data-bs-original-title="Lilian Fuller">
-                                        <img src=" " alt="Avatar" class="rounded-circle">
-                                      </li>
-                                      <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="avatar avatar-xs pull-up" title="" data-bs-original-title="Sophia Wilkerson">
-                                        <img src="" alt="Avatar" class="rounded-circle">
-                                      </li>
-                                      <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="avatar avatar-xs pull-up" title="" data-bs-original-title="Christina Parker">
-                                        <img src="" alt="Avatar" class="rounded-circle">
-                                      </li>
-                                    </ul>
-                                  </td>
-                                  <td><span class="badge bg-label-primary me-1">Active</span></td>
-                                  <td>
-                                    <div class="dropdown">
-                                      <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
-                                        <i class="bx bx-dots-vertical-rounded"></i>
-                                      </button>
-                                      <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-edit-alt me-1"></i> Edit</a>
-                                        <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-trash me-1"></i> Delete</a>
-                                      </div>
-                                    </div>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td  class="sticky-column">2</td>
-                                  <td class="sticky-column"><i class="fab fa-react fa-lg text-info me-3"></i> <strong>React Project</strong></td>
-                                  <td>Barry Hunter</td>
-                                  <td>Albert Cook</td>
-                                  <td>Albert Cook</td>
-                                  <td>Albert Cook</td>
-                                  <td>Albert Cook</td>
-                                  <td>Albert Cook</td>
-                                  <td>
-                                    <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
-                                      <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="avatar avatar-xs pull-up" title="" data-bs-original-title="Lilian Fuller">
-                                        <img src=" " alt="Avatar" class="rounded-circle">
-                                      </li>
-                                      <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="avatar avatar-xs pull-up" title="" data-bs-original-title="Sophia Wilkerson">
-                                        <img src="" alt="Avatar" class="rounded-circle">
-                                      </li>
-                                      <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="avatar avatar-xs pull-up" title="" data-bs-original-title="Christina Parker">
-                                        <img src="" alt="Avatar" class="rounded-circle">
-                                      </li>
-                                    </ul>
-                                  </td>
-                                  <td><span class="badge bg-label-success me-1">Completed</span></td>
-                                  <td>
-                                    <div class="dropdown">
-                                      <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
-                                        <i class="bx bx-dots-vertical-rounded"></i>
-                                      </button>
-                                      <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-edit-alt me-1"></i> Edit</a>
-                                        <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-trash me-1"></i> Delete</a>
-                                      </div>
-                                    </div>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td class="sticky-column ">3</td>
-                                  <td class="sticky-column "><i class="fab fa-vuejs fa-lg text-success me-3"></i> <strong>VueJs Project</strong></td>
-                                  <td>Trevor Baker</td>
-                                  <td>Albert Cook</td>
-                                  <td>Albert Cook</td>
-                                  <td>Albert Cook</td>
-                                  <td>Albert Cook</td>
-                                  <td>Albert Cook</td>
-                                  <td>
-                                    <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
-                                      <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="avatar avatar-xs pull-up" title="" data-bs-original-title="Lilian Fuller">
-                                        <img src=" " alt="Avatar" class="rounded-circle">
-                                      </li>
-                                      <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="avatar avatar-xs pull-up" title="" data-bs-original-title="Sophia Wilkerson">
-                                        <img src="" alt="Avatar" class="rounded-circle">
-                                      </li>
-                                      <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="avatar avatar-xs pull-up" title="" data-bs-original-title="Christina Parker">
-                                        <img src="" alt="Avatar" class="rounded-circle">
-                                      </li>
-                                    </ul>
-                                  </td>
-                                  <td><span class="badge bg-label-info me-1">Scheduled</span></td>
-                                  <td>
-                                    <div class="dropdown">
-                                      <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
-                                        <i class="bx bx-dots-vertical-rounded"></i>
-                                      </button>
-                                      <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-edit-alt me-1"></i> Edit</a>
-                                        <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-trash me-1"></i> Delete</a>
-                                      </div>
-                                    </div>
-                                  </td>
-                                </tr>
-                                <tr>
-                                  <td class="sticky-column ">4</td>
+                                <tr style="border-color:#384351;">
+                                  <td class="sticky-column">1</td>
                                   <td class="sticky-column">
-                                    <i class="fab fa-bootstrap fa-lg text-primary me-3"></i> <strong>Bootstrap Project</strong>
-                                  </td>
-                                  <td>Jerry Milton</td>
-                                  <td>Albert Cook</td>
-                                  <td>Albert Cook</td>
-                                  <td>Albert Cook</td>
-                                  <td>Albert Cook</td>
-                                  <td>Albert Cook</td>
+                                    <img class="px-2" src="https://img.icons8.com/?size=100&id=63192&format=png&color=000000" style="height:30px;border-radius:15px;" />
+                                     <strong>Bitcoin</strong>(BTC)
+                                    </td>
+                                  <td>$100,328.99</td>
+                                  <td style="color:red;">-0.89%</td>
+                                  <td style="color:red;">-5.39%</td>
+                                  <td style="color:green;">+7.54%</td>
+                                  <td> <LineChartWidget 
+                                    :data="[65, 59, 80, 81, 56]" 
+                                    :labels="['January', 'February', 'March', 'April', 'May']"
+                                    :options="{ lineColor: 'rgba(255, 99, 132, 1)', pointColor: 'rgba(255, 99, 132, 1)' }" />
+                                        </td>
+                                  <td>$2.01T</td>
                                   <td>
-                                    <ul class="list-unstyled users-list m-0 avatar-group d-flex align-items-center">
-                                      <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="avatar avatar-xs pull-up" title="" data-bs-original-title="Lilian Fuller">
-                                        <img src=" " alt="Avatar" class="rounded-circle">
-                                      </li>
-                                      <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="avatar avatar-xs pull-up" title="" data-bs-original-title="Sophia Wilkerson">
-                                        <img src="" alt="Avatar" class="rounded-circle">
-                                      </li>
-                                      <li data-bs-toggle="tooltip" data-popup="tooltip-custom" data-bs-placement="top" class="avatar avatar-xs pull-up" title="" data-bs-original-title="Christina Parker">
-                                        <img src="" alt="Avatar" class="rounded-circle">
-                                      </li>
-                                    </ul>
+                                    $28.96B
                                   </td>
-                                  <td><span class="badge bg-label-warning me-1">Pending</span></td>
+                                  <td><span class="badge rounded-pill text-capitalize" style="background:rgba(67, 89, 113, 0.8);">Cryptocurrency</span></td>
                                   <td>
                                     <div class="dropdown">
                                       <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
@@ -395,8 +288,106 @@ const tableStyles = computed(() => ({
                                     </div>
                                   </td>
                                 </tr>
+                                <tr style="border-color:#384351;">
+                                  <td class="sticky-column">1</td>
+                                  <td class="sticky-column">
+                                    <img class="px-2" src="https://img.icons8.com/?size=100&id=63192&format=png&color=000000" style="height:30px;border-radius:15px;" />
+                                     <strong>Bitcoin</strong>(BTC)
+                                    </td>
+                                  <td>$100,328.99</td>
+                                  <td style="color:red;">-0.89%</td>
+                                  <td style="color:red;">-5.39%</td>
+                                  <td style="color:green;">+7.54%</td>
+                                  <td> <LineChartWidget 
+                                    :data="[65, 59, 80, 81, 56]" 
+                                    :labels="['January', 'February', 'March', 'April', 'May']"
+                                    :options="{ lineColor: 'rgba(255, 99, 132, 1)', pointColor: 'rgba(255, 99, 132, 1)' }" />
+                                        </td>
+                                  <td>$2.01T</td>
+                                  <td>
+                                    $28.96B
+                                  </td>
+                                  <td><span class="badge rounded-pill text-capitalize" style="background:rgba(67, 89, 113, 0.8);">Cryptocurrency</span></td>
+                                  <td>
+                                    <div class="dropdown">
+                                      <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                                        <i class="bx bx-dots-vertical-rounded"></i>
+                                      </button>
+                                      <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-edit-alt me-1"></i> Edit</a>
+                                        <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-trash me-1"></i> Delete</a>
+                                      </div>
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr style="border-color:#384351;">
+                                  <td class="sticky-column">1</td>
+                                  <td class="sticky-column">
+                                    <img class="px-2" src="https://img.icons8.com/?size=100&id=63192&format=png&color=000000" style="height:30px;border-radius:15px;" />
+                                     <strong>Bitcoin</strong>(BTC)
+                                    </td>
+                                  <td>$100,328.99</td>
+                                  <td style="color:red;">-0.89%</td>
+                                  <td style="color:red;">-5.39%</td>
+                                  <td style="color:green;">+7.54%</td>
+                                  <td> <LineChartWidget 
+                                    :data="[65, 59, 80, 81, 56]" 
+                                    :labels="['January', 'February', 'March', 'April', 'May']"
+                                    :options="{ lineColor: 'rgba(255, 99, 132, 1)', pointColor: 'rgba(255, 99, 132, 1)' }" />
+                                        </td>
+                                  <td>$2.01T</td>
+                                  <td>
+                                    $28.96B
+                                  </td>
+                                  <td><span class="badge rounded-pill text-capitalize" style="background:rgba(67, 89, 113, 0.8);">Cryptocurrency</span></td>
+                                  <td>
+                                    <div class="dropdown">
+                                      <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                                        <i class="bx bx-dots-vertical-rounded"></i>
+                                      </button>
+                                      <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-edit-alt me-1"></i> Edit</a>
+                                        <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-trash me-1"></i> Delete</a>
+                                      </div>
+                                    </div>
+                                  </td>
+                                </tr>
+                                 <tr style="border-color:#384351;">
+                                  <td class="sticky-column">1</td>
+                                  <td class="sticky-column">
+                                    <img class="px-2" src="https://img.icons8.com/?size=100&id=63192&format=png&color=000000" style="height:30px;border-radius:15px;" />
+                                     <strong>Bitcoin</strong>(BTC)
+                                    </td>
+                                  <td>$100,328.99</td>
+                                  <td style="color:red;">-0.89%</td>
+                                  <td style="color:red;">-5.39%</td>
+                                  <td style="color:green;">+7.54%</td>
+                                  <td> <LineChartWidget 
+                                    :data="[65, 59, 80, 81, 56]" 
+                                    :labels="['January', 'February', 'March', 'April', 'May']"
+                                    :options="{ lineColor: 'rgba(255, 99, 132, 1)', pointColor: 'rgba(255, 99, 132, 1)' }" />
+                                        </td>
+                                  <td>$2.01T</td>
+                                  <td>
+                                    $28.96B
+                                  </td>
+                                  <td><span class="badge rounded-pill text-capitalize" style="background:rgba(67, 89, 113, 0.8);">Cryptocurrency</span></td>
+                                  <td>
+                                    <div class="dropdown">
+                                      <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                                        <i class="bx bx-dots-vertical-rounded"></i>
+                                      </button>
+                                      <div class="dropdown-menu">
+                                        <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-edit-alt me-1"></i> Edit</a>
+                                        <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-trash me-1"></i> Delete</a>
+                                      </div>
+                                    </div>
+                                  </td>
+                                </tr>
+                                 
                               </tbody>
-                            
+                              <tfoot>
+                              </tfoot>
                             </table>
                           </div>
                          
@@ -407,7 +398,28 @@ const tableStyles = computed(() => ({
   </template>
 
 <style lang="scss">
- 
+/* Make the table container scrollable */
+.table-container {
+  max-height: 300px; /* Set a fixed height */
+  overflow-y: auto; /* Enable vertical scrolling */
+  overflow-x: auto; /* Enable horizontal scrolling if needed */
+  border: 1px solid #ddd;
+}
+
+/* Customize scrollbar */
+.table-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+  background: #3498db; /* Change to your preferred color */
+  border-radius: 5px;
+}
+ .box {
+  display: inline-block;  
+  border-left: 3px solid #28303d;   
+  border-right: 3px solid #28303d;  
+}
  .sticky-column {
   position: sticky;
   left: 0;
