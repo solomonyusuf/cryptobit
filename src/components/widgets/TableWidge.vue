@@ -124,7 +124,16 @@ const tableStyles = computed(() => ({
                 <div class="mb-3">
                   <div class="row flex-nowrap mb-2  justify-content-start">
                    <div class="col-3 d-flex align-items-center">
-                    <input type="text"  :style="{background:tableBgColor}" class="form-control search shadow-none border-0" placeholder="Search Assets..." aria-label="Search Assets...">
+                    <div class="input-group input-group-merge">
+                        <span  :style="{background:tableBgColor}" id="basic-icon-default-phone2" class="input-group-text">
+                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                            <circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2" fill="none"/>
+                            <line x1="16.5" y1="16.5" x2="22" y2="22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                          </svg>
+
+                        </span>
+                        <input type="text" :style="{background:tableBgColor}" class="form-control phone-mask" placeholder="Search Assets...">
+                      </div>
                   </div>
                 <div class="col">
                   <select class="form-select border-0">
@@ -214,7 +223,7 @@ const tableStyles = computed(() => ({
                     </div>
                   </div>
                      
-                    <div class="tab-content">
+                    <div class="tab-content px-0 py-0">
                       <div
                         v-for="tab in props.tabs"
                         :key="tab.id"
