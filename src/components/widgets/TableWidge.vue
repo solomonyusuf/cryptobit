@@ -24,7 +24,7 @@ const props = defineProps({
   title: { type: String, default: 'Assets' },
   width: { type: String, default: '100%' },
   headerColor: { type: String, default: 'white' },
-  tableBgColor: { type: String, default: 'transparent' },
+  tableBgColor: { type: String, default: '#1c222e' },
   accentBgColor: { type: String, default: 'transparent' },
   stripedColor: { type: String, default: '#697a8d' },
   stripedBg: { type: String, default: '#f9fafb' },
@@ -119,15 +119,15 @@ const tableStyles = computed(() => ({
 </script>
 
 <template>
-      <div class="card" :style="{ background:tableBgColor }">
+        <div class="px-3 border-0" style="background:#111215" >
                 <h3 class="card-header" :style="{color:headerColor}">{{title}}</h3>
                 <div class="mb-3">
-                  <div class="row flex-nowrap mb-2 px-2 justify-content-start">
+                  <div class="row flex-nowrap mb-2  justify-content-start">
                    <div class="col-3 d-flex align-items-center">
-                    <input type="text"  style="background:transparent;" class="form-control search border-1 shadow-none" placeholder="Search Assets..." aria-label="Search Assets...">
+                    <input type="text"  :style="{background:tableBgColor}" class="form-control search shadow-none border-0" placeholder="Search Assets..." aria-label="Search Assets...">
                   </div>
                 <div class="col">
-                  <select class="form-select">
+                  <select class="form-select border-0">
                       <option>Category All</option>
                       <option value="1">One</option>
                       <option value="2">Two</option>
@@ -135,7 +135,7 @@ const tableStyles = computed(() => ({
                     </select>
                 </div>
                 <div class="col">
-                  <select class="form-select">
+                  <select class="form-select border-0">
                       <option>Sector All</option>
                       <option value="1">One</option>
                       <option value="2">Two</option>
@@ -143,7 +143,7 @@ const tableStyles = computed(() => ({
                     </select>
                 </div>
                 <div class="col">
-                  <select class="form-select">
+                  <select class="form-select  border-0">
                       <option>Tag All</option>
                       <option value="1">One</option>
                       <option value="2">Two</option>
@@ -151,7 +151,7 @@ const tableStyles = computed(() => ({
                     </select>
                 </div>
                 <div class="col">
-                  <select class="form-select">
+                  <select class="form-select  border-0">
                       <option>Exchange All</option>
                       <option value="1">One</option>
                       <option value="2">Two</option>
@@ -159,7 +159,7 @@ const tableStyles = computed(() => ({
                     </select>
                 </div>
                 <div class="col">
-                  <select class="form-select">
+                  <select class="form-select  border-0">
                       <option>Network All</option>
                       <option value="1">One</option>
                       <option value="2">Two</option>
@@ -167,7 +167,7 @@ const tableStyles = computed(() => ({
                     </select>
                 </div>
                  <div class="col">
-                  <select class="form-select">
+                  <select class="form-select  border-0">
                       <option>Marketcap</option>
                       <option value="1">One</option>
                       <option value="2">Two</option>
@@ -175,7 +175,7 @@ const tableStyles = computed(() => ({
                     </select>
                 </div>
                 <div class="col">
-                  <select class="form-select">
+                  <select class="form-select border-0">
                       <option>24H Volume</option>
                       <option value="1">One</option>
                       <option value="2">Two</option>
@@ -185,14 +185,15 @@ const tableStyles = computed(() => ({
 
                   </div>
                 </div>
-                <div class="card tab-container" :style="{border, background:tableBgColor}">
+                <div class="card rounded-1 border-0 tab-container" :style="{border, background:tableBgColor}">
                   
                    <div style="border-bottom: 1px solid;" class="d-flex justify-content-between align-items-center">
                     <ul class="nav" :style="{ color:fontColor}" role="tablist">
                       <li v-for="tab in props.tabs" :key="tab.id" class="nav-item">
                         <a
                           href="#"
-                          class="nav-link"
+                          class="nav-link mt-3"
+                          :style={color:fontColor}
                           :class="{ active: currentTab === tab.id }"
                           @click.prevent="activateTab(tab.id)"
                         >
@@ -200,12 +201,16 @@ const tableStyles = computed(() => ({
                         </a>
                       </li>
                     </ul>
-                    <div class="d-flex mt-2 gap-3"> 
-                      <label class="">33,380 Assets</label>
+                    <div class="d-flex mt-3 gap-3 px-3"> 
+                      
+                      <div class="">33,380 Assets</div>
+                      
                       <label>Group Assets</label>
                       <div class=" form-check form-switch">
                           <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
                       </div>
+
+                      <img src="/images/download.png" style="height:20px;" />
                     </div>
                   </div>
                      
@@ -220,27 +225,28 @@ const tableStyles = computed(() => ({
                           <div class="table-responsive text-nowrap">
                             <table class="table mb-5 col-xl-12" :style="tableStyles">
                               <thead>
-                                <tr>
-                                  <th></th>
+                                <tr class="">
+                                  <th class="sticky-column"></th>
                                   <th
                                     v-for="(col, index) in props.tabs[0].content.columns"
                                     :key="index"
-                                    class="border border-gray-300 px-4 py-2 text-left"
+                                    class="border-0 px-4 py-2 text-capitalize text-left"
                                   >
                                     <div>
                                       <div class="font-bold" :style="{color: fontColor}">{{ col.title }}</div>
-                                      <div v-if="col.subTitle" :style="{color:subHeadingColor}" class="text-sm">
+                                      <div v-if="col.subTitle" :style="{color:subHeadingColor}" class="text-sm text-capitalize">
                                         {{ col.subTitle }}
                                       </div>
                                     </div>
                                   </th>
                                    
+                                   
                                 </tr>
                               </thead>
                               <tbody>
                                 <tr>
-                                  <td>1</td>
-                                  <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>Angular Project</strong></td>
+                                  <td  class="sticky-column">1</td>
+                                  <td  class="sticky-column"><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>Angular Project</strong></td>
                                   <td>Albert Cook</td>
                                   <td>Albert Cook</td>
                                   <td>Albert Cook</td>
@@ -274,8 +280,8 @@ const tableStyles = computed(() => ({
                                   </td>
                                 </tr>
                                 <tr>
-                                  <td>2</td>
-                                  <td><i class="fab fa-react fa-lg text-info me-3"></i> <strong>React Project</strong></td>
+                                  <td  class="sticky-column">2</td>
+                                  <td class="sticky-column"><i class="fab fa-react fa-lg text-info me-3"></i> <strong>React Project</strong></td>
                                   <td>Barry Hunter</td>
                                   <td>Albert Cook</td>
                                   <td>Albert Cook</td>
@@ -309,8 +315,8 @@ const tableStyles = computed(() => ({
                                   </td>
                                 </tr>
                                 <tr>
-                                  <td>3</td>
-                                  <td><i class="fab fa-vuejs fa-lg text-success me-3"></i> <strong>VueJs Project</strong></td>
+                                  <td class="sticky-column ">3</td>
+                                  <td class="sticky-column "><i class="fab fa-vuejs fa-lg text-success me-3"></i> <strong>VueJs Project</strong></td>
                                   <td>Trevor Baker</td>
                                   <td>Albert Cook</td>
                                   <td>Albert Cook</td>
@@ -344,8 +350,8 @@ const tableStyles = computed(() => ({
                                   </td>
                                 </tr>
                                 <tr>
-                                  <td>4</td>
-                                  <td>
+                                  <td class="sticky-column ">4</td>
+                                  <td class="sticky-column">
                                     <i class="fab fa-bootstrap fa-lg text-primary me-3"></i> <strong>Bootstrap Project</strong>
                                   </td>
                                   <td>Jerry Milton</td>
@@ -393,6 +399,15 @@ const tableStyles = computed(() => ({
 
 <style lang="scss">
  
+ .sticky-column {
+  position: sticky;
+  left: 0;
+  z-index: 2; 
+}
+
+tbody .sticky-column {
+  z-index: 1; 
+}
 .scroll-card {
   overflow-x: auto;  
   display: flex;
@@ -2528,11 +2543,11 @@ textarea.form-control-lg {
   width: 100%;
   padding: 0.4375rem 1.875rem 0.4375rem 0.875rem;
   -moz-padding-start: calc(0.875rem - 3px);
-  font-size: 0.9375rem;
+  font-size: 0.8375rem;
   font-weight: 400;
   line-height: 1.53;
   color: #697a8d;
-  background:transparent;
+  background:#1c222e;
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='rgba%2867, 89, 113, 0.6%29' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
   background-repeat: no-repeat;
   background-position: right 0.875rem center;
