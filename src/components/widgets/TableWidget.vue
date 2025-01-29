@@ -21,6 +21,12 @@ interface TableContent {
   rows: string[][];
 }
 
+const data = Array.from({ length: 30 }, () => Math.floor(Math.random() * 100)); // Generate 30 random data points
+const labels = [
+  "January", "February", "March", "April", "May", "June", "July", "August", "September", "October",
+  "November", "December", "January", "February", "March", "April", "May", "June", "July", "August",
+  "September", "October", "November", "December", "January", "February", "March", "April", "May", "June"
+];
 
 const props = defineProps({
   title: { type: String, default: 'Assets' },
@@ -238,11 +244,17 @@ const tableStyles = computed(() => ({
                                 <tr style="border-color:#384351;">
                                   <th class="sticky-column"></th>
                                   <th
-                                    v-for="(col, index) in props.tabs[0].content.columns"
-                                    v-if="props.tabs[0].content.subject === props.tabs[0].content.columns[0].title"                       
+                                    v-for="(col, index) in props.tabs[0].content.columns"                       
                                     :key="index"
                                     style="border-color:#384351;"
-                                    class="sticky-column border-0 px-4 py-2 text-capitalize text-left"
+                                    :class="{
+                                    'sticky-column': col.title === props.tabs[0].content.subject, 
+                                    'border-0': true,
+                                    'px-4': true,
+                                    'py-2': true,
+                                    'text-capitalize': true,
+                                    'text-left': true
+                                  }"
                                   >
                                     <div>
                                       <div class="font-bold" :style="{color: fontColor}">{{ col.title }}</div>
@@ -267,8 +279,8 @@ const tableStyles = computed(() => ({
                                   <td style="color:red;">-5.39%</td>
                                   <td style="color:green;">+7.54%</td>
                                   <td> <LineChartWidget 
-                                    :data="[65, 59, 80, 81, 56]" 
-                                    :labels="['January', 'February', 'March', 'April', 'May']"
+                                    :data="data" 
+                                    :labels="labels"
                                     :options="{ lineColor: 'rgba(255, 99, 132, 1)', pointColor: 'rgba(255, 99, 132, 1)' }" />
                                         </td>
                                   <td>$2.01T</td>
@@ -299,8 +311,8 @@ const tableStyles = computed(() => ({
                                   <td style="color:red;">-5.39%</td>
                                   <td style="color:green;">+7.54%</td>
                                   <td> <LineChartWidget 
-                                    :data="[65, 59, 80, 81, 56]" 
-                                    :labels="['January', 'February', 'March', 'April', 'May']"
+                                    :data="data" 
+                                    :labels="labels"
                                     :options="{ lineColor: 'rgba(255, 99, 132, 1)', pointColor: 'rgba(255, 99, 132, 1)' }" />
                                         </td>
                                   <td>$2.01T</td>
@@ -331,8 +343,8 @@ const tableStyles = computed(() => ({
                                   <td style="color:red;">-5.39%</td>
                                   <td style="color:green;">+7.54%</td>
                                   <td> <LineChartWidget 
-                                    :data="[65, 59, 80, 81, 56]" 
-                                    :labels="['January', 'February', 'March', 'April', 'May']"
+                                    :data="data" 
+                                    :labels="labels"
                                     :options="{ lineColor: 'rgba(255, 99, 132, 1)', pointColor: 'rgba(255, 99, 132, 1)' }" />
                                         </td>
                                   <td>$2.01T</td>
@@ -363,8 +375,8 @@ const tableStyles = computed(() => ({
                                   <td style="color:red;">-5.39%</td>
                                   <td style="color:green;">+7.54%</td>
                                   <td> <LineChartWidget 
-                                    :data="[65, 59, 80, 81, 56]" 
-                                    :labels="['January', 'February', 'March', 'April', 'May']"
+                                    :data="data" 
+                                    :labels="labels"
                                     :options="{ lineColor: 'rgba(255, 99, 132, 1)', pointColor: 'rgba(255, 99, 132, 1)' }" />
                                         </td>
                                   <td>$2.01T</td>
@@ -398,23 +410,7 @@ const tableStyles = computed(() => ({
   </template>
 
 <style lang="scss">
-/* Make the table container scrollable */
-.table-container {
-  max-height: 300px; /* Set a fixed height */
-  overflow-y: auto; /* Enable vertical scrolling */
-  overflow-x: auto; /* Enable horizontal scrolling if needed */
-  border: 1px solid #ddd;
-}
-
-/* Customize scrollbar */
-.table-container::-webkit-scrollbar {
-  width: 6px;
-}
-
-.table-container::-webkit-scrollbar-thumb {
-  background: #3498db; /* Change to your preferred color */
-  border-radius: 5px;
-}
+ 
  .box {
   display: inline-block;  
   border-left: 3px solid #28303d;   
