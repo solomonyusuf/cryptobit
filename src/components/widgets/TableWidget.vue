@@ -1,8 +1,5 @@
 <script setup lang="ts">
-import { computed, ref } from 'vue';
-import TextWidget from './TextWidget.vue';
-import LineChartWidget from './LineChartWidget.vue';
-
+import { Component, computed, ref } from 'vue';
 
 interface Tab {
   id: string;
@@ -18,15 +15,8 @@ interface TableColumn {
 interface TableContent {
   subject : String;
   columns: TableColumn[];
-  rows: string[][];
 }
 
-const data = Array.from({ length: 30 }, () => Math.floor(Math.random() * 100)); // Generate 30 random data points
-const labels = [
-  "January", "February", "March", "April", "May", "June", "July", "August", "September", "October",
-  "November", "December", "January", "February", "March", "April", "May", "June", "July", "August",
-  "September", "October", "November", "December", "January", "February", "March", "April", "May", "June"
-];
 
 const props = defineProps({
   title: { type: String, default: 'Assets' },
@@ -67,39 +57,82 @@ const props = defineProps({
                           { title : "Marketcap", subTitle: "Current"},
                           { title : "Real Volume", subTitle: "24H"},
                           { title : "Sector", subTitle: ""}
-                      ],
-                      rows: [
-                        ["Row 1, Cell 1", "Row 1, Cell 2", "Row 1, Cell 3"],
-                        ["Row 2, Cell 1", "Row 2, Cell 2", "Row 2, Cell 3"]
-                      ] 
-
+                      ]
+                      
                     }
            
         },
         {
           id: "long-term",
           label: "Long-Term ROI",
-          content:
-            "Donut dragée jelly pie halvah. Danish gingerbread bonbon cookie wafer candy oat cake ice cream.",
+          content:  {
+                      subject: "Assets",
+                      columns: [ 
+                          { title : "Assets", subTitle: ""},
+                          { title : "Price", subTitle: "Current"}, 
+                          { title : "Price", subTitle: "24H Change"}, 
+                          { title : "Price", subTitle: "7D Change"}, 
+                          { title : "Price", subTitle: "30D Change"}, 
+                          { title : "Price", subTitle: "30D TL"}, 
+                          { title : "Marketcap", subTitle: "Current"},
+                          { title : "Real Volume", subTitle: "24H"},
+                          { title : "Sector", subTitle: ""}
+                      ]
+                    }
         },
         {
           id: "calender",
           label: "Calender Years ROI",
-          content:
-            "Oat cake chupa chups dragée donut toffee. Sweet cotton candy jelly beans macaroon gummies cupcake gummi bears cake chocolate.",
+          content:  {
+                      subject: "Assets",
+                      columns: [ 
+                          { title : "Assets", subTitle: ""},
+                          { title : "Price", subTitle: "Current"}, 
+                          { title : "Price", subTitle: "24H Change"}, 
+                          { title : "Price", subTitle: "7D Change"}, 
+                          { title : "Price", subTitle: "30D Change"}, 
+                          { title : "Price", subTitle: "30D TL"}, 
+                          { title : "Marketcap", subTitle: "Current"},
+                          { title : "Real Volume", subTitle: "24H"},
+                          { title : "Sector", subTitle: ""}
+                      ]
+                    }
         },
         {
           id: "volume",
           label: "Volume",
-          content:
-            "Oat cake chupa chups dragée donut toffee. Sweet cotton candy jelly beans macaroon gummies cupcake gummi bears cake chocolate.",
+          content: {
+                      subject: "Assets",
+                      columns: [ 
+                          { title : "Assets", subTitle: ""},
+                          { title : "Price", subTitle: "Current"}, 
+                          { title : "Price", subTitle: "24H Change"}, 
+                          { title : "Price", subTitle: "7D Change"}, 
+                          { title : "Price", subTitle: "30D Change"}, 
+                          { title : "Price", subTitle: "30D TL"}, 
+                          { title : "Marketcap", subTitle: "Current"},
+                          { title : "Real Volume", subTitle: "24H"},
+                          { title : "Sector", subTitle: ""}
+                      ]
+                    },
         },
         {
           id: "classification",
           label: "Classifications",
-          content:
-            "Oat cake chupa chups dragée donut toffee. Sweet cotton candy jelly beans macaroon gummies cupcake gummi bears cake chocolate.",
-        },
+          content: {
+                      subject: "Assets",
+                      columns: [ 
+                          { title : "Assets", subTitle: ""},
+                          { title : "Price", subTitle: "Current"}, 
+                          { title : "Price", subTitle: "24H Change"}, 
+                          { title : "Price", subTitle: "7D Change"}, 
+                          { title : "Price", subTitle: "30D Change"}, 
+                          { title : "Price", subTitle: "30D TL"}, 
+                          { title : "Marketcap", subTitle: "Current"},
+                          { title : "Real Volume", subTitle: "24H"},
+                          { title : "Sector", subTitle: ""}
+                      ]
+                    }},
       ]},
 });
 
@@ -242,9 +275,9 @@ const tableStyles = computed(() => ({
                             <table class="table mb-5 col-xl-12" :style="tableStyles">
                               <thead>
                                 <tr style="border-color:#384351;">
-                                  <th class="sticky-column"></th>
+                                  <th class="sticky-column border-0"></th>
                                   <th
-                                    v-for="(col, index) in props.tabs[0].content.columns"                       
+                                    v-for="(col, index) in tab.content.columns"                       
                                     :key="index"
                                     style="border-color:#384351;"
                                     :class="{
@@ -268,135 +301,7 @@ const tableStyles = computed(() => ({
                                 </tr>
                               </thead>
                               <tbody>
-                                <tr style="border-color:#384351;">
-                                  <td class="sticky-column">1</td>
-                                  <td class="sticky-column">
-                                    <img class="px-2" src="https://img.icons8.com/?size=100&id=63192&format=png&color=000000" style="height:30px;border-radius:15px;" />
-                                     <strong>Bitcoin</strong>(BTC)
-                                    </td>
-                                  <td>$100,328.99</td>
-                                  <td style="color:red;">-0.89%</td>
-                                  <td style="color:red;">-5.39%</td>
-                                  <td style="color:green;">+7.54%</td>
-                                  <td> <LineChartWidget 
-                                    :data="data" 
-                                    :labels="labels"
-                                    :options="{ lineColor: 'rgba(255, 99, 132, 1)', pointColor: 'rgba(255, 99, 132, 1)' }" />
-                                        </td>
-                                  <td>$2.01T</td>
-                                  <td>
-                                    $28.96B
-                                  </td>
-                                  <td><span class="badge rounded-pill text-capitalize" style="background:rgba(67, 89, 113, 0.8);">Cryptocurrency</span></td>
-                                  <td>
-                                    <div class="dropdown">
-                                      <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
-                                        <i class="bx bx-dots-vertical-rounded"></i>
-                                      </button>
-                                      <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-edit-alt me-1"></i> Edit</a>
-                                        <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-trash me-1"></i> Delete</a>
-                                      </div>
-                                    </div>
-                                  </td>
-                                </tr>
-                                <tr style="border-color:#384351;">
-                                  <td class="sticky-column">1</td>
-                                  <td class="sticky-column">
-                                    <img class="px-2" src="https://img.icons8.com/?size=100&id=63192&format=png&color=000000" style="height:30px;border-radius:15px;" />
-                                     <strong>Bitcoin</strong>(BTC)
-                                    </td>
-                                  <td>$100,328.99</td>
-                                  <td style="color:red;">-0.89%</td>
-                                  <td style="color:red;">-5.39%</td>
-                                  <td style="color:green;">+7.54%</td>
-                                  <td> <LineChartWidget 
-                                    :data="data" 
-                                    :labels="labels"
-                                    :options="{ lineColor: 'rgba(255, 99, 132, 1)', pointColor: 'rgba(255, 99, 132, 1)' }" />
-                                        </td>
-                                  <td>$2.01T</td>
-                                  <td>
-                                    $28.96B
-                                  </td>
-                                  <td><span class="badge rounded-pill text-capitalize" style="background:rgba(67, 89, 113, 0.8);">Cryptocurrency</span></td>
-                                  <td>
-                                    <div class="dropdown">
-                                      <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
-                                        <i class="bx bx-dots-vertical-rounded"></i>
-                                      </button>
-                                      <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-edit-alt me-1"></i> Edit</a>
-                                        <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-trash me-1"></i> Delete</a>
-                                      </div>
-                                    </div>
-                                  </td>
-                                </tr>
-                                <tr style="border-color:#384351;">
-                                  <td class="sticky-column">1</td>
-                                  <td class="sticky-column">
-                                    <img class="px-2" src="https://img.icons8.com/?size=100&id=63192&format=png&color=000000" style="height:30px;border-radius:15px;" />
-                                     <strong>Bitcoin</strong>(BTC)
-                                    </td>
-                                  <td>$100,328.99</td>
-                                  <td style="color:red;">-0.89%</td>
-                                  <td style="color:red;">-5.39%</td>
-                                  <td style="color:green;">+7.54%</td>
-                                  <td> <LineChartWidget 
-                                    :data="data" 
-                                    :labels="labels"
-                                    :options="{ lineColor: 'rgba(255, 99, 132, 1)', pointColor: 'rgba(255, 99, 132, 1)' }" />
-                                        </td>
-                                  <td>$2.01T</td>
-                                  <td>
-                                    $28.96B
-                                  </td>
-                                  <td><span class="badge rounded-pill text-capitalize" style="background:rgba(67, 89, 113, 0.8);">Cryptocurrency</span></td>
-                                  <td>
-                                    <div class="dropdown">
-                                      <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
-                                        <i class="bx bx-dots-vertical-rounded"></i>
-                                      </button>
-                                      <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-edit-alt me-1"></i> Edit</a>
-                                        <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-trash me-1"></i> Delete</a>
-                                      </div>
-                                    </div>
-                                  </td>
-                                </tr>
-                                 <tr style="border-color:#384351;">
-                                  <td class="sticky-column">1</td>
-                                  <td class="sticky-column">
-                                    <img class="px-2" src="https://img.icons8.com/?size=100&id=63192&format=png&color=000000" style="height:30px;border-radius:15px;" />
-                                     <strong>Bitcoin</strong>(BTC)
-                                    </td>
-                                  <td>$100,328.99</td>
-                                  <td style="color:red;">-0.89%</td>
-                                  <td style="color:red;">-5.39%</td>
-                                  <td style="color:green;">+7.54%</td>
-                                  <td> <LineChartWidget 
-                                    :data="data" 
-                                    :labels="labels"
-                                    :options="{ lineColor: 'rgba(255, 99, 132, 1)', pointColor: 'rgba(255, 99, 132, 1)' }" />
-                                        </td>
-                                  <td>$2.01T</td>
-                                  <td>
-                                    $28.96B
-                                  </td>
-                                  <td><span class="badge rounded-pill text-capitalize" style="background:rgba(67, 89, 113, 0.8);">Cryptocurrency</span></td>
-                                  <td>
-                                    <div class="dropdown">
-                                      <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
-                                        <i class="bx bx-dots-vertical-rounded"></i>
-                                      </button>
-                                      <div class="dropdown-menu">
-                                        <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-edit-alt me-1"></i> Edit</a>
-                                        <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-trash me-1"></i> Delete</a>
-                                      </div>
-                                    </div>
-                                  </td>
-                                </tr>
-                                 
+                                <slot :name="tab.id"></slot>
                               </tbody>
                               <tfoot>
                               </tfoot>

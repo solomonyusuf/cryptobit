@@ -7,15 +7,14 @@
   <script setup>
   import { onMounted, ref, defineProps } from 'vue';
   
-  // Define props for dynamic data
   const props = defineProps({
     labels: Array, // Labels for x-axis
     data: Array, // Data points
     width:{ type: String, default: "200px" },
-    height:{ type: String, default: "70px" },
-    lineColor: { type: String, default: "rgba(75, 192, 192, 1)" }, // Line color
-    showGrid: { type: Boolean, default: false }, // Toggle grid visibility
-    gridColor: { type: String, default: "rgba(200, 200, 200, 0.2)" } // Grid color
+    height:{ type: String, default: "50px" },
+    lineColor: { type: String, default: "rgba(75, 192, 192, 1)" },  
+    showGrid: { type: Boolean, default: false },  
+    gridColor: { type: String, default: "rgba(200, 200, 200, 0.2)" }  
   });
   
   // Reference for the canvas
