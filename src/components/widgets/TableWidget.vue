@@ -172,28 +172,28 @@ onMounted(() => {
     console.log("jQuery has been loaded successfully!");
 
     $(document).ready(function() {
-  const rowsPerPage = 10;  // Set how many rows per page
-  const rows = $('#Table tbody tr');  // Get all table rows
-  const totalRows = rows.length;  // Get the total number of rows
-  const totalPages = Math.ceil(totalRows / rowsPerPage);  // Calculate total pages
+          const rowsPerPage = 10;   
+          const rows = $('#Table tbody tr');   
+          const totalRows = rows.length;  
+          const totalPages = Math.ceil(totalRows / rowsPerPage);  
 
-  // Function to show a specific page
-  function showPage(pageNumber: number) {
-    const startIndex = (pageNumber - 1) * rowsPerPage;
-    const endIndex = startIndex + rowsPerPage;
+          // Function to show a specific page
+          function showPage(pageNumber: number) {
+            const startIndex = (pageNumber - 1) * rowsPerPage;
+            const endIndex = startIndex + rowsPerPage;
 
-    // Hide all rows
-    rows.hide();
+            // Hide all rows
+            rows.hide();
 
-    // Show the rows for the current page
-    rows.slice(startIndex, endIndex).show();
+            // Show the rows for the current page
+            rows.slice(startIndex, endIndex).show();
 
-    // Update pagination controls
-    updatePagination(pageNumber);
+            // Update pagination controls
+            updatePagination(pageNumber);
 
-    // Update the "Showing X to Y of Z results" text
-    updatePaginationInfo(pageNumber);
-  }
+            // Update the "Showing X to Y of Z results" text
+            updatePaginationInfo(pageNumber);
+          }
 
   // Function to update pagination controls
   function updatePagination(currentPage: number) {
@@ -2340,6 +2340,10 @@ progress {
 .table-responsive {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
+}
+.table-responsive {
+  scrollbar-width: thin; /* Options: auto, thin, or none */
+  scrollbar-color: darkgray #f1f1f1; /* Thumb color, Track color */
 }
 
 @media (max-width: 575.98px) {
