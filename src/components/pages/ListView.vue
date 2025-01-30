@@ -141,7 +141,7 @@ const overview_list = [
           <template #long-term>
             <tr v-for="(row, index) in overview_list" :key="index" style="border-color:#384351;">
               <td class="sticky-column">{{ index + 1 }}</td>
-              <td class="sticky-column">
+              <td class="sticky-column" style="width:500px;">
                 <AssetWidget 
                   :image="row[0]"
                   :title="row[1]"
@@ -153,15 +153,12 @@ const overview_list = [
               <td><PercentageWidget :amount="row[5]" color="red"/></td>
               <td><PercentageWidget :amount="row[6]" color="green"/></td>
               <td> 
-                <LineChartWidget 
-                  :data="data" 
-                  :labels="labels"
-                  :options="{ lineColor: 'rgba(255, 99, 132, 1)', pointColor: 'rgba(255, 99, 132, 1)' }" 
-                />
+                <PercentageWidget :amount="row[6]" color="green"/>
               </td>
-              <td><PriceWidget :amount="row[7]" symbol="$"/></td>
-              <td><PriceWidget :amount="row[8]" symbol="$"/></td>
-              <td><PillWidget :title="row[9]"/></td>
+              <td><PercentageWidget :amount="row[6]" color="green"/></td>
+              <td><PercentageWidget :amount="row[6]" color="green"/></td>
+              <td><PercentageWidget :amount="row[6]" color="green"/></td>
+              <td><PercentageWidget :amount="row[6]" color="green"/></td>
             </tr>
           </template>
       
