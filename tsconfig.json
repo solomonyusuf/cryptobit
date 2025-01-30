@@ -5,7 +5,7 @@
     "moduleResolution": "Node", // Resolves modules like Node.js
     "strict": true, // Enable all strict type-checking options
     "jsx": "preserve", // Preserves JSX in `.vue` files
-    "types": ["vite/client"], // Includes Vite-specific types
+    "types": ["vite/client", "jquery"], // Includes Vite-specific types
     "skipLibCheck": true, // Skip type checking of declaration files
     "esModuleInterop": true, // Ensures compatibility with CommonJS modules
     "forceConsistentCasingInFileNames": true, // Enforces consistent casing in import paths

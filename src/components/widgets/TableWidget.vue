@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { Component, computed, ref } from 'vue';
+import { Component, computed, ref, onMounted } from 'vue';
+import PaginationWidget from './PaginationWidget.vue';
 
 interface Tab {
   id: string;
@@ -19,6 +20,7 @@ interface TableContent {
 
 
 const props = defineProps({
+  currentRow: { type: Array, default: [] },
   title: { type: String, default: 'Assets' },
   width: { type: String, default: '100%' },
   headerColor: { type: String, default: 'white' },
@@ -142,6 +144,7 @@ const activateTab = (tabId: string) => {
   currentTab.value = tabId;
 };
 
+ 
 
 const tableStyles = computed(() => ({
   title: props.title,
@@ -159,6 +162,89 @@ const tableStyles = computed(() => ({
   verticalAlign: 'middle',
   borderColor: props.borderColor,
 }));
+
+onMounted(() => {
+  // Create and append jQuery script
+  const script = document.createElement("script");
+  script.src = "https://code.jquery.com/jquery-3.6.0.min.js";
+  script.type = "text/javascript";
+  script.onload = () => {
+    console.log("jQuery has been loaded successfully!");
+
+    $(document).ready(function() {
+  const rowsPerPage = 10;  // Set how many rows per page
+  const rows = $('#Table tbody tr');  // Get all table rows
+  const totalRows = rows.length;  // Get the total number of rows
+  const totalPages = Math.ceil(totalRows / rowsPerPage);  // Calculate total pages
+
+  // Function to show a specific page
+  function showPage(pageNumber: number) {
+    const startIndex = (pageNumber - 1) * rowsPerPage;
+    const endIndex = startIndex + rowsPerPage;
+
+    // Hide all rows
+    rows.hide();
+
+    // Show the rows for the current page
+    rows.slice(startIndex, endIndex).show();
+
+    // Update pagination controls
+    updatePagination(pageNumber);
+
+    // Update the "Showing X to Y of Z results" text
+    updatePaginationInfo(pageNumber);
+  }
+
+  // Function to update pagination controls
+  function updatePagination(currentPage: number) {
+    $('#pagination-buttons').empty();
+
+    // Prev button
+    const prevButton = $('<button style="color:#55585f;"> < </button>').prop('disabled', currentPage === 1);
+    prevButton.on('click', function() {
+      if (currentPage > 1) {
+        showPage(currentPage - 1);
+      }
+    });
+
+    // Page buttons
+    for (let i = 1; i <= totalPages; i++) {
+      const pageButton = $('<button></button>').text(i).addClass(i === currentPage ? 'active' : '');
+      pageButton.on('click', function() {
+        showPage(i);
+      });
+      $('#pagination-buttons').append(pageButton);
+    }
+
+    // Next button
+    const nextButton = $('<button style="color:#55585f;"> > </button>').prop('disabled', currentPage === totalPages);
+    nextButton.on('click', function() {
+      if (currentPage < totalPages) {
+        showPage(currentPage + 1);
+      }
+    });
+
+    // Append buttons to pagination container
+    $('#pagination-buttons').prepend(prevButton).append(nextButton);
+  }
+
+  // Function to update the "Showing X to Y of Z results" text
+  function updatePaginationInfo(currentPage: number) {
+    const startItem = (currentPage - 1) * rowsPerPage + 1;
+    const endItem = Math.min(currentPage * rowsPerPage, totalRows);
+    $('#pagination-info').text(`Showing ${startItem} to ${endItem} of ${totalRows} results`);
+  }
+
+  // Initialize first page
+  showPage(1);
+});
+    
+  };
+
+  document.head.appendChild(script);
+});
+
+
 </script>
 
 <template>
@@ -175,7 +261,7 @@ const tableStyles = computed(() => ({
                           </svg>
 
                         </span>
-                        <input type="text" :style="{background:tableBgColor}" class="form-control border-0" placeholder="Search Assets...">
+                        <input type="search" aria-controls="Table" :style="{background:tableBgColor}" class="form-control border-0" placeholder="Search Assets...">
                       </div>
                   </div>
                 <div class="col">
@@ -272,7 +358,7 @@ const tableStyles = computed(() => ({
                       >
                       
                           <div class="table-responsive text-nowrap">
-                            <table class="table mb-5 col-xl-12" :style="tableStyles">
+                            <table id="Table" class="table mb-5 col-xl-12" :style="tableStyles">
                               <thead>
                                 <tr style="border-color:#384351;">
                                   <th class="sticky-column border-0"></th>
@@ -303,9 +389,14 @@ const tableStyles = computed(() => ({
                               <tbody>
                                 <slot :name="tab.id"></slot>
                               </tbody>
-                              <tfoot>
-                              </tfoot>
                             </table>
+                            
+                          </div>
+                          <div class="card rounded-1 px-3 py-3" style="background:#161a24;">
+                            <div class="pagination-container">
+                                <div class="pagination-info" id="pagination-info"></div>
+                                <div class="pagination-buttons" id="pagination-buttons"></div>
+                              </div>
                           </div>
                          
                       </div>
@@ -315,7 +406,43 @@ const tableStyles = computed(() => ({
   </template>
 
 <style lang="scss">
- 
+.pagination-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 10px;
+    }
+
+    .pagination-info {
+      font-size: 14px;
+    }
+
+    .pagination-buttons {
+      display: flex;
+      gap: 5px;
+    }
+
+    .pagination-buttons button {
+      padding: 5px 10px;
+      background: transparent;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    .pagination-buttons button:disabled {
+      background: transparent;
+      cursor: not-allowed;
+    }
+
+    .pagination-buttons button.active {
+      background: #1d2330;
+    }
+ .wide-sticky-column {
+  min-width: 400px; /* Adjust as needed */
+  max-width: 300px; /* Optional */
+  width: 450px; /* Adjust width */
+}
  .box {
   display: inline-block;  
   border-left: 3px solid #28303d;   

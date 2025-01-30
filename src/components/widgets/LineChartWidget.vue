@@ -11,7 +11,7 @@
     labels: Array, // Labels for x-axis
     data: Array, // Data points
     width:{ type: String, default: "200px" },
-    height:{ type: String, default: "50px" },
+    height:{ type: String, default: "60px" },
     lineColor: { type: String, default: "rgba(75, 192, 192, 1)" },  
     showGrid: { type: Boolean, default: false },  
     gridColor: { type: String, default: "rgba(200, 200, 200, 0.2)" }  
@@ -21,6 +21,7 @@
   const chartRef = ref(null);
   
   onMounted(() => {
+    
     const script = document.createElement('script');
     script.src = "https://cdn.jsdelivr.net/npm/chart.js";
     script.onload = () => {

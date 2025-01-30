@@ -7,13 +7,8 @@ import PriceWidget from '../widgets/PriceWidget.vue';
 import PercentageWidget from '../widgets/PercentageWidget.vue';
 import PillWidget from '../widgets/PillWidget.vue';
 import { onMounted } from "vue";
-
-// onMounted(() => {
-//   const link = document.createElement("link");
-//   link.href = "https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Material+Icons&display=swap";
-//   link.rel = "stylesheet";
-//   document.head.appendChild(link);
-// });
+import PaginationWidget from '../widgets/PaginationWidget.vue';
+ 
 
 const data = Array.from({ length: 30 }, () => Math.floor(Math.random() * 100)); // Generate 30 random data points
 const labels = [
@@ -88,6 +83,24 @@ const overview_list = [
                        },
                     },
                     {
+                      id: 'calender',
+                      label: 'Calender',
+                      content: {
+                        subject: 'Assets',
+                        columns: [
+                          { title: 'Assets', subTitle: '' },
+                          { title: 'Price', subTitle: 'Current' },
+                          { title: 'Price', subTitle: '24H Change' },
+                          { title: 'Price', subTitle: '7D Change' },
+                          { title: 'Price', subTitle: '30D Change' },
+                          { title: 'Price', subTitle: '30D TL' },
+                          { title: 'Marketcap', subTitle: 'Current' },
+                          { title: 'Real Volume', subTitle: '24H' },
+                          { title: 'Sector', subTitle: '' },
+                        ]
+                       },
+                    },
+                    {
                       id: 'long-term',
                       label: 'Long-Term ROI',
                       content: {
@@ -137,11 +150,37 @@ const overview_list = [
               <td><PillWidget :title="row[9]"/></td>
             </tr>
           </template>
+          <template #calender>
+            <tr v-for="(row, index) in overview_list" :key="index" style="border-color:#384351;">
+              <td class="sticky-column">{{ index + 1 }}</td>
+              <td class="sticky-column">
+                <AssetWidget 
+                  :image="row[0]"
+                  :title="row[1]"
+                  :symbol="row[2]"
+                />
+              </td>
+              <td><PriceWidget :amount="row[3]" symbol="$"/></td>
+              <td><PercentageWidget :amount="row[4]" color="red"/></td>
+              <td><PercentageWidget :amount="row[5]" color="red"/></td>
+              <td><PercentageWidget :amount="row[6]" color="green"/></td>
+              <td> 
+                <LineChartWidget 
+                  :data="data" 
+                  :labels="labels"
+                  :options="{ lineColor: 'rgba(255, 99, 132, 1)', pointColor: 'rgba(255, 99, 132, 1)' }" 
+                />
+              </td>
+              <td><PriceWidget :amount="row[7]" symbol="$"/></td>
+              <td><PriceWidget :amount="row[8]" symbol="$"/></td>
+              <td><PillWidget :title="row[9]"/></td>
+            </tr>
+          </template>
 
           <template #long-term>
             <tr v-for="(row, index) in overview_list" :key="index" style="border-color:#384351;">
               <td class="sticky-column">{{ index + 1 }}</td>
-              <td class="sticky-column" style="width:500px;">
+              <td class="sticky-column wide-column">
                 <AssetWidget 
                   :image="row[0]"
                   :title="row[1]"
@@ -161,7 +200,6 @@ const overview_list = [
               <td><PercentageWidget :amount="row[6]" color="green"/></td>
             </tr>
           </template>
-      
         </TableWidget>
 
     </div>
