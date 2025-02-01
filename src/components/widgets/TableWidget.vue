@@ -183,75 +183,75 @@ onMounted(() => {
   script.onload = () => {
     console.log("jQuery has been loaded successfully!");
 
-    $(document).ready(function() {
+//     $(document).ready(function() {
       
-          const rowsPerPage = 10;   
-          let rows = $('#Table tbody tr');   
-          const totalRows = rows.length;  
-          const totalPages = Math.ceil(totalRows / rowsPerPage);  
+//           const rowsPerPage = 10;   
+//           let rows = $('#Table tbody tr');   
+//           const totalRows = rows.length;  
+//           const totalPages = Math.ceil(totalRows / rowsPerPage);  
 
         
-          // Function to show a specific page
-          function showPage(pageNumber: number) {
-            const startIndex = (pageNumber - 1) * rowsPerPage;
-            const endIndex = startIndex + rowsPerPage;
+//           // Function to show a specific page
+//           function showPage(pageNumber: number) {
+//             const startIndex = (pageNumber - 1) * rowsPerPage;
+//             const endIndex = startIndex + rowsPerPage;
 
-            // Hide all rows
-            rows.hide();
+//             // Hide all rows
+//             rows.hide();
 
-            // Show the rows for the current page
-            rows.slice(startIndex, endIndex).show();
+//             // Show the rows for the current page
+//             rows.slice(startIndex, endIndex).show();
 
-            // Update pagination controls
-            updatePagination(pageNumber);
+//             // Update pagination controls
+//             updatePagination(pageNumber);
 
-            // Update the "Showing X to Y of Z results" text
-            updatePaginationInfo(pageNumber);
-          }
+//             // Update the "Showing X to Y of Z results" text
+//             updatePaginationInfo(pageNumber);
+//           }
 
-  // Function to update pagination controls
-  function updatePagination(currentPage: number) {
-    $('#pagination-buttons').empty();
+//   // Function to update pagination controls
+//   function updatePagination(currentPage: number) {
+//     $('#pagination-buttons').empty();
 
-    // Prev button
-    const prevButton = $('<button style="color:#55585f;"> < </button>').prop('disabled', currentPage === 1);
-    prevButton.on('click', function() {
-      if (currentPage > 1) {
-        showPage(currentPage - 1);
-      }
-    });
+//     // Prev button
+//     const prevButton = $('<button style="color:#55585f;"> < </button>').prop('disabled', currentPage === 1);
+//     prevButton.on('click', function() {
+//       if (currentPage > 1) {
+//         showPage(currentPage - 1);
+//       }
+//     });
 
-    // Page buttons
-    for (let i = 1; i <= totalPages; i++) {
-      const pageButton = $('<button></button>').text(i).addClass(i === currentPage ? 'active' : '');
-      pageButton.on('click', function() {
-        showPage(i);
-      });
-      $('#pagination-buttons').append(pageButton);
-    }
+//     // Page buttons
+//     for (let i = 1; i <= totalPages; i++) {
+//       const pageButton = $('<button></button>').text(i).addClass(i === currentPage ? 'active' : '');
+//       pageButton.on('click', function() {
+//         showPage(i);
+//       });
+//       $('#pagination-buttons').append(pageButton);
+//     }
 
-    // Next button
-    const nextButton = $('<button style="color:#55585f;"> > </button>').prop('disabled', currentPage === totalPages);
-    nextButton.on('click', function() {
-      if (currentPage < totalPages) {
-        showPage(currentPage + 1);
-      }
-    });
+//     // Next button
+//     const nextButton = $('<button style="color:#55585f;"> > </button>').prop('disabled', currentPage === totalPages);
+//     nextButton.on('click', function() {
+//       if (currentPage < totalPages) {
+//         showPage(currentPage + 1);
+//       }
+//     });
 
-    // Append buttons to pagination container
-    $('#pagination-buttons').prepend(prevButton).append(nextButton);
-  }
+//     // Append buttons to pagination container
+//     $('#pagination-buttons').prepend(prevButton).append(nextButton);
+//   }
 
-  // Function to update the "Showing X to Y of Z results" text
-  function updatePaginationInfo(currentPage: number) {
-    const startItem = (currentPage - 1) * rowsPerPage + 1;
-    const endItem = Math.min(currentPage * rowsPerPage, totalRows);
-    $('#pagination-info').text(`Showing ${startItem} to ${endItem} of ${totalRows} results`);
-  }
+//   // Function to update the "Showing X to Y of Z results" text
+//   function updatePaginationInfo(currentPage: number) {
+//     const startItem = (currentPage - 1) * rowsPerPage + 1;
+//     const endItem = Math.min(currentPage * rowsPerPage, totalRows);
+//     $('#pagination-info').text(`Showing ${startItem} to ${endItem} of ${totalRows} results`);
+//   }
 
-  // Initialize first page
-  showPage(1);
-});
+//   // Initialize first page
+//   showPage(1);
+// });
     
   };
 
@@ -389,8 +389,8 @@ onMounted(() => {
                                     :key="index"
                                     style="border-color:#384351;"
                                     :class="{
-                                    'border-0': true,
                                     'sticky-column': col.title === props.tabs[0].content.subject, 
+                                    'border-0': true,
                                     'px-4': true,
                                     'py-2': true,
                                     'text-capitalize': true,
@@ -418,12 +418,12 @@ onMounted(() => {
                          
                       </div>
                     </div>
-                    <div class="card rounded-1 px-3 py-3" style="background:#161a24;">
+                    <!-- <div class="card rounded-1 px-3 py-3" style="background:#161a24;">
                             <div class="pagination-container">
                                 <div class="pagination-info" id="pagination-info"></div>
                                 <div class="pagination-buttons" id="pagination-buttons"></div>
                               </div>
-                          </div>
+                          </div> -->
                 </div>
               </div>
   </template>
