@@ -510,8 +510,10 @@ onMounted(() => {
 }
 .sticky-header
 {
-  background-color: #384351;
-  border:1px solid #384351;
+  background-color: #12161e;
+  border-color: #12161e;
+  // border:1px solid #384351;
+  border:0;
 }
  .sticky-column {
   position: sticky;
