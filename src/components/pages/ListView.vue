@@ -127,7 +127,7 @@ const overview_list = [
           <template #overview>
             <tr v-for="(row, index) in overview_list" :key="index" style="border-color:#384351;">
               <td class="sticky-column">{{ index + 1 }}</td>
-              <td class="sticky-column">
+              <td class="sticky-column" style="">
                 <AssetWidget 
                   :image="row[0]"
                   :title="row[1]"

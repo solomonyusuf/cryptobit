@@ -9,5 +9,5 @@ const props = defineProps({
 </script>
 <template>
     <img v-if="image" class="px-2" :src="image" style="height:30px;border-radius:15px;" />
-    <strong>{{ title }}</strong>({{ symbol }})
+    <strong>{{ title }}</strong> <span class="text-gray">{{ symbol }}</span>
 </template> 

@@ -24,7 +24,7 @@ const props = defineProps({
   title: { type: String, default: 'Assets' },
   width: { type: String, default: '100%' },
   headerColor: { type: String, default: 'white' },
-  tableBgColor: { type: String, default: '#1c222e' },
+  tableBgColor: { type: String, default: '#12161e' },
   accentBgColor: { type: String, default: 'transparent' },
   stripedColor: { type: String, default: '#697a8d' },
   stripedBg: { type: String, default: '#f9fafb' },
@@ -34,7 +34,7 @@ const props = defineProps({
   hoverBg: { type: String, default: 'rgba(67, 89, 113, 0.06)' },
   borderColor: { type: String, default: '#fffff' },
   subHeadingColor: { type: String, default: 'gray' },
-  border: { type: String, default: '1px solid #d9dee3' },
+  border: { type: String, default: '1px solid #1D2330' },
   fontColor: { type: String, default: 'white' },
   onClick: {
     type: Function,
@@ -250,7 +250,7 @@ onMounted(() => {
 </script>
 
 <template>
-        <div class="px-3 border-0" style="background:#111215" >
+        <div class="px-3 border-1">
                 <h3 class="card-header" :style="{color:headerColor}">{{title}}</h3>
                 <div class="mb-3">
                   <div class="row flex-nowrap mb-2  justify-content-start">
