@@ -172,11 +172,13 @@ onMounted(() => {
     console.log("jQuery has been loaded successfully!");
 
     $(document).ready(function() {
+      
           const rowsPerPage = 10;   
-          const rows = $('#Table tbody tr');   
+          let rows = $('#Table tbody tr');   
           const totalRows = rows.length;  
           const totalPages = Math.ceil(totalRows / rowsPerPage);  
 
+        
           // Function to show a specific page
           function showPage(pageNumber: number) {
             const startIndex = (pageNumber - 1) * rowsPerPage;
@@ -325,9 +327,9 @@ onMounted(() => {
                 </div>
                 <div class="card rounded-1 border-0 tab-container" :style="{border, background:tableBgColor}">
                   
-                   <div style="border-bottom: 1px solid;" class="d-flex justify-content-between align-items-center">
-                    <ul class="nav" :style="{ color:fontColor}" role="tablist">
-                      <li v-for="tab in props.tabs" :key="tab.id" class="nav-item">
+                   <div style="border-bottom: 1px solid;" class=" mt-0 d-flex justify-content-between align-items-center">
+                    <!-- <ul class="nav" :style="{ color:fontColor}" role="tablist">
+                      <li v-for="tab in props.tabs" :key="tab.id" class="nav-item d-none d-md-block">
                         <a
                           href="#"
                           class="nav-link mt-3"
@@ -338,14 +340,29 @@ onMounted(() => {
                           {{ tab.label }}
                         </a>
                       </li>
+                    </ul> -->
+                    <ul class="scroll-container nav" :style="{ color:fontColor}" role="tablist">
+                      <li v-for="tab in props.tabs" :key="tab.id" class="nav-item scroll-item">
+                        <a
+                          href="#"
+                          class="nav-link mt-3 mb-0"
+                          :style={color:fontColor}
+                          :class="{ active: currentTab === tab.id }"
+                          @click.prevent="activateTab(tab.id)"
+                        >
+                          {{ tab.label }}
+                        </a>
+                      </li>
                     </ul>
+
+                    
                     <div class="d-flex gap-2 px-3">
                       <div class="box px-2 py-3">33,380 Assets</div>
                       <label class="py-3">Group Assets</label>
                       <div class="form-check form-switch py-3">
                         <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
                       </div>
-                      <img src="/images/download.png" style="height:24px;" class=" px-2 mt-3">
+                      <img src="/images/download.png" style="height:24px;" class=" d-none d-md-block px-2 mt-3">
                     </div>
                   </div>
                      
@@ -392,21 +409,49 @@ onMounted(() => {
                             </table>
                             
                           </div>
-                          <div class="card rounded-1 px-3 py-3" style="background:#161a24;">
+                         
+                         
+                      </div>
+                    </div>
+                    <div class="card rounded-1 px-3 py-3" style="background:#161a24;">
                             <div class="pagination-container">
                                 <div class="pagination-info" id="pagination-info"></div>
                                 <div class="pagination-buttons" id="pagination-buttons"></div>
                               </div>
                           </div>
-                         
-                      </div>
-                    </div>
                 </div>
               </div>
   </template>
 
 <style lang="scss">
-.pagination-container {
+    /* Scroll container */
+    .scroll-container {
+            display: flex;
+            flex-wrap: nowrap;  /* Prevent wrapping */
+            overflow-x: auto;   /* Enable horizontal scrolling */
+            -webkit-overflow-scrolling: touch; /* Smooth scrolling for iOS */
+            scrollbar-width: none; /* Hide scrollbar for Firefox */
+            -ms-overflow-style: none; /* Hide scrollbar for IE/Edge */
+        }
+
+        /* Hide scrollbar for Chrome, Safari */
+        .scroll-container::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* List item styling */
+        .scroll-item {
+            flex: 0 0 auto; /* Prevent shrinking */
+            width: 170px; /* Set a fixed width */
+            
+            margin-right: 0.01rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            
+        }
+  .pagination-container {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -445,8 +490,8 @@ onMounted(() => {
 }
  .box {
   display: inline-block;  
-  border-left: 3px solid #28303d;   
-  border-right: 3px solid #28303d;  
+  border-left: 2px solid #28303d;   
+  border-right: 2px solid #28303d;  
 }
  .sticky-column {
   position: sticky;
@@ -582,7 +627,7 @@ blockquote {
 
 b,
 strong {
-  font-weight: 900;
+  font-weight: 700;
 }
 
 small, .small {
@@ -3495,7 +3540,6 @@ textarea.form-control-lg {
 
 .nav {
   display: flex;
-  flex-wrap: wrap;
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
