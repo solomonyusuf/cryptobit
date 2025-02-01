@@ -354,10 +354,10 @@ onMounted(() => {
                       </li>
                     </ul>
 
-                    <div class="d-sm-block mt-2 mb-0 d-flex justify-content-between">
-                    <button @click="scrollLeft" class="btn btn-sm btn-primary border rounded-pill">←</button>
-                    <button @click="scrollRight" class="btn btn-sm btn-primary border rounded-pill">→</button>
-                  </div>
+                    <div class="d-block d-sm-none mt-2 mb-0 d-flex justify-content-between">
+                  <button @click="scrollLeft" class="btn btn-sm btn-primary border rounded-pill">←</button>
+                  <button @click="scrollRight" class="btn btn-sm btn-primary border rounded-pill">→</button>
+                </div>
                     <div class="d-flex gap-2 px-3">
                       <div class="box px-2 py-3">33,380 Assets</div>
                       <label class="py-3">Group Assets</label>
@@ -383,14 +383,13 @@ onMounted(() => {
                             <table id="Table" class="table mb-5 col-xl-12" style="max-height:50vh; overflow-y: auto;" :style="tableStyles">
                               <thead class="sticky-header">
                                 <tr style="border-color:#384351;">
-                                  <th class="border-0"></th>
+                                  <th></th>
                                   <th
                                     v-for="(col, index) in tab.content.columns"                       
                                     :key="index"
                                     style="border-color:#384351;"
                                     :class="{
                                     'sticky-column': col.title === props.tabs[0].content.subject, 
-                                    'border-0': true,
                                     'px-4': true,
                                     'py-2': true,
                                     'text-capitalize': true,
