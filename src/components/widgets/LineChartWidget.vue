@@ -1,6 +1,6 @@
 <template>
     <div>
-      <canvas ref="chartRef" :style="{width, height}"></canvas>
+      <canvas ref="chartRef" :style="{maxWidth: width, height}"></canvas>
     </div>
   </template>
   
@@ -10,7 +10,7 @@
   const props = defineProps({
     labels: Array, // Labels for x-axis
     data: Array, // Data points
-    width:{ type: String, default: "200px" },
+    width:{ type: String, default: "15vh" },
     height:{ type: String, default: "60px" },
     lineColor: { type: String, default: "rgba(75, 192, 192, 1)" },  
     showGrid: { type: Boolean, default: false },  

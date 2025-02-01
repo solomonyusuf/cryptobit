@@ -4,6 +4,7 @@ const props = defineProps({
   image: { type: String, default: 'https://img.icons8.com/?size=100&id=63192&format=png&color=000000' },
   title: { type: String, default: 'Bitcoin' },
   symbol: { type: String, default: 'BTC' },
+
 });
 
 </script>

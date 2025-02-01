@@ -31,9 +31,9 @@ const overview_list = [
                 "Cryptocurrency"
               ], 
               [
-                "https://img.icons8.com/?size=100&id=63192&format=png&color=000000",
-                "Bitcoin",
-                "BTC",
+                "https://img.icons8.com/?size=100&id=IhWBOFHtv6vx&format=png&color=000000",
+                "Etherum",
+                "Eth",
                 "100,328.99",
                 "-0.89",
                 "-5.39",
@@ -43,9 +43,9 @@ const overview_list = [
                 "Cryptocurrency"
               ],
                [
-                "https://img.icons8.com/?size=100&id=63192&format=png&color=000000",
-                "Bitcoin",
-                "BTC",
+                "https://img.icons8.com/?size=100&id=GPOyWCiTpgRr&format=png&color=000000",
+                "XRP",
+                "XRP",
                 "100,328.99",
                 "-0.89",
                 "-5.39",
@@ -61,7 +61,7 @@ const overview_list = [
 </script>
 
 <template>
-    <div class="bit-px-2"> 
+    <div class="bit-px-1"> 
         <TableWidget
          :tabs="[
                     {
@@ -126,8 +126,8 @@ const overview_list = [
           class="bit-mt-4">
           <template #overview>
             <tr v-for="(row, index) in overview_list" :key="index" style="border-color:#384351;">
-              <td class="sticky-column">{{ index + 1 }}</td>
-              <td class="sticky-column" style="">
+              <td class="">{{ index + 1 }}</td>
+              <td class="sticky-column">
                 <AssetWidget 
                   :image="row[0]"
                   :title="row[1]"

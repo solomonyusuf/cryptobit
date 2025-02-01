@@ -144,7 +144,19 @@ const activateTab = (tabId: string) => {
   currentTab.value = tabId;
 };
 
- 
+const scrollContainer = ref<HTMLElement | null>();
+
+const scrollLeft = () => {
+  if (scrollContainer.value) {
+    scrollContainer.value.scrollBy({ left: -150, behavior: "smooth" });
+  }
+};
+
+const scrollRight = () => {
+  if (scrollContainer.value) {
+    scrollContainer.value.scrollBy({ left: 150, behavior: "smooth" });
+  }
+};
 
 const tableStyles = computed(() => ({
   title: props.title,
@@ -328,20 +340,7 @@ onMounted(() => {
                 <div class="card rounded-1 border-0 tab-container" :style="{border, background:tableBgColor}">
                   
                    <div style="border-bottom: 1px solid;" class=" mt-0 d-flex justify-content-between align-items-center">
-                    <!-- <ul class="nav" :style="{ color:fontColor}" role="tablist">
-                      <li v-for="tab in props.tabs" :key="tab.id" class="nav-item d-none d-md-block">
-                        <a
-                          href="#"
-                          class="nav-link mt-3"
-                          :style={color:fontColor}
-                          :class="{ active: currentTab === tab.id }"
-                          @click.prevent="activateTab(tab.id)"
-                        >
-                          {{ tab.label }}
-                        </a>
-                      </li>
-                    </ul> -->
-                    <ul class="scroll-container nav" :style="{ color:fontColor}" role="tablist">
+                    <ul ref="scrollContainer" class="scroll-container nav" :style="{ color:fontColor}" role="tablist">
                       <li v-for="tab in props.tabs" :key="tab.id" class="nav-item scroll-item">
                         <a
                           href="#"
@@ -355,14 +354,20 @@ onMounted(() => {
                       </li>
                     </ul>
 
-                    
+                    <div class="d-sm-none mt-2 mb-0 d-flex justify-content-between">
+                    <button @click="scrollLeft" class="btn btn-sm btn-primary border rounded-pill">←</button>
+                    <button @click="scrollRight" class="btn btn-sm btn-primary border rounded-pill">→</button>
+                  </div>
                     <div class="d-flex gap-2 px-3">
                       <div class="box px-2 py-3">33,380 Assets</div>
                       <label class="py-3">Group Assets</label>
                       <div class="form-check form-switch py-3">
                         <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
                       </div>
-                      <img src="/images/download.png" style="height:24px;" class=" d-none d-md-block px-2 mt-3">
+                      <div class="box2 px-2 py-3">
+                        <img src="/images/download.png" style="height:24px;" class="">
+                    
+                      </div>
                     </div>
                   </div>
                      
@@ -375,10 +380,10 @@ onMounted(() => {
                       >
                       
                           <div class="table-responsive text-nowrap">
-                            <table id="Table" class="table mb-5 col-xl-12" :style="tableStyles">
-                              <thead>
+                            <table id="Table" class="table mb-5 col-xl-12" style="max-height: 400px; overflow-y: auto;" :style="tableStyles">
+                              <thead class="sticky-header">
                                 <tr style="border-color:#384351;">
-                                  <th class="sticky-column border-0"></th>
+                                  <th class="border-0"></th>
                                   <th
                                     v-for="(col, index) in tab.content.columns"                       
                                     :key="index"
@@ -424,65 +429,72 @@ onMounted(() => {
   </template>
 
 <style lang="scss">
-    /* Scroll container */
-    .scroll-container {
-            display: flex;
-            flex-wrap: nowrap;  /* Prevent wrapping */
-            overflow-x: auto;   /* Enable horizontal scrolling */
-            -webkit-overflow-scrolling: touch; /* Smooth scrolling for iOS */
-            scrollbar-width: none; /* Hide scrollbar for Firefox */
-            -ms-overflow-style: none; /* Hide scrollbar for IE/Edge */
-        }
+.sticky-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: white;
+}
+/* Scroll container */
+.scroll-container {
+    display: flex;
+    flex-wrap: nowrap;  /* Prevent wrapping */
+    overflow-x: auto;   /* Enable horizontal scrolling */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling for iOS */
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+    -ms-overflow-style: none; /* Hide scrollbar for IE/Edge */
+}
 
-        /* Hide scrollbar for Chrome, Safari */
-        .scroll-container::-webkit-scrollbar {
-            display: none;
-        }
+/* Hide scrollbar for Chrome, Safari */
+.scroll-container::-webkit-scrollbar {
+    display: none;
+}
 
-        /* List item styling */
-        .scroll-item {
-            flex: 0 0 auto; /* Prevent shrinking */
-            width: 170px; /* Set a fixed width */
-            
-            margin-right: 0.01rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            
-        }
-  .pagination-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: 10px;
-    }
+/* List item styling */
+.scroll-item {
+    flex: 0 0 auto; /* Prevent shrinking */
+    width: 170px; /* Set a fixed width */
+    
+    margin-right: 0.01rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    
+}
+.pagination-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+  }
 
-    .pagination-info {
-      font-size: 14px;
-    }
+  .pagination-info {
+    font-size: 14px;
+  }
 
-    .pagination-buttons {
-      display: flex;
-      gap: 5px;
-    }
+  .pagination-buttons {
+    display: flex;
+    gap: 5px;
+  }
 
-    .pagination-buttons button {
-      padding: 5px 10px;
-      background: transparent;
-      color: white;
-      border: none;
-      cursor: pointer;
-    }
+  .pagination-buttons button {
+    padding: 5px 10px;
+    background: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
 
-    .pagination-buttons button:disabled {
-      background: transparent;
-      cursor: not-allowed;
-    }
+  .pagination-buttons button:disabled {
+    background: transparent;
+    cursor: not-allowed;
+  }
 
-    .pagination-buttons button.active {
-      background: #1d2330;
-    }
+  .pagination-buttons button.active {
+    background: #1d2330;
+  }
+
  .wide-sticky-column {
   min-width: 400px; /* Adjust as needed */
   max-width: 300px; /* Optional */
@@ -493,10 +505,16 @@ onMounted(() => {
   border-left: 2px solid #28303d;   
   border-right: 2px solid #28303d;  
 }
+.box2 {
+  display: inline-block;  
+  border-left: 2px solid #28303d;    
+}
  .sticky-column {
   position: sticky;
   left: 0;
   z-index: 2; 
+  min-width: 450px; 
+  max-width: 500px;
 }
 
 tbody .sticky-column {
