@@ -380,7 +380,7 @@ onMounted(() => {
                       >
                       
                           <div class="table-responsive text-nowrap">
-                            <table id="Table" class="table mb-5 col-xl-12" style="max-height: 400px; overflow-y: auto;" :style="tableStyles">
+                            <table id="Table" class="table mb-5 col-xl-12" style="max-height:50vh; overflow-y: auto;" :style="tableStyles">
                               <thead class="sticky-header">
                                 <tr style="border-color:#384351;">
                                   <th class="border-0"></th>
@@ -389,8 +389,8 @@ onMounted(() => {
                                     :key="index"
                                     style="border-color:#384351;"
                                     :class="{
-                                    'sticky-column': col.title === props.tabs[0].content.subject, 
                                     'border-0': true,
+                                    'sticky-column': col.title === props.tabs[0].content.subject, 
                                     'px-4': true,
                                     'py-2': true,
                                     'text-capitalize': true,
@@ -515,6 +515,7 @@ onMounted(() => {
   z-index: 2; 
   min-width: 450px; 
   max-width: 500px;
+  box-shadow: none !important;
 }
 
 tbody .sticky-column {
