@@ -354,7 +354,7 @@ onMounted(() => {
                       </li>
                     </ul>
 
-                    <div class="d-sm-none mt-2 mb-0 d-flex justify-content-between">
+                    <div class="d-sm-block mt-2 mb-0 d-flex justify-content-between">
                     <button @click="scrollLeft" class="btn btn-sm btn-primary border rounded-pill">←</button>
                     <button @click="scrollRight" class="btn btn-sm btn-primary border rounded-pill">→</button>
                   </div>
