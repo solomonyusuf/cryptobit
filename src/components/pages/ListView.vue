@@ -8,7 +8,8 @@ import PercentageWidget from '../widgets/PercentageWidget.vue';
 import PillWidget from '../widgets/PillWidget.vue';
 import { onMounted } from "vue";
 import PaginationWidget from '../widgets/PaginationWidget.vue';
- 
+import RowWidget from '../widgets/RowWidget.vue';
+import ColumnWidget from '../widgets/ColumnWidget.vue';
 
 const data = Array.from({ length: 30 }, () => Math.floor(Math.random() * 100)); // Generate 30 random data points
 const labels = [
@@ -54,7 +55,7 @@ const overview_list = [
                 "28.96B",
                 "Cryptocurrency"
               ],
-               [
+              [
                 "https://img.icons8.com/?size=100&id=63192&format=png&color=000000",
                 "Bitcoin",
                 "BTC",
@@ -90,16 +91,34 @@ const overview_list = [
                 "28.96B",
                 "Cryptocurrency"
               ],
+              [
+                "https://img.icons8.com/?size=100&id=IhWBOFHtv6vx&format=png&color=000000",
+                "Etherum",
+                "Eth",
+                "100,328.99",
+                "-0.89",
+                "-5.39",
+                "+7.54",
+                "2.01T",
+                "28.96B",
+                "Cryptocurrency"
+              ],
+              [
+                "https://img.icons8.com/?size=100&id=GPOyWCiTpgRr&format=png&color=000000",
+                "XRP",
+                "XRP",
+                "100,328.99",
+                "-0.89",
+                "-5.39",
+                "+7.54",
+                "2.01T",
+                "28.96B",
+                "Cryptocurrency"
+              ],
               
                 
           ];
-
-</script>
-
-<template>
-    <div class="bit-px-1"> 
-        <TableWidget
-         :tabs="[
+const header = [
                     {
                       id: 'overview',
                       label: 'Overview',
@@ -120,7 +139,7 @@ const overview_list = [
                     },
                     {
                       id: 'calender',
-                      label: 'Calender',
+                      label: 'Calender-Year ROI',
                       content: {
                         subject: 'Assets',
                         columns: [
@@ -158,83 +177,87 @@ const overview_list = [
                     },
                      
                     
-                  ]"
+                  ];
+
+</script>
+
+<template>
+    <div class="bit-px-1"> 
+        <TableWidget
+         :tabs="header"
           class="bit-mt-4">
           <template #overview>
-            <tr v-for="(row, index) in overview_list" :key="index" style="border-color:#384351;">
-              <td class="">{{ index + 1 }}</td>
-              <td class="sticky-column">
+            <RowWidget v-for="(row, index) in overview_list" :key="index">
+              <ColumnWidget>{{ index + 1 }}</ColumnWidget>
+              <ColumnWidget class="sticky-column">
                 <AssetWidget 
                   :image="row[0]"
                   :title="row[1]"
                   :symbol="row[2]"
                 />
-              </td>
-              <td><PriceWidget :amount="row[3]" symbol="$"/></td>
-              <td><PercentageWidget :amount="row[4]" color="red"/></td>
-              <td><PercentageWidget :amount="row[5]" color="red"/></td>
-              <td><PercentageWidget :amount="row[6]" color="green"/></td>
-              <td> 
+              </ColumnWidget>
+              <ColumnWidget>{{ index + 1 }}</ColumnWidget>
+              <ColumnWidget><PriceWidget :amount="row[3]" symbol="$"/></ColumnWidget>
+              <ColumnWidget><PercentageWidget :amount="row[4]" color="red"/></ColumnWidget>
+              <ColumnWidget><PercentageWidget :amount="row[5]" color="red"/></ColumnWidget>
+              <ColumnWidget><PercentageWidget :amount="row[6]" color="green"/></ColumnWidget>
+              <ColumnWidget> 
                 <LineChartWidget 
                   :data="data" 
                   :labels="labels"
                   :options="{ lineColor: 'rgba(255, 99, 132, 1)', pointColor: 'rgba(255, 99, 132, 1)' }" 
                 />
-              </td>
-              <td><PriceWidget :amount="row[7]" symbol="$"/></td>
-              <td><PriceWidget :amount="row[8]" symbol="$"/></td>
-              <td><PillWidget :title="row[9]"/></td>
-            </tr>
+              </ColumnWidget>
+              <ColumnWidget><PriceWidget :amount="row[7]" symbol="$"/></ColumnWidget>
+              <ColumnWidget><PriceWidget :amount="row[8]" symbol="$"/></ColumnWidget>
+              <ColumnWidget><PillWidget :title="row[9]"/></ColumnWidget>
+            </RowWidget>
           </template>
+
           <template #calender>
-            <tr v-for="(row, index) in overview_list" :key="index" style="border-color:#384351;">
-              <td class="">{{ index + 1 }}</td>
-              <td class="sticky-column">
+            <RowWidget v-for="(row, index) in overview_list" :key="index">
+              <ColumnWidget>{{ index + 1 }}</ColumnWidget>
+              <ColumnWidget class="sticky-column">
                 <AssetWidget 
                   :image="row[0]"
                   :title="row[1]"
                   :symbol="row[2]"
                 />
-              </td>
-              <td><PriceWidget :amount="row[3]" symbol="$"/></td>
-              <td><PercentageWidget :amount="row[4]" color="red"/></td>
-              <td><PercentageWidget :amount="row[5]" color="red"/></td>
-              <td><PercentageWidget :amount="row[6]" color="green"/></td>
-              <td> 
-                <LineChartWidget 
-                  :data="data" 
-                  :labels="labels"
-                  :options="{ lineColor: 'rgba(255, 99, 132, 1)', pointColor: 'rgba(255, 99, 132, 1)' }" 
-                />
-              </td>
-              <td><PriceWidget :amount="row[7]" symbol="$"/></td>
-              <td><PriceWidget :amount="row[8]" symbol="$"/></td>
-              <td><PillWidget :title="row[9]"/></td>
-            </tr>
+              </ColumnWidget>
+              <ColumnWidget><PercentageWidget :amount="row[4]" color="green"/></ColumnWidget>
+              <ColumnWidget><PriceWidget :amount="row[3]" symbol="$"/></ColumnWidget>
+              <ColumnWidget><PercentageWidget :amount="row[4]" color="red"/></ColumnWidget>
+              <ColumnWidget><PercentageWidget :amount="row[5]" color="red"/></ColumnWidget>
+              <ColumnWidget><PercentageWidget :amount="row[6]" color="green"/></ColumnWidget>
+              <ColumnWidget><PercentageWidget :amount="row[6]" color="green"/>
+              </ColumnWidget>
+              <ColumnWidget><PriceWidget :amount="row[7]" symbol="$"/></ColumnWidget>
+              <ColumnWidget><PriceWidget :amount="row[8]" symbol="$"/></ColumnWidget>
+              <ColumnWidget><PriceWidget :amount="row[8]" symbol="$"/></ColumnWidget>
+            </RowWidget>
           </template>
 
           <template #long-term>
-            <tr v-for="(row, index) in overview_list" :key="index" style="border-color:#384351;">
-              <td class="">{{ index + 1 }}</td>
-              <td class="sticky-column">
+            <RowWidget v-for="(row, index) in overview_list" :key="index">
+              <ColumnWidget>{{ index + 1 }}</ColumnWidget>
+              <ColumnWidget class="sticky-column">
                 <AssetWidget 
                   :image="row[0]"
                   :title="row[1]"
                   :symbol="row[2]"
                 />
-              </td>
-              <td><PriceWidget :amount="row[3]" symbol="$"/></td>
-              <td><PercentageWidget :amount="row[4]" color="red"/></td>
-              <td><PercentageWidget :amount="row[5]" color="red"/></td>
-              <td><PercentageWidget :amount="row[6]" color="green"/></td>
-              <td> 
-                <PercentageWidget :amount="row[6]" color="green"/>
-              </td>
-              <td><PercentageWidget :amount="row[6]" color="green"/></td>
-              <td><PercentageWidget :amount="row[6]" color="green"/></td>
-              <td><PercentageWidget :amount="row[6]" color="green"/></td>
-              <td><PercentageWidget :amount="row[6]" color="green"/></td>
-            </tr>
+              </ColumnWidget>
+              <ColumnWidget><PercentageWidget :amount="row[4]" color="green"/></ColumnWidget>
+              <ColumnWidget><PriceWidget :amount="row[3]" symbol="$"/></ColumnWidget>
+              <ColumnWidget><PercentageWidget :amount="row[4]" color="red"/></ColumnWidget>
+              <ColumnWidget><PercentageWidget :amount="row[5]" color="red"/></ColumnWidget>
+              <ColumnWidget><PercentageWidget :amount="row[6]" color="green"/></ColumnWidget>
+              <ColumnWidget><PercentageWidget :amount="row[6]" color="green"/>
+              </ColumnWidget>
+              <ColumnWidget><PriceWidget :amount="row[7]" symbol="$"/></ColumnWidget>
+              <ColumnWidget><PriceWidget :amount="row[8]" symbol="$"/></ColumnWidget>
+              <ColumnWidget><PriceWidget :amount="row[8]" symbol="$"/></ColumnWidget>
+            </RowWidget>
           </template>
         </TableWidget>
 

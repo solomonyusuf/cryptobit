@@ -266,7 +266,7 @@ onMounted(() => {
                 <h3 class="card-header" :style="{color:headerColor}">{{title}}</h3>
                 <div class="mb-3">
                   <div class="row flex-nowrap mb-2  justify-content-start">
-                   <div class="col-3 d-flex align-items-center">
+                   <div class="col-md-3 col-sm-6 d-flex align-items-center">
                     <div class="input-group input-group-merge border-0">
                         <span  :style="{background:tableBgColor}" class="input-group-text border-0">
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
@@ -278,7 +278,7 @@ onMounted(() => {
                         <input type="search" aria-controls="Table" :style="{background:tableBgColor}" class="form-control border-0" placeholder="Search Assets...">
                       </div>
                   </div>
-                <div class="col">
+                <div class="col d-none d-md-block">
                   <select class="form-select border-0">
                       <option>Category All</option>
                       <option value="1">One</option>
@@ -286,7 +286,7 @@ onMounted(() => {
                       <option value="3">Three</option>
                     </select>
                 </div>
-                <div class="col">
+                <div class="col  d-none d-md-block">
                   <select class="form-select border-0">
                       <option>Sector All</option>
                       <option value="1">One</option>
@@ -294,7 +294,7 @@ onMounted(() => {
                       <option value="3">Three</option>
                     </select>
                 </div>
-                <div class="col">
+                <div class="col  d-none d-md-block">
                   <select class="form-select  border-0">
                       <option>Tag All</option>
                       <option value="1">One</option>
@@ -302,7 +302,7 @@ onMounted(() => {
                       <option value="3">Three</option>
                     </select>
                 </div>
-                <div class="col">
+                <div class="col  d-none d-md-block">
                   <select class="form-select  border-0">
                       <option>Exchange All</option>
                       <option value="1">One</option>
@@ -310,7 +310,7 @@ onMounted(() => {
                       <option value="3">Three</option>
                     </select>
                 </div>
-                <div class="col">
+                <div class="col  d-none d-md-block">
                   <select class="form-select  border-0">
                       <option>Network All</option>
                       <option value="1">One</option>
@@ -318,7 +318,7 @@ onMounted(() => {
                       <option value="3">Three</option>
                     </select>
                 </div>
-                 <div class="col">
+                 <div class="col  d-none d-md-block">
                   <select class="form-select  border-0">
                       <option>Marketcap</option>
                       <option value="1">One</option>
@@ -326,7 +326,7 @@ onMounted(() => {
                       <option value="3">Three</option>
                     </select>
                 </div>
-                <div class="col">
+                <div class="col  d-none d-md-block">
                   <select class="form-select border-0">
                       <option>24H Volume</option>
                       <option value="1">One</option>
@@ -344,7 +344,7 @@ onMounted(() => {
                       <li v-for="tab in props.tabs" :key="tab.id" class="nav-item scroll-item">
                         <a
                           href="#"
-                          class="nav-link mt-3 mb-0"
+                          class="nav-link mt-3 mb-0 px-0"
                           :style={color:fontColor}
                           :class="{ active: currentTab === tab.id }"
                           @click.prevent="activateTab(tab.id)"
@@ -359,9 +359,9 @@ onMounted(() => {
                   <button @click="scrollRight" class="btn btn-sm btn-primary border rounded-pill">→</button>
                 </div>
                     <div class="d-flex gap-2 px-3">
-                      <div class="box px-2 py-3">33,380 Assets</div>
-                      <label class="py-3">Group Assets</label>
-                      <div class="form-check form-switch py-3">
+                      <div class="box px-2 py-3 d-none d-md-block">33,380 Assets</div>
+                      <label class="py-3 d-none d-md-block">Group Assets</label>
+                      <div class="form-check form-switch py-3 d-none d-md-block">
                         <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
                       </div>
                       <div class="box2 px-2 py-3">
@@ -3574,6 +3574,7 @@ textarea.form-control-lg {
   display: block;
   padding: 0.5rem 1.25rem;
   color: #8e9baa;
+  max-width:800px;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
