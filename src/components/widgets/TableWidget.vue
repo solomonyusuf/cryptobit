@@ -402,19 +402,14 @@ onMounted(() => {
                                         {{ col.subTitle }}
                                       </div>
                                     </div>
-                                  </th>
-                                   
-                                   
+                                  </th>    
                                 </tr>
                               </thead>
                               <tbody>
                                 <slot :name="tab.id"></slot>
                               </tbody>
-                            </table>
-                            
-                          </div>
-                         
-                         
+                            </table>                       
+                          </div>                                                
                       </div>
                     </div>
                     <!-- <div class="card rounded-1 px-3 py-3" style="background:#161a24;">

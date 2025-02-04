@@ -259,6 +259,7 @@ const header = [
               <ColumnWidget><PriceWidget :amount="row[8]" symbol="$"/></ColumnWidget>
             </RowWidget>
           </template>
+          
         </TableWidget>
 
     </div>

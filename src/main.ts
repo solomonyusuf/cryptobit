@@ -3,13 +3,18 @@ import App from './App.vue'
 import { createRouter, createWebHistory } from 'vue-router';
 import Login from './components/pages/Login.vue';
 import ListView from './components/pages/ListView.vue';
-
+import ChartView from './components/pages/ChartView.vue';
 const router = createRouter({
   history: createWebHistory(),
   routes: [
     
     {
       path: '/',
+      name: 'Pair',
+      component: ChartView,
+    },
+    {
+      path: '/list',
       name: 'List',
       component: ListView,
     },
