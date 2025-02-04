@@ -1,67 +1,58 @@
 <script setup>
 import { ref, onMounted, watch } from "vue";
 
+// Props for price data and chart customization
 const props = defineProps({
-  priceData: { type: Array, required: true }, // [{ time, open, high, low, close }]
-  theme: { type: String, default: "dark" }, // Theme support
+  priceData: { type: Array, required: true },  
+  theme: { type: String, default: "dark" }, 
 });
 
 const chartRef = ref(null);
 
-const loadChartScripts = (callback) => {
-  if (window.Plotly) {
-    callback();
-    return;
-  }
-
+// Load Lightweight Charts script dynamically from CDN
+const loadChartScript = () => {
   const script = document.createElement("script");
-  script.src = "https://cdn.plot.ly/plotly-latest.min.js"; // Load Plotly
+  script.src = "https://cdn.jsdelivr.net/npm/lightweight-charts@3.6.0/dist/lightweight-charts.standalone.production.min.js"; // CDN URL
   script.async = true;
-  script.onload = callback;
   document.head.appendChild(script);
+  script.onload = () => initializeChart(); 
 };
 
+// Initialize the chart after script load
 const initializeChart = () => {
-  if (!chartRef.value || !window.Plotly) return;
+  if (!chartRef.value || !window.LightweightCharts) return;
 
-  const timeSeries = props.priceData.map((d) => new Date(d.time * 1000));
-  const open = props.priceData.map((d) => d.open);
-  const high = props.priceData.map((d) => d.high);
-  const low = props.priceData.map((d) => d.low);
-  const close = props.priceData.map((d) => d.close);
-
-  const candlestickTrace = {
-    x: timeSeries,
-    close: close,
-    high: high,
-    low: low,
-    open: open,
-    type: "candlestick",
-    name: "Price",
-    increasing: { 
-      line: { color: "#00C853" }, // Solid Green Border
-      fillcolor: "#00C853" // Solid Green Fill
+  // Create the chart
+  const chart = window.LightweightCharts.createChart(chartRef.value, {
+    width: chartRef.value.clientWidth,
+    height: chartRef.value.clientHeight,
+    layout: {
+      backgroundColor: props.theme === "dark" ? "#222" : "#fff",
+      textColor: props.theme === "dark" ? "#fff" : "#222",
     },
-    decreasing: { 
-      line: { color: "#D50000" }, // Solid Red Border
-      fillcolor: "#D50000" // Solid Red Fill
-    }
-  };
+    grid: {
+      vertLines: { color: props.theme === "dark" ? "#444" : "#eee" },
+      horzLines: { color: props.theme === "dark" ? "#444" : "#eee" },
+    },
+  });
 
-  const layout = {
-    title: "Candlestick Chart",
-    xaxis: { rangeslider: { visible: false } },
-    yaxis: { title: "Price" },
-    plot_bgcolor: props.theme === "dark" ? "#222" : "#fff",
-    paper_bgcolor: props.theme === "dark" ? "#222" : "#fff",
-    font: { color: props.theme === "dark" ? "#fff" : "#222" },
-  };
+  // Create Candlestick series
+  const candlestickSeries = chart.addCandlestickSeries({
+    upColor: '#00C853',
+    downColor: '#D50000',
+    borderUpColor: '#00C853',
+    borderDownColor: '#D50000',
+    wickUpColor: '#00C853',
+    wickDownColor: '#D50000',
+  });
 
-  Plotly.newPlot(chartRef.value, [candlestickTrace], layout);
+  candlestickSeries.setData(props.priceData);
 };
 
+// Watch for priceData prop changes and re-initialize chart
 watch(() => props.priceData, initializeChart, { deep: true });
-onMounted(() => loadChartScripts(initializeChart));
+
+onMounted(() => loadChartScript());  
 </script>
 
 <template>

@@ -53,16 +53,12 @@ const sampleData = [
   { time: 1707109500, open: 255, high: 265, low: 250, close: 260 }, // Bullish (Green)
 ];
 
-
-
-
-
 </script>
 
 <template>
   <div>
     <h2>Live Trading Chart</h2>
-    <CurrencyPairWidget class="bit-md-12" :priceData="sampleData" theme="dark" :width="800" :height="500" />
+    <CurrencyPairWidget class="bit-md-12" :priceData="sampleData" theme="dark" :height="500" />
   </div>
 </template>
 <style lang="scss">
