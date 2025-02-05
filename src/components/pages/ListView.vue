@@ -51,7 +51,7 @@ const shared_data = [
                               { is: LineChartWidget, props: { data: data, labels: labels, options:"{ lineColor: 'rgba(255, 99, 132, 1)', pointColor: 'rgba(255, 99, 132, 1)'}"}},
                               { is: PillWidget, props: { title: "Cryptocurrency"}},
                            ],
-                       ];
+                    ];
 const header = [
                     {
                       id: 'overview',
@@ -131,76 +131,3 @@ const header = [
   <style lang="scss">
   @import url('../../assets/base.scss');
 </style>
-<!-- <template #overview>
-  <RowWidget v-for="(row, index) in overview_list" :key="index">
-    <ColumnWidget>{{ index + 1 }}</ColumnWidget>
-    <ColumnWidget class="sticky-column">
-      <AssetWidget 
-        :image="row[0]"
-        :title="row[1]"
-        :symbol="row[2]"
-      />
-    </ColumnWidget>
-    <ColumnWidget><PriceWidget :amount="row[3]" symbol="$"/></ColumnWidget>
-    <ColumnWidget><PercentageWidget :amount="row[4]" color="red"/></ColumnWidget>
-    <ColumnWidget><PercentageWidget :amount="row[5]" color="red"/></ColumnWidget>
-    <ColumnWidget><PercentageWidget :amount="row[6]" color="green"/></ColumnWidget>
-    <ColumnWidget> 
-      <LineChartWidget 
-        :data="data" 
-        :labels="labels"
-        :options="{ lineColor: 'rgba(255, 99, 132, 1)', pointColor: 'rgba(255, 99, 132, 1)' }" 
-      />
-    </ColumnWidget>
-    <ColumnWidget><PriceWidget :amount="row[7]" symbol="$"/></ColumnWidget>
-    <ColumnWidget><PriceWidget :amount="row[8]" symbol="$"/></ColumnWidget>
-    <ColumnWidget><PillWidget :title="row[9]"/></ColumnWidget>
-  </RowWidget>
-</template>
-
-<template #calender>
-  <RowWidget v-for="(row, index) in overview_list" :key="index">
-    <ColumnWidget>{{ index + 1 }}</ColumnWidget>
-    <ColumnWidget class="sticky-column">
-      <AssetWidget 
-        :image="row[0]"
-        :title="row[1]"
-        :symbol="row[2]"
-      />
-    </ColumnWidget>
-    <ColumnWidget><PercentageWidget :amount="row[4]" color="green"/></ColumnWidget>
-    <ColumnWidget><PriceWidget :amount="row[3]" symbol="$"/></ColumnWidget>
-    <ColumnWidget><PercentageWidget :amount="row[4]" color="red"/></ColumnWidget>
-    <ColumnWidget><PercentageWidget :amount="row[5]" color="red"/></ColumnWidget>
-    <ColumnWidget><PercentageWidget :amount="row[6]" color="green"/></ColumnWidget>
-    <ColumnWidget><PercentageWidget :amount="row[6]" color="green"/>
-    </ColumnWidget>
-    <ColumnWidget><PriceWidget :amount="row[7]" symbol="$"/></ColumnWidget>
-    <ColumnWidget><PriceWidget :amount="row[8]" symbol="$"/></ColumnWidget>
-    <ColumnWidget><PriceWidget :amount="row[8]" symbol="$"/></ColumnWidget>
-  </RowWidget>
-</template>
-
-<template #long-term>
-  <RowWidget v-for="(row, index) in overview_list" :key="index">
-    <ColumnWidget>{{ index + 1 }}</ColumnWidget>
-    <ColumnWidget class="sticky-column">
-      <AssetWidget 
-        :image="row[0]"
-        :title="row[1]"
-        :symbol="row[2]"
-      />
-    </ColumnWidget>
-    <ColumnWidget><PercentageWidget :amount="row[4]" color="green"/></ColumnWidget>
-    <ColumnWidget><PriceWidget :amount="row[3]" symbol="$"/></ColumnWidget>
-    <ColumnWidget><PercentageWidget :amount="row[4]" color="red"/></ColumnWidget>
-    <ColumnWidget><PercentageWidget :amount="row[5]" color="red"/></ColumnWidget>
-    <ColumnWidget><PercentageWidget :amount="row[6]" color="green"/></ColumnWidget>
-    <ColumnWidget><PercentageWidget :amount="row[6]" color="green"/>
-    </ColumnWidget>
-    <ColumnWidget><PriceWidget :amount="row[7]" symbol="$"/></ColumnWidget>
-    <ColumnWidget><PriceWidget :amount="row[8]" symbol="$"/></ColumnWidget>
-    <ColumnWidget><PriceWidget :amount="row[8]" symbol="$"/></ColumnWidget>
-  </RowWidget>
-</template> -->
-<!--  -->
