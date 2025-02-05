@@ -17,112 +17,46 @@ const labels = [
   "November", "December", "January", "February", "March", "April", "May", "June", "July", "August",
   "September", "October", "November", "December", "January", "February", "March", "April", "May", "June"
 ];
-
-const overview_list = [
-              [
-                "https://img.icons8.com/?size=100&id=63192&format=png&color=000000",
-                "Bitcoin",
-                "BTC",
-                "100,328.99",
-                "-0.89",
-                "-5.39",
-                "+7.54",
-                "2.01T",
-                "28.96B",
-                "Cryptocurrency"
-              ], 
-              [
-                "https://img.icons8.com/?size=100&id=IhWBOFHtv6vx&format=png&color=000000",
-                "Etherum",
-                "Eth",
-                "100,328.99",
-                "-0.89",
-                "-5.39",
-                "+7.54",
-                "2.01T",
-                "28.96B",
-                "Cryptocurrency"
-              ],
-              [
-                "https://img.icons8.com/?size=100&id=GPOyWCiTpgRr&format=png&color=000000",
-                "XRP",
-                "XRP",
-                "100,328.99",
-                "-0.89",
-                "-5.39",
-                "+7.54",
-                "2.01T",
-                "28.96B",
-                "Cryptocurrency"
-              ],
-              [
-                "https://img.icons8.com/?size=100&id=63192&format=png&color=000000",
-                "Bitcoin",
-                "BTC",
-                "100,328.99",
-                "-0.89",
-                "-5.39",
-                "+7.54",
-                "2.01T",
-                "28.96B",
-                "Cryptocurrency"
-              ], 
-              [
-                "https://img.icons8.com/?size=100&id=IhWBOFHtv6vx&format=png&color=000000",
-                "Etherum",
-                "Eth",
-                "100,328.99",
-                "-0.89",
-                "-5.39",
-                "+7.54",
-                "2.01T",
-                "28.96B",
-                "Cryptocurrency"
-              ],
-              [
-                "https://img.icons8.com/?size=100&id=GPOyWCiTpgRr&format=png&color=000000",
-                "XRP",
-                "XRP",
-                "100,328.99",
-                "-0.89",
-                "-5.39",
-                "+7.54",
-                "2.01T",
-                "28.96B",
-                "Cryptocurrency"
-              ],
-              [
-                "https://img.icons8.com/?size=100&id=IhWBOFHtv6vx&format=png&color=000000",
-                "Etherum",
-                "Eth",
-                "100,328.99",
-                "-0.89",
-                "-5.39",
-                "+7.54",
-                "2.01T",
-                "28.96B",
-                "Cryptocurrency"
-              ],
-              [
-                "https://img.icons8.com/?size=100&id=GPOyWCiTpgRr&format=png&color=000000",
-                "XRP",
-                "XRP",
-                "100,328.99",
-                "-0.89",
-                "-5.39",
-                "+7.54",
-                "2.01T",
-                "28.96B",
-                "Cryptocurrency"
-              ],
-              
-                
-          ];
+const shared_data = [
+                           [ 
+                              { is: AssetWidget, props: { image: "https://img.icons8.com/?size=100&id=63192&format=png&color=000000", title: 'Bitcoin', symbol:"BTC" } },
+                              { is: PriceWidget, props: { amount: "10000", symbol:"$" } },
+                              { is: PercentageWidget, props: { amount: '-1000', color:"red" } },
+                              { is: PercentageWidget, props: { amount: '+1000', color:"green" } },
+                              { is: PercentageWidget, props: { amount: '+4000', color:"green" } },
+                              { is: PercentageWidget, props: { amount: '+4000', color:"green" } },
+                              { is: LineChartWidget, props: { data: data, labels: labels, options:"{ lineColor: 'rgba(255, 99, 132, 1)', pointColor: 'rgba(255, 99, 132, 1)'}"}},
+                              { is: LineChartWidget, props: { data: data, labels: labels, options:"{ lineColor: 'rgba(255, 99, 132, 1)', pointColor: 'rgba(255, 99, 132, 1)'}"}},
+                              { is: PillWidget, props: { title: "Cryptocurrency"}},
+                           ],
+                           [ 
+                              { is: AssetWidget, props: { image: "https://img.icons8.com/?size=100&id=IhWBOFHtv6vx&format=png&color=000000", title: 'Ethereum', symbol:"ETH" } },
+                              { is: PriceWidget, props: { amount: "10000", symbol:"$" } },
+                              { is: PercentageWidget, props: { amount: '-1000', color:"red" } },
+                              { is: PercentageWidget, props: { amount: '+1000', color:"green" } },
+                              { is: PercentageWidget, props: { amount: '+4000', color:"green" } },
+                              { is: PercentageWidget, props: { amount: '+4000', color:"green" } },
+                              { is: LineChartWidget, props: { data: data, labels: labels, options:"{ lineColor: 'rgba(255, 99, 132, 1)', pointColor: 'rgba(255, 99, 132, 1)'}"}},
+                              { is: LineChartWidget, props: { data: data, labels: labels, options:"{ lineColor: 'rgba(255, 99, 132, 1)', pointColor: 'rgba(255, 99, 132, 1)'}"}},
+                              { is: PillWidget, props: { title: "Cryptocurrency"}},
+                           ],
+                           [ 
+                              { is: AssetWidget, props: { image: "https://img.icons8.com/?size=100&id=GPOyWCiTpgRr&format=png&color=000000", title: 'XRP', symbol:"XRP" } },
+                              { is: PriceWidget, props: { amount: "10000", symbol:"$" } },
+                              { is: PercentageWidget, props: { amount: '-1000', color:"red" } },
+                              { is: PercentageWidget, props: { amount: '+1000', color:"green" } },
+                              { is: PercentageWidget, props: { amount: '+4000', color:"green" } },
+                              { is: PercentageWidget, props: { amount: '+4000', color:"green" } },
+                              { is: LineChartWidget, props: { data: data, labels: labels, options:"{ lineColor: 'rgba(255, 99, 132, 1)', pointColor: 'rgba(255, 99, 132, 1)'}"}},
+                              { is: LineChartWidget, props: { data: data, labels: labels, options:"{ lineColor: 'rgba(255, 99, 132, 1)', pointColor: 'rgba(255, 99, 132, 1)'}"}},
+                              { is: PillWidget, props: { title: "Cryptocurrency"}},
+                           ],
+                       ];
 const header = [
                     {
                       id: 'overview',
                       label: 'Overview',
-                      content: {
+                      header: {
                         subject: 'Assets',
                         columns: [
                           { title: 'Assets', subTitle: '' },
@@ -136,11 +70,12 @@ const header = [
                           { title: 'Sector', subTitle: '' },
                         ]
                        },
+                       content : shared_data
                     },
                     {
                       id: 'calender',
                       label: 'Calender-Year ROI',
-                      content: {
+                      header: {
                         subject: 'Assets',
                         columns: [
                           { title: 'Assets', subTitle: '' },
@@ -152,13 +87,16 @@ const header = [
                           { title: 'Marketcap', subTitle: 'Current' },
                           { title: 'Real Volume', subTitle: '24H' },
                           { title: 'Sector', subTitle: '' },
-                        ]
+                        ],
+
                        },
+                       content :shared_data
+
                     },
                     {
                       id: 'long-term',
                       label: 'Long-Term ROI',
-                      content: {
+                      header: {
                         subject: 'Assets',
                         columns: [
                           { title: 'Assets', subTitle: '' },
@@ -174,99 +112,95 @@ const header = [
                            
                         ]
                        },
+                       content : shared_data
                     },
                      
                     
-                  ];
+               ];
 
 </script>
 
 <template>
-    <div class="bit-px-1"> 
+   <div class="bit-px-1"> 
         <TableWidget
-         :tabs="header"
-          class="bit-mt-4">
-          <template #overview>
-            <RowWidget v-for="(row, index) in overview_list" :key="index">
-              <ColumnWidget>{{ index + 1 }}</ColumnWidget>
-              <ColumnWidget class="sticky-column">
-                <AssetWidget 
-                  :image="row[0]"
-                  :title="row[1]"
-                  :symbol="row[2]"
-                />
-              </ColumnWidget>
-              <ColumnWidget>{{ index + 1 }}</ColumnWidget>
-              <ColumnWidget><PriceWidget :amount="row[3]" symbol="$"/></ColumnWidget>
-              <ColumnWidget><PercentageWidget :amount="row[4]" color="red"/></ColumnWidget>
-              <ColumnWidget><PercentageWidget :amount="row[5]" color="red"/></ColumnWidget>
-              <ColumnWidget><PercentageWidget :amount="row[6]" color="green"/></ColumnWidget>
-              <ColumnWidget> 
-                <LineChartWidget 
-                  :data="data" 
-                  :labels="labels"
-                  :options="{ lineColor: 'rgba(255, 99, 132, 1)', pointColor: 'rgba(255, 99, 132, 1)' }" 
-                />
-              </ColumnWidget>
-              <ColumnWidget><PriceWidget :amount="row[7]" symbol="$"/></ColumnWidget>
-              <ColumnWidget><PriceWidget :amount="row[8]" symbol="$"/></ColumnWidget>
-              <ColumnWidget><PillWidget :title="row[9]"/></ColumnWidget>
-            </RowWidget>
-          </template>
-
-          <template #calender>
-            <RowWidget v-for="(row, index) in overview_list" :key="index">
-              <ColumnWidget>{{ index + 1 }}</ColumnWidget>
-              <ColumnWidget class="sticky-column">
-                <AssetWidget 
-                  :image="row[0]"
-                  :title="row[1]"
-                  :symbol="row[2]"
-                />
-              </ColumnWidget>
-              <ColumnWidget><PercentageWidget :amount="row[4]" color="green"/></ColumnWidget>
-              <ColumnWidget><PriceWidget :amount="row[3]" symbol="$"/></ColumnWidget>
-              <ColumnWidget><PercentageWidget :amount="row[4]" color="red"/></ColumnWidget>
-              <ColumnWidget><PercentageWidget :amount="row[5]" color="red"/></ColumnWidget>
-              <ColumnWidget><PercentageWidget :amount="row[6]" color="green"/></ColumnWidget>
-              <ColumnWidget><PercentageWidget :amount="row[6]" color="green"/>
-              </ColumnWidget>
-              <ColumnWidget><PriceWidget :amount="row[7]" symbol="$"/></ColumnWidget>
-              <ColumnWidget><PriceWidget :amount="row[8]" symbol="$"/></ColumnWidget>
-              <ColumnWidget><PriceWidget :amount="row[8]" symbol="$"/></ColumnWidget>
-            </RowWidget>
-          </template>
-
-          <template #long-term>
-            <RowWidget v-for="(row, index) in overview_list" :key="index">
-              <ColumnWidget>{{ index + 1 }}</ColumnWidget>
-              <ColumnWidget class="sticky-column">
-                <AssetWidget 
-                  :image="row[0]"
-                  :title="row[1]"
-                  :symbol="row[2]"
-                />
-              </ColumnWidget>
-              <ColumnWidget><PercentageWidget :amount="row[4]" color="green"/></ColumnWidget>
-              <ColumnWidget><PriceWidget :amount="row[3]" symbol="$"/></ColumnWidget>
-              <ColumnWidget><PercentageWidget :amount="row[4]" color="red"/></ColumnWidget>
-              <ColumnWidget><PercentageWidget :amount="row[5]" color="red"/></ColumnWidget>
-              <ColumnWidget><PercentageWidget :amount="row[6]" color="green"/></ColumnWidget>
-              <ColumnWidget><PercentageWidget :amount="row[6]" color="green"/>
-              </ColumnWidget>
-              <ColumnWidget><PriceWidget :amount="row[7]" symbol="$"/></ColumnWidget>
-              <ColumnWidget><PriceWidget :amount="row[8]" symbol="$"/></ColumnWidget>
-              <ColumnWidget><PriceWidget :amount="row[8]" symbol="$"/></ColumnWidget>
-            </RowWidget>
-          </template>
-          
-        </TableWidget>
-
+         :tabHeader="header"
+          class="bit-mt-4"/>
     </div>
   </template>
 
   <style lang="scss">
   @import url('../../assets/base.scss');
 </style>
+<!-- <template #overview>
+  <RowWidget v-for="(row, index) in overview_list" :key="index">
+    <ColumnWidget>{{ index + 1 }}</ColumnWidget>
+    <ColumnWidget class="sticky-column">
+      <AssetWidget 
+        :image="row[0]"
+        :title="row[1]"
+        :symbol="row[2]"
+      />
+    </ColumnWidget>
+    <ColumnWidget><PriceWidget :amount="row[3]" symbol="$"/></ColumnWidget>
+    <ColumnWidget><PercentageWidget :amount="row[4]" color="red"/></ColumnWidget>
+    <ColumnWidget><PercentageWidget :amount="row[5]" color="red"/></ColumnWidget>
+    <ColumnWidget><PercentageWidget :amount="row[6]" color="green"/></ColumnWidget>
+    <ColumnWidget> 
+      <LineChartWidget 
+        :data="data" 
+        :labels="labels"
+        :options="{ lineColor: 'rgba(255, 99, 132, 1)', pointColor: 'rgba(255, 99, 132, 1)' }" 
+      />
+    </ColumnWidget>
+    <ColumnWidget><PriceWidget :amount="row[7]" symbol="$"/></ColumnWidget>
+    <ColumnWidget><PriceWidget :amount="row[8]" symbol="$"/></ColumnWidget>
+    <ColumnWidget><PillWidget :title="row[9]"/></ColumnWidget>
+  </RowWidget>
+</template>
 
+<template #calender>
+  <RowWidget v-for="(row, index) in overview_list" :key="index">
+    <ColumnWidget>{{ index + 1 }}</ColumnWidget>
+    <ColumnWidget class="sticky-column">
+      <AssetWidget 
+        :image="row[0]"
+        :title="row[1]"
+        :symbol="row[2]"
+      />
+    </ColumnWidget>
+    <ColumnWidget><PercentageWidget :amount="row[4]" color="green"/></ColumnWidget>
+    <ColumnWidget><PriceWidget :amount="row[3]" symbol="$"/></ColumnWidget>
+    <ColumnWidget><PercentageWidget :amount="row[4]" color="red"/></ColumnWidget>
+    <ColumnWidget><PercentageWidget :amount="row[5]" color="red"/></ColumnWidget>
+    <ColumnWidget><PercentageWidget :amount="row[6]" color="green"/></ColumnWidget>
+    <ColumnWidget><PercentageWidget :amount="row[6]" color="green"/>
+    </ColumnWidget>
+    <ColumnWidget><PriceWidget :amount="row[7]" symbol="$"/></ColumnWidget>
+    <ColumnWidget><PriceWidget :amount="row[8]" symbol="$"/></ColumnWidget>
+    <ColumnWidget><PriceWidget :amount="row[8]" symbol="$"/></ColumnWidget>
+  </RowWidget>
+</template>
+
+<template #long-term>
+  <RowWidget v-for="(row, index) in overview_list" :key="index">
+    <ColumnWidget>{{ index + 1 }}</ColumnWidget>
+    <ColumnWidget class="sticky-column">
+      <AssetWidget 
+        :image="row[0]"
+        :title="row[1]"
+        :symbol="row[2]"
+      />
+    </ColumnWidget>
+    <ColumnWidget><PercentageWidget :amount="row[4]" color="green"/></ColumnWidget>
+    <ColumnWidget><PriceWidget :amount="row[3]" symbol="$"/></ColumnWidget>
+    <ColumnWidget><PercentageWidget :amount="row[4]" color="red"/></ColumnWidget>
+    <ColumnWidget><PercentageWidget :amount="row[5]" color="red"/></ColumnWidget>
+    <ColumnWidget><PercentageWidget :amount="row[6]" color="green"/></ColumnWidget>
+    <ColumnWidget><PercentageWidget :amount="row[6]" color="green"/>
+    </ColumnWidget>
+    <ColumnWidget><PriceWidget :amount="row[7]" symbol="$"/></ColumnWidget>
+    <ColumnWidget><PriceWidget :amount="row[8]" symbol="$"/></ColumnWidget>
+    <ColumnWidget><PriceWidget :amount="row[8]" symbol="$"/></ColumnWidget>
+  </RowWidget>
+</template> -->
 <!--  -->

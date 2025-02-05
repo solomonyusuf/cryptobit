@@ -1,14 +1,11 @@
 <script setup lang="ts">
-import { computed, ref, onMounted } from 'vue';
+import { Component, computed, ref, onMounted } from 'vue';
 import PaginationWidget from './PaginationWidget.vue';
-import ColumnWidget from './ColumnWidget.vue';
-import RowWidget from './RowWidget.vue';
 
 interface Tab {
   id: string;
   label: string;
-  header: TableHeader;
-  content: any[][]
+  content: TableContent;
 }
 
 interface TableColumn {
@@ -16,7 +13,7 @@ interface TableColumn {
   subTitle: string;
 }
 
-interface TableHeader {
+interface TableContent {
   subject : String;
   columns: TableColumn[];
 }
@@ -44,10 +41,101 @@ const props = defineProps({
     default: null,
   },
   activeTab: { type: String, default: 'overview' }, 
-  tabHeader: {
+  tabs: {
       type: Array as () => Tab[],
-      default: []
-    },
+      default: () => [
+        {
+          id: "overview",
+          label: "Overview",
+          content:  {
+                      subject: "Assets",
+                      columns: [ 
+                          { title : "Assets", subTitle: ""},
+                          { title : "Price", subTitle: "Current"}, 
+                          { title : "Price", subTitle: "24H Change"}, 
+                          { title : "Price", subTitle: "7D Change"}, 
+                          { title : "Price", subTitle: "30D Change"}, 
+                          { title : "Price", subTitle: "30D TL"}, 
+                          { title : "Marketcap", subTitle: "Current"},
+                          { title : "Real Volume", subTitle: "24H"},
+                          { title : "Sector", subTitle: ""}
+                      ]
+                      
+                    }
+           
+        },
+        {
+          id: "long-term",
+          label: "Long-Term ROI",
+          content:  {
+                      subject: "Assets",
+                      columns: [ 
+                          { title : "Assets", subTitle: ""},
+                          { title : "Price", subTitle: "Current"}, 
+                          { title : "Price", subTitle: "24H Change"}, 
+                          { title : "Price", subTitle: "7D Change"}, 
+                          { title : "Price", subTitle: "30D Change"}, 
+                          { title : "Price", subTitle: "30D TL"}, 
+                          { title : "Marketcap", subTitle: "Current"},
+                          { title : "Real Volume", subTitle: "24H"},
+                          { title : "Sector", subTitle: ""}
+                      ]
+                    }
+        },
+        {
+          id: "calender",
+          label: "Calender Years ROI",
+          content:  {
+                      subject: "Assets",
+                      columns: [ 
+                          { title : "Assets", subTitle: ""},
+                          { title : "Price", subTitle: "Current"}, 
+                          { title : "Price", subTitle: "24H Change"}, 
+                          { title : "Price", subTitle: "7D Change"}, 
+                          { title : "Price", subTitle: "30D Change"}, 
+                          { title : "Price", subTitle: "30D TL"}, 
+                          { title : "Marketcap", subTitle: "Current"},
+                          { title : "Real Volume", subTitle: "24H"},
+                          { title : "Sector", subTitle: ""}
+                      ]
+                    }
+        },
+        {
+          id: "volume",
+          label: "Volume",
+          content: {
+                      subject: "Assets",
+                      columns: [ 
+                          { title : "Assets", subTitle: ""},
+                          { title : "Price", subTitle: "Current"}, 
+                          { title : "Price", subTitle: "24H Change"}, 
+                          { title : "Price", subTitle: "7D Change"}, 
+                          { title : "Price", subTitle: "30D Change"}, 
+                          { title : "Price", subTitle: "30D TL"}, 
+                          { title : "Marketcap", subTitle: "Current"},
+                          { title : "Real Volume", subTitle: "24H"},
+                          { title : "Sector", subTitle: ""}
+                      ]
+                    },
+        },
+        {
+          id: "classification",
+          label: "Classifications",
+          content: {
+                      subject: "Assets",
+                      columns: [ 
+                          { title : "Assets", subTitle: ""},
+                          { title : "Price", subTitle: "Current"}, 
+                          { title : "Price", subTitle: "24H Change"}, 
+                          { title : "Price", subTitle: "7D Change"}, 
+                          { title : "Price", subTitle: "30D Change"}, 
+                          { title : "Price", subTitle: "30D TL"}, 
+                          { title : "Marketcap", subTitle: "Current"},
+                          { title : "Real Volume", subTitle: "24H"},
+                          { title : "Sector", subTitle: ""}
+                      ]
+                    }},
+      ]},
 });
 
 const currentTab = ref(props.activeTab);
@@ -253,7 +341,7 @@ onMounted(() => {
                   
                    <div style="border-bottom: 1px solid;" class=" mt-0 d-flex justify-content-between align-items-center">
                     <ul ref="scrollContainer" class="scroll-container nav" :style="{ color:fontColor}" role="tablist">
-                      <li v-for="tab in props.tabHeader" :key="tab.id" class="nav-item scroll-item">
+                      <li v-for="tab in props.tabs" :key="tab.id" class="nav-item scroll-item">
                         <a
                           href="#"
                           class="nav-link mt-3 mb-0 px-0"
@@ -285,7 +373,7 @@ onMounted(() => {
                      
                     <div class="tab-content px-0 py-0">
                       <div
-                        v-for="tab in props.tabHeader"
+                        v-for="tab in props.tabs"
                         :key="tab.id"
                         class="tab-pane"
                         :class="{ active: currentTab === tab.id }"
@@ -297,11 +385,11 @@ onMounted(() => {
                                 <tr style="border-color:#384351;">
                                   <th></th>
                                   <th
-                                    v-for="(col, index) in tab.header.columns"                       
+                                    v-for="(col, index) in tab.content.columns"                       
                                     :key="index"
                                     style="border-color:#384351;"
                                     :class="{
-                                    'sticky-column': col.title === props.tabHeader[0].header.subject, 
+                                    'sticky-column': col.title === props.tabs[0].content.subject, 
                                     'px-4': true,
                                     'py-2': true,
                                     'text-capitalize': true,
@@ -318,15 +406,7 @@ onMounted(() => {
                                 </tr>
                               </thead>
                               <tbody>
-                              
-                              <RowWidget v-for="(row, index) in tab.content" :key="index">
-                                <ColumnWidget>{{ index + 1 }}</ColumnWidget>
-                                  <template v-for="(widget, inner_key) in row" :key="inner_key">
-                                    <ColumnWidget :class="{ 'sticky-column' : tab.id == tab.header.subject}">
-                                      <component :is="widget.is" v-bind="widget.props"></component>
-                                    </ColumnWidget>
-                                  </template>
-                                </RowWidget>
+                                <slot :name="tab.id"></slot>
                               </tbody>
                             </table>                       
                           </div>                                                
