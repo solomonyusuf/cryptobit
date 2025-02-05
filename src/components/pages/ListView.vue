@@ -51,6 +51,127 @@ const shared_data = [
                               { is: LineChartWidget, props: { data: data, labels: labels, options:"{ lineColor: 'rgba(255, 99, 132, 1)', pointColor: 'rgba(255, 99, 132, 1)'}"}},
                               { is: PillWidget, props: { title: "Cryptocurrency"}},
                            ],
+                           [ 
+                              { is: AssetWidget, props: { image: "https://img.icons8.com/?size=100&id=63192&format=png&color=000000", title: 'Bitcoin', symbol:"BTC" } },
+                              { is: PriceWidget, props: { amount: "10000", symbol:"$" } },
+                              { is: PercentageWidget, props: { amount: '-1000', color:"red" } },
+                              { is: PercentageWidget, props: { amount: '+1000', color:"green" } },
+                              { is: PercentageWidget, props: { amount: '+4000', color:"green" } },
+                              { is: PercentageWidget, props: { amount: '+4000', color:"green" } },
+                              { is: LineChartWidget, props: { data: data, labels: labels, options:"{ lineColor: 'rgba(255, 99, 132, 1)', pointColor: 'rgba(255, 99, 132, 1)'}"}},
+                              { is: LineChartWidget, props: { data: data, labels: labels, options:"{ lineColor: 'rgba(255, 99, 132, 1)', pointColor: 'rgba(255, 99, 132, 1)'}"}},
+                              { is: PillWidget, props: { title: "Cryptocurrency"}},
+                           ],
+                           [ 
+                              { is: AssetWidget, props: { image: "https://img.icons8.com/?size=100&id=IhWBOFHtv6vx&format=png&color=000000", title: 'Ethereum', symbol:"ETH" } },
+                              { is: PriceWidget, props: { amount: "10000", symbol:"$" } },
+                              { is: PercentageWidget, props: { amount: '-1000', color:"red" } },
+                              { is: PercentageWidget, props: { amount: '+1000', color:"green" } },
+                              { is: PercentageWidget, props: { amount: '+4000', color:"green" } },
+                              { is: PercentageWidget, props: { amount: '+4000', color:"green" } },
+                              { is: LineChartWidget, props: { data: data, labels: labels, options:"{ lineColor: 'rgba(255, 99, 132, 1)', pointColor: 'rgba(255, 99, 132, 1)'}"}},
+                              { is: LineChartWidget, props: { data: data, labels: labels, options:"{ lineColor: 'rgba(255, 99, 132, 1)', pointColor: 'rgba(255, 99, 132, 1)'}"}},
+                              { is: PillWidget, props: { title: "Cryptocurrency"}},
+                           ],
+                           [ 
+                              { is: AssetWidget, props: { image: "https://img.icons8.com/?size=100&id=GPOyWCiTpgRr&format=png&color=000000", title: 'XRP', symbol:"XRP" } },
+                              { is: PriceWidget, props: { amount: "10000", symbol:"$" } },
+                              { is: PercentageWidget, props: { amount: '-1000', color:"red" } },
+                              { is: PercentageWidget, props: { amount: '+1000', color:"green" } },
+                              { is: PercentageWidget, props: { amount: '+4000', color:"green" } },
+                              { is: PercentageWidget, props: { amount: '+4000', color:"green" } },
+                              { is: LineChartWidget, props: { data: data, labels: labels, options:"{ lineColor: 'rgba(255, 99, 132, 1)', pointColor: 'rgba(255, 99, 132, 1)'}"}},
+                              { is: LineChartWidget, props: { data: data, labels: labels, options:"{ lineColor: 'rgba(255, 99, 132, 1)', pointColor: 'rgba(255, 99, 132, 1)'}"}},
+                              { is: PillWidget, props: { title: "Cryptocurrency"}},
+                           ],
+                           [ 
+                              { is: AssetWidget, props: { image: "https://img.icons8.com/?size=100&id=63192&format=png&color=000000", title: 'Bitcoin', symbol:"BTC" } },
+                              { is: PriceWidget, props: { amount: "10000", symbol:"$" } },
+                              { is: PercentageWidget, props: { amount: '-1000', color:"red" } },
+                              { is: PercentageWidget, props: { amount: '+1000', color:"green" } },
+                              { is: PercentageWidget, props: { amount: '+4000', color:"green" } },
+                              { is: PercentageWidget, props: { amount: '+4000', color:"green" } },
+                              { is: LineChartWidget, props: { data: data, labels: labels, options:"{ lineColor: 'rgba(255, 99, 132, 1)', pointColor: 'rgba(255, 99, 132, 1)'}"}},
+                              { is: LineChartWidget, props: { data: data, labels: labels, options:"{ lineColor: 'rgba(255, 99, 132, 1)', pointColor: 'rgba(255, 99, 132, 1)'}"}},
+                              { is: PillWidget, props: { title: "Cryptocurrency"}},
+                           ],
+                           [ 
+                              { is: AssetWidget, props: { image: "https://img.icons8.com/?size=100&id=IhWBOFHtv6vx&format=png&color=000000", title: 'Ethereum', symbol:"ETH" } },
+                              { is: PriceWidget, props: { amount: "10000", symbol:"$" } },
+                              { is: PercentageWidget, props: { amount: '-1000', color:"red" } },
+                              { is: PercentageWidget, props: { amount: '+1000', color:"green" } },
+                              { is: PercentageWidget, props: { amount: '+4000', color:"green" } },
+                              { is: PercentageWidget, props: { amount: '+4000', color:"green" } },
+                              { is: LineChartWidget, props: { data: data, labels: labels, options:"{ lineColor: 'rgba(255, 99, 132, 1)', pointColor: 'rgba(255, 99, 132, 1)'}"}},
+                              { is: LineChartWidget, props: { data: data, labels: labels, options:"{ lineColor: 'rgba(255, 99, 132, 1)', pointColor: 'rgba(255, 99, 132, 1)'}"}},
+                              { is: PillWidget, props: { title: "Cryptocurrency"}},
+                           ],
+                           [ 
+                              { is: AssetWidget, props: { image: "https://img.icons8.com/?size=100&id=GPOyWCiTpgRr&format=png&color=000000", title: 'XRP', symbol:"XRP" } },
+                              { is: PriceWidget, props: { amount: "10000", symbol:"$" } },
+                              { is: PercentageWidget, props: { amount: '-1000', color:"red" } },
+                              { is: PercentageWidget, props: { amount: '+1000', color:"green" } },
+                              { is: PercentageWidget, props: { amount: '+4000', color:"green" } },
+                              { is: PercentageWidget, props: { amount: '+4000', color:"green" } },
+                              { is: LineChartWidget, props: { data: data, labels: labels, options:"{ lineColor: 'rgba(255, 99, 132, 1)', pointColor: 'rgba(255, 99, 132, 1)'}"}},
+                              { is: LineChartWidget, props: { data: data, labels: labels, options:"{ lineColor: 'rgba(255, 99, 132, 1)', pointColor: 'rgba(255, 99, 132, 1)'}"}},
+                              { is: PillWidget, props: { title: "Cryptocurrency"}},
+                           ],
+                           [ 
+                              { is: AssetWidget, props: { image: "https://img.icons8.com/?size=100&id=IhWBOFHtv6vx&format=png&color=000000", title: 'Ethereum', symbol:"ETH" } },
+                              { is: PriceWidget, props: { amount: "10000", symbol:"$" } },
+                              { is: PercentageWidget, props: { amount: '-1000', color:"red" } },
+                              { is: PercentageWidget, props: { amount: '+1000', color:"green" } },
+                              { is: PercentageWidget, props: { amount: '+4000', color:"green" } },
+                              { is: PercentageWidget, props: { amount: '+4000', color:"green" } },
+                              { is: LineChartWidget, props: { data: data, labels: labels, options:"{ lineColor: 'rgba(255, 99, 132, 1)', pointColor: 'rgba(255, 99, 132, 1)'}"}},
+                              { is: LineChartWidget, props: { data: data, labels: labels, options:"{ lineColor: 'rgba(255, 99, 132, 1)', pointColor: 'rgba(255, 99, 132, 1)'}"}},
+                              { is: PillWidget, props: { title: "Cryptocurrency"}},
+                           ],
+                           [ 
+                              { is: AssetWidget, props: { image: "https://img.icons8.com/?size=100&id=GPOyWCiTpgRr&format=png&color=000000", title: 'XRP', symbol:"XRP" } },
+                              { is: PriceWidget, props: { amount: "10000", symbol:"$" } },
+                              { is: PercentageWidget, props: { amount: '-1000', color:"red" } },
+                              { is: PercentageWidget, props: { amount: '+1000', color:"green" } },
+                              { is: PercentageWidget, props: { amount: '+4000', color:"green" } },
+                              { is: PercentageWidget, props: { amount: '+4000', color:"green" } },
+                              { is: LineChartWidget, props: { data: data, labels: labels, options:"{ lineColor: 'rgba(255, 99, 132, 1)', pointColor: 'rgba(255, 99, 132, 1)'}"}},
+                              { is: LineChartWidget, props: { data: data, labels: labels, options:"{ lineColor: 'rgba(255, 99, 132, 1)', pointColor: 'rgba(255, 99, 132, 1)'}"}},
+                              { is: PillWidget, props: { title: "Cryptocurrency"}},
+                           ],
+                           [ 
+                              { is: AssetWidget, props: { image: "https://img.icons8.com/?size=100&id=63192&format=png&color=000000", title: 'Bitcoin', symbol:"BTC" } },
+                              { is: PriceWidget, props: { amount: "10000", symbol:"$" } },
+                              { is: PercentageWidget, props: { amount: '-1000', color:"red" } },
+                              { is: PercentageWidget, props: { amount: '+1000', color:"green" } },
+                              { is: PercentageWidget, props: { amount: '+4000', color:"green" } },
+                              { is: PercentageWidget, props: { amount: '+4000', color:"green" } },
+                              { is: LineChartWidget, props: { data: data, labels: labels, options:"{ lineColor: 'rgba(255, 99, 132, 1)', pointColor: 'rgba(255, 99, 132, 1)'}"}},
+                              { is: LineChartWidget, props: { data: data, labels: labels, options:"{ lineColor: 'rgba(255, 99, 132, 1)', pointColor: 'rgba(255, 99, 132, 1)'}"}},
+                              { is: PillWidget, props: { title: "Cryptocurrency"}},
+                           ],
+                           [ 
+                              { is: AssetWidget, props: { image: "https://img.icons8.com/?size=100&id=IhWBOFHtv6vx&format=png&color=000000", title: 'Ethereum', symbol:"ETH" } },
+                              { is: PriceWidget, props: { amount: "10000", symbol:"$" } },
+                              { is: PercentageWidget, props: { amount: '-1000', color:"red" } },
+                              { is: PercentageWidget, props: { amount: '+1000', color:"green" } },
+                              { is: PercentageWidget, props: { amount: '+4000', color:"green" } },
+                              { is: PercentageWidget, props: { amount: '+4000', color:"green" } },
+                              { is: LineChartWidget, props: { data: data, labels: labels, options:"{ lineColor: 'rgba(255, 99, 132, 1)', pointColor: 'rgba(255, 99, 132, 1)'}"}},
+                              { is: LineChartWidget, props: { data: data, labels: labels, options:"{ lineColor: 'rgba(255, 99, 132, 1)', pointColor: 'rgba(255, 99, 132, 1)'}"}},
+                              { is: PillWidget, props: { title: "Cryptocurrency"}},
+                           ],
+                           [ 
+                              { is: AssetWidget, props: { image: "https://img.icons8.com/?size=100&id=GPOyWCiTpgRr&format=png&color=000000", title: 'XRP', symbol:"XRP" } },
+                              { is: PriceWidget, props: { amount: "10000", symbol:"$" } },
+                              { is: PercentageWidget, props: { amount: '-1000', color:"red" } },
+                              { is: PercentageWidget, props: { amount: '+1000', color:"green" } },
+                              { is: PercentageWidget, props: { amount: '+4000', color:"green" } },
+                              { is: PercentageWidget, props: { amount: '+4000', color:"green" } },
+                              { is: LineChartWidget, props: { data: data, labels: labels, options:"{ lineColor: 'rgba(255, 99, 132, 1)', pointColor: 'rgba(255, 99, 132, 1)'}"}},
+                              { is: LineChartWidget, props: { data: data, labels: labels, options:"{ lineColor: 'rgba(255, 99, 132, 1)', pointColor: 'rgba(255, 99, 132, 1)'}"}},
+                              { is: PillWidget, props: { title: "Cryptocurrency"}},
+                           ],
                     ];
 const header = [
                     {
@@ -117,6 +238,15 @@ const header = [
                      
                     
                ];
+const  filters = [
+        { key: 'category', label: 'Category All', options: [{ value: 1, label: 'One' }, { value: 2, label: 'Two' }, { value: 3, label: 'Three' }] },
+        { key: 'sector', label: 'Sector All', options: [{ value: 1, label: 'One' }, { value: 2, label: 'Two' }, { value: 3, label: 'Three' }] },
+        { key: 'tag', label: 'Tag All', options: [{ value: 1, label: 'One' }, { value: 2, label: 'Two' }, { value: 3, label: 'Three' }] },
+        { key: 'exchange', label: 'Exchange All', options: [{ value: 1, label: 'One' }, { value: 2, label: 'Two' }, { value: 3, label: 'Three' }] },
+        { key: 'network', label: 'Network All', options: [{ value: 1, label: 'One' }, { value: 2, label: 'Two' }, { value: 3, label: 'Three' }] },
+        { key: 'marketcap', label: 'Marketcap', options: [{ value: 1, label: 'One' }, { value: 2, label: 'Two' }, { value: 3, label: 'Three' }] },
+        { key: 'volume', label: '24H Volume', options: [{ value: 1, label: 'One' }, { value: 2, label: 'Two' }, { value: 3, label: 'Three' }] }
+      ]
 
 </script>
 
@@ -124,6 +254,7 @@ const header = [
    <div class="bit-px-1"> 
         <TableWidget
          :tabHeader="header"
+         :filters="filters"
           class="bit-mt-4"/>
     </div>
   </template>

@@ -21,9 +21,21 @@ interface TableHeader {
   columns: TableColumn[];
 }
 
+interface Filter {
+  key : any;
+  label : any;
+  options: Option[];
+}
+interface Option {
+  value : any;
+  label : any;
+}
+
 
 const props = defineProps({
-  currentRow: { type: Array, default: [] },
+  totalItems: { type: Number, default: 10 },
+  ItemsPerPage: { type: Number, default: 5 },
+  totalPages: { type: Number, default: 2 },
   title: { type: String, default: 'Assets' },
   width: { type: String, default: '100%' },
   headerColor: { type: String, default: 'white' },
@@ -64,18 +76,37 @@ const props = defineProps({
       type: Array as () => Tab[],
       default: []
     },
+    filters: {
+      type: Array as () => Filter[],
+      default: []
+    },
 });
 
-const emit = defineEmits(["update:activeTab"]);
-
-let assetCount = computed(() => props.tabHeader[0]?.content?.length ?? 0);
+const emit = defineEmits([
+  "update:activeTab", 
+  "update:currentPage"
+]);
 
 const currentTab = ref(props.activeTab);
 
+const currentPage = ref(1);
+
+let assetCount = computed(() => props.tabHeader[0]?.content?.length ?? 0);
+
+const totalPages = computed(() => Math.ceil(props.totalItems / props.ItemsPerPage));
+
+let startItem = computed(() => (currentPage.value - 1) * props.ItemsPerPage + 1);
+
+let endItem = computed(() => Math.min(currentPage.value * props.ItemsPerPage, assetCount.value));
+
+
 const activateTab = (tabId: string) => {
   currentTab.value = tabId;
-  emit("update:activeTab", tabId);
   assetCount = computed(() => props.tabHeader.find(x => x.id === tabId)?.content.length ?? 0);
+
+
+  emit("update:activeTab", tabId);  
+  emit("update:currentPage", 1);
 };
 
 const scrollContainer = ref<HTMLElement | null>();
@@ -89,6 +120,19 @@ const scrollLeft = () => {
 const scrollRight = () => {
   if (scrollContainer.value) {
     scrollContainer.value.scrollBy({ left: 150, behavior: "smooth" });
+  }
+};
+
+
+const paginatedItems = computed(() => {
+  const start = (currentPage.value - 1) * props.ItemsPerPage;
+  return props.tabHeader[0]?.content.slice(start, start + props.ItemsPerPage) ?? [];
+});
+
+const changePage = (page: number) => {
+  if (page > 0 && page <= totalPages.value) {
+    currentPage.value = page;
+    emit("update:currentPage", page);
   }
 };
 
@@ -109,90 +153,6 @@ const tableStyles = computed(() => ({
   borderColor: props.borderColor,
 }));
 
-onMounted(() => {
-
- 
-  // Create and append jQuery script
-  const script = document.createElement("script");
-  script.src = "https://code.jquery.com/jquery-3.6.0.min.js";
-  script.type = "text/javascript";
-  script.onload = () => {
-    console.log("jQuery has been loaded successfully!");
-
-//     $(document).ready(function() {
-      
-//           const rowsPerPage = 10;   
-//           let rows = $('#Table tbody tr');   
-//           const totalRows = rows.length;  
-//           const totalPages = Math.ceil(totalRows / rowsPerPage);  
-
-        
-//           // Function to show a specific page
-//           function showPage(pageNumber: number) {
-//             const startIndex = (pageNumber - 1) * rowsPerPage;
-//             const endIndex = startIndex + rowsPerPage;
-
-//             // Hide all rows
-//             rows.hide();
-
-//             // Show the rows for the current page
-//             rows.slice(startIndex, endIndex).show();
-
-//             // Update pagination controls
-//             updatePagination(pageNumber);
-
-//             // Update the "Showing X to Y of Z results" text
-//             updatePaginationInfo(pageNumber);
-//           }
-
-//   // Function to update pagination controls
-//   function updatePagination(currentPage: number) {
-//     $('#pagination-buttons').empty();
-
-//     // Prev button
-//     const prevButton = $('<button style="color:#55585f;"> < </button>').prop('disabled', currentPage === 1);
-//     prevButton.on('click', function() {
-//       if (currentPage > 1) {
-//         showPage(currentPage - 1);
-//       }
-//     });
-
-//     // Page buttons
-//     for (let i = 1; i <= totalPages; i++) {
-//       const pageButton = $('<button></button>').text(i).addClass(i === currentPage ? 'active' : '');
-//       pageButton.on('click', function() {
-//         showPage(i);
-//       });
-//       $('#pagination-buttons').append(pageButton);
-//     }
-
-//     // Next button
-//     const nextButton = $('<button style="color:#55585f;"> > </button>').prop('disabled', currentPage === totalPages);
-//     nextButton.on('click', function() {
-//       if (currentPage < totalPages) {
-//         showPage(currentPage + 1);
-//       }
-//     });
-
-//     // Append buttons to pagination container
-//     $('#pagination-buttons').prepend(prevButton).append(nextButton);
-//   }
-
-//   // Function to update the "Showing X to Y of Z results" text
-//   function updatePaginationInfo(currentPage: number) {
-//     const startItem = (currentPage - 1) * rowsPerPage + 1;
-//     const endItem = Math.min(currentPage * rowsPerPage, totalRows);
-//     $('#pagination-info').text(`Showing ${startItem} to ${endItem} of ${totalRows} results`);
-//   }
-
-//   // Initialize first page
-//   showPage(1);
-// });
-    
-  };
-
-  document.head.appendChild(script);
-});
 
 
 </script>
@@ -211,65 +171,15 @@ onMounted(() => {
                           </svg>
 
                         </span>
-                        <input :change="onSearch" type="search" aria-controls="Table" :style="{background:tableBgColor}" class="form-control border-0" placeholder="Search Assets...">
+                        <input :input="onSearch" type="search" aria-controls="Table" :style="{background:tableBgColor}" class="form-control border-0" placeholder="Search Assets...">
                       </div>
-                  </div>
-                <div class="col d-none d-md-block">
-                  <select :change="onDropdown" class="form-select border-0">
-                      <option>Category All</option>
-                      <option value="1">One</option>
-                      <option value="2">Two</option>
-                      <option value="3">Three</option>
-                    </select>
-                </div>
-                <div class="col  d-none d-md-block">
-                  <select :change="onDropdown" class="form-select border-0">
-                      <option>Sector All</option>
-                      <option value="1">One</option>
-                      <option value="2">Two</option>
-                      <option value="3">Three</option>
-                    </select>
-                </div>
-                <div class="col  d-none d-md-block">
-                  <select :change="onDropdown" class="form-select  border-0">
-                      <option>Tag All</option>
-                      <option value="1">One</option>
-                      <option value="2">Two</option>
-                      <option value="3">Three</option>
-                    </select>
-                </div>
-                <div class="col  d-none d-md-block">
-                  <select :change="onDropdown" class="form-select  border-0">
-                      <option>Exchange All</option>
-                      <option value="1">One</option>
-                      <option value="2">Two</option>
-                      <option value="3">Three</option>
-                    </select>
-                </div>
-                <div class="col  d-none d-md-block">
-                  <select :change="onDropdown" class="form-select  border-0">
-                      <option>Network All</option>
-                      <option value="1">One</option>
-                      <option value="2">Two</option>
-                      <option value="3">Three</option>
-                    </select>
-                </div>
-                 <div class="col  d-none d-md-block">
-                  <select :change="onDropdown" class="form-select  border-0">
-                      <option>Marketcap</option>
-                      <option value="1">One</option>
-                      <option value="2">Two</option>
-                      <option value="3">Three</option>
-                    </select>
-                </div>
-                <div class="col  d-none d-md-block">
-                  <select :change="onDropdown" class="form-select border-0">
-                      <option>24H Volume</option>
-                      <option value="1">One</option>
-                      <option value="2">Two</option>
-                      <option value="3">Three</option>
-                    </select>
-                </div>
+                   </div>
+
+                  <div v-for="(filter, index) in filters" :key="index" class="col d-none d-md-block">
+                  <select @change="onDropdown($event, filter.key)" class="form-select border-0">
+                    <option>{{ filter.label }}</option>
+                    <option v-for="option in filter.options" :key="option.value" :value="option.value">{{ option.label }}</option>
+                  </select>
 
                   </div>
                 </div>
@@ -345,8 +255,8 @@ onMounted(() => {
                               </thead>
                               <tbody>
                               
-                              <RowWidget v-for="(row, index) in tab.content" :key="index">
-                                <ColumnWidget>{{ index + 1 }}</ColumnWidget>
+                              <RowWidget v-for="(row, index) in paginatedItems" :key="index">
+                                <ColumnWidget>{{ index + 1}}</ColumnWidget>
                                   <template v-for="(widget, inner_key) in row" :key="inner_key">
                                     <ColumnWidget :class="{ 'sticky-column' : tab.id == tab.header.subject}">
                                       <component :is="widget.is" v-bind="widget.props"></component>
@@ -360,20 +270,26 @@ onMounted(() => {
                     </div>
                     <div class="card rounded-1 px-3 py-3" :style="{background:tableBgColor}">
                             <div class="pagination-container">
-                                <div class="pagination-info"> Showing 1 to 100 from 1000</div>
+                                <div class="pagination-info"> Showing {{ startItem }} to {{ endItem }} of {{ assetCount }} results</div>
                                 <div class="pagination-buttons">
-                                  <button id="prevPage"><</button>
-                                  
-                                  <button class="active">1</button>
-                                  <button>2</button>
-                                  <button>3</button>
-                                  
-                                  <button id="nextPage">></button>
-                                </div>
+                                    <button @click="changePage(currentPage - 1)" :disabled="currentPage === 1">Prev</button>
+
+                                    <span v-for="page in totalPages" :key="page">
+                                      <button 
+                                        @click="changePage(page)" 
+                                        :class="{ active: currentPage === page }">
+                                        {{ page }}
+                                      </button>
+                                    </span>
+
+                                    <button @click="changePage(currentPage + 1)" :disabled="currentPage === totalPages">Next</button>
+                                  </div>
+
                               </div>
                           </div>
                 </div>
               </div>
+            </div>
   </template>
 
 <style lang="scss">
@@ -440,7 +356,7 @@ onMounted(() => {
   }
 
   .pagination-buttons button.active {
-    background: #1d2330;
+    background: #252d3d;
   }
 
  .wide-sticky-column {
