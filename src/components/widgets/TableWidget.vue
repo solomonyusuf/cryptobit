@@ -241,11 +241,15 @@ const tableStyles = computed(() => ({
                                     'px-4': true,
                                     'py-2': true,
                                     'text-capitalize': true,
-                                    'text-left': true
-                                  }"
+                                    'text-left': true,
+                                   }"
                                   >
                                     <div>
-                                      <div class="font-bold" :style="{color: fontColor}">{{ col.title }}</div>
+                                      <div :class="{
+                                        'font-bold' : true,
+                                        'mb-3' : col.subTitle === ''
+                                        }" 
+                                        :style="{color: fontColor}">{{ col.title }}</div>
                                       <div v-if="col.subTitle" :style="{color:subHeadingColor}" class="text-sm text-capitalize">
                                         {{ col.subTitle }}
                                       </div>
