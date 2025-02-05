@@ -9,12 +9,12 @@ const router = createRouter({
   routes: [
     
     {
-      path: '/',
+      path: '/chart',
       name: 'Pair',
       component: ChartView,
     },
     {
-      path: '/list',
+      path: '/',
       name: 'List',
       component: ListView,
     },
