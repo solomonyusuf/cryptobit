@@ -332,12 +332,12 @@ onMounted(() => {
                           </div>                                                
                       </div>
                     </div>
-                    <!-- <div class="card rounded-1 px-3 py-3" style="background:#161a24;">
+                    <div class="card rounded-1 px-3 py-3" style="background:#161a24;">
                             <div class="pagination-container">
                                 <div class="pagination-info" id="pagination-info"></div>
                                 <div class="pagination-buttons" id="pagination-buttons"></div>
                               </div>
-                          </div> -->
+                          </div>
                 </div>
               </div>
   </template>
