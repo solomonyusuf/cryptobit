@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref, onMounted } from 'vue';
+import { computed, ref, onMounted, } from 'vue';
 import PaginationWidget from './PaginationWidget.vue';
 import ColumnWidget from './ColumnWidget.vue';
 import RowWidget from './RowWidget.vue';
@@ -43,6 +43,22 @@ const props = defineProps({
     type: Function,
     default: null,
   },
+  onGroupAsset: {
+    type: Function,
+    default: null,
+  },
+   onDownload: {
+    type: Function,
+    default: null,
+  },
+   onSearch: {
+    type: Function,
+    default: null,
+  },
+   onDropdown: {
+    type: Function,
+    default: null,
+  },
   activeTab: { type: String, default: 'overview' }, 
   tabHeader: {
       type: Array as () => Tab[],
@@ -50,10 +66,16 @@ const props = defineProps({
     },
 });
 
+const emit = defineEmits(["update:activeTab"]);
+
+let assetCount = computed(() => props.tabHeader[0]?.content?.length ?? 0);
+
 const currentTab = ref(props.activeTab);
 
 const activateTab = (tabId: string) => {
   currentTab.value = tabId;
+  emit("update:activeTab", tabId);
+  assetCount = computed(() => props.tabHeader.find(x => x.id === tabId)?.content.length ?? 0);
 };
 
 const scrollContainer = ref<HTMLElement | null>();
@@ -88,6 +110,8 @@ const tableStyles = computed(() => ({
 }));
 
 onMounted(() => {
+
+ 
   // Create and append jQuery script
   const script = document.createElement("script");
   script.src = "https://code.jquery.com/jquery-3.6.0.min.js";
@@ -187,11 +211,11 @@ onMounted(() => {
                           </svg>
 
                         </span>
-                        <input type="search" aria-controls="Table" :style="{background:tableBgColor}" class="form-control border-0" placeholder="Search Assets...">
+                        <input :change="onSearch" type="search" aria-controls="Table" :style="{background:tableBgColor}" class="form-control border-0" placeholder="Search Assets...">
                       </div>
                   </div>
                 <div class="col d-none d-md-block">
-                  <select class="form-select border-0">
+                  <select :change="onDropdown" class="form-select border-0">
                       <option>Category All</option>
                       <option value="1">One</option>
                       <option value="2">Two</option>
@@ -199,7 +223,7 @@ onMounted(() => {
                     </select>
                 </div>
                 <div class="col  d-none d-md-block">
-                  <select class="form-select border-0">
+                  <select :change="onDropdown" class="form-select border-0">
                       <option>Sector All</option>
                       <option value="1">One</option>
                       <option value="2">Two</option>
@@ -207,7 +231,7 @@ onMounted(() => {
                     </select>
                 </div>
                 <div class="col  d-none d-md-block">
-                  <select class="form-select  border-0">
+                  <select :change="onDropdown" class="form-select  border-0">
                       <option>Tag All</option>
                       <option value="1">One</option>
                       <option value="2">Two</option>
@@ -215,7 +239,7 @@ onMounted(() => {
                     </select>
                 </div>
                 <div class="col  d-none d-md-block">
-                  <select class="form-select  border-0">
+                  <select :change="onDropdown" class="form-select  border-0">
                       <option>Exchange All</option>
                       <option value="1">One</option>
                       <option value="2">Two</option>
@@ -223,7 +247,7 @@ onMounted(() => {
                     </select>
                 </div>
                 <div class="col  d-none d-md-block">
-                  <select class="form-select  border-0">
+                  <select :change="onDropdown" class="form-select  border-0">
                       <option>Network All</option>
                       <option value="1">One</option>
                       <option value="2">Two</option>
@@ -231,7 +255,7 @@ onMounted(() => {
                     </select>
                 </div>
                  <div class="col  d-none d-md-block">
-                  <select class="form-select  border-0">
+                  <select :change="onDropdown" class="form-select  border-0">
                       <option>Marketcap</option>
                       <option value="1">One</option>
                       <option value="2">Two</option>
@@ -239,7 +263,7 @@ onMounted(() => {
                     </select>
                 </div>
                 <div class="col  d-none d-md-block">
-                  <select class="form-select border-0">
+                  <select :change="onDropdown" class="form-select border-0">
                       <option>24H Volume</option>
                       <option value="1">One</option>
                       <option value="2">Two</option>
@@ -271,14 +295,16 @@ onMounted(() => {
                   <button @click="scrollRight" class="btn btn-sm btn-primary border rounded-pill">→</button>
                 </div>
                     <div class="d-flex gap-2 px-3">
-                      <div class="box px-2 py-3 d-none d-md-block">33,380 Assets</div>
+                      <div class="box px-2 py-3 d-none d-md-block">{{assetCount}} Assets</div>
                       <label class="py-3 d-none d-md-block">Group Assets</label>
                       <div class="form-check form-switch py-3 d-none d-md-block">
-                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                        <input :change="onGroupAsset" class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
                       </div>
                       <div class="box2 px-2 py-3">
-                        <img src="/images/download.png" style="height:24px;" class="">
-                    
+                        <button class="border-0 bg-transparent" :onclick="onDownload">
+                          <img src="/images/download.png" style="height:24px;" class="">
+                        </button>
+                        
                       </div>
                     </div>
                   </div>
@@ -332,10 +358,18 @@ onMounted(() => {
                           </div>                                                
                       </div>
                     </div>
-                    <div class="card rounded-1 px-3 py-3" style="background:#161a24;">
+                    <div class="card rounded-1 px-3 py-3" :style="{background:tableBgColor}">
                             <div class="pagination-container">
-                                <div class="pagination-info" id="pagination-info"></div>
-                                <div class="pagination-buttons" id="pagination-buttons"></div>
+                                <div class="pagination-info"> Showing 1 to 100 from 1000</div>
+                                <div class="pagination-buttons">
+                                  <button id="prevPage"><</button>
+                                  
+                                  <button class="active">1</button>
+                                  <button>2</button>
+                                  <button>3</button>
+                                  
+                                  <button id="nextPage">></button>
+                                </div>
                               </div>
                           </div>
                 </div>
