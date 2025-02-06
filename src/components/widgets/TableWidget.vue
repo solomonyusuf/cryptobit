@@ -262,7 +262,7 @@ const tableStyles = computed(() => ({
                               <RowWidget v-for="(row, index) in paginatedItems" :key="index">
                                 <ColumnWidget>{{ index + 1}}</ColumnWidget>
                                   <template v-for="(widget, inner_key) in row" :key="inner_key">
-                                    <ColumnWidget :class="{ 'sticky-column' : tab.id == tab.header.subject}">
+                                    <ColumnWidget :class="{ 'sticky-column' : tab.header.columns[inner_key].title == tab.header.subject}">
                                       <component :is="widget.is" v-bind="widget.props"></component>
                                     </ColumnWidget>
                                   </template>
@@ -384,14 +384,31 @@ const tableStyles = computed(() => ({
   // border:1px solid #384351;
   border:0;
 }
- .sticky-column {
+.sticky-column {
   position: sticky;
   left: 0;
   z-index: 2; 
   min-width: 450px; 
   max-width: 500px;
   box-shadow: none !important;
+  transition: all 0.3s ease; /* Smooth transition effect */
 }
+
+/* Reduce width on smaller screens */
+@media (max-width: 768px) {
+  .sticky-column {
+    min-width: 270px; /* Reduce minimum width */
+    max-width: 300px; /* Reduce maximum width */
+  }
+}
+
+@media (max-width: 480px) {
+  .sticky-column {
+    min-width: 170px; /* Even smaller for mobile screens */
+    max-width: 180px;
+  }
+}
+
 
 tbody .sticky-column {
   z-index: 1; 
