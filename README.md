@@ -1,6 +1,6 @@
-# cryptobit
+## Cryptobit
 
-#Table Widgets
+## Table Widgets
 
 This Vue component integrates multiple widgets to display financial data, including asset information, pricing, percentage changes, and line charts. It is designed to work within a broader financial dashboard.
 
