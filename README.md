@@ -16,22 +16,7 @@ Ensure you have Vue 3 installed in your project. Then, import the required depen
 npm install
 ```
 
-## Usage
-Include this component in your Vue application:
 
-```vue
-<script setup lang="ts">
-import TableWidget from '../widgets/TableWidget.vue'
-</script>
-<template>
-   <div class="bit-px-1"> 
-        <TableWidget
-         :tabHeader="header"
-         :filters="filters"
-          class="bit-mt-4"/>
-    </div>
-  </template>
-```
 
 ## Data Structure
 The component structures data into a `shared_data` array that holds multiple financial assets, each represented with various widgets:
@@ -122,6 +107,23 @@ const  filters = [
         { key: 'volume', label: '24H Volume', options: [{ value: 1, label: 'One' }, { value: 2, label: 'Two' }, { value: 3, label: 'Three' }] }
       ]
 ```
+## Usage
+Include this component in your Vue application:
+
+```vue
+<script setup lang="ts">
+import TableWidget from '../widgets/TableWidget.vue'
+</script>
+<template>
+   <div class="bit-px-1"> 
+        <TableWidget
+         :tabHeader="header"
+         :filters="filters"
+          class="bit-mt-4"/>
+    </div>
+  </template>
+```
+
 you can also customize table with the following props property
 ```vue
 <script setup lang="ts">
