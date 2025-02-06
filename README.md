@@ -138,38 +138,39 @@ const onDropdown = () => { console.log('Dropdown Triggered!'); };
 
 <template>
   <div class="bit-px-1">
-    <TableWidget
-      :total-items="10"
-      :items-per-page="5"
-      :total-pages="2"
-      :active-tab="'overview'"
-      :tab-header="tabHeader"
-      :filters="filters"
-      
-      :title="'Assets'"
-      :width="'100%'"
-      :header-color="'white'"
-      :table-bg-color="'#12161e'"
-      :accent-bg-color="'transparent'"
-      :striped-color="'#697a8d'"
-      :striped-bg="'#f9fafb'"
-      :active-color="'#697a8d'"
-      :active-bg="'rgba(67, 89, 113, 0.1)'"
-      :hover-color="'#697a8d'"
-      :hover-bg="'rgba(67, 89, 113, 0.06)'"
-      :border-color="'#ffffff'"
-      :sub-heading-color="'gray'"
-      :border="'1px solid #1D2330'"
-      :font-color="'white'"
-      
-      :on-click="onClick"
-      :on-group-asset="onGroupAsset"
-      :on-download="onDownload"
-      :on-search="onSearch"
-      :on-dropdown="onDropdown"
-      
-      class="bit-mt-4"
-    />
+   <TableWidget
+  :totalItems="10"
+  :itemsPerPage="5"
+  :totalPages="2"
+  :activeTab="'overview'"
+  :tabHeader="header" // from the variable above
+  :filters="filters"
+  
+  :title="Assets"
+  :width="100%"
+  :headerColor="white"
+  :tableBgColor="#12161e"
+  :accentBgColor="transparent"
+  :stripedColor="#697a8d"
+  :stripedBg="#f9fafb"
+  :activeColor="'#697a8d'"
+  :activeBg="'rgba(67, 89, 113, 0.1)'"
+  :hoverColor="'#697a8d'"
+  :hoverBg="rgba(67, 89, 113, 0.06)"
+  :borderColor="#ffffff"
+  :subHeadingColor="gray"
+  :border="'1px solid #1D2330'"
+  :fontColor="'white'"
+  
+  :onClick="onClick"
+  :onGroupAsset="onGroupAsset"
+  :onDownload="onDownload"
+  :onSearch="onSearch"
+  :onDropdown="onDropdown"
+  
+  class="bit-mt-4"
+/>
+
   </div>
 </template>
 ```
