@@ -235,7 +235,7 @@ const onDropdown = () => { console.log('Dropdown Triggered!'); };
   :totalItems="10"
   :itemsPerPage="5"
   :totalPages="2"
-  :activeTab="'overview'"
+  :activeTab="overview"
   :tabHeader="header" // from the variable above
   :filters="filters"
   
@@ -246,14 +246,14 @@ const onDropdown = () => { console.log('Dropdown Triggered!'); };
   :accentBgColor="transparent"
   :stripedColor="#697a8d"
   :stripedBg="#f9fafb"
-  :activeColor="'#697a8d'"
-  :activeBg="'rgba(67, 89, 113, 0.1)'"
-  :hoverColor="'#697a8d'"
+  :activeColor="#697a8d"
+  :activeBg="rgba(67, 89, 113, 0.1)"
+  :hoverColor="#697a8d"
   :hoverBg="rgba(67, 89, 113, 0.06)"
   :borderColor="#ffffff"
   :subHeadingColor="gray"
-  :border="'1px solid #1D2330'"
-  :fontColor="'white'"
+  :border="1px solid #1D2330"
+  :fontColor="white"
   
   :onClick="onClick"
   :onGroupAsset="onGroupAsset"
