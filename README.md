@@ -22,6 +22,35 @@ you can reuse our text widget follow this example
       />
 ```
 
+## Pill Widget
+you can reuse our pill widget follow this example
+```vue
+<PillWidget 
+     title="Crypto"
+     background="blue"
+ />
+```
+
+## LineChart Widget
+you can reuse our line-chart widget follow this example
+```vue
+<script lang="ts">
+const data = Array.from({ length: 30 }, () => Math.floor(Math.random() * 100)); // Generate 30 random data points
+const labels = [
+  "January", "February", "March", "April", "May", "June", "July", "August", "September", "October",
+  "November", "December", "January", "February", "March", "April", "May", "June", "July", "August",
+  "September", "October", "November", "December", "January", "February", "March", "April", "May", "June"
+];
+<script>
+<LineChartWidget 
+     :labels="labels"
+     :data="data"
+      width="100%"
+      height="20vh"
+      lineColor="red"
+ />
+```
+
 
 ## Percentage Widget
 you can reuse our percentage widget to show percentage follow this example
