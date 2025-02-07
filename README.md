@@ -16,6 +16,9 @@ you can reuse our text widget follow this example
 <TextWidget 
       title="Login To Access"
       variation="h3"
+      color=""
+      weight=""
+      margin=""
       />
 ```
 
