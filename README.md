@@ -10,6 +10,15 @@ you can reuse our asset widget to display assets
    />
 ```
 
+## Text Widget
+you can reuse our text widget follow this example
+```vue
+<TextWidget 
+      title="Login To Access"
+      variation="h3"
+      />
+```
+
 
 ## Table Widgets
 
