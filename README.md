@@ -77,24 +77,10 @@ you can reuse our link widget follow this example
 
 ## Table Widgets
 
-This Vue component integrates multiple widgets to display financial data, including asset information, pricing, percentage changes, and line charts. It is designed to work within a broader financial dashboard.
+This Vue component integrates multiple widgets to display financial data, including asset information, pricing, percentage changes, and line charts. It is designed to work within a broader financial dashboard
 
-## Features
-- **Dynamic Data Generation**: Generates 30 random data points for chart visualization.
-- **Modular Widget System**: Uses various widgets for asset details, prices, percentage changes, and charts.
-- **Reusable UI Components**: Includes widgets like `AssetWidget`, `PriceWidget`, `PercentageWidget`, `LineChartWidget`, and more.
-
-## Installation
-Ensure you have Vue 3 installed in your project. Then, import the required dependencies and components.
-
-```sh
-npm install
-```
-
-
-
-## Data Structure
-The component structures data into a `shared_data` array that holds multiple financial assets, each represented with various widgets:
+# Data Structure
+The component structures data into a `shared_data` array that holds multiple financial assets, each represented with various widgets in the header variable:
 
 ```ts
 const shared_data = [
@@ -190,11 +176,11 @@ Include this component in your Vue application:
 import TableWidget from '../widgets/TableWidget.vue'
 </script>
 <template>
-   <div class="bit-px-1"> 
+   <div> 
         <TableWidget
          :tabHeader="header"
          :filters="filters"
-          class="bit-mt-4"/>
+          />
     </div>
   </template>
 ```
