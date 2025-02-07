@@ -35,6 +35,7 @@ you can reuse our pill widget follow this example
 you can reuse our line-chart widget follow this example
 ```vue
 <script lang="ts">
+import LineChartWidget from '../widgets/LineChartWidget.vue';
 const data = Array.from({ length: 30 }, () => Math.floor(Math.random() * 100)); // Generate 30 random data points
 const labels = [
   "January", "February", "March", "April", "May", "June", "July", "August", "September", "October",
