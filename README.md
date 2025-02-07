@@ -19,6 +19,29 @@ you can reuse our text widget follow this example
       />
 ```
 
+## Button Widget
+you can reuse our button widget follow this example
+```vue
+  <ButtonWidget 
+      output="button" //can be reset, submit or button
+      :onClick="handleGoogle" //pass a function
+      background="#1b1c20"
+      title="Google Account"
+      shadow="0 0.125rem 0.25rem 0 rgba(66, 70, 74, 0.4)"
+      image="/images/google.png"
+      margin="0.5rem"
+      weight="700"
+      />
+```
+## Input Widget
+you can reuse our input widget follow this example
+```vue
+  <InputWidget 
+       v-model="password"
+       output="password"
+       placeholder="Enter Your Password"/>
+```
+
 
 ## Table Widgets
 
