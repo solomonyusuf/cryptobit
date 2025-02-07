@@ -22,6 +22,16 @@ you can reuse our text widget follow this example
       />
 ```
 
+
+## Percentage Widget
+you can reuse our percentage widget to show percentage follow this example
+```vue
+<PercentageWidget 
+           amount="100"
+           color="red"
+         />
+```
+
 ## Button Widget
 you can reuse our button widget follow this example
 ```vue
@@ -43,6 +53,25 @@ you can reuse our input widget follow this example
        v-model="password"
        output="password"
        placeholder="Enter Your Password"/>
+```
+
+## Input Checkbox Widget
+you can reuse our checkbox widget follow this example
+```vue
+  <InputCheckbox
+            v-model="checkbox"
+             margin="0"
+           />
+```
+## Link Widget
+you can reuse our link widget follow this example
+```vue
+  <LinkWidget
+            title="Proceed to table"
+            link="/list"
+            weight="700"
+            background="#164fe8"
+            />
 ```
 
 
