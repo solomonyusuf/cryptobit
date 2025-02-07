@@ -1,4 +1,15 @@
 # Cryptobit
+## Asset Widget
+you can reuse our asset widget to display assets
+
+```vue
+<AssetWidget
+   image = "https://img.icons8.com/?size=100&id=63192&format=png&color=000000"
+   title = "Bitcoin"
+   symbol="BTC"
+   />
+```
+
 
 ## Table Widgets
 
