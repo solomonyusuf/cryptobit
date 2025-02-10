@@ -45,7 +45,7 @@ const student_data = [
         { is: PriceWidget, props: { amount: "30B", symbol:"$" } },
         { is: PriceWidget, props: { amount: "31B", symbol:"$" } },
     ],
-   ];
+                     ];
     
 const shared_data = [
     [ 
@@ -118,7 +118,7 @@ const shared_data = [
         { is: LineChartWidget, props: { data, labels, options: "{ lineColor: 'rgba(0, 128, 255, 1)', pointColor: 'rgba(0, 128, 255, 1)'}" } },
         { is: PillWidget, props: { title: "Smart Contracts" } },
     ]
-];
+                     ];
 
 const header = [
                     {
@@ -193,6 +193,27 @@ const  filters = [
         { key: 'volume', label: '24H Volume', options: [{ value: 1, label: 'One' }, { value: 2, label: 'Two' }, { value: 3, label: 'Three' }] }
       ]
 
+const handleSearch = (event: any) => {
+  console.log("Search input:", event.target.value);
+  alert(event.target.value);
+};
+
+const handleDownload = (event:any) => {
+  console.log("Download button clicked");
+  alert("Download button clicked");
+};
+
+
+const handleGroup = (event:any) => {
+  console.log("Group button clicked");
+  alert("Group Toggle clicked");
+};
+
+const handleDropdown = (event:any, filter:any) => {
+  console.log("Dropdown clicked");
+  alert("Dropdown clicked");
+};
+
 </script>
 
 <template>
@@ -200,7 +221,11 @@ const  filters = [
         <TableWidget
          :tabHeader="header"
          :filters="filters"
-          class="bit-mt-4"/>
+         :onSearch="handleSearch"
+         :onDownload="handleDownload"
+         :onGroupAsset="handleGroup"
+         :onDropdown="handleDropdown"
+          />
     </div>
   </template>
 

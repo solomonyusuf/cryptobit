@@ -175,7 +175,7 @@ const tableStyles = computed(() => ({
                           </svg>
 
                         </span>
-                        <input :input="onSearch" type="search" aria-controls="Table" :style="{background:tableBgColor}" class="form-control border-0" placeholder="Search Assets...">
+                        <input @input="onSearch($event)" type="search" aria-controls="Table" :style="{background:tableBgColor}" class="form-control border-0" placeholder="Search Assets..."/>
                       </div>
                    </div>
 
@@ -212,7 +212,7 @@ const tableStyles = computed(() => ({
                       <div class="box px-2 py-3 d-none d-md-block">{{assetCount}} Assets</div>
                       <label class="py-3 d-none d-md-block">Group Assets</label>
                       <div class="form-check form-switch py-3 d-none d-md-block">
-                        <input :change="onGroupAsset" class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                        <input @input="onGroupAsset($event)" class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
                       </div>
                       <div class="box2 px-2 py-3">
                         <button class="border-0 bg-transparent" :onclick="onDownload">
@@ -248,8 +248,9 @@ const tableStyles = computed(() => ({
                                     'text-left': true,
                                    }"
                                   >
-                                    <div>
+                                    <div class="border-0">
                                       <h6 :class="{
+                                        'border-0':true,
                                         'fw-bold' : true,
                                         'font-bold' : true,
                                         'mb-4' : col.subTitle === '',
@@ -377,17 +378,17 @@ const tableStyles = computed(() => ({
 }
  .box {
   display: inline-block;  
-  border-left: 2px solid #28303d;   
-  border-right: 2px solid #28303d;  
+  border-left: 1px solid #343e4b;   
+  border-right: 1px solid #343e4b;  
 }
 .box2 {
   display: inline-block;  
-  border-left: 2px solid #28303d;    
+  border-left: 2px solid #343e4b;    
 }
 .sticky-header
 {
   background-color: #12161e;
-  border-color: #12161e;
+  border-color: #343e4b;
   // border:1px solid #384351;
   border:0;
 }
@@ -397,7 +398,7 @@ const tableStyles = computed(() => ({
   z-index: 2; 
   min-width: 450px; 
   max-width: 500px;
-  box-shadow: none !important;
+  box-shadow: none !important; 
   transition: all 0.3s ease; /* Smooth transition effect */
 }
 
@@ -411,14 +412,19 @@ const tableStyles = computed(() => ({
 
 @media (max-width: 480px) {
   .sticky-column {
-    min-width: 170px; /* Even smaller for mobile screens */
-    max-width: 180px;
+    min-width: 190px; /* Even smaller for mobile screens */
+    max-width: 200px;
   }
 }
 
 
 tbody .sticky-column {
-  z-index: 1; 
+  z-index: 1;
+
+}
+
+tbody th{
+  border:0.5px solid #343e4b;
 }
 .scroll-card {
   overflow-x: auto;  
@@ -6463,7 +6469,8 @@ a.invert-bg-dark:hover, a.invert-bg-dark:focus {
 .nav-align-left .table:not(.table-dark) thead:not(.table-dark) th,
 .nav-align-left .table:not(.table-dark) tfoot:not(.table-dark) th,
 .nav-align-left .table:not(.table-dark) td {
-  border-color: #d9dee3;
+  border-color: #343e4b;
+  border:0.5px;
 }
 
 .btn {
