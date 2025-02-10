@@ -412,8 +412,8 @@ const tableStyles = computed(() => ({
 
 @media (max-width: 480px) {
   .sticky-column {
-    min-width: 190px; /* Even smaller for mobile screens */
-    max-width: 200px;
+    min-width: 210px; /* Even smaller for mobile screens */
+    max-width: 220px;
   }
 }
 
