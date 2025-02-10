@@ -84,9 +84,11 @@ const props = defineProps({
 
 const emit = defineEmits([
   "update:activeTab", 
+  "update:clickedTab", 
   "update:currentPage"
 ]);
 
+ 
 const currentTab = ref(props.activeTab);
 
 const currentPage = ref(1);
@@ -102,11 +104,13 @@ let endItem = computed(() => Math.min(currentPage.value * props.ItemsPerPage, as
 
 const activateTab = (tabId: string) => {
   currentTab.value = tabId;
-  assetCount = computed(() => props.tabHeader.find(x => x.id === tabId)?.content.length ?? 0);
-
+  let temp = props.tabHeader.find(x => x.id === tabId);
+  assetCount = computed(() => temp?.content.length ?? 0);
 
   emit("update:activeTab", tabId);  
+  emit("update:clickedTab", temp);
   emit("update:currentPage", 1);
+  currentPage.value = 1;
 };
 
 const scrollContainer = ref<HTMLElement | null>();
@@ -126,7 +130,7 @@ const scrollRight = () => {
 
 const paginatedItems = computed(() => {
   const start = (currentPage.value - 1) * props.ItemsPerPage;
-  return props.tabHeader[0]?.content.slice(start, start + props.ItemsPerPage) ?? [];
+  return  props.tabHeader.find(x => x.id === currentTab.value)?.content.slice(start, start + props.ItemsPerPage) ?? [];
 });
 
 const changePage = (page: number) => {
@@ -159,7 +163,7 @@ const tableStyles = computed(() => ({
 
 <template>
         <div class="px-3 border-1">
-                <h3 class="card-header" :style="{color:headerColor}">{{title}}</h3>
+                <h3 class="card-header fw-bold" :style="{color:headerColor}">{{title}}</h3>
                 <div class="mb-3">
                   <div class="row flex-nowrap mb-2  justify-content-start">
                    <div class="col-md-3 col-sm-6 d-flex align-items-center">
@@ -231,13 +235,13 @@ const tableStyles = computed(() => ({
                             <table id="Table" class="table mb-5 col-xl-12" style="max-height:50vh; overflow-y: auto;" :style="tableStyles">
                               <thead class="sticky-header">
                                 <tr style="border-color:#384351;">
-                                  <th></th>
+                                  <th>#</th>
                                   <th
                                     v-for="(col, index) in tab.header.columns"                       
                                     :key="index"
                                     style="border-color:#384351;"
                                     :class="{
-                                    'sticky-column': col.title === props.tabHeader[0].header.subject, 
+                                    'sticky-column': col.title === tab.header.subject, 
                                     'px-4': true,
                                     'py-2': true,
                                     'text-capitalize': true,
@@ -245,11 +249,13 @@ const tableStyles = computed(() => ({
                                    }"
                                   >
                                     <div>
-                                      <div :class="{
+                                      <h6 :class="{
+                                        'fw-bold' : true,
                                         'font-bold' : true,
-                                        'mb-3' : col.subTitle === ''
+                                        'mb-4' : col.subTitle === '',
+                                        'mb-0' : col.subTitle !== ''
                                         }" 
-                                        :style="{color: fontColor}">{{ col.title }}</div>
+                                        :style="{color: fontColor}">{{ col.title }}</h6>
                                       <div v-if="col.subTitle" :style="{color:subHeadingColor}" class="text-sm text-capitalize">
                                         {{ col.subTitle }}
                                       </div>
@@ -261,18 +267,16 @@ const tableStyles = computed(() => ({
                               
                               <RowWidget v-for="(row, index) in paginatedItems" :key="index">
                                 <ColumnWidget>{{ index + 1}}</ColumnWidget>
-                                  <template v-for="(widget, inner_key) in row" :key="inner_key">
-                                    <ColumnWidget :class="{ 'sticky-column' : tab.header.columns[inner_key].title == tab.header.subject}">
+                                  <template v-for="(widget, innerkey) in row" :key="innerkey">
+                                    <ColumnWidget :class="{ 'sticky-column' : tab.header?.columns[innerkey]?.title == tab.header.subject}">
                                       <component :is="widget.is" v-bind="widget.props"></component>
                                     </ColumnWidget>
                                   </template>
                                 </RowWidget>
                               </tbody>
                             </table>                       
-                          </div>                                                
-                      </div>
-                    </div>
-                    <div class="card rounded-1 px-3 py-3" :style="{background:tableBgColor}">
+                          </div>
+                          <div v-if="tab.content.length > ItemsPerPage" class="card rounded-1 px-3 py-3" :style="{background:tableBgColor}">
                             <div class="pagination-container">
                                 <div class="pagination-info"> Showing {{ startItem }} to {{ endItem }} of {{ assetCount }} results</div>
                                 <div class="pagination-buttons">
@@ -290,7 +294,10 @@ const tableStyles = computed(() => ({
                                   </div>
 
                               </div>
-                          </div>
+                    </div>                                                
+                      </div>
+                    </div>
+                   
                 </div>
               </div>
             </div>

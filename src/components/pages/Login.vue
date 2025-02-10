@@ -6,7 +6,10 @@ import InputWidget from '../widgets/InputWidget.vue';
 import LinkWidget from '../widgets/LinkWidget.vue';
 import TextWidget from '../widgets/TextWidget.vue';
 import TableWidget from '../widgets/TableWidge.vue'
+import PercentageWidget from '../widgets/PercentageWidget.vue';
+import PillWidget from '../widgets/PillWidget.vue';
 import { ref } from "vue";
+import LineChartWidget from '../widgets/LineChartWidget.vue';
 
 
 const checkbox = ref(false);
@@ -37,7 +40,7 @@ const handleCoinbase = () => {
 <div class="layout-container">
    <div class="content-wrapper">
         <div class="container-xxl bit-mt-4 bit-mb-4">
-         
+          
           <div class="bit-row bit-justify-content-center">
             <CardWidget
              height="100vh"
@@ -79,6 +82,8 @@ const handleCoinbase = () => {
                         :onClick="handleGoogle"
                         background="#1b1c20"
                         title="Google Account"
+                        shadow="0 0.125rem 0.25rem 0 rgba(66, 70, 74, 0.4)"
+                        image="/images/google.png"
                         margin="0.5rem"
                         weight="700"
                         />
