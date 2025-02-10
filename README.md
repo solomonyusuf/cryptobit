@@ -1,25 +1,116 @@
 # Cryptobit
+## Asset Widget
+you can reuse our asset widget to display assets
 
-## Table Widgets
+```vue
+<AssetWidget
+   image = "https://img.icons8.com/?size=100&id=63192&format=png&color=000000"
+   title = "Bitcoin"
+   symbol="BTC"
+   />
+```
 
-This Vue component integrates multiple widgets to display financial data, including asset information, pricing, percentage changes, and line charts. It is designed to work within a broader financial dashboard.
+## Text Widget
+you can reuse our text widget follow this example
+```vue
+<TextWidget 
+      title="Login To Access"
+      variation="h3"
+      color=""
+      weight=""
+      margin=""
+      />
+```
 
-## Features
-- **Dynamic Data Generation**: Generates 30 random data points for chart visualization.
-- **Modular Widget System**: Uses various widgets for asset details, prices, percentage changes, and charts.
-- **Reusable UI Components**: Includes widgets like `AssetWidget`, `PriceWidget`, `PercentageWidget`, `LineChartWidget`, and more.
+## Pill Widget
+you can reuse our pill widget follow this example
+```vue
+<PillWidget 
+     title="Crypto"
+     background="blue"
+ />
+```
 
-## Installation
-Ensure you have Vue 3 installed in your project. Then, import the required dependencies and components.
-
-```sh
-npm install
+## LineChart Widget
+you can reuse our line-chart widget follow this example
+```vue
+<script lang="ts">
+import LineChartWidget from '../widgets/LineChartWidget.vue';
+const data = Array.from({ length: 30 }, () => Math.floor(Math.random() * 100)); // Generate 30 random data points
+const labels = [
+  "January", "February", "March", "April", "May", "June", "July", "August", "September", "October",
+  "November", "December", "January", "February", "March", "April", "May", "June", "July", "August",
+  "September", "October", "November", "December", "January", "February", "March", "April", "May", "June"
+];
+<script>
+<LineChartWidget 
+     :labels="labels"
+     :data="data"
+      width="100%"
+      height="20vh"
+      lineColor="red"
+ />
 ```
 
 
+## Percentage Widget
+you can reuse our percentage widget to show percentage follow this example
+```vue
+<PercentageWidget 
+           amount="100"
+           color="red"
+         />
+```
 
-## Data Structure
-The component structures data into a `shared_data` array that holds multiple financial assets, each represented with various widgets:
+## Button Widget
+you can reuse our button widget follow this example
+```vue
+  <ButtonWidget 
+      output="button" //can be reset, submit or button
+      :onClick="handleGoogle" //pass a function
+      background="#1b1c20"
+      title="Google Account"
+      shadow="0 0.125rem 0.25rem 0 rgba(66, 70, 74, 0.4)"
+      image="/images/google.png"
+      margin="0.5rem"
+      weight="700"
+      />
+```
+## Input Widget
+you can reuse our input widget follow this example
+```vue
+  <InputWidget 
+       v-model="password"
+       output="password"
+       placeholder="Enter Your Password"/>
+```
+
+## Input Checkbox Widget
+you can reuse our checkbox widget follow this example
+```vue
+  <InputCheckbox
+            v-model="checkbox"
+             margin="0"
+           />
+```
+## Link Widget
+you can reuse our link widget follow this example
+```vue
+  <LinkWidget
+            title="Proceed to table"
+            link="/list"
+            weight="700"
+            background="#164fe8"
+            />
+```
+
+
+## Table Widgets
+
+This Vue component integrates multiple widgets to display financial data, including asset information, pricing, percentage changes, and line charts. It is designed to work within a broader financial dashboard
+
+# Data Structure
+The component structures data into a `shared_data` array that holds multiple financial assets, each represented with various widgets in the header variable:
 
 ```ts
 const shared_data = [
@@ -115,11 +206,11 @@ Include this component in your Vue application:
 import TableWidget from '../widgets/TableWidget.vue'
 </script>
 <template>
-   <div class="bit-px-1"> 
+   <div> 
         <TableWidget
          :tabHeader="header"
          :filters="filters"
-          class="bit-mt-4"/>
+          />
     </div>
   </template>
 ```
@@ -144,7 +235,7 @@ const onDropdown = () => { console.log('Dropdown Triggered!'); };
   :totalItems="10"
   :itemsPerPage="5"
   :totalPages="2"
-  :activeTab="'overview'"
+  :activeTab="overview"
   :tabHeader="header" // from the variable above
   :filters="filters"
   
@@ -155,14 +246,14 @@ const onDropdown = () => { console.log('Dropdown Triggered!'); };
   :accentBgColor="transparent"
   :stripedColor="#697a8d"
   :stripedBg="#f9fafb"
-  :activeColor="'#697a8d'"
-  :activeBg="'rgba(67, 89, 113, 0.1)'"
-  :hoverColor="'#697a8d'"
+  :activeColor="#697a8d"
+  :activeBg="rgba(67, 89, 113, 0.1)"
+  :hoverColor="#697a8d"
   :hoverBg="rgba(67, 89, 113, 0.06)"
   :borderColor="#ffffff"
   :subHeadingColor="gray"
-  :border="'1px solid #1D2330'"
-  :fontColor="'white'"
+  :border="1px solid #1D2330"
+  :fontColor="white"
   
   :onClick="onClick"
   :onGroupAsset="onGroupAsset"
