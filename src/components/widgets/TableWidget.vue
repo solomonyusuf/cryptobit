@@ -17,8 +17,10 @@ interface TableColumn {
 }
 
 interface TableHeader {
-  subject : String;
+  subject : string;
   columns: TableColumn[];
+  minColumnWidth: string;
+  maxColumnWidth: string;
 }
 
 interface Filter {
@@ -33,9 +35,7 @@ interface Option {
 
 
 const props = defineProps({
-  totalItems: { type: Number, default: 10 },
-  ItemsPerPage: { type: Number, default: 5 },
-  totalPages: { type: Number, default: 2 },
+  ItemsPerPage: { type: Number, default: 10 },
   title: { type: String, default: 'Assets' },
   width: { type: String, default: '100%' },
   headerColor: { type: String, default: 'white' },
@@ -91,11 +91,19 @@ const emit = defineEmits([
  
 const currentTab = ref(props.activeTab);
 
+const clickedTab = computed(()=>{
+  return props.tabHeader.find(x => x.id === currentTab.value);
+});
+
+let tabCount = props.tabHeader.find(x => x.id === currentTab.value)?.header.columns.length ?? 0;
+
 const currentPage = ref(1);
 
 let assetCount = computed(() => props.tabHeader[0]?.content?.length ?? 0);
 
-const totalPages = computed(() => Math.ceil(props.totalItems / props.ItemsPerPage));
+let totalItems = assetCount.value;
+
+const totalPages = computed(() => Math.ceil(totalItems / props.ItemsPerPage));
 
 let startItem = computed(() => (currentPage.value - 1) * props.ItemsPerPage + 1);
 
@@ -112,6 +120,7 @@ const activateTab = (tabId: string) => {
   emit("update:currentPage", 1);
   currentPage.value = 1;
 };
+
 
 const scrollContainer = ref<HTMLElement | null>();
 
@@ -204,10 +213,14 @@ const tableStyles = computed(() => ({
                       </li>
                     </ul>
 
-                    <div class="d-block d-sm-none mt-2 mb-0 d-flex justify-content-between">
-                  <button @click="scrollLeft" class="btn btn-sm btn-primary border rounded-pill">←</button>
-                  <button @click="scrollRight" class="btn btn-sm btn-primary border rounded-pill">→</button>
-                </div>
+                  <div class="d-block d-sm-none mt-2 mb-0 d-flex justify-content-between">
+                      <button @click="scrollLeft" class="btn btn-sm btn-primary border rounded-pill">←</button>
+                      <button @click="scrollRight" class="btn btn-sm btn-primary border rounded-pill">→</button>
+                    </div>
+                  <div v-if="tabCount > 6" class="d-flex d-none d-md-block mb-0 justify-content-between">
+                      <button @click="scrollLeft" class="btn btn-sm btn-primary border rounded-pill">←</button>
+                      <button @click="scrollRight" class="btn btn-sm btn-primary border rounded-pill">→</button>
+                    </div>
                     <div class="d-flex gap-2 px-3">
                       <div class="box px-2 py-3 d-none d-md-block">{{assetCount}} Assets</div>
                       <label class="py-3 d-none d-md-block">Group Assets</label>
@@ -231,8 +244,8 @@ const tableStyles = computed(() => ({
                         :class="{ active: currentTab === tab.id }"
                       >
                       
-                          <div class="table-responsive text-nowrap">
-                            <table id="Table" class="table mb-5 col-xl-12" style="max-height:50vh; overflow-y: auto;" :style="tableStyles">
+                          <div class="table-responsive  text-nowrap">
+                            <table id="Table" class="table table-hover mb-5 col-xl-12" style="max-height:50vh; overflow-y: auto;" :style="tableStyles">
                               <thead class="sticky-header">
                                 <tr style="border-color:#384351;">
                                   <th>#</th>
@@ -242,9 +255,10 @@ const tableStyles = computed(() => ({
                                     style="border-color:#384351;"
                                     :class="{
                                     'sticky-column': col.title === tab.header.subject, 
+                                    'fw-bold': true,
                                     'px-4': true,
                                     'py-2': true,
-                                    'text-capitalize': true,
+                                     
                                     'text-left': true,
                                    }"
                                   >
@@ -253,7 +267,7 @@ const tableStyles = computed(() => ({
                                         'border-0':true,
                                         'fw-bold' : true,
                                         'font-bold' : true,
-                                        'mb-4' : col.subTitle === '',
+                                        'mb-3' : col.subTitle === '',
                                         'mb-0' : col.subTitle !== ''
                                         }" 
                                         :style="{color: fontColor}">{{ col.title }}</h6>
@@ -267,10 +281,12 @@ const tableStyles = computed(() => ({
                               <tbody>
                               
                               <RowWidget v-for="(row, index) in paginatedItems" :key="index">
-                                <ColumnWidget>{{ index + 1}}</ColumnWidget>
-                                  <template v-for="(widget, innerkey) in row" :key="innerkey">
-                                    <ColumnWidget :class="{ 'sticky-column' : tab.header?.columns[innerkey]?.title == tab.header.subject}">
-                                      <component :is="widget.is" v-bind="widget.props"></component>
+                                <ColumnWidget>    {{ (startItem - 1) + index + 1 }}</ColumnWidget>
+                                  <template :class="{'d-flex':true}" v-for="(widget_list, innerkey) in row" :key="innerkey">
+                                    <ColumnWidget :minWidth="tab.header.minColumnWidth" :maxWidth="tab.header.maxColumnWidth" :class="{ 'sticky-column' : tab.header?.columns[innerkey]?.title == tab.header.subject}">
+                                      <template v-for="(widget, colkey) in widget_list" :key="colkey">
+                                          <component :is="widget.is" v-bind="widget.props"></component>
+                                      </template>
                                     </ColumnWidget>
                                   </template>
                                 </RowWidget>
@@ -305,11 +321,16 @@ const tableStyles = computed(() => ({
   </template>
 
 <style lang="scss">
+
+.table-responsive .sticky-column:hover tr:hover {
+    background-color: rgba(0, 0, 0, 0.05); /* Light gray background on hover */
+    transition: background-color 0.3s ease-in-out;
+}
 .sticky-header {
   position: sticky;
   top: 0;
   z-index: 100;
-  background-color: white;
+  background-color: #343e4b;
 }
 /* Scroll container */
 .scroll-container {
@@ -400,6 +421,10 @@ const tableStyles = computed(() => ({
   max-width: 500px;
   box-shadow: none !important; 
   transition: all 0.3s ease; /* Smooth transition effect */
+}
+.sticky-column:hover {
+    background-color: rgba(0, 0, 0, 0.05); /* Light gray background on hover */
+    transition: background-color 0.3s ease-in-out;
 }
 
 /* Reduce width on smaller screens */

@@ -29,7 +29,8 @@ const headerTag = computed(() => (validTags.includes(variation) ? variation : "h
 </script>
 
 <template>
-  <component 
+  <component
+ 
     :is="headerTag" 
     :style="{ color, margin, fontWeight: weight }"> 
     {{ title }}

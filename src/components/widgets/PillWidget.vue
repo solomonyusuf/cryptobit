@@ -7,5 +7,5 @@ const props = defineProps({
 
 </script>
 <template>
-    <span class="badge rounded-pill text-capitalize" :style="{background}">{{ title }}</span>
+    <span class="badge rounded-pill text-capitalize fw-bold" :style="{background}">{{ title }}</span>
 </template> 

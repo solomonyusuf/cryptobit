@@ -25,7 +25,7 @@ const { title, color, image, margin, output, background, shadow, borderColor } =
   },
   image: {
     type: String,
-    default: "/images/google.png",
+    default: "",
   },
   margin: {
     type: String,

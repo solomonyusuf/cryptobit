@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import TableWidget from '../widgets/TableWidget.vue'
 import LineChartWidget from '../widgets/LineChartWidget.vue';
-import TextWidget from './TextWidget.vue';
 import AssetWidget from '../widgets/AssetWidget.vue';
 import PriceWidget from '../widgets/PriceWidget.vue';
 import PercentageWidget from '../widgets/PercentageWidget.vue';
@@ -10,6 +9,14 @@ import { onMounted } from "vue";
 import PaginationWidget from '../widgets/PaginationWidget.vue';
 import RowWidget from '../widgets/RowWidget.vue';
 import ColumnWidget from '../widgets/ColumnWidget.vue';
+import ImageWidget from '../widgets/ImageWidget.vue';
+import TimeWidget from '../widgets/TimeWidget.vue';
+import SpeedWidget from '../widgets/SpeedWidget.vue';
+import FireWidget from '../widgets/FireWidget.vue';
+import TextWidget from '../widgets/TextWidget.vue';
+import VerticalLineWidget from '../widgets/VerticalLineWidget.vue';
+import ButtonWidget from '../widgets/ButtonWidget.vue';
+import LinkWidget from '../widgets/LinkWidget.vue';
 
 const data = Array.from({ length: 30 }, () => Math.floor(Math.random() * 100)); // Generate 30 random data points
 const labels = [
@@ -48,84 +55,1394 @@ const student_data = [
                      ];
     
 const shared_data = [
+  
     [ 
-        { is: AssetWidget, props: { image: "https://img.icons8.com/?size=100&id=63192&format=png&color=000000", image2:"https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", title: 'Bitcoin', symbol:"BTC" } },
-        { is: PriceWidget, props: { amount: "45,320", symbol:"$" } },
-        { is: PercentageWidget, props: { amount: '-2.5', color:"red" } },
+      [
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        { is: AssetWidget, props: { image: "https://img.icons8.com/?size=100&id=63192&format=png&color=000000", image2:"", title: 'Bitcoin', symbol:"BTC" } }, 
+        { is: TimeWidget, props: { content: "5h" } },
+       
+       
+      ],
+      [
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        { is: TimeWidget, props: { content: "5h" } },
+        { is: SpeedWidget, props: { content: "500" } },
+        { is: FireWidget, props: { content: "# 3" } },
+        { is: VerticalLineWidget },
+        { is: TextWidget, props: { title: "Central Africa Republic", variation:"p" } },
+        
+      ],
+      [
+      { is: LineChartWidget, props: { data, labels, options: "{ lineColor: 'rgba(255, 165, 0, 1)', pointColor: 'rgba(255, 165, 0, 1)'}" } },
+        
+      ],
+      [
+       { is: PercentageWidget, props: { amount: '-2.5', color:"red" } },  
+      ],
+      [
         { is: PercentageWidget, props: { amount: '+5.1', color:"green" } },
+      ],
+      [
         { is: PriceWidget, props: { amount: "860B", symbol:"$" } },
+      ],
+      [
         { is: PriceWidget, props: { amount: "30B", symbol:"$" } },
+      ],
+      [
         { is: PriceWidget, props: { amount: "30B", symbol:"$" } },
-        { is: LineChartWidget, props: { data, labels, options: "{ lineColor: 'rgba(255, 215, 0, 1)', pointColor: 'rgba(255, 215, 0, 1)'}" } },
+      ],
+      [
         { is: PillWidget, props: { title: "Cryptocurrency" } },
+      ],
+       [
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        { is: AssetWidget, props: { image: "https://img.icons8.com/?size=100&id=63192&format=png&color=000000", image2:"", title: 'Bitcoin', symbol:"BTC" } }, 
+        { is: TimeWidget, props: { content: "5h" } },
+       
+       
+      ],
+      [
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        { is: TimeWidget, props: { content: "5h" } },
+        { is: SpeedWidget, props: { content: "500" } },
+        { is: FireWidget, props: { content: "# 3" } },
+        { is: VerticalLineWidget },
+        { is: TextWidget, props: { title: "Central Africa Republic", variation:"p" } },
+        
+      ],
+      [
+      { is: LineChartWidget, props: { data, labels, options: "{ lineColor: 'rgba(255, 165, 0, 1)', pointColor: 'rgba(255, 165, 0, 1)'}" } },
+        
+      ],
+      [
+       { is: PercentageWidget, props: { amount: '-2.5', color:"red" } },  
+      ],
+      [
+        { is: PercentageWidget, props: { amount: '+5.1', color:"green" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "860B", symbol:"$" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "30B", symbol:"$" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "30B", symbol:"$" } },
+      ],
+      [
+        { is: PillWidget, props: { title: "Cryptocurrency" } },
+      ]
     ],
     [ 
-        { is: AssetWidget, props: { image: "https://img.icons8.com/?size=100&id=IhWBOFHtv6vx&format=png&color=000000",image2:"https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", title: 'Ethereum', symbol:"ETH" } },
-        { is: PriceWidget, props: { amount: "3,210", symbol:"$" } },
-        { is: PercentageWidget, props: { amount: '-1.2', color:"red" } },
-        { is: PercentageWidget, props: { amount: '+6.3', color:"green" } },
-        { is: PriceWidget, props: { amount: "450B", symbol:"$" } },
-        { is: PriceWidget, props: { amount: "18B", symbol:"$" } },
-        { is: PriceWidget, props: { amount: "18B", symbol:"$" } },
-        { is: PriceWidget, props: { amount: "18B", symbol:"$" } },
-        { is: PillWidget, props: { title: "DeFi" } },
+      [
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        { is: AssetWidget, props: { image: "https://img.icons8.com/?size=100&id=IhWBOFHtv6vx&format=png&color=000000",image2:"https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", title: 'Ethereum', symbol:"ETH" } }, 
+        { is: TimeWidget, props: { content: "5h" } },
+       
+       
+      ],
+      [
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        { is: TimeWidget, props: { content: "5454h" } },
+        { is: SpeedWidget, props: { content: "500000" } },
+        { is: FireWidget, props: { content: "# 3" } },
+    
+      ],
+      [
+        
+      { is: ButtonWidget, props: { title: "Test Button", } },
+      { is: ButtonWidget, props: { title: "Another Button", } },
+        
+      ],
+      [
+       { is: PercentageWidget, props: { amount: '-2.5', color:"red" } },  
+      ],
+      [
+        { is: PercentageWidget, props: { amount: '+5.1', color:"green" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "860B", symbol:"$" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "30B", symbol:"$" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "30B", symbol:"$" } },
+      ],
+      [
+        { is: PillWidget, props: { title: "Cryptocurrency" } },
+      ]
     ],
     [ 
-        { is: AssetWidget, props: { image: "https://img.icons8.com/?size=100&id=GPOyWCiTpgRr&format=png&color=000000", image2:"https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000",title: 'XRP', symbol:"XRP" } },
-        { is: PriceWidget, props: { amount: "0.67", symbol:"$" } },
-        { is: PercentageWidget, props: { amount: '+3.5', color:"green" } },
-        { is: PercentageWidget, props: { amount: '-0.8', color:"red" } },
-        { is: PriceWidget, props: { amount: "35B", symbol:"$" } },
-        { is: PriceWidget, props: { amount: "5B", symbol:"$" } },
-        { is: PriceWidget, props: { amount: "5B", symbol:"$" } },
-        { is: LineChartWidget, props: { data, labels,options: "{ lineColor: 'rgba(0, 0, 255, 1)', pointColor: 'rgba(0, 0, 255, 1)'}" } },
-        { is: PillWidget, props: { title: "Payments" } },
+      [
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        { is: AssetWidget, props: { image: "https://img.icons8.com/?size=100&id=63192&format=png&color=000000", image2:"", title: 'Bitcoin', symbol:"BTC" } }, 
+        { is: FireWidget, props: { content: "# 55" } },
+       
+       
+      ],
+      [
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        
+      ],
+      [
+        { is: FireWidget, props: { content: "# 105" } },
+
+        { is: FireWidget, props: { content: "# 550" } },
+        { is: FireWidget, props: { content: "# 250" } },
+        { is: FireWidget, props: { content: "# 50050" } },
+        { is: FireWidget, props: { content: "# 55000" } },
+        { is: FireWidget, props: { content: "# 550000" } },
+        { is: FireWidget, props: { content: "# 55000" } },
+       
+        
+      ],
+      [
+       { is: PercentageWidget, props: { amount: '-2.5', color:"red" } },  
+      ],
+      [
+        { is: PercentageWidget, props: { amount: '+5.1', color:"green" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "86000000000000000000", symbol:"$" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "3000000000000000000000B", symbol:"$" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "300000000000000000B", symbol:"$" } },
+      ],
+      [
+        { is: PillWidget, props: { title: "Crypto" } },
+      ]
     ],
     [ 
-        { is: AssetWidget, props: { image: "https://img.icons8.com/?size=100&id=12345&format=png&color=000000",image2:"https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", title: 'Solana', symbol:"SOL" } },
-        { is: PriceWidget, props: { amount: "145.20", symbol:"$" } },
-        { is: PercentageWidget, props: { amount: '+12.8', color:"green" } },
-        { is: PriceWidget, props: { amount: "60B", symbol:"$" } },
-        { is: PriceWidget, props: { amount: "8B", symbol:"$" } },
-        { is: PriceWidget, props: { amount: "5B", symbol:"$" } },
-        { is: PriceWidget, props: { amount: "5B", symbol:"$" } },
-        { is: PriceWidget, props: { amount: "2B", symbol:"$" } },
-        { is: PillWidget, props: { title: "NFTs" } },
+      [
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        { is: AssetWidget, props: { image: "https://img.icons8.com/?size=100&id=63192&format=png&color=000000", image2:"", title: 'Bitcoin', symbol:"BTC" } }, 
+        { is: TimeWidget, props: { content: "5h" } },
+       
+       
+      ],
+      [
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        { is: TimeWidget, props: { content: "5h" } },
+        { is: SpeedWidget, props: { content: "500" } },
+        { is: FireWidget, props: { content: "# 3" } },
+        { is: TimeWidget, props: { content: "5454h", color:"gold" } },
+        
+      ],
+      [
+        { is: LinkWidget, props: { link:"google.com", title:" test link 1" }},
+        { is: SpeedWidget, props: { content: "500000000" } },
+        
+      ],
+      [
+       { is: PercentageWidget, props: { amount: '-2.5', color:"red" } },  
+      ],
+      [
+        { is: PercentageWidget, props: { amount: '+5.1', color:"green" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "860B", symbol:"$" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "30B", symbol:"$" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "30B", symbol:"$" } },
+      ],
+      [
+        { is: PillWidget, props: { title: "Cryptocurrency" } },
+      ]
+    ],
+    [
+      [
+        { is: SpeedWidget, props: { content: "500" } },
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        { is: AssetWidget, props: { image: "https://img.icons8.com/?size=100&id=63192&format=png&color=000000", image2:"", title: 'Bitcoin', symbol:"BTC" } }, 
+        { is: TimeWidget, props: { content: "5h" } },
+       
+       
+      ],
+      [
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        { is: TimeWidget, props: { content: "500000h" } },
+        { is: SpeedWidget, props: { content: "5000000000000" } },
+        
+      ],
+      [
+       { is: TextWidget, props: { variation: "h4", title:"Show Test Now Now Now Length", margin:"4px" } },
+        
+      ],
+      [
+       { is: PercentageWidget, props: { amount: '-2.5', color:"red" } },  
+      ],
+      [
+        { is: PercentageWidget, props: { amount: '+5.1', color:"green" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "860B", symbol:"$" } },
+      ],
+      [
+        { is: TextWidget, props: { title: "Show Text", symbol:"$" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "30B", symbol:"$" } },
+      ],
+      [
+        { is: PillWidget, props: { title: "Cryptocurrency" } },
+      ]
     ],
     [ 
-        { is: AssetWidget, props: { image: "https://img.icons8.com/?size=100&id=54321&format=png&color=000000",image2:"https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", title: 'Dogecoin', symbol:"DOGE" } },
-        { is: PriceWidget, props: { amount: "0.089", symbol:"$" } },
-        { is: PercentageWidget, props: { amount: '+6.5', color:"green" } },
-        { is: PriceWidget, props: { amount: "12B", symbol:"$" } },
-        { is: PriceWidget, props: { amount: "3B", symbol:"$" } },
-        { is: PercentageWidget, props: { amount: '+4.3', color:"green" } },
-        { is: PercentageWidget, props: { amount: '+4.3', color:"green" } },
-        { is: LineChartWidget, props: { data, labels, options: "{ lineColor: 'rgba(255, 165, 0, 1)', pointColor: 'rgba(255, 165, 0, 1)'}" } },
-        { is: PillWidget, props: { title: "Meme Coins" } },
+      [
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        { is: AssetWidget, props: { image: "https://img.icons8.com/?size=100&id=63192&format=png&color=000000", image2:"", title: 'Bitcoin', symbol:"BTC" } }, 
+        { is: TimeWidget, props: { content: "5h" } },
+       
+       
+      ],
+      [
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        { is: TimeWidget, props: { content: "5h" } },
+        { is: SpeedWidget, props: { content: "500" } },
+        { is: FireWidget, props: { content: "# 3" } },
+        { is: VerticalLineWidget },
+        { is: TextWidget, props: { title: "Central Africa Republic", variation:"p" } },
+        
+      ],
+      [
+      { is: LineChartWidget, props: { data, labels, options: "{ lineColor: 'rgba(255, 165, 0, 1)', pointColor: 'rgba(255, 165, 0, 1)'}" } },
+        
+      ],
+      [
+       { is: PercentageWidget, props: { amount: '-2.5', color:"red" } },  
+      ],
+      [
+        { is: PercentageWidget, props: { amount: '+5.1', color:"green" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "860B", symbol:"$" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "30B", symbol:"$" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "30B", symbol:"$" } },
+      ],
+      [
+        { is: PillWidget, props: { title: "Cryptocurrency" } },
+      ]
     ],
     [ 
-        { is: AssetWidget, props: { image: "https://img.icons8.com/?size=100&id=axJ7sXBmQS2g&format=png&color=000000", image2:"https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", title: 'Binance Coin', symbol:"BNB" } },
-        { is: PriceWidget, props: { amount: "370.50", symbol:"$" } },
-        { is: PercentageWidget, props: { amount: '-1.7', color:"red" } },
-        { is: PercentageWidget, props: { amount: '+1.7', color:"green" } },
-        { is: PriceWidget, props: { amount: "80B", symbol:"$" } },
-        { is: PriceWidget, props: { amount: "4B", symbol:"$" } },
-        { is: PriceWidget, props: { amount: "1B", symbol:"$" } },
-        { is: PriceWidget, props: { amount: "1B", symbol:"$" } },
-        { is: PillWidget, props: { title: "Exchange Token" } },
+      [
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        { is: AssetWidget, props: { image: "https://img.icons8.com/?size=100&id=IhWBOFHtv6vx&format=png&color=000000",image2:"https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", title: 'Ethereum', symbol:"ETH" } }, 
+        { is: TimeWidget, props: { content: "5h" } },
+       
+       
+      ],
+      [
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        { is: TimeWidget, props: { content: "5454h" } },
+        { is: SpeedWidget, props: { content: "500000" } },
+        { is: FireWidget, props: { content: "# 3" } },
+    
+      ],
+      [
+        
+      { is: ButtonWidget, props: { title: "Test Button", } },
+      { is: ButtonWidget, props: { title: "Another Button", } },
+        
+      ],
+      [
+       { is: PercentageWidget, props: { amount: '-2.5', color:"red" } },  
+      ],
+      [
+        { is: PercentageWidget, props: { amount: '+5.1', color:"green" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "860B", symbol:"$" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "30B", symbol:"$" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "30B", symbol:"$" } },
+      ],
+      [
+        { is: PillWidget, props: { title: "Cryptocurrency" } },
+      ]
     ],
     [ 
-        { is: AssetWidget, props: { image: "https://img.icons8.com/?size=100&id=i9bqSOXbRDgV&format=png&color=000000", image2:"https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", title: 'Cardano', symbol:"ADA" } },
-        { is: PriceWidget, props: { amount: "1.25", symbol:"$" } },
-        { is: PercentageWidget, props: { amount: '+4.3', color:"green" } },
-        { is: PriceWidget, props: { amount: "50B", symbol:"$" } },
-        { is: PriceWidget, props: { amount: "2B", symbol:"$" } },
-        { is: PercentageWidget, props: { amount: '-4.3', color:"red" } },
-        { is: PercentageWidget, props: { amount: '-4.3', color:"red" } },
-        { is: LineChartWidget, props: { data, labels, options: "{ lineColor: 'rgba(0, 128, 255, 1)', pointColor: 'rgba(0, 128, 255, 1)'}" } },
-        { is: PillWidget, props: { title: "Smart Contracts" } },
-    ]
-                     ];
+      [
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        { is: AssetWidget, props: { image: "https://img.icons8.com/?size=100&id=63192&format=png&color=000000", image2:"", title: 'Bitcoin', symbol:"BTC" } }, 
+        { is: FireWidget, props: { content: "# 55" } },
+       
+       
+      ],
+      [
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        
+      ],
+      [
+        { is: FireWidget, props: { content: "# 105" } },
+
+        { is: FireWidget, props: { content: "# 550" } },
+        { is: FireWidget, props: { content: "# 250" } },
+        { is: FireWidget, props: { content: "# 50050" } },
+        { is: FireWidget, props: { content: "# 55000" } },
+        { is: FireWidget, props: { content: "# 550000" } },
+        { is: FireWidget, props: { content: "# 55000" } },
+       
+        
+      ],
+      [
+       { is: PercentageWidget, props: { amount: '-2.5', color:"red" } },  
+      ],
+      [
+        { is: PercentageWidget, props: { amount: '+5.1', color:"green" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "86000000000000000000", symbol:"$" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "3000000000000000000000B", symbol:"$" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "300000000000000000B", symbol:"$" } },
+      ],
+      [
+        { is: PillWidget, props: { title: "Crypto" } },
+      ]
+    ],
+    [ 
+      [
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        { is: AssetWidget, props: { image: "https://img.icons8.com/?size=100&id=63192&format=png&color=000000", image2:"", title: 'Bitcoin', symbol:"BTC" } }, 
+        { is: TimeWidget, props: { content: "5h" } },
+       
+       
+      ],
+      [
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        { is: TimeWidget, props: { content: "5h" } },
+        { is: SpeedWidget, props: { content: "500" } },
+        { is: FireWidget, props: { content: "# 3" } },
+        { is: TimeWidget, props: { content: "5454h", color:"gold" } },
+        
+      ],
+      [
+        { is: LinkWidget, props: { link:"google.com", title:" test link 1" }},
+        { is: SpeedWidget, props: { content: "500000000" } },
+        
+      ],
+      [
+       { is: PercentageWidget, props: { amount: '-2.5', color:"red" } },  
+      ],
+      [
+        { is: PercentageWidget, props: { amount: '+5.1', color:"green" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "860B", symbol:"$" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "30B", symbol:"$" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "30B", symbol:"$" } },
+      ],
+      [
+        { is: PillWidget, props: { title: "Cryptocurrency" } },
+      ]
+    ],
+    [
+      [
+        { is: SpeedWidget, props: { content: "500" } },
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        { is: AssetWidget, props: { image: "https://img.icons8.com/?size=100&id=63192&format=png&color=000000", image2:"", title: 'Bitcoin', symbol:"BTC" } }, 
+        { is: TimeWidget, props: { content: "5h" } },
+       
+       
+      ],
+      [
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        { is: TimeWidget, props: { content: "500000h" } },
+        { is: SpeedWidget, props: { content: "5000000000000" } },
+        
+      ],
+      [
+       { is: TextWidget, props: { variation: "h4", title:"Show Test Now Now Now Length", margin:"4px" } },
+        
+      ],
+      [
+       { is: PercentageWidget, props: { amount: '-2.5', color:"red" } },  
+      ],
+      [
+        { is: PercentageWidget, props: { amount: '+5.1', color:"green" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "860B", symbol:"$" } },
+      ],
+      [
+        { is: TextWidget, props: { title: "Show Text", symbol:"$" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "30B", symbol:"$" } },
+      ],
+      [
+        { is: PillWidget, props: { title: "Cryptocurrency" } },
+      ]
+    ],
+    [ 
+      [
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        { is: AssetWidget, props: { image: "https://img.icons8.com/?size=100&id=63192&format=png&color=000000", image2:"", title: 'Bitcoin', symbol:"BTC" } }, 
+        { is: TimeWidget, props: { content: "5h" } },
+       
+       
+      ],
+      [
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        { is: TimeWidget, props: { content: "5h" } },
+        { is: SpeedWidget, props: { content: "500" } },
+        { is: FireWidget, props: { content: "# 3" } },
+        { is: VerticalLineWidget },
+        { is: TextWidget, props: { title: "Central Africa Republic", variation:"p" } },
+        
+      ],
+      [
+      { is: LineChartWidget, props: { data, labels, options: "{ lineColor: 'rgba(255, 165, 0, 1)', pointColor: 'rgba(255, 165, 0, 1)'}" } },
+        
+      ],
+      [
+       { is: PercentageWidget, props: { amount: '-2.5', color:"red" } },  
+      ],
+      [
+        { is: PercentageWidget, props: { amount: '+5.1', color:"green" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "860B", symbol:"$" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "30B", symbol:"$" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "30B", symbol:"$" } },
+      ],
+      [
+        { is: PillWidget, props: { title: "Cryptocurrency" } },
+      ]
+    ],
+    [ 
+      [
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        { is: AssetWidget, props: { image: "https://img.icons8.com/?size=100&id=IhWBOFHtv6vx&format=png&color=000000",image2:"https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", title: 'Ethereum', symbol:"ETH" } }, 
+        { is: TimeWidget, props: { content: "5h" } },
+       
+       
+      ],
+      [
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        { is: TimeWidget, props: { content: "5454h" } },
+        { is: SpeedWidget, props: { content: "500000" } },
+        { is: FireWidget, props: { content: "# 3" } },
+    
+      ],
+      [
+        
+      { is: ButtonWidget, props: { title: "Test Button", } },
+      { is: ButtonWidget, props: { title: "Another Button", } },
+        
+      ],
+      [
+       { is: PercentageWidget, props: { amount: '-2.5', color:"red" } },  
+      ],
+      [
+        { is: PercentageWidget, props: { amount: '+5.1', color:"green" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "860B", symbol:"$" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "30B", symbol:"$" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "30B", symbol:"$" } },
+      ],
+      [
+        { is: PillWidget, props: { title: "Cryptocurrency" } },
+      ]
+    ],
+    [ 
+      [
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        { is: AssetWidget, props: { image: "https://img.icons8.com/?size=100&id=63192&format=png&color=000000", image2:"", title: 'Bitcoin', symbol:"BTC" } }, 
+        { is: FireWidget, props: { content: "# 55" } },
+       
+       
+      ],
+      [
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        
+      ],
+      [
+        { is: FireWidget, props: { content: "# 105" } },
+
+        { is: FireWidget, props: { content: "# 550" } },
+        { is: FireWidget, props: { content: "# 250" } },
+        { is: FireWidget, props: { content: "# 50050" } },
+        { is: FireWidget, props: { content: "# 55000" } },
+        { is: FireWidget, props: { content: "# 550000" } },
+        { is: FireWidget, props: { content: "# 55000" } },
+       
+        
+      ],
+      [
+       { is: PercentageWidget, props: { amount: '-2.5', color:"red" } },  
+      ],
+      [
+        { is: PercentageWidget, props: { amount: '+5.1', color:"green" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "86000000000000000000", symbol:"$" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "3000000000000000000000B", symbol:"$" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "300000000000000000B", symbol:"$" } },
+      ],
+      [
+        { is: PillWidget, props: { title: "Crypto" } },
+      ]
+    ],
+    [ 
+      [
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        { is: AssetWidget, props: { image: "https://img.icons8.com/?size=100&id=63192&format=png&color=000000", image2:"", title: 'Bitcoin', symbol:"BTC" } }, 
+        { is: TimeWidget, props: { content: "5h" } },
+       
+       
+      ],
+      [
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        { is: TimeWidget, props: { content: "5h" } },
+        { is: SpeedWidget, props: { content: "500" } },
+        { is: FireWidget, props: { content: "# 3" } },
+        { is: TimeWidget, props: { content: "5454h", color:"gold" } },
+        
+      ],
+      [
+        { is: LinkWidget, props: { link:"google.com", title:" test link 1" }},
+        { is: SpeedWidget, props: { content: "500000000" } },
+        
+      ],
+      [
+       { is: PercentageWidget, props: { amount: '-2.5', color:"red" } },  
+      ],
+      [
+        { is: PercentageWidget, props: { amount: '+5.1', color:"green" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "860B", symbol:"$" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "30B", symbol:"$" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "30B", symbol:"$" } },
+      ],
+      [
+        { is: PillWidget, props: { title: "Cryptocurrency" } },
+      ]
+    ],
+    [
+      [
+        { is: SpeedWidget, props: { content: "500" } },
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        { is: AssetWidget, props: { image: "https://img.icons8.com/?size=100&id=63192&format=png&color=000000", image2:"", title: 'Bitcoin', symbol:"BTC" } }, 
+        { is: TimeWidget, props: { content: "5h" } },
+       
+       
+      ],
+      [
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        { is: TimeWidget, props: { content: "500000h" } },
+        { is: SpeedWidget, props: { content: "5000000000000" } },
+        
+      ],
+      [
+       { is: TextWidget, props: { variation: "h4", title:"Show Test Now Now Now Length", margin:"4px" } },
+        
+      ],
+      [
+       { is: PercentageWidget, props: { amount: '-2.5', color:"red" } },  
+      ],
+      [
+        { is: PercentageWidget, props: { amount: '+5.1', color:"green" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "860B", symbol:"$" } },
+      ],
+      [
+        { is: TextWidget, props: { title: "Show Text", symbol:"$" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "30B", symbol:"$" } },
+      ],
+      [
+        { is: PillWidget, props: { title: "Cryptocurrency" } },
+      ]
+    ],
+    [ 
+      [
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        { is: AssetWidget, props: { image: "https://img.icons8.com/?size=100&id=63192&format=png&color=000000", image2:"", title: 'Bitcoin', symbol:"BTC" } }, 
+        { is: TimeWidget, props: { content: "5h" } },
+       
+       
+      ],
+      [
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        { is: TimeWidget, props: { content: "5h" } },
+        { is: SpeedWidget, props: { content: "500" } },
+        { is: FireWidget, props: { content: "# 3" } },
+        { is: VerticalLineWidget },
+        { is: TextWidget, props: { title: "Central Africa Republic", variation:"p" } },
+        
+      ],
+      [
+      { is: LineChartWidget, props: { data, labels, options: "{ lineColor: 'rgba(255, 165, 0, 1)', pointColor: 'rgba(255, 165, 0, 1)'}" } },
+        
+      ],
+      [
+       { is: PercentageWidget, props: { amount: '-2.5', color:"red" } },  
+      ],
+      [
+        { is: PercentageWidget, props: { amount: '+5.1', color:"green" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "860B", symbol:"$" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "30B", symbol:"$" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "30B", symbol:"$" } },
+      ],
+      [
+        { is: PillWidget, props: { title: "Cryptocurrency" } },
+      ]
+    ],
+    [ 
+      [
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        { is: AssetWidget, props: { image: "https://img.icons8.com/?size=100&id=IhWBOFHtv6vx&format=png&color=000000",image2:"https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", title: 'Ethereum', symbol:"ETH" } }, 
+        { is: TimeWidget, props: { content: "5h" } },
+       
+       
+      ],
+      [
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        { is: TimeWidget, props: { content: "5454h" } },
+        { is: SpeedWidget, props: { content: "500000" } },
+        { is: FireWidget, props: { content: "# 3" } },
+    
+      ],
+      [
+        
+      { is: ButtonWidget, props: { title: "Test Button", } },
+      { is: ButtonWidget, props: { title: "Another Button", } },
+        
+      ],
+      [
+       { is: PercentageWidget, props: { amount: '-2.5', color:"red" } },  
+      ],
+      [
+        { is: PercentageWidget, props: { amount: '+5.1', color:"green" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "860B", symbol:"$" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "30B", symbol:"$" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "30B", symbol:"$" } },
+      ],
+      [
+        { is: PillWidget, props: { title: "Cryptocurrency" } },
+      ]
+    ],
+    [ 
+      [
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        { is: AssetWidget, props: { image: "https://img.icons8.com/?size=100&id=63192&format=png&color=000000", image2:"", title: 'Bitcoin', symbol:"BTC" } }, 
+        { is: FireWidget, props: { content: "# 55" } },
+       
+       
+      ],
+      [
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        
+      ],
+      [
+        { is: FireWidget, props: { content: "# 105" } },
+
+        { is: FireWidget, props: { content: "# 550" } },
+        { is: FireWidget, props: { content: "# 250" } },
+        { is: FireWidget, props: { content: "# 50050" } },
+        { is: FireWidget, props: { content: "# 55000" } },
+        { is: FireWidget, props: { content: "# 550000" } },
+        { is: FireWidget, props: { content: "# 55000" } },
+       
+        
+      ],
+      [
+       { is: PercentageWidget, props: { amount: '-2.5', color:"red" } },  
+      ],
+      [
+        { is: PercentageWidget, props: { amount: '+5.1', color:"green" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "86000000000000000000", symbol:"$" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "3000000000000000000000B", symbol:"$" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "300000000000000000B", symbol:"$" } },
+      ],
+      [
+        { is: PillWidget, props: { title: "Crypto" } },
+      ]
+    ],
+    [ 
+      [
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        { is: AssetWidget, props: { image: "https://img.icons8.com/?size=100&id=63192&format=png&color=000000", image2:"", title: 'Bitcoin', symbol:"BTC" } }, 
+        { is: TimeWidget, props: { content: "5h" } },
+       
+       
+      ],
+      [
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        { is: TimeWidget, props: { content: "5h" } },
+        { is: SpeedWidget, props: { content: "500" } },
+        { is: FireWidget, props: { content: "# 3" } },
+        { is: TimeWidget, props: { content: "5454h", color:"gold" } },
+        
+      ],
+      [
+        { is: LinkWidget, props: { link:"google.com", title:" test link 1" }},
+        { is: SpeedWidget, props: { content: "500000000" } },
+        
+      ],
+      [
+       { is: PercentageWidget, props: { amount: '-2.5', color:"red" } },  
+      ],
+      [
+        { is: PercentageWidget, props: { amount: '+5.1', color:"green" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "860B", symbol:"$" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "30B", symbol:"$" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "30B", symbol:"$" } },
+      ],
+      [
+        { is: PillWidget, props: { title: "Cryptocurrency" } },
+      ]
+    ],
+    [
+      [
+        { is: SpeedWidget, props: { content: "500" } },
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        { is: AssetWidget, props: { image: "https://img.icons8.com/?size=100&id=63192&format=png&color=000000", image2:"", title: 'Bitcoin', symbol:"BTC" } }, 
+        { is: TimeWidget, props: { content: "5h" } },
+       
+       
+      ],
+      [
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        { is: TimeWidget, props: { content: "500000h" } },
+        { is: SpeedWidget, props: { content: "5000000000000" } },
+        
+      ],
+      [
+       { is: TextWidget, props: { variation: "h4", title:"Show Test Now Now Now Length", margin:"4px" } },
+        
+      ],
+      [
+       { is: PercentageWidget, props: { amount: '-2.5', color:"red" } },  
+      ],
+      [
+        { is: PercentageWidget, props: { amount: '+5.1', color:"green" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "860B", symbol:"$" } },
+      ],
+      [
+        { is: TextWidget, props: { title: "Show Text", symbol:"$" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "30B", symbol:"$" } },
+      ],
+      [
+        { is: PillWidget, props: { title: "Cryptocurrency" } },
+      ]
+    ],
+    [ 
+      [
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        { is: AssetWidget, props: { image: "https://img.icons8.com/?size=100&id=63192&format=png&color=000000", image2:"", title: 'Bitcoin', symbol:"BTC" } }, 
+        { is: TimeWidget, props: { content: "5h" } },
+       
+       
+      ],
+      [
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        { is: TimeWidget, props: { content: "5h" } },
+        { is: SpeedWidget, props: { content: "500" } },
+        { is: FireWidget, props: { content: "# 3" } },
+        { is: VerticalLineWidget },
+        { is: TextWidget, props: { title: "Central Africa Republic", variation:"p" } },
+        
+      ],
+      [
+      { is: LineChartWidget, props: { data, labels, options: "{ lineColor: 'rgba(255, 165, 0, 1)', pointColor: 'rgba(255, 165, 0, 1)'}" } },
+        
+      ],
+      [
+       { is: PercentageWidget, props: { amount: '-2.5', color:"red" } },  
+      ],
+      [
+        { is: PercentageWidget, props: { amount: '+5.1', color:"green" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "860B", symbol:"$" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "30B", symbol:"$" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "30B", symbol:"$" } },
+      ],
+      [
+        { is: PillWidget, props: { title: "Cryptocurrency" } },
+      ]
+    ],
+    [ 
+      [
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        { is: AssetWidget, props: { image: "https://img.icons8.com/?size=100&id=IhWBOFHtv6vx&format=png&color=000000",image2:"https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", title: 'Ethereum', symbol:"ETH" } }, 
+        { is: TimeWidget, props: { content: "5h" } },
+       
+       
+      ],
+      [
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        { is: TimeWidget, props: { content: "5454h" } },
+        { is: SpeedWidget, props: { content: "500000" } },
+        { is: FireWidget, props: { content: "# 3" } },
+    
+      ],
+      [
+        
+      { is: ButtonWidget, props: { title: "Test Button", } },
+      { is: ButtonWidget, props: { title: "Another Button", } },
+        
+      ],
+      [
+       { is: PercentageWidget, props: { amount: '-2.5', color:"red" } },  
+      ],
+      [
+        { is: PercentageWidget, props: { amount: '+5.1', color:"green" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "860B", symbol:"$" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "30B", symbol:"$" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "30B", symbol:"$" } },
+      ],
+      [
+        { is: PillWidget, props: { title: "Cryptocurrency" } },
+      ]
+    ],
+    [ 
+      [
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        { is: AssetWidget, props: { image: "https://img.icons8.com/?size=100&id=63192&format=png&color=000000", image2:"", title: 'Bitcoin', symbol:"BTC" } }, 
+        { is: FireWidget, props: { content: "# 55" } },
+       
+       
+      ],
+      [
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        
+      ],
+      [
+        { is: FireWidget, props: { content: "# 105" } },
+
+        { is: FireWidget, props: { content: "# 550" } },
+        { is: FireWidget, props: { content: "# 250" } },
+        { is: FireWidget, props: { content: "# 50050" } },
+        { is: FireWidget, props: { content: "# 55000" } },
+        { is: FireWidget, props: { content: "# 550000" } },
+        { is: FireWidget, props: { content: "# 55000" } },
+       
+        
+      ],
+      [
+       { is: PercentageWidget, props: { amount: '-2.5', color:"red" } },  
+      ],
+      [
+        { is: PercentageWidget, props: { amount: '+5.1', color:"green" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "86000000000000000000", symbol:"$" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "3000000000000000000000B", symbol:"$" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "300000000000000000B", symbol:"$" } },
+      ],
+      [
+        { is: PillWidget, props: { title: "Crypto" } },
+      ]
+    ],
+    [ 
+      [
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        { is: AssetWidget, props: { image: "https://img.icons8.com/?size=100&id=63192&format=png&color=000000", image2:"", title: 'Bitcoin', symbol:"BTC" } }, 
+        { is: TimeWidget, props: { content: "5h" } },
+       
+       
+      ],
+      [
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        { is: TimeWidget, props: { content: "5h" } },
+        { is: SpeedWidget, props: { content: "500" } },
+        { is: FireWidget, props: { content: "# 3" } },
+        { is: TimeWidget, props: { content: "5454h", color:"gold" } },
+        
+      ],
+      [
+        { is: LinkWidget, props: { link:"google.com", title:" test link 1" }},
+        { is: SpeedWidget, props: { content: "500000000" } },
+        
+      ],
+      [
+       { is: PercentageWidget, props: { amount: '-2.5', color:"red" } },  
+      ],
+      [
+        { is: PercentageWidget, props: { amount: '+5.1', color:"green" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "860B", symbol:"$" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "30B", symbol:"$" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "30B", symbol:"$" } },
+      ],
+      [
+        { is: PillWidget, props: { title: "Cryptocurrency" } },
+      ]
+    ],
+    [
+      [
+        { is: SpeedWidget, props: { content: "500" } },
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        { is: AssetWidget, props: { image: "https://img.icons8.com/?size=100&id=63192&format=png&color=000000", image2:"", title: 'Bitcoin', symbol:"BTC" } }, 
+        { is: TimeWidget, props: { content: "5h" } },
+       
+       
+      ],
+      [
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        { is: TimeWidget, props: { content: "500000h" } },
+        { is: SpeedWidget, props: { content: "5000000000000" } },
+        
+      ],
+      [
+       { is: TextWidget, props: { variation: "h4", title:"Show Test Now Now Now Length", margin:"4px" } },
+        
+      ],
+      [
+       { is: PercentageWidget, props: { amount: '-2.5', color:"red" } },  
+      ],
+      [
+        { is: PercentageWidget, props: { amount: '+5.1', color:"green" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "860B", symbol:"$" } },
+      ],
+      [
+        { is: TextWidget, props: { title: "Show Text", symbol:"$" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "30B", symbol:"$" } },
+      ],
+      [
+        { is: PillWidget, props: { title: "Cryptocurrency" } },
+      ]
+    ],
+    [ 
+      [
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        { is: AssetWidget, props: { image: "https://img.icons8.com/?size=100&id=63192&format=png&color=000000", image2:"", title: 'Bitcoin', symbol:"BTC" } }, 
+        { is: TimeWidget, props: { content: "5h" } },
+       
+       
+      ],
+      [
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        { is: TimeWidget, props: { content: "5h" } },
+        { is: SpeedWidget, props: { content: "500" } },
+        { is: FireWidget, props: { content: "# 3" } },
+        { is: VerticalLineWidget },
+        { is: TextWidget, props: { title: "Central Africa Republic", variation:"p" } },
+        
+      ],
+      [
+      { is: LineChartWidget, props: { data, labels, options: "{ lineColor: 'rgba(255, 165, 0, 1)', pointColor: 'rgba(255, 165, 0, 1)'}" } },
+        
+      ],
+      [
+       { is: PercentageWidget, props: { amount: '-2.5', color:"red" } },  
+      ],
+      [
+        { is: PercentageWidget, props: { amount: '+5.1', color:"green" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "860B", symbol:"$" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "30B", symbol:"$" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "30B", symbol:"$" } },
+      ],
+      [
+        { is: PillWidget, props: { title: "Cryptocurrency" } },
+      ]
+    ],
+    [ 
+      [
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        { is: AssetWidget, props: { image: "https://img.icons8.com/?size=100&id=IhWBOFHtv6vx&format=png&color=000000",image2:"https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", title: 'Ethereum', symbol:"ETH" } }, 
+        { is: TimeWidget, props: { content: "5h" } },
+       
+       
+      ],
+      [
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        { is: TimeWidget, props: { content: "5454h" } },
+        { is: SpeedWidget, props: { content: "500000" } },
+        { is: FireWidget, props: { content: "# 3" } },
+    
+      ],
+      [
+        
+      { is: ButtonWidget, props: { title: "Test Button", } },
+      { is: ButtonWidget, props: { title: "Another Button", } },
+        
+      ],
+      [
+       { is: PercentageWidget, props: { amount: '-2.5', color:"red" } },  
+      ],
+      [
+        { is: PercentageWidget, props: { amount: '+5.1', color:"green" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "860B", symbol:"$" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "30B", symbol:"$" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "30B", symbol:"$" } },
+      ],
+      [
+        { is: PillWidget, props: { title: "Cryptocurrency" } },
+      ]
+    ],
+    [ 
+      [
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        { is: AssetWidget, props: { image: "https://img.icons8.com/?size=100&id=63192&format=png&color=000000", image2:"", title: 'Bitcoin', symbol:"BTC" } }, 
+        { is: FireWidget, props: { content: "# 55" } },
+       
+       
+      ],
+      [
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        
+      ],
+      [
+        { is: FireWidget, props: { content: "# 105" } },
+
+        { is: FireWidget, props: { content: "# 550" } },
+        { is: FireWidget, props: { content: "# 250" } },
+        { is: FireWidget, props: { content: "# 50050" } },
+        { is: FireWidget, props: { content: "# 55000" } },
+        { is: FireWidget, props: { content: "# 550000" } },
+        { is: FireWidget, props: { content: "# 55000" } },
+       
+        
+      ],
+      [
+       { is: PercentageWidget, props: { amount: '-2.5', color:"red" } },  
+      ],
+      [
+        { is: PercentageWidget, props: { amount: '+5.1', color:"green" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "86000000000000000000", symbol:"$" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "3000000000000000000000B", symbol:"$" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "300000000000000000B", symbol:"$" } },
+      ],
+      [
+        { is: PillWidget, props: { title: "Crypto" } },
+      ]
+    ],
+    [ 
+      [
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        { is: AssetWidget, props: { image: "https://img.icons8.com/?size=100&id=63192&format=png&color=000000", image2:"", title: 'Bitcoin', symbol:"BTC" } }, 
+        { is: TimeWidget, props: { content: "5h" } },
+       
+       
+      ],
+      [
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        { is: TimeWidget, props: { content: "5h" } },
+        { is: SpeedWidget, props: { content: "500" } },
+        { is: FireWidget, props: { content: "# 3" } },
+        { is: TimeWidget, props: { content: "5454h", color:"gold" } },
+        
+      ],
+      [
+        { is: LinkWidget, props: { link:"google.com", title:" test link 1" }},
+        { is: SpeedWidget, props: { content: "500000000" } },
+        
+      ],
+      [
+       { is: PercentageWidget, props: { amount: '-2.5', color:"red" } },  
+      ],
+      [
+        { is: PercentageWidget, props: { amount: '+5.1', color:"green" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "860B", symbol:"$" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "30B", symbol:"$" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "30B", symbol:"$" } },
+      ],
+      [
+        { is: PillWidget, props: { title: "Cryptocurrency" } },
+      ]
+    ],
+    [
+      [
+        { is: SpeedWidget, props: { content: "500" } },
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        { is: AssetWidget, props: { image: "https://img.icons8.com/?size=100&id=63192&format=png&color=000000", image2:"", title: 'Bitcoin', symbol:"BTC" } }, 
+        { is: TimeWidget, props: { content: "5h" } },
+       
+       
+      ],
+      [
+        {is: ImageWidget, props:{ src: "https://img.icons8.com/?size=100&id=icTiMgoOHSVy&format=png&color=000000", width:"30px", height:"30px", margin: "2px" }},
+        { is: TimeWidget, props: { content: "500000h" } },
+        { is: SpeedWidget, props: { content: "5000000000000" } },
+        
+      ],
+      [
+       { is: TextWidget, props: { variation: "h4", title:"Show Test Now Now Now Length", margin:"4px" } },
+        
+      ],
+      [
+       { is: PercentageWidget, props: { amount: '-2.5', color:"red" } },  
+      ],
+      [
+        { is: PercentageWidget, props: { amount: '+5.1', color:"green" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "860B", symbol:"$" } },
+      ],
+      [
+        { is: TextWidget, props: { title: "Show Text", symbol:"$" } },
+      ],
+      [
+        { is: PriceWidget, props: { amount: "30B", symbol:"$" } },
+      ],
+      [
+        { is: PillWidget, props: { title: "Cryptocurrency" } },
+      ]
+    ],
+  
+    
+  ];
 
 const header = [
                     {
@@ -135,7 +1452,7 @@ const header = [
                         subject: 'Assets',
                         columns: [
                           { title: 'Assets', subTitle: '' },
-                          { title: 'Price', subTitle: 'Current' },
+                          { title: 'Time', subTitle: 'Current' },
                           { title: 'Price', subTitle: '24H Change' },
                           { title: 'Price', subTitle: '7D Change' },
                           { title: 'Price', subTitle: '30D Change' },
@@ -143,7 +1460,18 @@ const header = [
                           { title: 'Marketcap', subTitle: 'Current' },
                           { title: 'Real Volume', subTitle: '24H' },
                           { title: 'Sector', subTitle: '' },
-                        ]
+                          { title: 'Asset2', subTitle: '' },
+                          { title: 'Time', subTitle: 'Current' },
+                          { title: 'Price', subTitle: '24H Change' },
+                          { title: 'Price', subTitle: '7D Change' },
+                          { title: 'Price', subTitle: '30D Change' },
+                          { title: 'Price', subTitle: '30D TL' },
+                          { title: 'Marketcap', subTitle: 'Current' },
+                          { title: 'Real Volume', subTitle: '24H' },
+                          { title: 'Sector', subTitle: '' },
+                        ],
+                        minColumnWidth: "300px",
+                        maxColumnWidth: "400px"
                        },
                        content : shared_data
                     },
@@ -161,6 +1489,8 @@ const header = [
                           { title: 'Loss', subTitle: '' },
                           { title: 'Profit', subTitle: '' },
                         ],
+                         minColumnWidth: "300px",
+                        maxColumnWidth: "400px"
 
                        },
                        content :student_data
@@ -183,9 +1513,155 @@ const header = [
                           { title: 'Price', subTitle: '3Y Change' },
                           { title: 'Price', subTitle: '5Y Change' },
                            
-                        ]
+                        ],
+                        minColumnWidth: "300px",
+                        maxColumnWidth: "400px"
                        },
                        content : shared_data
+                    },
+                    {
+                      id: 'header1',
+                      label: 'Header 1',
+                      header: {
+                        subject: 'First',
+                        columns: [
+                          { title: 'First', subTitle: '' },
+                          { title: 'Scond', subTitle: 'Current' },
+                          { title: 'Third', subTitle: '' },
+                          
+                        ],
+                        minColumnWidth: "300px",
+                        maxColumnWidth: "400px"
+                       },
+                       content : []
+                    },
+                    {
+                      id: 'header2',
+                      label: 'Header2',
+                      header: {
+                        subject: 'First',
+                        columns: [
+                          { title: 'First', subTitle: '' },
+                          { title: 'Scond', subTitle: 'Current' },
+                          { title: 'Third', subTitle: '' },
+                          
+                        ],
+                        minColumnWidth: "300px",
+                        maxColumnWidth: "400px"
+                       },
+                       content : []
+                    },
+                    {
+                      id: 'header3',
+                      label: 'Header3',
+                      header: {
+                        subject: 'First',
+                        columns: [
+                          { title: 'First', subTitle: '' },
+                          { title: 'Scond', subTitle: 'Current' },
+                          { title: 'Third', subTitle: '' },
+                          
+                        ],
+                        minColumnWidth: "300px",
+                        maxColumnWidth: "400px"
+                       },
+                       content : []
+                    },
+                    {
+                      id: 'header4',
+                      label: 'Header4',
+                      header: {
+                        subject: 'First',
+                        columns: [
+                          { title: 'First', subTitle: '' },
+                          { title: 'Scond', subTitle: 'Current' },
+                          { title: 'Third', subTitle: '' },
+                          
+                        ],
+                        minColumnWidth: "300px",
+                        maxColumnWidth: "400px"
+                       },
+                       content : []
+                    },
+                    {
+                      id: 'header5',
+                      label: 'Header5',
+                      header: {
+                        subject: 'First',
+                        columns: [
+                          { title: 'First', subTitle: '' },
+                          { title: 'Scond', subTitle: 'Current' },
+                          { title: 'Third', subTitle: '' },
+                          
+                        ],
+                        minColumnWidth: "300px",
+                        maxColumnWidth: "400px"
+                       },
+                       content : []
+                    },
+                    {
+                      id: 'header6',
+                      label: 'Header6',
+                      header: {
+                        subject: 'First',
+                        columns: [
+                          { title: 'First', subTitle: '' },
+                          { title: 'Scond', subTitle: 'Current' },
+                          { title: 'Third', subTitle: '' },
+                          
+                        ],
+                        minColumnWidth: "300px",
+                        maxColumnWidth: "400px"
+                       },
+                       content : []
+                    },
+                     {
+                      id: 'header8',
+                      label: 'Header8',
+                      header: {
+                        subject: 'First',
+                        columns: [
+                          { title: 'First', subTitle: '' },
+                          { title: 'Scond', subTitle: 'Current' },
+                          { title: 'Third', subTitle: '' },
+                          
+                        ],
+                        minColumnWidth: "300px",
+                        maxColumnWidth: "400px"
+                       },
+                       content : []
+                    },
+                    {
+                      id: 'header9',
+                      label: 'Header9',
+                      header: {
+                        subject: 'First',
+                        columns: [
+                          { title: 'First', subTitle: '' },
+                          { title: 'Scond', subTitle: 'Current' },
+                          { title: 'Third', subTitle: '' },
+                          
+                        ],
+                        minColumnWidth: "300px",
+                        maxColumnWidth: "400px"
+                       },
+                       content : []
+                    },
+                    {
+                      id: 'header10',
+                      label: 'Header10',
+                      header: {
+                        subject: 'First',
+                        columns: [
+                          { title: 'First', subTitle: '' },
+                          { title: 'Scond', subTitle: 'Current' },
+                          { title: 'Third', subTitle: '' },
+                          
+                        ],
+                        minColumnWidth: "300px",
+                        maxColumnWidth: "400px"
+                       },
+                       content : []
                     },
                      
                     
@@ -198,7 +1674,7 @@ const  filters = [
         { key: 'network', label: 'Network All', options: [{ value: 1, label: 'One' }, { value: 2, label: 'Two' }, { value: 3, label: 'Three' }] },
         { key: 'marketcap', label: 'Marketcap', options: [{ value: 1, label: 'One' }, { value: 2, label: 'Two' }, { value: 3, label: 'Three' }] },
         { key: 'volume', label: '24H Volume', options: [{ value: 1, label: 'One' }, { value: 2, label: 'Two' }, { value: 3, label: 'Three' }] }
-      ]
+      ];
 
 const handleSearch = (event: any) => {
   console.log("Search input:", event.target.value);
