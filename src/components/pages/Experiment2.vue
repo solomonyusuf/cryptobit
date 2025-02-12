@@ -328,6 +328,8 @@ const handleDropdown = (event:any, filter:any) => {
          :showTableBorder="false"
          :showRowBorder="false"
          :showColumnBorder="false"
+         :showDownloadButton="false"
+         :showToggleButton="false"
          :activeTab="'stocks'"
          :showFilter ="false"
          :title="'Stock Prices'"

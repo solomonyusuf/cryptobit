@@ -38,6 +38,8 @@ const props = defineProps({
   showTableBorder: { type: Boolean, default: false },
   showRowBorder: { type: Boolean, default: false },
   showColumnBorder: { type: Boolean, default: true },
+  showDownloadButton: { type: Boolean, default: true },
+  showToggleButton: { type: Boolean, default: true },
   ItemsPerPage: { type: Number, default: 10 },
   title: { type: String, default: 'Assets' },
   width: { type: String, default: '100%' },
@@ -233,11 +235,12 @@ onMounted(() => {
                     </div>
                     <div class="d-flex gap-2 px-3">
                       <div class="box px-2 py-3 d-none d-md-block">{{assetCount}} Assets</div>
-                      <label class="py-3 d-none d-md-block">Group Assets</label>
-                      <div class="form-check form-switch py-3 d-none d-md-block">
+                      
+                      <label v-if="showToggleButton" class="py-3 d-none d-md-block">Group Assets</label>
+                      <div v-if="showToggleButton" class="form-check form-switch py-3 d-none d-md-block">
                         <input @input="onGroupAsset($event)" class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
                       </div>
-                      <div class="box2 px-2 py-3">
+                      <div v-if="showDownloadButton" class="box2 px-2 py-3">
                         <button class="border-0 bg-transparent" :onclick="onDownload">
                           <img src="/images/download.png" style="height:24px;" class="">
                         </button>
@@ -336,6 +339,7 @@ onMounted(() => {
   </template>
 
 <style lang="scss">
+
 .hide-row{
   border-top: 0;
   border-bottom: 0;
