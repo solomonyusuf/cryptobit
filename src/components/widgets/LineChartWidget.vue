@@ -90,7 +90,7 @@
   
   <style scoped>
   canvas {
-    background-color: #12161e;
+    background-color: transparent;
     border: 0;
   }
   </style>

@@ -926,6 +926,7 @@ const header = [
                             image2:"", 
                             title: 'Price', 
                             symbol:"",
+                            subTitleColor: 'white',
                             subTitle:"current",
                             margin:"0 0 0 10px" }
                             } },
@@ -934,6 +935,7 @@ const header = [
                             image2:"", 
                             title: 'Market Cap', 
                             symbol:"",
+                            subTitleColor: 'white',
                             subTitle: 'profit',
                             margin:"0 0 0 10px" }
                             }},
@@ -942,6 +944,7 @@ const header = [
                             image2:"", 
                             title: 'Spot Volume', 
                             subTitle:'Cap',
+                            subTitleColor: 'white',
                             symbol:"",
                             margin:"0 0 0 10px" }
                             }},
@@ -959,6 +962,7 @@ const header = [
                             title: '1h Funding', 
                             symbol:"",
                             subTitle:"",
+                            subTitleColor: 'white',
                             margin:"0 0 0 10px" }
                             }},
                           
@@ -1021,6 +1025,7 @@ const header = [
                             title: 'Price', 
                             symbol:"",
                             subTitle: '24H Change',
+                            subTitleColor: 'white',
                             margin:"0 0 0 10px" }
                             }},
                             
@@ -1029,6 +1034,7 @@ const header = [
                             title: 'Price', 
                             subTitle:'7D Change',
                             symbol:"",
+                            subTitleColor: 'white',
                             margin:"0 0 0 10px" }
                             }},
                           
@@ -1037,6 +1043,7 @@ const header = [
                             title: 'Price', 
                             symbol:"",
                             subTitle:"30D Change",
+                            subTitleColor: 'white',
                             margin:"0 0 0 10px" }
                             }},
                           
@@ -1045,6 +1052,7 @@ const header = [
                             title: 'Price', 
                             symbol:"",
                             subTitle:"30D TL",
+                            subTitleColor: 'white',
                             margin:"0 0 0 10px" }
                             }},
                           
@@ -1092,14 +1100,18 @@ const handleDropdown = (event:any, filter:any) => {
 <template>
    <div class="bit-px-1"> 
         <TableWidget
+         :tableBgColor="'green'"
          :showTableNumbering="true"
          :showTableBorder="false"
          :showRowBorder="false"
          :showColumnBorder="true"
+         :borderColor = "'green'"
+         :border="''"
          :activeTab="'crypto'"
-         :title="'Exchange Asset'"
+         :title="'Green Table Asset'"
          :tabHeader="header"
          :filters="filters"
+         :headerColor ="'green'"
          :onSearch="handleSearch"
          :onDownload="handleDownload"
          :onGroupAsset="handleGroup"
@@ -1108,6 +1120,8 @@ const handleDropdown = (event:any, filter:any) => {
     </div>
   </template>
 
-  <style lang="scss">
-  @import url('../../assets/base.scss');
+<style lang="scss">
+ body{
+    //background:gray;
+ }
 </style>

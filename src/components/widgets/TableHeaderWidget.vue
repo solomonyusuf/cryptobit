@@ -8,6 +8,8 @@ const props = defineProps({
   symbol: { type: String, default: 'BTC' },
   margin: { type: String, default: '' },
   color: { type: String, default: 'white' },
+  subTitleColor: { type: String, default: 'gray' },
+
   
 });
 
@@ -17,6 +19,6 @@ const props = defineProps({
     <img v-if="image2" class="" :src="image2" style="height:30px;border-radius:15px;" />
     <img v-if="image" class=" " :src="image" style="height:30px;border-radius:15px;" />
     <strong :style={color} style="font-size:20px;" class="px-1">{{ title }}</strong> <br/>
-    <span  class="text-gray">{{subTitle}}</span>
+    <span :style="{color:subTitleColor}">{{subTitle}}</span>
   </div>
  </template> 
