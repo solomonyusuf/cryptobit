@@ -3,6 +3,7 @@ import plugin from '@vitejs/plugin-vue';
 
 // https://vitejs.dev/config/
 export default defineConfig({
+     base: "/cryptobit/",
     plugins: [plugin()
     ],
     server: {
