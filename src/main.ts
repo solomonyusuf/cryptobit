@@ -5,6 +5,7 @@ import Login from './components/pages/Login.vue';
 import ListView from './components/pages/ListView.vue';
 import ChartView from './components/pages/ChartView.vue';
 import Experiment from './components/pages/Experiment.vue';
+import Experiment2 from './components/pages/Experiment2.vue';
 
 const router = createRouter({
   history: createWebHashHistory(), // Use hash mode
@@ -13,6 +14,7 @@ const router = createRouter({
     { path: '/chart', name: 'Pair', component: ChartView },
     { path: '/login', name: 'Login', component: Login },
     { path: '/table2', name: 'Experiment', component: Experiment },
+    { path: '/table3', name: 'Experiment2', component: Experiment2 },
   ],
 });
 

@@ -53,6 +53,7 @@ const props = defineProps({
   borderColor: { type: String, default: '#fffff' },
   border: { type: String, default: '1px solid #1D2330' },
   fontColor: { type: String, default: 'white' },
+  filterColor: { type: String, default: '#1D2330' },
   onClick: {
     type: Function,
     default: null,
@@ -197,7 +198,7 @@ onMounted(() => {
                    </div>
 
                   <div v-for="(filter, index) in filters" :key="index" class="col d-none d-md-block">
-                  <select @change="onDropdown($event, filter.key)" :style="{background:'green'}"class="form-select border-0">
+                  <select @change="onDropdown($event, filter.key)" :style="{background:filterColor}"class="form-select border-0">
                     <option>{{ filter.label }}</option>
                     <option v-for="option in filter.options" :key="option.value" :value="option.value">{{ option.label }}</option>
                   </select>
