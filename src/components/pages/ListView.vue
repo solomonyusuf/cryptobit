@@ -19,6 +19,7 @@ import ButtonWidget from '../widgets/ButtonWidget.vue';
 import LinkWidget from '../widgets/LinkWidget.vue';
 import ClickIconWidget from '../widgets/ClickIconWidget.vue';
 import TableHeaderWidget from '../widgets/TableHeaderWidget.vue';
+import ImageClusterWidget from '../widgets/ImageClusterWidget.vue';
 
 const data = Array.from({ length: 30 }, () => Math.floor(Math.random() * 100)); // Generate 30 random data points
 const labels = [
@@ -27,6 +28,7 @@ const labels = [
   "September", "October", "November", "December", "January", "February", "March", "April", "May", "June"
 ];
  
+
     
 const crypto = [
   
@@ -693,6 +695,190 @@ const stocks = [
   ],
 
 ];
+const memecoin = [
+  [ 
+    [
+      { is: ClickIconWidget, props: { iconStyle:"height:18px;"  }}, 
+      { is: AssetWidget, props: { image: "https://messari.io/_next/image?url=https%3A%2F%2Fasset-images.messari.io%2Fimages%2F7d793fa7-5fc6-432a-b26b-d1b10769d42e%2F64.png%3Fv%3D2&w=32&q=100&dpl=dpl_BKSbNFT6cAjT1m5YCoMSxx9B1b98", 
+        image2:"", 
+        title: 'Dogecoin', 
+        symbol:"DOGE",
+        margin:"0 0 0 10px" }
+        }, 
+      { is: FireWidget, props: { content: "24" } },
+      
+      
+    ],
+    [
+       { is: ImageClusterWidget, props: { images:["https://messari.io/_next/image?url=https%3A%2F%2Fasset-images.messari.io%2Fimages%2F99b6a5f4-2200-4098-82fd-53d091bdee70%2F64.png%3Fv%3D2&w=32&q=100&dpl=dpl_3iih4gtnh5BjR2cga2myenZrTNyh",
+                                                   "https://messari.io/_next/image?url=https%3A%2F%2Fasset-images.messari.io%2Fimages%2F4b8836f5-95e3-4e55-a1d5-72d65530e26c%2F64.png%3Fv%3D2&w=32&q=100&dpl=dpl_3iih4gtnh5BjR2cga2myenZrTNyh",
+                                                   "https://messari.io/_next/image?url=https%3A%2F%2Fasset-images.messari.io%2Fimages%2F1d51479d-68f6-4886-8644-2a55ea9007bf%2F64.png%3Fv%3D2&w=32&q=100&dpl=dpl_3iih4gtnh5BjR2cga2myenZrTNyh",
+                                                   "https://messari.io/_next/image?url=https%3A%2F%2Fasset-images.messari.io%2Fimages%2Fa2c56dda-f408-4905-b8c0-0acc1ea29616%2F64.png%3Fv%3D2&w=32&q=100&dpl=dpl_3iih4gtnh5BjR2cga2myenZrTNyh",
+                                                   "https://messari.io/_next/image?url=https%3A%2F%2Fasset-images.messari.io%2Fimages%2F9adede5a-bb01-4c87-b44b-a15b92528d0b%2F64.png%3Fv%3D2&w=32&q=100&dpl=dpl_3iih4gtnh5BjR2cga2myenZrTNyh",
+                                                   "https://messari.io/_next/image?url=https%3A%2F%2Fasset-images.messari.io%2Fimages%2Ffd41189f-48ce-417b-97a4-3da221dfa5d8%2F64.png%3Fv%3D2&w=32&q=100&dpl=dpl_3iih4gtnh5BjR2cga2myenZrTNyh",
+                                                    "https://messari.io/_next/image?url=https%3A%2F%2Fasset-images.messari.io%2Fimages%2F147192a4-adcc-4211-be3a-f346241e83b4%2F64.png%3Fv%3D2&w=32&q=100&dpl=dpl_3iih4gtnh5BjR2cga2myenZrTNyh"
+                                                  ]} },   
+    ],
+    [
+      { is: PriceWidget, props: { amount: "670", symbol: "$" } },   
+    ],
+    [
+      { is: FireWidget, props: { content: "# 33" } },   
+    ],
+    [
+      { is: SpeedWidget, props: { content: "400" } },   
+    ],
+    [
+      { is: PriceWidget, props: { amount: "145", symbol: "$" } },   
+    ], 
+  ],
+  [ 
+    [
+      { is: ClickIconWidget, props: { iconStyle:"height:18px;"  }}, 
+      { is: AssetWidget, props: { image: "https://messari.io/_next/image?url=https%3A%2F%2Fasset-images.messari.io%2Fimages%2F8c4f84a7-6484-4074-8c17-fe363a243e7f%2F64.png%3Fv%3D2&w=32&q=100&dpl=dpl_BKSbNFT6cAjT1m5YCoMSxx9B1b98", 
+        image2:"", 
+        title: 'Shiba inu', 
+        symbol:"SHIB",
+        margin:"0 0 0 10px" }
+        }, 
+      { is: FireWidget, props: { content: "114" } },
+      
+      
+    ],
+    [
+       { is: ImageClusterWidget, props: { images:["https://messari.io/_next/image?url=https%3A%2F%2Fasset-images.messari.io%2Fimages%2F99b6a5f4-2200-4098-82fd-53d091bdee70%2F64.png%3Fv%3D2&w=32&q=100&dpl=dpl_3iih4gtnh5BjR2cga2myenZrTNyh",
+                                                   "https://messari.io/_next/image?url=https%3A%2F%2Fasset-images.messari.io%2Fimages%2F4b8836f5-95e3-4e55-a1d5-72d65530e26c%2F64.png%3Fv%3D2&w=32&q=100&dpl=dpl_3iih4gtnh5BjR2cga2myenZrTNyh",
+                                                   "https://messari.io/_next/image?url=https%3A%2F%2Fasset-images.messari.io%2Fimages%2F1d51479d-68f6-4886-8644-2a55ea9007bf%2F64.png%3Fv%3D2&w=32&q=100&dpl=dpl_3iih4gtnh5BjR2cga2myenZrTNyh",
+                                                   "https://messari.io/_next/image?url=https%3A%2F%2Fasset-images.messari.io%2Fimages%2Fa2c56dda-f408-4905-b8c0-0acc1ea29616%2F64.png%3Fv%3D2&w=32&q=100&dpl=dpl_3iih4gtnh5BjR2cga2myenZrTNyh",
+                                                   "https://messari.io/_next/image?url=https%3A%2F%2Fasset-images.messari.io%2Fimages%2F9adede5a-bb01-4c87-b44b-a15b92528d0b%2F64.png%3Fv%3D2&w=32&q=100&dpl=dpl_3iih4gtnh5BjR2cga2myenZrTNyh",
+                                                   "https://messari.io/_next/image?url=https%3A%2F%2Fasset-images.messari.io%2Fimages%2Ffd41189f-48ce-417b-97a4-3da221dfa5d8%2F64.png%3Fv%3D2&w=32&q=100&dpl=dpl_3iih4gtnh5BjR2cga2myenZrTNyh",
+                                                    "https://messari.io/_next/image?url=https%3A%2F%2Fasset-images.messari.io%2Fimages%2F147192a4-adcc-4211-be3a-f346241e83b4%2F64.png%3Fv%3D2&w=32&q=100&dpl=dpl_3iih4gtnh5BjR2cga2myenZrTNyh"
+                                                  ]} },   
+    ],
+    [
+      { is: PriceWidget, props: { amount: "670", symbol: "$" } },   
+    ],
+    [
+      { is: FireWidget, props: { content: "# 31" } },   
+    ],
+    [
+      { is: SpeedWidget, props: { content: "120" } },   
+    ],
+    [
+      { is: PriceWidget, props: { amount: "155", symbol: "$" } },   
+    ], 
+  ],
+  [ 
+    [
+      { is: ClickIconWidget, props: { iconStyle:"height:18px;"  }}, 
+      { is: AssetWidget, props: { image: "https://messari.io/_next/image?url=https%3A%2F%2Fasset-images.messari.io%2Fimages%2F02e9c2cc-2e3b-45fe-b7bb-508cb23a3a39%2F64.png%3Fv%3D2&w=32&q=100&dpl=dpl_BKSbNFT6cAjT1m5YCoMSxx9B1b98", 
+        image2:"", 
+        title: 'Pepe', 
+        symbol:"PEPE",
+        margin:"0 0 0 10px" }
+        }, 
+      { is: FireWidget, props: { content: "22" } },
+      
+      
+    ],
+    [
+       { is: ImageClusterWidget, props: { images:["https://messari.io/_next/image?url=https%3A%2F%2Fasset-images.messari.io%2Fimages%2F99b6a5f4-2200-4098-82fd-53d091bdee70%2F64.png%3Fv%3D2&w=32&q=100&dpl=dpl_3iih4gtnh5BjR2cga2myenZrTNyh",
+                                                   "https://messari.io/_next/image?url=https%3A%2F%2Fasset-images.messari.io%2Fimages%2F4b8836f5-95e3-4e55-a1d5-72d65530e26c%2F64.png%3Fv%3D2&w=32&q=100&dpl=dpl_3iih4gtnh5BjR2cga2myenZrTNyh",
+                                                   "https://messari.io/_next/image?url=https%3A%2F%2Fasset-images.messari.io%2Fimages%2F1d51479d-68f6-4886-8644-2a55ea9007bf%2F64.png%3Fv%3D2&w=32&q=100&dpl=dpl_3iih4gtnh5BjR2cga2myenZrTNyh",
+                                                   "https://messari.io/_next/image?url=https%3A%2F%2Fasset-images.messari.io%2Fimages%2Fa2c56dda-f408-4905-b8c0-0acc1ea29616%2F64.png%3Fv%3D2&w=32&q=100&dpl=dpl_3iih4gtnh5BjR2cga2myenZrTNyh",
+                                                   "https://messari.io/_next/image?url=https%3A%2F%2Fasset-images.messari.io%2Fimages%2F9adede5a-bb01-4c87-b44b-a15b92528d0b%2F64.png%3Fv%3D2&w=32&q=100&dpl=dpl_3iih4gtnh5BjR2cga2myenZrTNyh",
+                                                   "https://messari.io/_next/image?url=https%3A%2F%2Fasset-images.messari.io%2Fimages%2Ffd41189f-48ce-417b-97a4-3da221dfa5d8%2F64.png%3Fv%3D2&w=32&q=100&dpl=dpl_3iih4gtnh5BjR2cga2myenZrTNyh",
+                                                    "https://messari.io/_next/image?url=https%3A%2F%2Fasset-images.messari.io%2Fimages%2F147192a4-adcc-4211-be3a-f346241e83b4%2F64.png%3Fv%3D2&w=32&q=100&dpl=dpl_3iih4gtnh5BjR2cga2myenZrTNyh"
+                                                  ]} },   
+    ],
+    [
+      { is: PriceWidget, props: { amount: "270", symbol: "$" } },   
+    ],
+    [
+      { is: FireWidget, props: { content: "# 133" } },   
+    ],
+    [
+      { is: SpeedWidget, props: { content: "140" } },   
+    ],
+    [
+      { is: PriceWidget, props: { amount: "145", symbol: "$" } },   
+    ], 
+  ],
+  [ 
+    [
+      { is: ClickIconWidget, props: { iconStyle:"height:18px;"  }}, 
+      { is: AssetWidget, props: { image: "https://messari.io/_next/image?url=https%3A%2F%2Fasset-images.messari.io%2Fimages%2Fe7f6fb5c-b7e6-45b4-b9ed-3f3c761f280e%2F64.png%3Fv%3D2&w=32&q=100&dpl=dpl_BKSbNFT6cAjT1m5YCoMSxx9B1b98", 
+        image2:"", 
+        title: 'Bonk', 
+        symbol:"BONK",
+        margin:"0 0 0 10px" }
+        }, 
+      { is: FireWidget, props: { content: "12" } },
+      
+      
+    ],
+    [
+       { is: ImageClusterWidget, props: { images:["https://messari.io/_next/image?url=https%3A%2F%2Fasset-images.messari.io%2Fimages%2F99b6a5f4-2200-4098-82fd-53d091bdee70%2F64.png%3Fv%3D2&w=32&q=100&dpl=dpl_3iih4gtnh5BjR2cga2myenZrTNyh",
+                                                   "https://messari.io/_next/image?url=https%3A%2F%2Fasset-images.messari.io%2Fimages%2F4b8836f5-95e3-4e55-a1d5-72d65530e26c%2F64.png%3Fv%3D2&w=32&q=100&dpl=dpl_3iih4gtnh5BjR2cga2myenZrTNyh",
+                                                   "https://messari.io/_next/image?url=https%3A%2F%2Fasset-images.messari.io%2Fimages%2F1d51479d-68f6-4886-8644-2a55ea9007bf%2F64.png%3Fv%3D2&w=32&q=100&dpl=dpl_3iih4gtnh5BjR2cga2myenZrTNyh",
+                                                   "https://messari.io/_next/image?url=https%3A%2F%2Fasset-images.messari.io%2Fimages%2Fa2c56dda-f408-4905-b8c0-0acc1ea29616%2F64.png%3Fv%3D2&w=32&q=100&dpl=dpl_3iih4gtnh5BjR2cga2myenZrTNyh",
+                                                   "https://messari.io/_next/image?url=https%3A%2F%2Fasset-images.messari.io%2Fimages%2F9adede5a-bb01-4c87-b44b-a15b92528d0b%2F64.png%3Fv%3D2&w=32&q=100&dpl=dpl_3iih4gtnh5BjR2cga2myenZrTNyh",
+                                                   "https://messari.io/_next/image?url=https%3A%2F%2Fasset-images.messari.io%2Fimages%2Ffd41189f-48ce-417b-97a4-3da221dfa5d8%2F64.png%3Fv%3D2&w=32&q=100&dpl=dpl_3iih4gtnh5BjR2cga2myenZrTNyh",
+                                                    "https://messari.io/_next/image?url=https%3A%2F%2Fasset-images.messari.io%2Fimages%2F147192a4-adcc-4211-be3a-f346241e83b4%2F64.png%3Fv%3D2&w=32&q=100&dpl=dpl_3iih4gtnh5BjR2cga2myenZrTNyh"
+                                                  ]} },   
+    ],
+    [
+      { is: PriceWidget, props: { amount: "70", symbol: "$" } },   
+    ],
+    [
+      { is: FireWidget, props: { content: "# 313" } },   
+    ],
+    [
+      { is: SpeedWidget, props: { content: "600" } },   
+    ],
+    [
+      { is: PriceWidget, props: { amount: "145", symbol: "$" } },   
+    ], 
+  ],
+  [ 
+    [
+      { is: ClickIconWidget, props: { iconStyle:"height:18px;"  }}, 
+      { is: AssetWidget, props: { image: "https://messari.io/_next/image?url=https%3A%2F%2Fasset-images.messari.io%2Fimages%2F50424862-8a20-443d-bd79-7a05cdeea6ec%2F64.png%3Fv%3D2&w=32&q=100&dpl=dpl_BKSbNFT6cAjT1m5YCoMSxx9B1b98", 
+        image2:"", 
+        title: 'Brett', 
+        symbol:"BRETT",
+        margin:"0 0 0 10px" }
+        }, 
+      { is: FireWidget, props: { content: "14" } },
+      
+      
+    ],
+    [
+       { is: ImageClusterWidget, props: { images:["https://messari.io/_next/image?url=https%3A%2F%2Fasset-images.messari.io%2Fimages%2F99b6a5f4-2200-4098-82fd-53d091bdee70%2F64.png%3Fv%3D2&w=32&q=100&dpl=dpl_3iih4gtnh5BjR2cga2myenZrTNyh",
+                                                   "https://messari.io/_next/image?url=https%3A%2F%2Fasset-images.messari.io%2Fimages%2F4b8836f5-95e3-4e55-a1d5-72d65530e26c%2F64.png%3Fv%3D2&w=32&q=100&dpl=dpl_3iih4gtnh5BjR2cga2myenZrTNyh",
+                                                   "https://messari.io/_next/image?url=https%3A%2F%2Fasset-images.messari.io%2Fimages%2F1d51479d-68f6-4886-8644-2a55ea9007bf%2F64.png%3Fv%3D2&w=32&q=100&dpl=dpl_3iih4gtnh5BjR2cga2myenZrTNyh",
+                                                   "https://messari.io/_next/image?url=https%3A%2F%2Fasset-images.messari.io%2Fimages%2Fa2c56dda-f408-4905-b8c0-0acc1ea29616%2F64.png%3Fv%3D2&w=32&q=100&dpl=dpl_3iih4gtnh5BjR2cga2myenZrTNyh",
+                                                   "https://messari.io/_next/image?url=https%3A%2F%2Fasset-images.messari.io%2Fimages%2F9adede5a-bb01-4c87-b44b-a15b92528d0b%2F64.png%3Fv%3D2&w=32&q=100&dpl=dpl_3iih4gtnh5BjR2cga2myenZrTNyh",
+                                                   "https://messari.io/_next/image?url=https%3A%2F%2Fasset-images.messari.io%2Fimages%2Ffd41189f-48ce-417b-97a4-3da221dfa5d8%2F64.png%3Fv%3D2&w=32&q=100&dpl=dpl_3iih4gtnh5BjR2cga2myenZrTNyh",
+                                                    "https://messari.io/_next/image?url=https%3A%2F%2Fasset-images.messari.io%2Fimages%2F147192a4-adcc-4211-be3a-f346241e83b4%2F64.png%3Fv%3D2&w=32&q=100&dpl=dpl_3iih4gtnh5BjR2cga2myenZrTNyh"
+                                                  ]} },   
+    ],
+    [
+      { is: PriceWidget, props: { amount: "670", symbol: "$" } },   
+    ],
+    [
+      { is: FireWidget, props: { content: "# 13" } },   
+    ],
+    [
+      { is: SpeedWidget, props: { content: "100" } },   
+    ],
+    [
+      { is: PriceWidget, props: { amount: "125", symbol: "$" } },   
+    ], 
+  ],
+  
+
+];
 
 const header = [
                     {
@@ -701,13 +887,14 @@ const header = [
                       header: {
                         subject: '',
                         columns: [
-                          { title: { is: TableHeaderWidget, props: { image: "https://img.icons8.com/?size=100&id=7163&format=png&color=FFFFFF", 
+                          { title: { is: TableHeaderWidget, 
+                            props: { image: "https://img.icons8.com/?size=100&id=XrEFnp33pJYw&format=png&color=000000", 
                             image2:"", 
                             title: 'Market', 
                             symbol:"",
                             margin:"0 0 0 10px" }
                             }, subTitle: '',  },
-                          { title: { is: TableHeaderWidget, props: { image: "https://img.icons8.com/?size=100&id=BbKPvnE-fBDV&format=png&color=FFFFFF", 
+                          { title: { is: TableHeaderWidget, props: { image: "https://img.icons8.com/?size=100&id=D0A1Afld5jac&format=png&color=000000", 
                             image2:"", 
                             title: 'Price Chart', 
                             symbol:"",
@@ -726,7 +913,7 @@ const header = [
                       header: {
                         subject: 'Capital',
                         columns: [
-                          { title: { is: TableHeaderWidget, props: { image: "https://img.icons8.com/?size=100&id=7163&format=png&color=FFFFFF", 
+                          { title: { is: TableHeaderWidget, props: { image: "https://img.icons8.com/?size=100&id=DAoPjn2XoTUN&format=png&color=000000", 
                             image2:"", 
                             title: 'Capital', 
                             symbol:"",
@@ -734,11 +921,12 @@ const header = [
                             margin:"0 0 0 10px" }
                             }},
 
-                          { title: { is: TableHeaderWidget, props: { image: "https://img.icons8.com/?size=100&id=BbKPvnE-fBDV&format=png&color=FFFFFF", 
+                          { title: { is: TableHeaderWidget, 
+                            props: { image: "", 
                             image2:"", 
                             title: 'Price', 
                             symbol:"",
-                            subTitle:"",
+                            subTitle:"current",
                             margin:"0 0 0 10px" }
                             } },
                             
@@ -811,7 +999,7 @@ const header = [
                         subject: 'Assets',
                         columns: [
                           { title: { is: TableHeaderWidget, 
-                            props: { image: "", 
+                            props: { image: "https://img.icons8.com/?size=100&id=D0A1Afld5jac&format=png&color=000000", 
                             image2:"", 
                             title: 'Assets', 
                             symbol:"",
@@ -819,9 +1007,10 @@ const header = [
                             margin:"0 0 0 10px" }
                             }},
 
-                          { title: { is: TableHeaderWidget, props: { image: "", 
+                            { title: { is: TableHeaderWidget,
+                               props: { image: "https://img.icons8.com/?size=100&id=ZuLBkjDczTqY&format=png&color=000000", 
                             image2:"", 
-                            title: 'Price', 
+                            title: 'Exchanges', 
                             symbol:"",
                             subTitle:"",
                             margin:"0 0 0 10px" }
@@ -829,57 +1018,33 @@ const header = [
                             
                           { title: { is: TableHeaderWidget, props: { image: "", 
                             image2:"", 
-                            title: 'Market Cap', 
+                            title: 'Price', 
                             symbol:"",
-                            subTitle: 'profit',
+                            subTitle: '24H Change',
                             margin:"0 0 0 10px" }
                             }},
                             
                           { title: { is: TableHeaderWidget, props: { image: "", 
                             image2:"", 
-                            title: 'Spot Volume', 
+                            title: 'Price', 
+                            subTitle:'7D Change',
                             symbol:"",
-                            subTitle:"",
                             margin:"0 0 0 10px" }
                             }},
                           
                           { title: { is: TableHeaderWidget, props: { image: "", 
                             image2:"", 
-                            title: 'Open Intrest', 
+                            title: 'Price', 
                             symbol:"",
-                            subTitle:"",
+                            subTitle:"30D Change",
                             margin:"0 0 0 10px" }
                             }},
                           
                           { title: { is: TableHeaderWidget, props: { image: "", 
                             image2:"", 
-                            title: '1h Funding', 
+                            title: 'Price', 
                             symbol:"",
-                            subTitle:"",
-                            margin:"0 0 0 10px" }
-                            }},
-                          
-                          { title: { is: TableHeaderWidget, props: { image: "", 
-                            image2:"", 
-                            title: 'Trades', 
-                            symbol:"",
-                            subTitle:"",
-                            margin:"0 0 0 10px" }
-                            }},
-                        
-                            { title: { is: TableHeaderWidget, props: { image: "", 
-                            image2:"", 
-                            title: '24H Change', 
-                            symbol:"",
-                            subTitle:"",
-                            margin:"0 0 0 10px" }
-                            }},
-                            
-                          { title: { is: TableHeaderWidget, props: { image: "", 
-                            image2:"", 
-                            title: 'Time Interval', 
-                            symbol:"",
-                            subTitle:"",
+                            subTitle:"30D TL",
                             margin:"0 0 0 10px" }
                             }},
                           
@@ -887,7 +1052,7 @@ const header = [
                         minColumnWidth: "100px",
                         maxColumnWidth: "150px"
                        },
-                       content : []
+                       content : memecoin
                     },
                      
                ];

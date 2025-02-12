@@ -182,7 +182,7 @@ onMounted(() => {
 <template>
         <div class="px-3 border-1">
                 <h3 class="card-header fw-bold" :style="{color:headerColor}">{{title}}</h3>
-                <div class="mb-3">
+                <div class="mb-3" style="background:transparent;">
                   <div class="row flex-nowrap mb-2  justify-content-start">
                    <div class="col-md-3 col-sm-6 d-flex align-items-center">
                     <div class="input-group input-group-merge border-0">
