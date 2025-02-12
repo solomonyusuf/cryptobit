@@ -1106,6 +1106,7 @@ const handleDropdown = (event:any, filter:any) => {
          :showRowBorder="false"
          :showColumnBorder="true"
          :borderColor = "'green'"
+         :filterColor = "'green'"
          :border="''"
          :activeTab="'crypto'"
          :title="'Green Table Asset'"
