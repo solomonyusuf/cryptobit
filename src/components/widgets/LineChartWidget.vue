@@ -8,8 +8,8 @@
   import { onMounted, ref, defineProps } from 'vue';
   
   const props = defineProps({
-    labels: Array, // Labels for x-axis
-    data: Array, // Data points
+    labels:{ type: Array, default: [ 1,2,3,4,5,6,7,8,9,10] } , // Labels for x-axis
+    data: { type: Array, default: [0,0,0,0,0,0,0,0,0,0,0] }, // Data points
     width:{ type: String, default: "20vh" },
     height:{ type: String, default: "60px" },
     lineColor: { type: String, default: "rgba(75, 192, 192, 1)" },  
@@ -35,7 +35,7 @@
           labels: props.labels,
           datasets: [
             {
-              label: 'Dynamic Dataset',
+              label: '',
               data: props.data,
               borderColor: props.lineColor,
               borderWidth: 2,

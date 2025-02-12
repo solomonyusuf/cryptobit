@@ -12,8 +12,7 @@ interface Tab {
 }
 
 interface TableColumn {
-  title: string;
-  subTitle: string;
+  title: any;
 }
 
 interface TableHeader {
@@ -35,6 +34,10 @@ interface Option {
 
 
 const props = defineProps({
+  showTableNumbering: { type: Boolean, default: true },
+  showTableBorder: { type: Boolean, default: false },
+  showRowBorder: { type: Boolean, default: false },
+  showColumnBorder: { type: Boolean, default: true },
   ItemsPerPage: { type: Number, default: 10 },
   title: { type: String, default: 'Assets' },
   width: { type: String, default: '100%' },
@@ -95,7 +98,7 @@ const clickedTab = computed(()=>{
   return props.tabHeader.find(x => x.id === currentTab.value);
 });
 
-let tabCount = props.tabHeader.find(x => x.id === currentTab.value)?.header.columns.length ?? 0;
+let tabCount = props.tabHeader.length ?? 0;
 
 const currentPage = ref(1);
 
@@ -196,9 +199,9 @@ const tableStyles = computed(() => ({
 
                   </div>
                 </div>
-                <div class="card rounded-1 border-0 tab-container" :style="{border, background:tableBgColor}">
+                <div class="card rounded-1 tab-container" :class="{ 'border': showTableBorder}" :style="{border, background:tableBgColor}">
                   
-                   <div style="border-bottom: 1px solid;" class=" mt-0 d-flex justify-content-between align-items-center">
+                   <div style="border-bottom: 1px solid #384351;" class=" mt-0 d-flex justify-content-between align-items-center">
                     <ul ref="scrollContainer" class="scroll-container nav" :style="{ color:fontColor}" role="tablist">
                       <li v-for="tab in props.tabHeader" :key="tab.id" class="nav-item scroll-item">
                         <a
@@ -245,45 +248,50 @@ const tableStyles = computed(() => ({
                       >
                       
                           <div class="table-responsive  text-nowrap">
-                            <table id="Table" class="table table-hover mb-5 col-xl-12" style="max-height:50vh; overflow-y: auto;" :style="tableStyles">
+                            <table id="Table" class="table table-hover mb-5" style="max-height:50vh; overflow-y: auto;" :style="tableStyles">
                               <thead class="sticky-header">
-                                <tr style="border-color:#384351;">
-                                  <th>#</th>
-                                  <th
-                                    v-for="(col, index) in tab.header.columns"                       
-                                    :key="index"
-                                    style="border-color:#384351;"
-                                    :class="{
-                                    'sticky-column': col.title === tab.header.subject, 
+                              <tr style="border-bottom: 1px solid #ccc;"> 
+                                <th :class="{'show-side': showColumnBorder}" v-if="showTableNumbering">#</th>
+                                <th
+                                  v-for="(col, index) in tab.header.columns"                       
+                                  :key="index"
+                                  style="border-color:#ccc;"  
+                                  :class="{
+                                    'sticky-column': col.title.props.title === tab.header.subject, 
                                     'fw-bold': true,
                                     'px-4': true,
                                     'py-2': true,
-                                     
+                                    'text-capitalize': true,
                                     'text-left': true,
-                                   }"
-                                  >
-                                    <div class="border-0">
-                                      <h6 :class="{
-                                        'border-0':true,
-                                        'fw-bold' : true,
-                                        'font-bold' : true,
-                                        'mb-3' : col.subTitle === '',
-                                        'mb-0' : col.subTitle !== ''
-                                        }" 
-                                        :style="{color: fontColor}">{{ col.title }}</h6>
-                                      <div v-if="col.subTitle" :style="{color:subHeadingColor}" class="text-sm text-capitalize">
-                                        {{ col.subTitle }}
-                                      </div>
-                                    </div>
-                                  </th>    
-                                </tr>
-                              </thead>
+                                  }"
+                                >
+                                  <div class="border-0">
+                                    <component :is="col.title.is" v-bind="col.title.props"></component>
+                                    <!-- <h6 :class="{
+                                        'border-0': true,
+                                        'fw-bold': true,
+                                        'font-bold': true,
+                                        'mb-3': col.subTitle === '',
+                                        'mb-0': col.subTitle !== ''
+                                      }" 
+                                      :style="{color: fontColor}"
+                                    >
+                                      {{ col.title }}
+                                    </h6> -->
+                                     
+                                  </div>
+                                </th>    
+                              </tr>
+                            </thead>
+
                               <tbody>
                               
-                              <RowWidget v-for="(row, index) in paginatedItems" :key="index">
-                                <ColumnWidget>    {{ (startItem - 1) + index + 1 }}</ColumnWidget>
+                              <RowWidget :class="{'hide-row': !showRowBorder}" v-for="(row, index) in paginatedItems" :key="index">
+                                <ColumnWidget :minWidth="'50px'"  :class="{ 
+                                  'hide-row': !showRowBorder,
+                                  }" v-if="showTableNumbering">   # {{ (startItem - 1) + index + 1 }}</ColumnWidget>
                                   <template :class="{'d-flex':true}" v-for="(widget_list, innerkey) in row" :key="innerkey">
-                                    <ColumnWidget :minWidth="tab.header.minColumnWidth" :maxWidth="tab.header.maxColumnWidth" :class="{ 'sticky-column' : tab.header?.columns[innerkey]?.title == tab.header.subject}">
+                                    <ColumnWidget :minWidth="tab.header.minColumnWidth" :maxWidth="tab.header.maxColumnWidth" :class="{ 'sticky-column' : tab.header?.columns[innerkey]?.title.props.title == tab.header.subject, 'hide-row': !showRowBorder, 'show-side': showColumnBorder}">
                                       <template v-for="(widget, colkey) in widget_list" :key="colkey">
                                           <component :is="widget.is" v-bind="widget.props"></component>
                                       </template>
@@ -321,7 +329,16 @@ const tableStyles = computed(() => ({
   </template>
 
 <style lang="scss">
+.hide-row{
+  border-top: 0;
+  border-bottom: 0;
+}
+.show-side {
+//  border-left: 0.5px solid #384351;  /* Left border */
+  border-right: 0.5px solid #384351; /* Right border */
+}
 
+ 
 .table-responsive .sticky-column:hover tr:hover {
     background-color: rgba(0, 0, 0, 0.05); /* Light gray background on hover */
     transition: background-color 0.3s ease-in-out;
@@ -331,6 +348,7 @@ const tableStyles = computed(() => ({
   top: 0;
   z-index: 100;
   background-color: #343e4b;
+  border-bottom: 0.5px solid #384351;
 }
 /* Scroll container */
 .scroll-container {
@@ -408,10 +426,10 @@ const tableStyles = computed(() => ({
 }
 .sticky-header
 {
-  background-color: #12161e;
+  background-color: transparent;
   border-color: #343e4b;
-  // border:1px solid #384351;
-  border:0;
+  border-bottom:0.5px solid #384351;
+
 }
 .sticky-column {
   position: sticky;
@@ -423,7 +441,7 @@ const tableStyles = computed(() => ({
   transition: all 0.3s ease; /* Smooth transition effect */
 }
 .sticky-column:hover {
-    background-color: rgba(0, 0, 0, 0.05); /* Light gray background on hover */
+    background-color: rgba(35, 34, 34, 0.05); /* Light gray background on hover */
     transition: background-color 0.3s ease-in-out;
 }
 

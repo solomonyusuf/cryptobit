@@ -7,5 +7,5 @@ const props = defineProps({
 
 </script>
 <template>
-    <strong>{{ symbol }}{{ amount }}</strong>
+    <strong style="text-align:center;">{{ symbol }}{{ amount }}</strong>
 </template> 
