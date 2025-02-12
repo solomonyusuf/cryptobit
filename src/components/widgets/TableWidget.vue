@@ -53,6 +53,7 @@ const props = defineProps({
   borderColor: { type: String, default: '#fffff' },
   border: { type: String, default: '1px solid #1D2330' },
   fontColor: { type: String, default: 'white' },
+  showFilter: { type: Boolean, default: true },
   filterColor: { type: String, default: '#1D2330' },
   onClick: {
     type: Function,
@@ -197,7 +198,7 @@ onMounted(() => {
                       </div>
                    </div>
 
-                  <div v-for="(filter, index) in filters" :key="index" class="col d-none d-md-block">
+                  <div v-if="showFilter" v-for="(filter, index) in filters" :key="index" class="col d-none d-md-block">
                   <select @change="onDropdown($event, filter.key)" :style="{background:filterColor}"class="form-select border-0">
                     <option>{{ filter.label }}</option>
                     <option v-for="option in filter.options" :key="option.value" :value="option.value">{{ option.label }}</option>
@@ -446,6 +447,7 @@ onMounted(() => {
   box-shadow: none !important; 
   transition: all 0.3s ease; /* Smooth transition effect */
 }
+ 
 .sticky-column:hover {
     background-color: rgba(35, 34, 34, 0.05); /* Light gray background on hover */
     transition: background-color 0.3s ease-in-out;
@@ -467,14 +469,6 @@ onMounted(() => {
 }
 
 
-tbody .sticky-column {
-  z-index: 1;
-
-}
-
-tbody th{
-  border:0.5px solid #343e4b;
-}
 .scroll-card {
   overflow-x: auto;  
   display: flex;
