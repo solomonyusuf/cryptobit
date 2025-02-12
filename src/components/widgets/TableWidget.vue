@@ -170,6 +170,12 @@ const tableStyles = computed(() => ({
 }));
 
 
+onMounted(() => {
+  const fontLink = document.createElement("link");
+  fontLink.href = "https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap";
+  fontLink.rel = "stylesheet";
+  document.head.appendChild(fontLink);
+});
 
 </script>
 
@@ -251,7 +257,7 @@ const tableStyles = computed(() => ({
                             <table id="Table" class="table table-hover mb-5" style="max-height:50vh; overflow-y: auto;" :style="tableStyles">
                               <thead class="sticky-header">
                               <tr style="border-bottom: 1px solid #ccc;"> 
-                                <th :class="{'show-side': showColumnBorder}" v-if="showTableNumbering">#</th>
+                                <th  v-if="showTableNumbering">#</th>
                                 <th
                                   v-for="(col, index) in tab.header.columns"                       
                                   :key="index"
@@ -265,7 +271,7 @@ const tableStyles = computed(() => ({
                                     'text-left': true,
                                   }"
                                 >
-                                  <div class="border-0">
+                                  <div class="border-0" :class="{ 'mb-3': col.title.props.subTitle === ''}">
                                     <component :is="col.title.is" v-bind="col.title.props"></component>
                                     <!-- <h6 :class="{
                                         'border-0': true,
