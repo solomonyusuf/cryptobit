@@ -3,6 +3,9 @@ import { computed, ref, onMounted, } from 'vue';
 import PaginationWidget from './PaginationWidget.vue';
 import ColumnWidget from './ColumnWidget.vue';
 import RowWidget from './RowWidget.vue';
+import DropdownWidget from './DropdownWidget.vue';
+import LabelButtonWidget from './LabelButtonWidget.vue';
+
 
 interface Tab {
   id: string;
@@ -180,165 +183,206 @@ onMounted(() => {
   document.head.appendChild(fontLink);
 });
 
+var options = ['One', 'Two', 'Three']
+const isDropdownOpen = ref(false);
+const handleSelection = (item:any) => {
+  console.log("Selected:", item);
+};
 </script>
 
 <template>
         <div class="px-3 border-1">
                 <h3 class="card-header fw-bold" :style="{color:headerColor}">{{title}}</h3>
-                <div class="mb-3" style="background:transparent;">
-                  <div class="row flex-nowrap mb-2  justify-content-start">
-                   <div class="col-md-3 col-sm-6 d-flex align-items-center">
-                    <div class="input-group input-group-merge border-0">
-                        <span  :style="{background:tableBgColor}" class="input-group-text border-0">
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
-                            <circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2" fill="none"/>
-                            <line x1="16.5" y1="16.5" x2="22" y2="22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                          </svg>
-
-                        </span>
-                        <input @input="onSearch($event)" type="search" aria-controls="Table" :style="{background:tableBgColor}" class="form-control border-0" placeholder="Search Assets..."/>
-                      </div>
-                   </div>
-
-                  <div v-if="showFilter" v-for="(filter, index) in filters" :key="index" class="col d-none d-md-block">
-                  <select @change="onDropdown($event, filter.key)" :style="{background:filterColor}"class="form-select border-0">
-                    <option>{{ filter.label }}</option>
-                    <option v-for="option in filter.options" :key="option.value" :value="option.value">{{ option.label }}</option>
-                  </select>
-
-                  </div>
-                </div>
-                <div class="card rounded-1 tab-container" :class="{ 'border': showTableBorder}" :style="{border, background:tableBgColor}">
-                  
-                   <div style="border-bottom: 1px solid #384351;" class=" mt-0 d-flex justify-content-between align-items-center">
-                    <ul ref="scrollContainer" class="scroll-container nav" :style="{ color:fontColor}" role="tablist">
-                      <li v-for="tab in props.tabHeader" :key="tab.id" class="nav-item scroll-item">
-                        <a
-                          href="#"
-                          class="nav-link mt-3 mb-0 px-0"
-                          :style={color:fontColor}
-                          :class="{ active: currentTab === tab.id }"
-                          @click.prevent="activateTab(tab.id)"
-                        >
-                          {{ tab.label }}
-                        </a>
-                      </li>
-                    </ul>
-
-                  <div class="d-block d-sm-none mt-2 mb-0 d-flex justify-content-between">
-                      <button @click="scrollLeft" class="btn btn-sm btn-primary border rounded-pill">←</button>
-                      <button @click="scrollRight" class="btn btn-sm btn-primary border rounded-pill">→</button>
-                    </div>
-                  <div v-if="tabCount > 6" class="d-flex d-none d-md-block mb-0 justify-content-between">
-                      <button @click="scrollLeft" class="btn btn-sm btn-primary border rounded-pill">←</button>
-                      <button @click="scrollRight" class="btn btn-sm btn-primary border rounded-pill">→</button>
-                    </div>
-                    <div class="d-flex gap-2 px-3">
-                      <div class="box px-2 py-3 d-none d-md-block">{{assetCount}} Assets</div>
-                      
-                      <label v-if="showToggleButton" class="py-3 d-none d-md-block">Group Assets</label>
-                      <div v-if="showToggleButton" class="form-check form-switch py-3 d-none d-md-block">
-                        <input @input="onGroupAsset($event)" class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
-                      </div>
-                      <div v-if="showDownloadButton" class="box2 px-2 py-3">
-                        <button class="border-0 bg-transparent" :onclick="onDownload">
-                          <img src="/images/download.png" style="height:24px;" class="">
-                        </button>
+                <div class="mb-3">
+                  <div class="row mb-2  justify-content-center">
+                    <div class="col-6 d-flex">
+                      <div class="card w-100" :style="{background:tableBgColor, border, boxShadow:'0' }">
+                        <div class="card-body py-3">
+                         <h5 class="card-title text-center" :style="{color:fontColor}">24H VOLUME: <strong>$534.6M</strong></h5>
                         
+                       </div>
+                      </div>
+                    </div>
+                    <div class="col-6 d-flex ">
+                      <div class="card w-100" :style="{background:tableBgColor, border, boxShadow:'0'}">
+                        <div class="card-body py-3">
+                         <h5 class="card-title text-center"  :style="{color:fontColor}">24H VOLUME: <strong>$534.6M</strong></h5>
+                        
+                       </div>
                       </div>
                     </div>
                   </div>
-                     
-                    <div class="tab-content px-0 py-0">
-                      <div
-                        v-for="tab in props.tabHeader"
-                        :key="tab.id"
-                        class="tab-pane"
-                        :class="{ active: currentTab === tab.id }"
-                      >
-                      
-                          <div class="table-responsive  text-nowrap">
-                            <table id="Table" class="table table-hover mb-5" style="max-height:50vh; overflow-y: auto;" :style="tableStyles">
-                              <thead class="sticky-header">
-                              <tr style="border-bottom: 1px solid #ccc;"> 
-                                <th  v-if="showTableNumbering">#</th>
-                                <th
-                                  v-for="(col, index) in tab.header.columns"                       
-                                  :key="index"
-                                  style="border-color:#ccc;"  
-                                  :class="{
-                                    'sticky-column': col.title.props.title === tab.header.subject, 
-                                    'fw-bold': true,
-                                    'px-4': true,
-                                    'py-2': true,
-                                    'text-capitalize': true,
-                                    'text-left': true,
-                                  }"
-                                >
-                                  <div class="border-0" :class="{ 'mb-3': col.title.props.subTitle === ''}">
-                                    <component :is="col.title.is" v-bind="col.title.props"></component>
-                                    <!-- <h6 :class="{
-                                        'border-0': true,
-                                        'fw-bold': true,
-                                        'font-bold': true,
-                                        'mb-3': col.subTitle === '',
-                                        'mb-0': col.subTitle !== ''
-                                      }" 
-                                      :style="{color: fontColor}"
-                                    >
-                                      {{ col.title }}
-                                    </h6> -->
-                                     
-                                  </div>
-                                </th>    
-                              </tr>
-                            </thead>
+                  <div class="row mb-2  justify-content-center">
+                    <div class="col">
+                        <DropdownWidget
+                            background="blue"
+                            :border="border"
+                            label="Last 24 Hours"
+                            image="https://img.icons8.com/?size=100&id=ZzwZjM47OSDw&format=png&color=000000"
+                            :options="['One', 'Two', 'Three']"
+                          />
+                    </div>
+                    <div class="col">
+                        <LabelButtonWidget
+                             
+                          />
+                    </div>
+                  </div>
+                   <div class="row flex-nowrap mb-2  justify-content-start">
+                    <div class="col-md-3 col-sm-6 d-flex align-items-center">
+                      <div class="input-group input-group-merge border-0">
+                          <span  :style="{background:tableBgColor}" class="input-group-text border-0">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                              <circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2" fill="none"/>
+                              <line x1="16.5" y1="16.5" x2="22" y2="22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
 
-                              <tbody>
-                              
-                              <RowWidget :class="{'hide-row': !showRowBorder}" v-for="(row, index) in paginatedItems" :key="index">
-                                <ColumnWidget :minWidth="'50px'"  :class="{ 
-                                  'hide-row': !showRowBorder,
-                                  }" v-if="showTableNumbering">   # {{ (startItem - 1) + index + 1 }}</ColumnWidget>
-                                  <template :class="{'d-flex':true}" v-for="(widget_list, innerkey) in row" :key="innerkey">
-                                    <ColumnWidget :minWidth="tab.header.minColumnWidth" :maxWidth="tab.header.maxColumnWidth" :class="{ 'sticky-column' : tab.header?.columns[innerkey]?.title.props.title == tab.header.subject, 'hide-row': !showRowBorder, 'show-side': showColumnBorder}">
-                                      <template v-for="(widget, colkey) in widget_list" :key="colkey">
-                                          <component :is="widget.is" v-bind="widget.props"></component>
-                                      </template>
-                                    </ColumnWidget>
-                                  </template>
-                                </RowWidget>
-                              </tbody>
-                            </table>                       
-                          </div>
-                          <div v-if="tab.content.length > ItemsPerPage" class="card rounded-1 px-3 py-3" :style="{background:tableBgColor}">
-                            <div class="pagination-container">
-                                <div class="pagination-info"> Showing {{ startItem }} to {{ endItem }} of {{ assetCount }} results</div>
-                                <div class="pagination-buttons">
-                                    <button @click="changePage(currentPage - 1)" :disabled="currentPage === 1">Prev</button>
+                          </span>
+                          <input @input="onSearch($event)" type="search" aria-controls="Table" :style="{background:tableBgColor}" class="form-control border-0" placeholder="Search Assets..."/>
+                        </div>
+                    </div>
 
-                                    <span v-for="page in totalPages" :key="page">
-                                      <button 
-                                        @click="changePage(page)" 
-                                        :class="{ active: currentPage === page }">
-                                        {{ page }}
-                                      </button>
-                                    </span>
+                    <div v-if="showFilter" v-for="(filter, index) in filters" :key="index" class="col d-none d-md-block">
+                    <select @change="onDropdown($event, filter.key)" :style="{background:filterColor}"class="form-select border-0">
+                      <option>{{ filter.label }}</option>
+                      <option v-for="option in filter.options" :key="option.value" :value="option.value">{{ option.label }}</option>
+                    </select>
 
-                                    <button @click="changePage(currentPage + 1)" :disabled="currentPage === totalPages">Next</button>
-                                  </div>
+                    </div>
+                
+                  </div>
+                  <div class="card rounded-1 tab-container" :class="{ 'border': showTableBorder}" :style="{border, background:tableBgColor}">
+                    
+                    <div style="border-bottom: 1px solid #384351;" class=" mt-0 d-flex justify-content-between align-items-center">
+                      <ul ref="scrollContainer" class="scroll-container nav" :style="{ color:fontColor}" role="tablist">
+                        <li v-for="tab in props.tabHeader" :key="tab.id" class="nav-item scroll-item">
+                          <a
+                            href="#"
+                            class="nav-link mt-3 mb-0 px-0"
+                            :style={color:fontColor}
+                            :class="{ active: currentTab === tab.id }"
+                            @click.prevent="activateTab(tab.id)"
+                          >
+                            {{ tab.label }}
+                          </a>
+                        </li>
+                      </ul>
 
-                              </div>
-                    </div>                                                
+                    <div class="d-block d-sm-none mt-2 mb-0 d-flex justify-content-between">
+                        <button @click="scrollLeft" class="btn btn-sm btn-primary border rounded-pill">←</button>
+                        <button @click="scrollRight" class="btn btn-sm btn-primary border rounded-pill">→</button>
+                      </div>
+                    <div v-if="tabCount > 6" class="d-flex d-none d-md-block mb-0 justify-content-between">
+                        <button @click="scrollLeft" class="btn btn-sm btn-primary border rounded-pill">←</button>
+                        <button @click="scrollRight" class="btn btn-sm btn-primary border rounded-pill">→</button>
+                      </div>
+                      <div class="d-flex gap-2 px-3">
+                        <div class="box px-2 py-3 d-none d-md-block">{{assetCount}} Assets</div>
+                        
+                        <label v-if="showToggleButton" class="py-3 d-none d-md-block">Group Assets</label>
+                        <div v-if="showToggleButton" class="form-check form-switch py-3 d-none d-md-block">
+                          <input @input="onGroupAsset($event)" class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                        </div>
+                        <div v-if="showDownloadButton" class="box2 px-2 py-3">
+                          <button class="border-0 bg-transparent" :onclick="onDownload">
+                            <img src="/images/download.png" style="height:24px;" class="">
+                          </button>
+                          
+                        </div>
                       </div>
                     </div>
-                   
-                </div>
+                      
+                      <div class="tab-content px-0 py-0">
+                        <div
+                          v-for="tab in props.tabHeader"
+                          :key="tab.id"
+                          class="tab-pane"
+                          :class="{ active: currentTab === tab.id }"
+                        >
+                        
+                            <div class="table-responsive  text-nowrap">
+                              <table id="Table" class="table table-hover mb-5" style="max-height:50vh; overflow-y: auto;" :style="tableStyles">
+                                <thead class="sticky-header">
+                                <tr style="border-bottom: 1px solid #ccc;"> 
+                                  <th  v-if="showTableNumbering">#</th>
+                                  <th
+                                    v-for="(col, index) in tab.header.columns"                       
+                                    :key="index"
+                                    style="border-color:#ccc;"  
+                                    :class="{
+                                      'sticky-column': col.title.props.title === tab.header.subject, 
+                                      'fw-bold': true,
+                                      'px-4': true,
+                                      'py-2': true,
+                                      'text-capitalize': true,
+                                      'text-left': true,
+                                    }"
+                                  >
+                                    <div class="border-0" :class="{ 'mb-3': col.title.props.subTitle === ''}">
+                                      <component :is="col.title.is" v-bind="col.title.props"></component>
+                                      <!-- <h6 :class="{
+                                          'border-0': true,
+                                          'fw-bold': true,
+                                          'font-bold': true,
+                                          'mb-3': col.subTitle === '',
+                                          'mb-0': col.subTitle !== ''
+                                        }" 
+                                        :style="{color: fontColor}"
+                                      >
+                                        {{ col.title }}
+                                      </h6> -->
+                                      
+                                    </div>
+                                  </th>    
+                                </tr>
+                              </thead>
+
+                                <tbody>
+                                
+                                <RowWidget :class="{'hide-row': !showRowBorder}" v-for="(row, index) in paginatedItems" :key="index">
+                                  <ColumnWidget :minWidth="'50px'"  :class="{ 
+                                    'hide-row': !showRowBorder,
+                                    }" v-if="showTableNumbering">   # {{ (startItem - 1) + index + 1 }}</ColumnWidget>
+                                    <template :class="{'d-flex':true}" v-for="(widget_list, innerkey) in row" :key="innerkey">
+                                      <ColumnWidget :minWidth="tab.header.minColumnWidth" :maxWidth="tab.header.maxColumnWidth" :class="{ 'sticky-column' : tab.header?.columns[innerkey]?.title.props.title == tab.header.subject, 'hide-row': !showRowBorder, 'show-side': showColumnBorder}">
+                                        <template v-for="(widget, colkey) in widget_list" :key="colkey">
+                                            <component :is="widget.is" v-bind="widget.props"></component>
+                                        </template>
+                                      </ColumnWidget>
+                                    </template>
+                                  </RowWidget>
+                                </tbody>
+                              </table>                       
+                            </div>
+                            <div v-if="tab.content.length > ItemsPerPage" class="card rounded-1 px-3 py-3" :style="{background:tableBgColor}">
+                              <div class="pagination-container">
+                                  <div class="pagination-info"> Showing {{ startItem }} to {{ endItem }} of {{ assetCount }} results</div>
+                                  <div class="pagination-buttons">
+                                      <button @click="changePage(currentPage - 1)" :disabled="currentPage === 1">Prev</button>
+
+                                      <span v-for="page in totalPages" :key="page">
+                                        <button 
+                                          @click="changePage(page)" 
+                                          :class="{ active: currentPage === page }">
+                                          {{ page }}
+                                        </button>
+                                      </span>
+
+                                      <button @click="changePage(currentPage + 1)" :disabled="currentPage === totalPages">Next</button>
+                                    </div>
+
+                                </div>
+                      </div>                                                
+                        </div>
+                      </div>
+                    
+                  </div>
               </div>
             </div>
   </template>
 
 <style lang="scss">
+
 
 .hide-row{
   border-top: 0;
@@ -8598,7 +8642,7 @@ button.list-group-item-gray.active {
 
 .card {
   background-clip: padding-box;
-  box-shadow: 0 2px 6px 0 rgba(67, 89, 113, 0.12);
+  box-shadow: 0 ;
 }
 .card .card-link {
   display: inline-block;
