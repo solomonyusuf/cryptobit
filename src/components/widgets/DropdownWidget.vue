@@ -22,6 +22,10 @@ const props = defineProps({
     type: Array,
     required: true,
   },
+  onDropdown: {
+    type: Function,
+    required: false,
+  },
 });
 
 const selected = ref("");
@@ -30,10 +34,10 @@ const selected = ref("");
 <template>
   <div class="dropdown-wrapper" :style="{ background, border }" style="border-radius: 0.575rem;">
       <img :src="image" alt="icon" class="dropdown-icon" />
-      <select v-model="selected" class="form-control  dropdown">
-        <option value="" disabled>{{ label }}</option>
-        <option v-for="(option, index) in options" :key="index" :value="option">
-          {{ option }}
+      <select  @change="onDropdown($event)" class="form-control  dropdown">
+        <option value="" selected disabled>{{ label }}</option>
+        <option v-for="(option, index) in options" :key="index" :value="option.label">
+          {{ option.label }}
         </option>
       </select>
     </div>

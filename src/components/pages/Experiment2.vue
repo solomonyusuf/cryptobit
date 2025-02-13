@@ -254,7 +254,8 @@ const header = [
                       header: {
                         subject: '',
                         columns: [
-                          { title: { is: TableHeaderWidget, props: { image: "https://img.icons8.com/?size=100&id=OfULsxLTqVmm&format=png&color=000000", 
+                          { title: { is: TableHeaderWidget, 
+                            props: { image: "https://img.icons8.com/?size=100&id=OfULsxLTqVmm&format=png&color=000000", 
                             image2:"", 
                             title: 'Symbol', 
                             symbol:"",
@@ -289,14 +290,10 @@ const header = [
                       
                ];
 const  filters = [
-        { key: 'category', label: 'Category All', options: [{ value: 1, label: 'One' }, { value: 2, label: 'Two' }, { value: 3, label: 'Three' }] },
-        { key: 'sector', label: 'Sector All', options: [{ value: 1, label: 'One' }, { value: 2, label: 'Two' }, { value: 3, label: 'Three' }] },
-        { key: 'tag', label: 'Tag All', options: [{ value: 1, label: 'One' }, { value: 2, label: 'Two' }, { value: 3, label: 'Three' }] },
-        { key: 'exchange', label: 'Exchange All', options: [{ value: 1, label: 'One' }, { value: 2, label: 'Two' }, { value: 3, label: 'Three' }] },
-        { key: 'network', label: 'Network All', options: [{ value: 1, label: 'One' }, { value: 2, label: 'Two' }, { value: 3, label: 'Three' }] },
-        { key: 'marketcap', label: 'Marketcap', options: [{ value: 1, label: 'One' }, { value: 2, label: 'Two' }, { value: 3, label: 'Three' }] },
-        { key: 'volume', label: '24H Volume', options: [{ value: 1, label: 'One' }, { value: 2, label: 'Two' }, { value: 3, label: 'Three' }] }
-      ];
+        { key: 'symbol', label: 'Category All', options: [{ value: 1, label: 'One' }, { value: 2, label: 'Two' }, { value: 3, label: 'Three' }] },
+        { key: 'last', label: 'Sector All', options: [{ value: 1, label: 'One' }, { value: 2, label: 'Two' }, { value: 3, label: 'Three' }] },
+        { key: 'change', label: 'Tag All', options: [{ value: 1, label: 'One' }, { value: 2, label: 'Two' }, { value: 3, label: 'Three' }] },
+       ];
 
 const handleSearch = (event: any) => {
   console.log("Search input:", event.target.value);
@@ -331,7 +328,7 @@ const handleDropdown = (event:any, filter:any) => {
          :showDownloadButton="false"
          :showToggleButton="false"
          :activeTab="'stocks'"
-         :showFilter ="false"
+         :showFilter ="true"
          :title="'Stock Prices'"
          :tabHeader="header"
          :filters="filters"

@@ -183,22 +183,22 @@ onMounted(() => {
   document.head.appendChild(fontLink);
 });
 
-var options = ['One', 'Two', 'Three']
-const isDropdownOpen = ref(false);
-const handleSelection = (item:any) => {
-  console.log("Selected:", item);
+
+const handleDropdown = (event:any) => {
+  console.log("Dropdown clicked");
+  alert("Dropdown clicked");
 };
 </script>
 
 <template>
-        <div class="px-3 border-1">
+        <div  class="px-3 border-1">
                 <h3 class="card-header fw-bold" :style="{color:headerColor}">{{title}}</h3>
                 <div class="mb-3">
                   <div class="row mb-2  justify-content-center">
                     <div class="col-6 d-flex">
                       <div class="card w-100" :style="{background:tableBgColor, border, boxShadow:'0' }">
                         <div class="card-body py-3">
-                         <h5 class="card-title text-center" :style="{color:fontColor}">24H VOLUME: <strong>$534.6M</strong></h5>
+                         <p class="card-title text-center" :style="{color:fontColor}">24H VOLUME: <strong>$534.6M</strong></p>
                         
                        </div>
                       </div>
@@ -206,13 +206,42 @@ const handleSelection = (item:any) => {
                     <div class="col-6 d-flex ">
                       <div class="card w-100" :style="{background:tableBgColor, border, boxShadow:'0'}">
                         <div class="card-body py-3">
-                         <h5 class="card-title text-center"  :style="{color:fontColor}">24H VOLUME: <strong>$534.6M</strong></h5>
+                         <p class="card-title text-center"  :style="{color:fontColor}">24H VOLUME: <strong>$534.6M</strong></p>
                         
                        </div>
                       </div>
                     </div>
                   </div>
-                  <div class="row mb-2  justify-content-center">
+                  <div class="row flex-nowrap mb-2  justify-content-start">
+                    <div class="col-md-3 col-sm-6 d-flex align-items-center">
+                      <div class="input-group input-group-merge border-0">
+                          <span  :style="{background:tableBgColor}" class="input-group-text border-0">
+                            <img src="https://img.icons8.com/?size=100&id=ObuWtTlsoTj6&format=png&color=000000" style="height:25px;" />
+
+                          </span>
+                          <input @input="onSearch($event)" type="search" aria-controls="Table" :style="{background:tableBgColor}" class="form-control border-0" placeholder="Search Assets..."/>
+                        </div>
+                    </div>
+
+                    <div v-if="showFilter" v-for="(filter, index) in filters" :key="index" class="col d-none d-md-block">
+                      <DropdownWidget
+                            :onDropdown="handleDropdown"
+                             background=""
+                             class="col"
+                            :border="border"
+                            :label="filter.label"
+                             image="https://img.icons8.com/?size=100&id=wC9CUA0rwrS2&format=png&color=000000"
+                            :options="filter.options"
+                          />
+                    <!-- <select @change="onDropdown($event, filter.key)" :style="{background:filterColor}"class="form-select border-0">
+                      <option>{{ filter.label }}</option>
+                      <option v-for="option in filter.options" :key="option.value" :value="option.value">{{ option.label }}</option>
+                    </select> -->
+
+                    </div>
+                
+                  </div>
+                  <div class="row custom-scroll mb-2" style="flex-wrap:nowrap;">
                     <div class="col">
                         <DropdownWidget
                             background="blue"
@@ -224,33 +253,55 @@ const handleSelection = (item:any) => {
                     </div>
                     <div class="col">
                         <LabelButtonWidget
-                             
+                              :image="'https://img.icons8.com/?size=100&id=htXOOvtj6HxI&format=png&color=000000'"
+                             :title="'Trending'"
+                             :buttons="{ '5M': '5M', '1H': '1H', '6H': '6H', '24H': '24H' }"
+                          />
+                    </div> 
+                    <div class="col">
+                        <LabelButtonWidget
+                              :image="'https://img.icons8.com/?size=100&id=DAoPjn2XoTUN&format=png&color=000000'"
+                             :title="'Top'"
+                             :buttons="{ '5M': '5M', '1H': '1H', '6H': '6H', '24H': '24H' }"
+                          />
+                    </div>
+                     <div class="col">
+                        <LabelButtonWidget
+                              :image="'https://img.icons8.com/?size=100&id=Nx10k7FUukCA&format=png&color=000000'"
+                             :title="'Gainer'"
+                             :buttons="{ '5M': '5M', '1H': '1H', '6H': '6H', '24H': '24H' }"
+                          />
+                    </div> 
+                    <div class="col">
+                        <LabelButtonWidget
+                              :image="'https://img.icons8.com/?size=100&id=FHQYz1px0h83&format=png&color=000000'"
+                             :title="' Pairs'"
+                             :buttons="{ '5M': '5M', '1H': '1H', '6H': '6H', '24H': '24H' }"
+                          />
+                    </div>
+                     <div class="col">
+                        <LabelButtonWidget
+                              :image="'https://img.icons8.com/?size=100&id=OfULsxLTqVmm&format=png&color=000000'"
+                             :title="'Symbols'"
+                             :buttons="{ '5M': '5M', '1H': '1H', '6H': '6H', '24H': '24H' }"
+                          />
+                    </div>
+                     <div class="col">
+                        <LabelButtonWidget
+                              :image="'https://img.icons8.com/?size=100&id=xDBlwMuXqAn0&format=png&color=000000'"
+                             :title="'Change'"
+                             :buttons="{ '5M': '5M', '1H': '1H', '6H': '6H', '24H': '24H' }"
+                          />
+                    </div>
+                     <div class="col">
+                        <LabelButtonWidget
+                              :image="'https://img.icons8.com/?size=100&id=EUFks8SepuwG&format=png&color=000000'"
+                             :title="'Newest'"
+                             :buttons="{ '5M': '5M', '1H': '1H', '6H': '6H', '24H': '24H' }"
                           />
                     </div>
                   </div>
-                   <div class="row flex-nowrap mb-2  justify-content-start">
-                    <div class="col-md-3 col-sm-6 d-flex align-items-center">
-                      <div class="input-group input-group-merge border-0">
-                          <span  :style="{background:tableBgColor}" class="input-group-text border-0">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
-                              <circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2" fill="none"/>
-                              <line x1="16.5" y1="16.5" x2="22" y2="22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                            </svg>
-
-                          </span>
-                          <input @input="onSearch($event)" type="search" aria-controls="Table" :style="{background:tableBgColor}" class="form-control border-0" placeholder="Search Assets..."/>
-                        </div>
-                    </div>
-
-                    <div v-if="showFilter" v-for="(filter, index) in filters" :key="index" class="col d-none d-md-block">
-                    <select @change="onDropdown($event, filter.key)" :style="{background:filterColor}"class="form-select border-0">
-                      <option>{{ filter.label }}</option>
-                      <option v-for="option in filter.options" :key="option.value" :value="option.value">{{ option.label }}</option>
-                    </select>
-
-                    </div>
-                
-                  </div>
+                   
                   <div class="card rounded-1 tab-container" :class="{ 'border': showTableBorder}" :style="{border, background:tableBgColor}">
                     
                     <div style="border-bottom: 1px solid #384351;" class=" mt-0 d-flex justify-content-between align-items-center">
@@ -378,7 +429,7 @@ const handleSelection = (item:any) => {
                     
                   </div>
               </div>
-            </div>
+        </div>
   </template>
 
 <style lang="scss">
