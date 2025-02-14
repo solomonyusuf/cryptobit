@@ -1089,7 +1089,7 @@ const handleBookmark = (index) => {
 
 
 <template>
-    <div class="px-2 py-3 mt-3">
+    <div class="px-3 py-3 mt-3">
         <div class="card" style="background:#212124;">
           <div class="input-group input-group-merge w-100 mb-4">
               <span class="input-group-text " 
@@ -1115,13 +1115,13 @@ const handleBookmark = (index) => {
                 border-color:#8f9398;
                 font-size:1rem;
                 font-weight: 100;" 
-                class="form-control placeholder-color" 
+                class="form-control" 
                 placeholder="Search Markets" 
                 aria-label="Search..." 
                 aria-describedby="basic-addon-search31">
             </div>
 
-            <div class="row mb-3">
+            <div class="row mb-3 d-none d-md-block">
                   <div class="col d-flex flex-column gap-2">
                     <div class="d-flex align-items-center gap-2">
                       <label style="color:#969aa0;" class="form-check-label">
@@ -1280,7 +1280,7 @@ const handleBookmark = (index) => {
               
             </div>
 
-            <div class="mt-2 table-responsive text-nowrap " style="max-height: 400px; overflow-y: auto;">
+            <div class="mt-2 table-responsive text-nowrap " style="max-height: 500px; overflow-y: auto;">
                 <table class="table table-hover" >
                 <thead>
                     <tr class="border-0">
@@ -1297,6 +1297,16 @@ const handleBookmark = (index) => {
                     </tr>
                 </thead>
                 <tbody class="table-border-bottom-0">
+                  <tr v-if="paginatedItems.length === 0">
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td v-if="searchQuery"><h4> '{{searchQuery}}' Was not found </h4></td>
+                    <td v-if="!searchQuery"><h4> No data found </h4></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                  </tr>
                   <tr v-for="(stock, index) in paginatedItems" :key="index">
                        <td class="lay">
                         <div style="display: flex; min-width:250px; align-items: center; gap: 8px;">
@@ -1318,7 +1328,16 @@ const handleBookmark = (index) => {
                         <PriceWidget :amount="stock.price.amount" :symbol="stock.price.symbol" />
                       </td>
                       <td class="lay">
-                        <LineChartWidget :lineColor="stock.chart.lineColor" :data="stock.chart.data" :label="stock.chart.label" />
+                        <LineChartWidget 
+                        :lineColor="stock.chart.lineColor" 
+                        :data="Array.from({ length: 30 }, () => Math.floor(Math.random() * 100))" 
+                        :label="label"
+                         />
+                         <!-- <LineChartWidget 
+                        :lineColor="stock.chart.lineColor" 
+                        :data="stock.chart.data" 
+                        :label="stock.chart.label"
+                         /> -->
                       </td>
                       <td class="lay">
                         <PercentageWidget :amount="stock.percentage.amount" :color="stock.percentage.color" />
@@ -1344,7 +1363,7 @@ const handleBookmark = (index) => {
                     </tr>
                 </tbody>
                 <tfoot>
-                    <tr>
+                    <tr style="position:sticky;">
                       <td  style="background:#212124;">Showing {{ startItem }} - {{ endItem }} out of {{ assetCount }}</td>
                       <td  style="background:#212124;"></td>
                       <td  style="background:#212124;"></td>
@@ -11936,11 +11955,12 @@ li:not(:first-child) .dropdown-item, .dropdown-menu .dropdown-item:not(:first-ch
 }
 .input-group:hover .input-group-text,
 .input-group:hover .form-control {
-  border-color: #7a838b;
+  // border-color: #7a838b;
 }
 .input-group:focus-within {
-  -webkit-box-shadow: 0 0.125rem 0.25rem 0 rgba(105, 108, 255, 0.4);
-          box-shadow: 0 0.125rem 0.25rem 0 rgba(105, 108, 255, 0.4);
+  border-radius:26px;
+  // -webkit-box-shadow: 0 0.125rem 0.25rem 0 rgba(105, 108, 255, 0.4);
+  //         box-shadow: 0 0.125rem 0.25rem 0 rgba(105, 108, 255, 0.4);
 }
 .input-group:focus-within .form-control,
 .input-group:focus-within .input-group-text {
@@ -11952,7 +11972,7 @@ li:not(:first-child) .dropdown-item, .dropdown-menu .dropdown-item:not(:first-ch
 .input-group[disabled] .form-control {
   pointer-events: none;
   color: #a7acb2;
-  background-color: rgba(34, 48, 62, 0.06);
+  background-color: transparent;
   border-color: #cacdd1;
 }
 
