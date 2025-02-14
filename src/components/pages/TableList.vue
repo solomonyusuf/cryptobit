@@ -61,7 +61,8 @@ const labels = [
   "September", "October", "November", "December", "January", "February", "March", "April", "May", "June"
 ];
 
- 
+const searchQuery = ref("");
+
 const stocks = [
   {
     category: "Bookmark",
@@ -694,7 +695,7 @@ const stocks = [
     change: { amount: "0.002", color: "green" }
   },
   {
-    category: "RWA",
+    category: "RWA, Launchable",
     asset: {
       image: "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/USDC.png",
       title: "RealUSD",
@@ -736,7 +737,7 @@ const stocks = [
     change: { amount: "0.004", color: "green" }
   },
   {
-    category: "RWA",
+    category: "RWA, Launchable",
     asset: {
       image: "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/PAXG.png",
       title: "PAX Gold",
@@ -757,7 +758,7 @@ const stocks = [
     change: { amount: "-0.002", color: "red" }
   },
   {
-    category: "RWA",
+    category: "RWA, Launchable",
     asset: {
       image: "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/REAL.png",
       title: "Real Estate Coin",
@@ -778,7 +779,7 @@ const stocks = [
     change: { amount: "0.008", color: "green" }
   },
   {
-    category: "RWA",
+    category: "RWA, Launchable",
     asset: {
       image: "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/USDP.png",
       title: "Pax Dollar",
@@ -997,9 +998,15 @@ const emit = defineEmits([
  
 const filteredItems = computed(() => {
   if (selectedCategory.value === 'All') {
-    return stocks; 
+    if(searchQuery.value !== '')
+      return stocks.filter(x => x.asset.title.toLowerCase().includes(searchQuery.value.toLowerCase()));
+    else return stocks;
   }
-  return stocks.filter(item => item.category.includes(selectedCategory.value));
+  if(searchQuery.value === '')
+    return stocks.filter(item => item.category.toLowerCase().includes(selectedCategory.value.toLowerCase()));
+  else
+    return stocks.filter(item => item.category.toLowerCase().includes(selectedCategory.value.toLowerCase()))
+                 .filter(x => x.asset.title.toLowerCase().includes(searchQuery.value.toLowerCase()));
 });
  
 const currentPage = ref(1);
@@ -1086,19 +1093,20 @@ const handleBookmark = (index) => {
         <div class="card" style="background:#212124;">
           <div class="input-group input-group-merge w-100 mb-4">
               <span class="input-group-text " 
-                style="background:#3b3b3f;
-                border-top-left-radius:25px;
-                border-color:#8f9398;
-                font-size: 1.1em;
-                border-bottom-left-radius:25px;
-                padding:10px;color:#d5d5da;" id="basic-addon-search31">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="11" cy="11" r="8"></circle>
-                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                </svg>
+                  style="background:#3b3b3f;
+                  border-top-left-radius:25px;
+                  border-color:#8f9398;
+                  font-size: 1.1em;
+                  border-bottom-left-radius:25px;
+                  padding:10px;color:#d5d5da;" id="basic-addon-search31">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  </svg>
 
               </span>
               <input type="text" 
+               v-model="searchQuery"
                 style="background:#3b3b3f;
                 padding:10px;
                 border-top-right-radius:25px;
