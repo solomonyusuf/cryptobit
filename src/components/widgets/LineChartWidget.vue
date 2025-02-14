@@ -38,7 +38,7 @@
               label: '',
               data: props.data,
               borderColor: props.lineColor,
-              borderWidth: 2,
+              borderWidth: 4,
               fill: false,
               pointBackgroundColor: 'transparent',
               pointBorderColor:  'transparent',  

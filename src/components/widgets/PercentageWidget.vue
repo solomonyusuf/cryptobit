@@ -7,5 +7,5 @@ const props = defineProps({
 
 </script>
 <template>
-    <strong :style="{color}">{{ amount }}%</strong>
+    <strong :style="{color, fontSize:'17px'}">{{ amount }}%</strong>
 </template> 
