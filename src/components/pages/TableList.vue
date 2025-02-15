@@ -1436,8 +1436,8 @@ let short_data = [
                 <table class="table table-hover" >
                 <thead>
                     <tr class="border-0">
-                    <th class="text-capitalize border-0" style="background:#212124;">Market</th>
-                    <th class="text-capitalize border-0" style="background:#212124;">Oracle Price</th>
+                    <th class="text-capitalize border-0 " style="background:#212124;">Market</th>
+                    <th class="text-capitalize border-0 " style="background:#212124;">Oracle Price</th>
                     <th class="text-capitalize border-0" style="background:#212124;">Last 24H Change</th>
                     <th class="text-capitalize border-0" style="background:#212124;">24h change</th>
                     <th class="text-capitalize border-0" style="background:#212124;">24h Volume 
@@ -1460,7 +1460,7 @@ let short_data = [
                     <td></td>
                     <td></td>
                     <td v-if="searchQuery"><h4> '{{searchQuery}}' Was not found </h4></td>
-                    <td v-if="!searchQuery"><h4> No data found </h4></td>
+                    <td v-if="!searchQuery"><h4 class="font"> No data found </h4></td>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -1597,7 +1597,17 @@ let short_data = [
     </div>
 </template>
 <style lang="scss">
-
+.font
+{
+  color: var(--color-text-1);
+  font: var(--font-medium-medium);
+  display: inline-block;
+  // overflow: hidden;
+  // text-overflow: ellipsis;
+  white-space: nowrap;
+  // min-width: 1px;
+  // max-width: 4.5rem;
+}
 .pagination-container {
   display: flex;
   align-items: center;
@@ -1804,6 +1814,10 @@ body {
   font-weight: var(--bs-body-font-weight);
   line-height: var(--bs-body-line-height);
   color: #7b7b84;
+  color: var(--color-text-1);
+  font: var(--font-medium-medium);
+  display: inline-block;
+  white-space: nowrap;
   text-align: var(--bs-body-text-align);
   background-color: #212124;
   -webkit-text-size-adjust: 100%;

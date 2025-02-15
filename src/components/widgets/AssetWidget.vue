@@ -16,6 +16,8 @@ const props = defineProps({
   <div :style="{margin}">
     <img v-if="image2" class="" :src="image2" :style="{height:imageHeight}" style="border-radius:15px;" />
     <img v-if="image" class=" " :src="image" :style="{height:imageHeight}" style="border-radius:20px;" />
-    <strong class="px-1" :style="{color, fontSize:'17px',}">{{ title }}</strong> <span class="text-gray">{{ symbol }}</span>
+    <strong class="px-1" 
+    style=""  
+    :style="{color, fontSize:'17px',}">{{ title }}</strong> <span class="text-gray">{{ symbol }}</span>
   </div>
  </template> 
