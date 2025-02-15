@@ -1749,18 +1749,7 @@ body
   }
 }
 
-body {
-  margin: 0;
-  font-family:  var(--font-medium-medium);
-  font-size:13px;
-  font-weight: var(--bs-body-font-weight);
-  line-height: var(--bs-body-line-height);
-  color: #7b7b84;
-  text-align: var(--bs-body-text-align);
-  background-color: #212124;
-  -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: rgba(34, 48, 62, 0);
-}
+
 :root {
   --fontFamily-base: "Satoshi", system-ui, -apple-system, Helvetica, Arial, sans-serif;
   --fontFamily-monospace: Courier, monospace, var(--fontFamily-base);
@@ -1807,6 +1796,20 @@ body {
   --font-extra-bold: var(--fontWeight-bold) var(--fontSize-extra) var(--fontFamily-base);
   --fontFeature-monoNumbers: "tnum" on, "lnum" on, "zero" 1;
 }
+
+body {
+  margin: 0;
+  font-family:  var(--font-medium-medium);
+  font-size:13px;
+  font-weight: var(--bs-body-font-weight);
+  line-height: var(--bs-body-line-height);
+  color: #7b7b84;
+  text-align: var(--bs-body-text-align);
+  background-color: #212124;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(34, 48, 62, 0);
+}
+
 hr {
   margin: 1rem 0;
   color: #e4e6e8;
