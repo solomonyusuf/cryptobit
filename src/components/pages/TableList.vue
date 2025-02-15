@@ -1875,7 +1875,7 @@ blockquote {
 
 b,
 strong {
-  font-weight: bolder;
+  font-weight: bold;
 }
 
 small, .small {
@@ -9604,7 +9604,7 @@ textarea.form-control-lg {
 
 b,
 strong {
-  font-weight: 600;
+  font-weight: 500;
 }
 
 a:not([href]) {
