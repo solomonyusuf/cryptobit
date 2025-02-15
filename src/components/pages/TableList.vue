@@ -18,10 +18,9 @@ import ButtonWidget from '../widgets/ButtonWidget.vue';
 import LinkWidget from '../widgets/LinkWidget.vue';
 import TableHeaderWidget from '../widgets/TableHeaderWidget.vue';
 import ImageClusterWidget from '../widgets/ImageClusterWidget.vue';
-
-
-
-
+import TradingCardWidget from '../widgets/TradingCardWidget.vue';
+import ShortTableWidget from '../widgets/ShortTableWidget.vue';
+ 
 
 
 
@@ -47,10 +46,10 @@ const getButtonClasses = (label) => {
 
 onMounted(() => {
 
-  const fontLink = document.createElement("link");
-  fontLink.href = "https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap";
-  fontLink.rel = "stylesheet";
-  document.head.appendChild(fontLink);
+  // const fontLink = document.createElement("link");
+  // fontLink.href = "https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap";
+  // fontLink.rel = "stylesheet";
+  // document.head.appendChild(fontLink);
 
 });
 
@@ -1119,7 +1118,43 @@ const SortItems = (order = "asc") => {
 
 
 <template>
-    <div class="px-3 py-3 mt-3">
+    <div class="row px-3 py-3 mt-3">
+        <div class="col-md-4 px-4">
+          <div class="row mb-3">
+            <TradingCardWidget 
+            title="Trading Volume"
+            label="24h"
+            content="$136,436,705"
+            />
+            
+        </div>
+        <div class="row mb-3">
+            <TradingCardWidget 
+            title="Open Intrest"
+            label="Current"
+            content="$236,436,705"
+            />
+            
+        </div>
+        <div class="row mb-3">
+            <TradingCardWidget 
+            title="Earned by stakers"
+            label="24h"
+            content="$13,605"
+            />
+            
+        </div>
+        </div>
+        <!-- <div class="col-md-4 px-4">
+           <ShortTableWidget/>
+        </div> -->
+        <div class="col-md-4 px-4">
+           <ShortTableWidget
+           title="Biggest Movers"
+           show
+           />
+        </div>
+
         <div class="card" style="background:#212124;">
           <div class="input-group input-group-merge w-100 mb-4">
               <span class="input-group-text " 
@@ -1562,8 +1597,8 @@ tfoot td {
 /* Body Rows */
 tbody td {
   padding: 12px;
-  background: white;
-  border-top: 1px solid #ddd;
+  // background: white;
+  border-top: 0.5px solid #424249;
 }
 
 
