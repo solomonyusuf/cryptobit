@@ -20,6 +20,7 @@ import TableHeaderWidget from '../widgets/TableHeaderWidget.vue';
 import ImageClusterWidget from '../widgets/ImageClusterWidget.vue';
 import TradingCardWidget from '../widgets/TradingCardWidget.vue';
 import ShortTableWidget from '../widgets/ShortTableWidget.vue';
+import PriceStackWidget from '../widgets/PriceStackWidget.vue';
  
 
 
@@ -1612,51 +1613,21 @@ let short_data = [
                         </button>
                         <AssetWidget :image="stock.asset.image" :title="stock.asset.title" />
                         <PillWidget :title="stock.asset.charge"/>
+                        <PriceWidget :amount="stock.volume.amount" color="gray"/>
                         </div>
                       </td>
                       <td class="lay" style="border-bottom:0 solid;min-width: 100px;max-width: 150;">
-                        <PriceWidget :amount="stock.price.amount" :symbol="stock.price.symbol" />
+                        <PriceStackWidget :amounts="[ stock.change.amount + '%', '$' + stock.price.amount]"  
+                        :firstColor="stock.change.color"
+                         lastColor="#fff" />
                       </td>
-                      <td class="lay" style="border-bottom:0 solid;min-width: 100px;max-width: 150;">
-                        <LineChartWidget 
-                        :lineColor="stock.chart.lineColor" 
-                        :data="Array.from({ length: 30 }, () => Math.floor(Math.random() * 100))" 
-                        :label="label"
-                         />
-                         <!-- <LineChartWidget 
-                        :lineColor="stock.chart.lineColor" 
-                        :data="stock.chart.data" 
-                        :label="stock.chart.label"
-                         /> -->
-                      </td>
-                      <td class="lay" style="border-bottom:0 solid;min-width: 100px;max-width: 150;">
-                        <PercentageWidget :amount="stock.percentage.amount" :color="stock.percentage.color" />
-                      </td>
-                      <td class="lay" style="border-bottom:0 solid">
-                        <PriceWidget :amount="stock.marketCap.amount" :symbol="stock.marketCap.symbol" />
-                      </td>
-                      <td class="lay" style="border-bottom:0 solid">
-                        <PriceWidget :amount="stock.volume.amount" :symbol="stock.volume.symbol" />
-                      </td>
-                      <td class="lay" style="border-bottom:0 solid">
-                        <PriceWidget :amount="stock.supply.amount" :symbol="stock.supply.symbol" />
-                      </td>
-                      <td class="lay" style="border-bottom:0 solid">
-                        <PriceWidget :amount="stock.rank.amount" :symbol="stock.rank.symbol" />
-                      </td>
-                      <td class="lay" style="border-bottom:0 solid">
-                        <PriceWidget :amount="stock.liquidity.amount" :symbol="stock.liquidity.symbol" />
-                      </td>
-                      <td class="lay" style="border-bottom:0 solid">
-                        <PercentageWidget :amount="stock.change.amount" :color="stock.change.color" />
-                      </td>
+                       
                     </tr>
                 </tbody>
                 <tfoot style="border-top: 0px solid;position:sticky;">
                     <tr>
-                      <td colspan="100"  style="background:#212124;">
-                        <div class="d-flex " style="gap:20.5rem;">
-                          <div> Showing {{ startItem }} - {{ endItem }} out of {{ assetCount }}</div>
+                      <td colspan="10"  style="background:#212124;">
+                        <div class="d-flex " style="gap:1.5rem;">
                         <div class="pagination-container">
                               <!-- Prev Button -->
                               <button 

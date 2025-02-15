@@ -2,8 +2,8 @@
 
 const props = defineProps({
  
-  firstColor: { type: String, default: ["green"] },
-  lastColor: { type: String, default: ["green"] },
+  firstColor: { type: String, default: "green" },
+  lastColor: { type: String, default: "green" },
   amounts: { type: Array, default: [] },
 });
 
