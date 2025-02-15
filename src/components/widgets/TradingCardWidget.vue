@@ -3,7 +3,7 @@ import { defineProps } from 'vue';
 
 const props = defineProps({
     height :{type: String, default:"100px"},
-    width :{type: String, default:"auto"},
+    width :{type: String, default:"250px"},
     color :{type: String, default:""},
     title :{type: String, default:""},
     label :{type: String, default:""},

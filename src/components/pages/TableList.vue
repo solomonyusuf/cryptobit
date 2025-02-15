@@ -62,932 +62,933 @@ const labels = [
 
 const searchQuery = ref("");
 
-const stocks = ref([
-  {
-    category: "Bookmark",
-    asset: {
-      image: "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/ZK.png",
-      title: "ZKsync",
-      charge: "5X"
-    },
-    price: { amount: "2,000", symbol: "$" },
-    chart: {
-      lineColor: "red",
-      data: [10, 20, 15, 30, 25, 40, 35, 50],
-      label: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
-    },
-    percentage: { amount: "0.18", color: "green" },
-    marketCap: { amount: "1.71K", symbol: "$" },
-    volume: { amount: "36M", symbol: "$" },
-    supply: { amount: "398M", symbol: "$" },
-    rank: { amount: "3", symbol: "" },
-    liquidity: { amount: "60.3K", symbol: "$" },
-    change: { amount: "-0.000002", color: "red" }
-  },
-  {
-    category: "Recently Listed",
-    asset: {
-      image: "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/ETH.png",
-      title: "Ethereum",
-      charge: "10X"
-    },
-    price: { amount: "3,200", symbol: "$" },
-    chart: {
-      lineColor: "green",
-      data: [12, 25, 20, 35, 30, 50, 40, 60],
-      label: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
-    },
-    percentage: { amount: "0.25", color: "green" },
-    marketCap: { amount: "500B", symbol: "$" },
-    volume: { amount: "100M", symbol: "$" },
-    supply: { amount: "118M", symbol: "$" },
-    rank: { amount: "2", symbol: "" },
-    liquidity: { amount: "150K", symbol: "$" },
-    change: { amount: "0.0005", color: "green" }
-  },
-  {
-    "category": "Recently Listed",
-    "asset": {
-      "image": "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/BTC.png",
-      "title": "Bitcoin",
-      "charge": "12X"
-    },
-    "price": { "amount": "45,000", "symbol": "$" },
-    "chart": {
-      "lineColor": "green",
-      "data": [15, 30, 28, 40, 35, 55, 45, 65],
-      "label": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
-    },
-    "percentage": { "amount": "0.50", "color": "green" },
-    "marketCap": { "amount": "900B", "symbol": "$" },
-    "volume": { "amount": "200M", "symbol": "$" },
-    "supply": { "amount": "21M", "symbol": "$" },
-    "rank": { "amount": "1", "symbol": "" },
-    "liquidity": { "amount": "300K", "symbol": "$" },
-    "change": { "amount": "0.0010", "color": "green" }
-  },
-  {
-    "category": "Recently Listed",
-    "asset": {
-      "image": "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/BNB.png",
-      "title": "Binance Coin",
-      "charge": "8X"
-    },
-    "price": { "amount": "500", "symbol": "$" },
-    "chart": {
-      "lineColor": "red",
-      "data": [10, 22, 18, 30, 27, 40, 35, 50],
-      "label": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
-    },
-    "percentage": { "amount": "-0.75", "color": "red" },
-    "marketCap": { "amount": "80B", "symbol": "$" },
-    "volume": { "amount": "50M", "symbol": "$" },
-    "supply": { "amount": "150M", "symbol": "$" },
-    "rank": { "amount": "4", "symbol": "" },
-    "liquidity": { "amount": "100K", "symbol": "$" },
-    "change": { "amount": "-0.0020", "color": "red" }
-  },
-  {
-    "category": "Recently Listed",
-    "asset": {
-      "image": "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/SOL.png",
-      "title": "Solana",
-      "charge": "15X"
-    },
-    "price": { "amount": "180", "symbol": "$" },
-    "chart": {
-      "lineColor": "green",
-      "data": [5, 15, 12, 25, 22, 35, 30, 45],
-      "label": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
-    },
-    "percentage": { "amount": "1.20", "color": "green" },
-    "marketCap": { "amount": "70B", "symbol": "$" },
-    "volume": { "amount": "30M", "symbol": "$" },
-    "supply": { "amount": "400M", "symbol": "$" },
-    "rank": { "amount": "6", "symbol": "" },
-    "liquidity": { "amount": "80K", "symbol": "$" },
-    "change": { "amount": "0.0030", "color": "green" }
-  },
-  {
-    "category": "Meme",
-    "asset": {
-      "image": "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/DOGE.png",
-      "title": "Dogecoin",
-      "charge": "20X"
-    },
-    "price": { "amount": "0.085", "symbol": "$" },
-    "chart": {
-      "lineColor": "green",
-      "data": [2, 5, 3, 8, 6, 10, 9, 12],
-      "label": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
-    },
-    "percentage": { "amount": "3.50", "color": "green" },
-    "marketCap": { "amount": "12B", "symbol": "$" },
-    "volume": { "amount": "800M", "symbol": "$" },
-    "supply": { "amount": "140B", "symbol": "$" },
-    "rank": { "amount": "10", "symbol": "" },
-    "liquidity": { "amount": "200K", "symbol": "$" },
-    "change": { "amount": "0.0001", "color": "green" }
-  },
-  {
-    "category": "Meme",
-    "asset": {
-      "image": "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/SHIB.png",
-      "title": "Shiba Inu",
-      "charge": "50X"
-    },
-    "price": { "amount": "0.000012", "symbol": "$" },
-    "chart": {
-      "lineColor": "red",
-      "data": [0.00001, 0.000015, 0.000012, 0.000018, 0.000016, 0.000020, 0.000019, 0.000025],
-      "label": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
-    },
-    "percentage": { "amount": "-2.10", "color": "red" },
-    "marketCap": { "amount": "7B", "symbol": "$" },
-    "volume": { "amount": "500M", "symbol": "$" },
-    "supply": { "amount": "589T", "symbol": "$" },
-    "rank": { "amount": "15", "symbol": "" },
-    "liquidity": { "amount": "150K", "symbol": "$" },
-    "change": { "amount": "-0.0000002", "color": "red" }
-  },
-  {
-    "category": "Meme",
-    "asset": {
-      "image": "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/PEPE.png",
-      "title": "Pepe Coin",
-      "charge": "100X"
-    },
-    "price": { "amount": "0.000001", "symbol": "$" },
-    "chart": {
-      "lineColor": "green",
-      "data": [0.0000005, 0.0000008, 0.0000006, 0.0000012, 0.000001, 0.0000015, 0.0000013, 0.000002],
-      "label": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
-    },
-    "percentage": { "amount": "5.00", "color": "green" },
-    "marketCap": { "amount": "3B", "symbol": "$" },
-    "volume": { "amount": "300M", "symbol": "$" },
-    "supply": { "amount": "420T", "symbol": "$" },
-    "rank": { "amount": "25", "symbol": "" },
-    "liquidity": { "amount": "100K", "symbol": "$" },
-    "change": { "amount": "0.0000001", "color": "green" }
-  },
-  {
-    "category": "Meme, Bookmark",
-    "asset": {
-      "image": "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/FLOKI.png",
-      "title": "Floki Inu",
-      "charge": "30X"
-    },
-    "price": { "amount": "0.000025", "symbol": "$" },
-    "chart": {
-      "lineColor": "green",
-      "data": [0.00002, 0.000023, 0.000021, 0.000027, 0.000025, 0.000030, 0.000028, 0.000035],
-      "label": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
-    },
-    "percentage": { "amount": "2.75", "color": "green" },
-    "marketCap": { "amount": "2B", "symbol": "$" },
-    "volume": { "amount": "200M", "symbol": "$" },
-    "supply": { "amount": "9.8T", "symbol": "$" },
-    "rank": { "amount": "30", "symbol": "" },
-    "liquidity": { "amount": "90K", "symbol": "$" },
-    "change": { "amount": "0.000001", "color": "green" }
-  },
-  {
-    "category": "Meme",
-    "asset": {
-      "image": "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/BABYDOGE.png",
-      "title": "Baby Doge",
-      "charge": "80X"
-    },
-    "price": { "amount": "0.0000003", "symbol": "$" },
-    "chart": {
-      "lineColor": "red",
-      "data": [0.0000002, 0.0000004, 0.0000003, 0.0000005, 0.0000004, 0.0000006, 0.0000005, 0.0000007],
-      "label": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
-    },
-    "percentage": { "amount": "-1.80", "color": "red" },
-    "marketCap": { "amount": "1.2B", "symbol": "$" },
-    "volume": { "amount": "150M", "symbol": "$" },
-    "supply": { "amount": "420Q", "symbol": "$" },
-    "rank": { "amount": "40", "symbol": "" },
-    "liquidity": { "amount": "80K", "symbol": "$" },
-    "change": { "amount": "-0.00000005", "color": "red" }
-  },
-  {
-    "category": "Meme",
-    "asset": {
-      "image": "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/KISHU.png",
-      "title": "Kishu Inu",
-      "charge": "60X"
-    },
-    "price": { "amount": "0.0000001", "symbol": "$" },
-    "chart": {
-      "lineColor": "green",
-      "data": [0.00000005, 0.00000009, 0.00000007, 0.00000012, 0.0000001, 0.00000015, 0.00000013, 0.0000002],
-      "label": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
-    },
-    "percentage": { "amount": "3.80", "color": "green" },
-    "marketCap": { "amount": "600M", "symbol": "$" },
-    "volume": { "amount": "100M", "symbol": "$" },
-    "supply": { "amount": "100Q", "symbol": "$" },
-    "rank": { "amount": "50", "symbol": "" },
-    "liquidity": { "amount": "70K", "symbol": "$" },
-    "change": { "amount": "0.00000002", "color": "green" }
-  },
-  {
-    "category": "AI & Big Data",
-    "asset": {
-      "image": "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/FET.png",
-      "title": "Fetch.ai",
-      "charge": "15X"
-    },
-    "price": { "amount": "1.20", "symbol": "$" },
-    "chart": {
-      "lineColor": "green",
-      "data": [0.8, 0.9, 1.0, 1.2, 1.1, 1.3, 1.25, 1.4],
-      "label": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
-    },
-    "percentage": { "amount": "4.20", "color": "green" },
-    "marketCap": { "amount": "900M", "symbol": "$" },
-    "volume": { "amount": "350M", "symbol": "$" },
-    "supply": { "amount": "1.15B", "symbol": "$" },
-    "rank": { "amount": "35", "symbol": "" },
-    "liquidity": { "amount": "150K", "symbol": "$" },
-    "change": { "amount": "0.10", "color": "green" }
-  },
-  {
-    "category": "AI & Big Data",
-    "asset": {
-      "image": "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/OCEAN.png",
-      "title": "Ocean Protocol",
-      "charge": "20X"
-    },
-    "price": { "amount": "0.85", "symbol": "$" },
-    "chart": {
-      "lineColor": "green",
-      "data": [0.6, 0.7, 0.65, 0.75, 0.8, 0.9, 0.85, 1.0],
-      "label": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
-    },
-    "percentage": { "amount": "3.80", "color": "green" },
-    "marketCap": { "amount": "500M", "symbol": "$" },
-    "volume": { "amount": "200M", "symbol": "$" },
-    "supply": { "amount": "613M", "symbol": "$" },
-    "rank": { "amount": "40", "symbol": "" },
-    "liquidity": { "amount": "120K", "symbol": "$" },
-    "change": { "amount": "0.08", "color": "green" }
-  },
-  {
-    "category": "AI & Big Data",
-    "asset": {
-      "image": "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/AGIX.png",
-      "title": "SingularityNET",
-      "charge": "25X"
-    },
-    "price": { "amount": "0.50", "symbol": "$" },
-    "chart": {
-      "lineColor": "red",
-      "data": [0.4, 0.45, 0.5, 0.55, 0.52, 0.6, 0.58, 0.65],
-      "label": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
-    },
-    "percentage": { "amount": "-2.00", "color": "red" },
-    "marketCap": { "amount": "600M", "symbol": "$" },
-    "volume": { "amount": "180M", "symbol": "$" },
-    "supply": { "amount": "1.2B", "symbol": "$" },
-    "rank": { "amount": "45", "symbol": "" },
-    "liquidity": { "amount": "110K", "symbol": "$" },
-    "change": { "amount": "-0.02", "color": "red" }
-  },
-  {
-    "category": "AI & Big Data",
-    "asset": {
-      "image": "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/GRT.png",
-      "title": "The Graph",
-      "charge": "12X"
-    },
-    "price": { "amount": "0.35", "symbol": "$" },
-    "chart": {
-      "lineColor": "green",
-      "data": [0.3, 0.33, 0.32, 0.36, 0.35, 0.38, 0.37, 0.40],
-      "label": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
-    },
-    "percentage": { "amount": "1.50", "color": "green" },
-    "marketCap": { "amount": "1.5B", "symbol": "$" },
-    "volume": { "amount": "250M", "symbol": "$" },
-    "supply": { "amount": "4.2B", "symbol": "$" },
-    "rank": { "amount": "30", "symbol": "" },
-    "liquidity": { "amount": "90K", "symbol": "$" },
-    "change": { "amount": "0.01", "color": "green" }
-  },
-  {
-    "category": "AI & Big Data, Layer 2",
-    "asset": {
-      "image": "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/NMR.png",
-      "title": "Numeraire",
-      "charge": "18X"
-    },
-    "price": { "amount": "18.75", "symbol": "$" },
-    "chart": {
-      "lineColor": "green",
-      "data": [15, 16, 17, 18.5, 18, 19, 18.8, 20],
-      "label": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
-    },
-    "percentage": { "amount": "2.80", "color": "green" },
-    "marketCap": { "amount": "120M", "symbol": "$" },
-    "volume": { "amount": "75M", "symbol": "$" },
-    "supply": { "amount": "6.8M", "symbol": "$" },
-    "rank": { "amount": "60", "symbol": "" },
-    "liquidity": { "amount": "80K", "symbol": "$" },
-    "change": { "amount": "0.50", "color": "green" }
-  },
-  {
-    "category": "AI & Big Data",
-    "asset": {
-      "image": "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/RLC.png",
-      "title": "iExec RLC",
-      "charge": "22X"
-    },
-    "price": { "amount": "2.80", "symbol": "$" },
-    "chart": {
-      "lineColor": "red",
-      "data": [2.4, 2.5, 2.7, 2.9, 2.85, 3.0, 2.95, 3.2],
-      "label": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
-    },
-    "percentage": { "amount": "-1.20", "color": "red" },
-    "marketCap": { "amount": "200M", "symbol": "$" },
-    "volume": { "amount": "90M", "symbol": "$" },
-    "supply": { "amount": "72M", "symbol": "$" },
-    "rank": { "amount": "55", "symbol": "" },
-    "liquidity": { "amount": "70K", "symbol": "$" },
-    "change": { "amount": "-0.05", "color": "red" }
-  },
-  {
-    "category": "DeFi",
-    "asset": {
-      "image": "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/UNI.png",
-      "title": "Uniswap",
-      "charge": "12X"
-    },
-    "price": { "amount": "6.50", "symbol": "$" },
-    "chart": {
-      "lineColor": "green",
-      "data": [5.2, 5.5, 5.8, 6.1, 6.3, 6.7, 6.6, 7.0],
-      "label": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
-    },
-    "percentage": { "amount": "2.50", "color": "green" },
-    "marketCap": { "amount": "4B", "symbol": "$" },
-    "volume": { "amount": "350M", "symbol": "$" },
-    "supply": { "amount": "753M", "symbol": "$" },
-    "rank": { "amount": "20", "symbol": "" },
-    "liquidity": { "amount": "180K", "symbol": "$" },
-    "change": { "amount": "0.25", "color": "green" }
-  },
-  {
-    "category": "DeFi",
-    "asset": {
-      "image": "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/AAVE.png",
-      "title": "Aave",
-      "charge": "15X"
-    },
-    "price": { "amount": "92.80", "symbol": "$" },
-    "chart": {
-      "lineColor": "green",
-      "data": [85, 88, 90, 91, 93, 95, 94, 98],
-      "label": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
-    },
-    "percentage": { "amount": "3.80", "color": "green" },
-    "marketCap": { "amount": "1.3B", "symbol": "$" },
-    "volume": { "amount": "250M", "symbol": "$" },
-    "supply": { "amount": "16M", "symbol": "$" },
-    "rank": { "amount": "35", "symbol": "" },
-    "liquidity": { "amount": "140K", "symbol": "$" },
-    "change": { "amount": "1.20", "color": "green" }
-  },
-  {
-    "category": "DeFi",
-    "asset": {
-      "image": "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/CRV.png",
-      "title": "Curve DAO",
-      "charge": "8X"
-    },
-    "price": { "amount": "0.75", "symbol": "$" },
-    "chart": {
-      "lineColor": "red",
-      "data": [0.9, 0.85, 0.8, 0.78, 0.76, 0.74, 0.73, 0.7],
-      "label": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
-    },
-    "percentage": { "amount": "-4.00", "color": "red" },
-    "marketCap": { "amount": "600M", "symbol": "$" },
-    "volume": { "amount": "180M", "symbol": "$" },
-    "supply": { "amount": "950M", "symbol": "$" },
-    "rank": { "amount": "45", "symbol": "" },
-    "liquidity": { "amount": "120K", "symbol": "$" },
-    "change": { "amount": "-0.04", "color": "red" }
-  },
-  {
-    "category": "DeFi",
-    "asset": {
-      "image": "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/SUSHI.png",
-      "title": "SushiSwap",
-      "charge": "10X"
-    },
-    "price": { "amount": "1.40", "symbol": "$" },
-    "chart": {
-      "lineColor": "green",
-      "data": [1.2, 1.25, 1.3, 1.35, 1.38, 1.45, 1.43, 1.5],
-      "label": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
-    },
-    "percentage": { "amount": "1.80", "color": "green" },
-    "marketCap": { "amount": "300M", "symbol": "$" },
-    "volume": { "amount": "100M", "symbol": "$" },
-    "supply": { "amount": "222M", "symbol": "$" },
-    "rank": { "amount": "50", "symbol": "" },
-    "liquidity": { "amount": "90K", "symbol": "$" },
-    "change": { "amount": "0.05", "color": "green" }
-  },
-  {
-    "category": "DeFi",
-    "asset": {
-      "image": "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/COMP.png",
-      "title": "Compound",
-      "charge": "18X"
-    },
-    "price": { "amount": "45.60", "symbol": "$" },
-    "chart": {
-      "lineColor": "green",
-      "data": [42, 43, 44, 45, 46, 47, 46.5, 48],
-      "label": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
-    },
-    "percentage": { "amount": "2.10", "color": "green" },
-    "marketCap": { "amount": "500M", "symbol": "$" },
-    "volume": { "amount": "150M", "symbol": "$" },
-    "supply": { "amount": "11M", "symbol": "$" },
-    "rank": { "amount": "40", "symbol": "" },
-    "liquidity": { "amount": "110K", "symbol": "$" },
-    "change": { "amount": "0.90", "color": "green" }
-  },
-  {
-    "category": "DeFi, Layer 1",
-    "asset": {
-      "image": "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/YFI.png",
-      "title": "Yearn Finance",
-      "charge": "22X"
-    },
-    "price": { "amount": "8,200", "symbol": "$" },
-    "chart": {
-      "lineColor": "red",
-      "data": [8200, 8100, 8050, 8000, 7950, 7900, 7800, 7700],
-      "label": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
-    },
-    "percentage": { "amount": "-1.50", "color": "red" },
-    "marketCap": { "amount": "300M", "symbol": "$" },
-    "volume": { "amount": "75M", "symbol": "$" },
-    "supply": { "amount": "36K", "symbol": "$" },
-    "rank": { "amount": "55", "symbol": "" },
-    "liquidity": { "amount": "80K", "symbol": "$" },
-    "change": { "amount": "-50", "color": "red" }
-  },
-  {
-    "category": "DePIN",
-    "asset": {
-      "image": "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/HNT.png",
-      "title": "Helium",
-      "charge": "14X"
-    },
-    "price": { "amount": "5.20", "symbol": "$" },
-    "chart": {
-      "lineColor": "green",
-      "data": [4.8, 4.9, 5.0, 5.1, 5.2, 5.3, 5.4, 5.5],
-      "label": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
-    },
-    "percentage": { "amount": "1.90", "color": "green" },
-    "marketCap": { "amount": "700M", "symbol": "$" },
-    "volume": { "amount": "90M", "symbol": "$" },
-    "supply": { "amount": "160M", "symbol": "$" },
-    "rank": { "amount": "45", "symbol": "" },
-    "liquidity": { "amount": "75K", "symbol": "$" },
-    "change": { "amount": "0.10", "color": "green" }
-  },
-  {
-    "category": "DePIN, Bookmark",
-    "asset": {
-      "image": "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/AKT.png",
-      "title": "Akash Network",
-      "charge": "10X"
-    },
-    "price": { "amount": "3.75", "symbol": "$" },
-    "chart": {
-      "lineColor": "red",
-      "data": [3.9, 3.8, 3.7, 3.6, 3.5, 3.4, 3.3, 3.2],
-      "label": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
-    },
-    "percentage": { "amount": "-3.50", "color": "red" },
-    "marketCap": { "amount": "500M", "symbol": "$" },
-    "volume": { "amount": "120M", "symbol": "$" },
-    "supply": { "amount": "150M", "symbol": "$" },
-    "rank": { "amount": "55", "symbol": "" },
-    "liquidity": { "amount": "65K", "symbol": "$" },
-    "change": { "amount": "-0.20", "color": "red" }
-  },
-  {
-    "category": "DePIN, Bookmark",
-    "asset": {
-      "image": "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/STRK.png",
-      "title": "Storj",
-      "charge": "8X"
-    },
-    "price": { "amount": "0.95", "symbol": "$" },
-    "chart": {
-      "lineColor": "green",
-      "data": [0.85, 0.88, 0.89, 0.90, 0.91, 0.92, 0.93, 0.95],
-      "label": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
-    },
-    "percentage": { "amount": "1.80", "color": "green" },
-    "marketCap": { "amount": "350M", "symbol": "$" },
-    "volume": { "amount": "80M", "symbol": "$" },
-    "supply": { "amount": "425M", "symbol": "$" },
-    "rank": { "amount": "65", "symbol": "" },
-    "liquidity": { "amount": "55K", "symbol": "$" },
-    "change": { "amount": "0.05", "color": "green" }
-  },
-  {
-    "category": "DePIN",
-    "asset": {
-      "image": "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/RENDER.png",
-      "title": "Render Network",
-      "charge": "20X"
-    },
-    "price": { "amount": "7.80", "symbol": "$" },
-    "chart": {
-      "lineColor": "green",
-      "data": [7.2, 7.4, 7.5, 7.6, 7.7, 7.8, 7.9, 8.0],
-      "label": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
-    },
-    "percentage": { "amount": "3.40", "color": "green" },
-    "marketCap": { "amount": "2B", "symbol": "$" },
-    "volume": { "amount": "300M", "symbol": "$" },
-    "supply": { "amount": "500M", "symbol": "$" },
-    "rank": { "amount": "30", "symbol": "" },
-    "liquidity": { "amount": "95K", "symbol": "$" },
-    "change": { "amount": "0.35", "color": "green" }
-  },
-  {
-    "category": "DePIN, Layer 1",
-    "asset": {
-      "image": "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/FILE.png",
-      "title": "Filecoin",
-      "charge": "12X"
-    },
-    "price": { "amount": "4.30", "symbol": "$" },
-    "chart": {
-      "lineColor": "green",
-      "data": [4.0, 4.1, 4.15, 4.2, 4.25, 4.3, 4.35, 4.4],
-      "label": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
-    },
-    "percentage": { "amount": "1.20", "color": "green" },
-    "marketCap": { "amount": "1.5B", "symbol": "$" },
-    "volume": { "amount": "200M", "symbol": "$" },
-    "supply": { "amount": "400M", "symbol": "$" },
-    "rank": { "amount": "40", "symbol": "" },
-    "liquidity": { "amount": "85K", "symbol": "$" },
-    "change": { "amount": "0.15", "color": "green" }
-  },
-  {
-    "category": "DePIN, Layer 2, Bookmark",
-    "asset": {
-      "image": "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/AR.png",
-      "title": "Arweave",
-      "charge": "16X"
-    },
-    "price": { "amount": "12.50", "symbol": "$" },
-    "chart": {
-      "lineColor": "red",
-      "data": [13.0, 12.8, 12.6, 12.4, 12.2, 12.0, 11.8, 11.5],
-      "label": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
-    },
-    "percentage": { "amount": "-2.50", "color": "red" },
-    "marketCap": { "amount": "800M", "symbol": "$" },
-    "volume": { "amount": "150M", "symbol": "$" },
-    "supply": { "amount": "66M", "symbol": "$" },
-    "rank": { "amount": "50", "symbol": "" },
-    "liquidity": { "amount": "70K", "symbol": "$" },
-    "change": { "amount": "-0.30", "color": "red" }
-  },
-  {
-    category: "RWA",
-    asset: {
-      image: "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/USDT.png",
-      title: "Tether Gold",
-      charge: "5X"
-    },
-    price: { amount: "2,100", symbol: "$" },
-    chart: {
-      lineColor: "green",
-      data: [10, 15, 12, 18, 22, 25, 30, 35],
-      label: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
-    },
-    percentage: { amount: "1.2", color: "green" },
-    marketCap: { amount: "800M", symbol: "$" },
-    volume: { amount: "250M", symbol: "$" },
-    supply: { amount: "400K", symbol: "$" },
-    rank: { amount: "25", symbol: "" },
-    liquidity: { amount: "90K", symbol: "$" },
-    change: { amount: "0.002", color: "green" }
-  },
-  {
-    category: "RWA, Launchable",
-    asset: {
-      image: "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/USDC.png",
-      title: "RealUSD",
-      charge: "3X"
-    },
-    price: { amount: "1.00", symbol: "$" },
-    chart: {
-      lineColor: "red",
-      data: [1.00, 0.98, 0.99, 1.02, 1.01, 1.00, 0.97, 0.99],
-      label: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
-    },
-    percentage: { amount: "-0.5", color: "red" },
-    marketCap: { amount: "2B", symbol: "$" },
-    volume: { amount: "600M", symbol: "$" },
-    supply: { amount: "2B", symbol: "$" },
-    rank: { amount: "10", symbol: "" },
-    liquidity: { amount: "500K", symbol: "$" },
-    change: { amount: "-0.001", color: "red" }
-  },
-  {
-    category: "RWA",
-    asset: {
-      image: "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/WBTC.png",
-      title: "Wrapped Bitcoin",
-      charge: "8X"
-    },
-    price: { amount: "40,500", symbol: "$" },
-    chart: {
-      lineColor: "green",
-      data: [35, 38, 37, 39, 41, 42, 45, 40],
-      label: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
-    },
-    percentage: { amount: "2.5", color: "green" },
-    marketCap: { amount: "5B", symbol: "$" },
-    volume: { amount: "1.2B", symbol: "$" },
-    supply: { amount: "120K", symbol: "$" },
-    rank: { amount: "5", symbol: "" },
-    liquidity: { amount: "600K", symbol: "$" },
-    change: { amount: "0.004", color: "green" }
-  },
-  {
-    category: "RWA, Launchable, Bookmark",
-    asset: {
-      image: "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/PAXG.png",
-      title: "PAX Gold",
-      charge: "4X"
-    },
-    price: { amount: "1,920", symbol: "$" },
-    chart: {
-      lineColor: "red",
-      data: [1900, 1920, 1915, 1930, 1925, 1910, 1905, 1940],
-      label: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
-    },
-    percentage: { amount: "-0.3", color: "red" },
-    marketCap: { amount: "700M", symbol: "$" },
-    volume: { amount: "180M", symbol: "$" },
-    supply: { amount: "350K", symbol: "$" },
-    rank: { amount: "30", symbol: "" },
-    liquidity: { amount: "85K", symbol: "$" },
-    change: { amount: "-0.002", color: "red" }
-  },
-  {
-    category: "RWA, Launchable",
-    asset: {
-      image: "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/REAL.png",
-      title: "Real Estate Coin",
-      charge: "6X"
-    },
-    price: { amount: "150", symbol: "$" },
-    chart: {
-      lineColor: "green",
-      data: [140, 145, 148, 152, 155, 160, 162, 158],
-      label: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
-    },
-    percentage: { amount: "3.0", color: "green" },
-    marketCap: { amount: "1.5B", symbol: "$" },
-    volume: { amount: "500M", symbol: "$" },
-    supply: { amount: "10M", symbol: "$" },
-    rank: { amount: "15", symbol: "" },
-    liquidity: { amount: "200K", symbol: "$" },
-    change: { amount: "0.008", color: "green" }
-  },
-  {
-    category: "RWA, Launchable",
-    asset: {
-      image: "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/USDP.png",
-      title: "Pax Dollar",
-      charge: "2X"
-    },
-    price: { amount: "1.01", symbol: "$" },
-    chart: {
-      lineColor: "red",
-      data: [1.01, 1.00, 0.99, 1.02, 1.01, 1.00, 0.97, 0.98],
-      label: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
-    },
-    percentage: { amount: "-0.2", color: "red" },
-    marketCap: { amount: "900M", symbol: "$" },
-    volume: { amount: "300M", symbol: "$" },
-    supply: { amount: "900M", symbol: "$" },
-    rank: { amount: "20", symbol: "" },
-    liquidity: { amount: "400K", symbol: "$" },
-    change: { amount: "-0.001", color: "red" }
-  },
-  {
-    category: "Gaming",
-    asset: {
-      image: "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/AXS.png",
-      title: "Axie Infinity",
-      charge: "7X"
-    },
-    price: { amount: "6.50", symbol: "$" },
-    chart: {
-      lineColor: "green",
-      data: [5.2, 5.5, 5.8, 6.1, 6.3, 6.6, 6.8, 7.0],
-      label: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
-    },
-    percentage: { amount: "4.5", color: "green" },
-    marketCap: { amount: "1.2B", symbol: "$" },
-    volume: { amount: "200M", symbol: "$" },
-    supply: { amount: "270M", symbol: "$" },
-    rank: { amount: "50", symbol: "" },
-    liquidity: { amount: "300K", symbol: "$" },
-    change: { amount: "0.05", color: "green" }
-  },
-  {
-    category: "Gaming",
-    asset: {
-      image: "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/ENJ.png",
-      title: "Enjin Coin",
-      charge: "5X"
-    },
-    price: { amount: "0.45", symbol: "$" },
-    chart: {
-      lineColor: "red",
-      data: [0.50, 0.48, 0.46, 0.44, 0.42, 0.43, 0.41, 0.40],
-      label: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
-    },
-    percentage: { amount: "-3.2", color: "red" },
-    marketCap: { amount: "500M", symbol: "$" },
-    volume: { amount: "100M", symbol: "$" },
-    supply: { amount: "800M", symbol: "$" },
-    rank: { amount: "75", symbol: "" },
-    liquidity: { amount: "150K", symbol: "$" },
-    change: { amount: "-0.02", color: "red" }
-  },
-  {
-    category: "Gaming",
-    asset: {
-      image: "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/SAND.png",
-      title: "The Sandbox",
-      charge: "6X"
-    },
-    price: { amount: "0.85", symbol: "$" },
-    chart: {
-      lineColor: "green",
-      data: [0.75, 0.78, 0.80, 0.83, 0.87, 0.90, 0.92, 0.89],
-      label: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
-    },
-    percentage: { amount: "2.8", color: "green" },
-    marketCap: { amount: "1.0B", symbol: "$" },
-    volume: { amount: "180M", symbol: "$" },
-    supply: { amount: "1.5B", symbol: "$" },
-    rank: { amount: "40", symbol: "" },
-    liquidity: { amount: "250K", symbol: "$" },
-    change: { amount: "0.03", color: "green" }
-  },
-  {
-    category: "Gaming",
-    asset: {
-      image: "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/MANA.png",
-      title: "Decentraland",
-      charge: "4X"
-    },
-    price: { amount: "0.60", symbol: "$" },
-    chart: {
-      lineColor: "red",
-      data: [0.70, 0.68, 0.65, 0.63, 0.60, 0.58, 0.57, 0.55],
-      label: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
-    },
-    percentage: { amount: "-2.5", color: "red" },
-    marketCap: { amount: "900M", symbol: "$" },
-    volume: { amount: "150M", symbol: "$" },
-    supply: { amount: "2.0B", symbol: "$" },
-    rank: { amount: "55", symbol: "" },
-    liquidity: { amount: "220K", symbol: "$" },
-    change: { amount: "-0.04", color: "red" }
-  },
-  {
-    category: "Gaming",
-    asset: {
-      image: "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/GALA.png",
-      title: "Gala",
-      charge: "8X"
-    },
-    price: { amount: "0.12", symbol: "$" },
-    chart: {
-      lineColor: "green",
-      data: [0.10, 0.11, 0.12, 0.13, 0.14, 0.13, 0.15, 0.16],
-      label: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
-    },
-    percentage: { amount: "6.1", color: "green" },
-    marketCap: { amount: "600M", symbol: "$" },
-    volume: { amount: "170M", symbol: "$" },
-    supply: { amount: "3.5B", symbol: "$" },
-    rank: { amount: "60", symbol: "" },
-    liquidity: { amount: "180K", symbol: "$" },
-    change: { amount: "0.06", color: "green" }
-  },
-  {
-    category: "Gaming",
-    asset: {
-      image: "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/ILV.png",
-      title: "Illuvium",
-      charge: "10X"
-    },
-    price: { amount: "80.50", symbol: "$" },
-    chart: {
-      lineColor: "green",
-      data: [75, 78, 80, 82, 85, 88, 90, 85],
-      label: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
-    },
-    percentage: { amount: "4.0", color: "green" },
-    marketCap: { amount: "450M", symbol: "$" },
-    volume: { amount: "120M", symbol: "$" },
-    supply: { amount: "5M", symbol: "$" },
-    rank: { amount: "70", symbol: "" },
-    liquidity: { amount: "160K", symbol: "$" },
-    change: { amount: "0.02", color: "green" }
-  },
-  {
-    category: "Forex",
-    asset: {
-      image: "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/TRY.png",
-      title: "Turkish Lira",
-      charge: "3X"
-    },
-    price: { amount: "147.85", symbol: "¥" },
-    chart: {
-      lineColor: "green",
-      data: [145.2, 146.5, 146.8, 147.1, 147.5, 147.7, 147.9, 148.0],
-      label: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
-    },
-    percentage: { amount: "0.50", color: "green" },
-    marketCap: { amount: "1.5T", symbol: "$" },
-    volume: { amount: "300B", symbol: "$" },
-    supply: { amount: "N/A", symbol: "" },
-    rank: { amount: "1", symbol: "" },
-    liquidity: { amount: "500K", symbol: "$" },
-    change: { amount: "0.25", color: "green" }
-  },
-  {
-    category: "Forex",
-    asset: {
-      image: "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/EUR.png",
-      title: "EURO",
-      charge: "5X"
-    },
-    price: { amount: "1.08", symbol: "$" },
-    chart: {
-      lineColor: "red",
-      data: [1.10, 1.09, 1.09, 1.08, 1.08, 1.07, 1.06, 1.06],
-      label: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
-    },
-    percentage: { amount: "-0.30", color: "red" },
-    marketCap: { amount: "800B", symbol: "$" },
-    volume: { amount: "250B", symbol: "$" },
-    supply: { amount: "N/A", symbol: "" },
-    rank: { amount: "2", symbol: "" },
-    liquidity: { amount: "400K", symbol: "$" },
-    change: { amount: "-0.01", color: "red" }
-  },
-  {
-    category: "Forex",
-    asset: {
-      image: "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/BRL.png",
-      title: "Brazilian Real",
-      charge: "4X"
-    },
-    price: { amount: "1.26", symbol: "$" },
-    chart: {
-      lineColor: "green",
-      data: [1.24, 1.25, 1.26, 1.27, 1.26, 1.28, 1.29, 1.30],
-      label: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
-    },
-    percentage: { amount: "1.20", color: "green" },
-    marketCap: { amount: "700B", symbol: "$" },
-    volume: { amount: "200B", symbol: "$" },
-    supply: { amount: "N/A", symbol: "" },
-    rank: { amount: "3", symbol: "" },
-    liquidity: { amount: "350K", symbol: "$" },
-    change: { amount: "0.02", color: "green" }
-  },
-]);
+ const stocks = ref(
+  [
+        {
+          category: "Bookmark",
+          asset: {
+            image: "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/ZK.png",
+            title: "ZKsync",
+            charge: "5X"
+          },
+          price: { amount: "2,000", symbol: "$" },
+          chart: {
+            lineColor: "red",
+            data: [10, 20, 15, 30, 25, 40, 35, 50],
+            label: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
+          },
+          percentage: { amount: "0.18", color: "green" },
+          marketCap: { amount: "1.71K", symbol: "$" },
+          volume: { amount: "36M", symbol: "$" },
+          supply: { amount: "398M", symbol: "$" },
+          rank: { amount: "3", symbol: "" },
+          liquidity: { amount: "60.3K", symbol: "$" },
+          change: { amount: "-0.000002", color: "red" }
+        },
+        {
+          category: "Recently Listed",
+          asset: {
+            image: "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/ETH.png",
+            title: "Ethereum",
+            charge: "10X"
+          },
+          price: { amount: "3,200", symbol: "$" },
+          chart: {
+            lineColor: "green",
+            data: [12, 25, 20, 35, 30, 50, 40, 60],
+            label: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
+          },
+          percentage: { amount: "0.25", color: "green" },
+          marketCap: { amount: "500B", symbol: "$" },
+          volume: { amount: "100M", symbol: "$" },
+          supply: { amount: "118M", symbol: "$" },
+          rank: { amount: "2", symbol: "" },
+          liquidity: { amount: "150K", symbol: "$" },
+          change: { amount: "0.0005", color: "green" }
+        },
+        {
+          "category": "Recently Listed",
+          "asset": {
+            "image": "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/BTC.png",
+            "title": "Bitcoin",
+            "charge": "12X"
+          },
+          "price": { "amount": "45,000", "symbol": "$" },
+          "chart": {
+            "lineColor": "green",
+            "data": [15, 30, 28, 40, 35, 55, 45, 65],
+            "label": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
+          },
+          "percentage": { "amount": "0.50", "color": "green" },
+          "marketCap": { "amount": "900B", "symbol": "$" },
+          "volume": { "amount": "200M", "symbol": "$" },
+          "supply": { "amount": "21M", "symbol": "$" },
+          "rank": { "amount": "1", "symbol": "" },
+          "liquidity": { "amount": "300K", "symbol": "$" },
+          "change": { "amount": "0.0010", "color": "green" }
+        },
+        {
+          "category": "Recently Listed",
+          "asset": {
+            "image": "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/BNB.png",
+            "title": "Binance Coin",
+            "charge": "8X"
+          },
+          "price": { "amount": "500", "symbol": "$" },
+          "chart": {
+            "lineColor": "red",
+            "data": [10, 22, 18, 30, 27, 40, 35, 50],
+            "label": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
+          },
+          "percentage": { "amount": "-0.75", "color": "red" },
+          "marketCap": { "amount": "80B", "symbol": "$" },
+          "volume": { "amount": "50M", "symbol": "$" },
+          "supply": { "amount": "150M", "symbol": "$" },
+          "rank": { "amount": "4", "symbol": "" },
+          "liquidity": { "amount": "100K", "symbol": "$" },
+          "change": { "amount": "-0.0020", "color": "red" }
+        },
+        {
+          "category": "Recently Listed",
+          "asset": {
+            "image": "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/SOL.png",
+            "title": "Solana",
+            "charge": "15X"
+          },
+          "price": { "amount": "180", "symbol": "$" },
+          "chart": {
+            "lineColor": "green",
+            "data": [5, 15, 12, 25, 22, 35, 30, 45],
+            "label": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
+          },
+          "percentage": { "amount": "1.20", "color": "green" },
+          "marketCap": { "amount": "70B", "symbol": "$" },
+          "volume": { "amount": "30M", "symbol": "$" },
+          "supply": { "amount": "400M", "symbol": "$" },
+          "rank": { "amount": "6", "symbol": "" },
+          "liquidity": { "amount": "80K", "symbol": "$" },
+          "change": { "amount": "0.0030", "color": "green" }
+        },
+        {
+          "category": "Meme",
+          "asset": {
+            "image": "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/DOGE.png",
+            "title": "Dogecoin",
+            "charge": "20X"
+          },
+          "price": { "amount": "0.085", "symbol": "$" },
+          "chart": {
+            "lineColor": "green",
+            "data": [2, 5, 3, 8, 6, 10, 9, 12],
+            "label": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
+          },
+          "percentage": { "amount": "3.50", "color": "green" },
+          "marketCap": { "amount": "12B", "symbol": "$" },
+          "volume": { "amount": "800M", "symbol": "$" },
+          "supply": { "amount": "140B", "symbol": "$" },
+          "rank": { "amount": "10", "symbol": "" },
+          "liquidity": { "amount": "200K", "symbol": "$" },
+          "change": { "amount": "0.0001", "color": "green" }
+        },
+        {
+          "category": "Meme",
+          "asset": {
+            "image": "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/SHIB.png",
+            "title": "Shiba Inu",
+            "charge": "50X"
+          },
+          "price": { "amount": "0.000012", "symbol": "$" },
+          "chart": {
+            "lineColor": "red",
+            "data": [0.00001, 0.000015, 0.000012, 0.000018, 0.000016, 0.000020, 0.000019, 0.000025],
+            "label": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
+          },
+          "percentage": { "amount": "-2.10", "color": "red" },
+          "marketCap": { "amount": "7B", "symbol": "$" },
+          "volume": { "amount": "500M", "symbol": "$" },
+          "supply": { "amount": "589T", "symbol": "$" },
+          "rank": { "amount": "15", "symbol": "" },
+          "liquidity": { "amount": "150K", "symbol": "$" },
+          "change": { "amount": "-0.0000002", "color": "red" }
+        },
+        {
+          "category": "Meme",
+          "asset": {
+            "image": "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/PEPE.png",
+            "title": "Pepe Coin",
+            "charge": "100X"
+          },
+          "price": { "amount": "0.000001", "symbol": "$" },
+          "chart": {
+            "lineColor": "green",
+            "data": [0.0000005, 0.0000008, 0.0000006, 0.0000012, 0.000001, 0.0000015, 0.0000013, 0.000002],
+            "label": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
+          },
+          "percentage": { "amount": "5.00", "color": "green" },
+          "marketCap": { "amount": "3B", "symbol": "$" },
+          "volume": { "amount": "300M", "symbol": "$" },
+          "supply": { "amount": "420T", "symbol": "$" },
+          "rank": { "amount": "25", "symbol": "" },
+          "liquidity": { "amount": "100K", "symbol": "$" },
+          "change": { "amount": "0.0000001", "color": "green" }
+        },
+        {
+          "category": "Meme, Bookmark",
+          "asset": {
+            "image": "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/FLOKI.png",
+            "title": "Floki Inu",
+            "charge": "30X"
+          },
+          "price": { "amount": "0.000025", "symbol": "$" },
+          "chart": {
+            "lineColor": "green",
+            "data": [0.00002, 0.000023, 0.000021, 0.000027, 0.000025, 0.000030, 0.000028, 0.000035],
+            "label": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
+          },
+          "percentage": { "amount": "2.75", "color": "green" },
+          "marketCap": { "amount": "2B", "symbol": "$" },
+          "volume": { "amount": "200M", "symbol": "$" },
+          "supply": { "amount": "9.8T", "symbol": "$" },
+          "rank": { "amount": "30", "symbol": "" },
+          "liquidity": { "amount": "90K", "symbol": "$" },
+          "change": { "amount": "0.000001", "color": "green" }
+        },
+        {
+          "category": "Meme",
+          "asset": {
+            "image": "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/BABYDOGE.png",
+            "title": "Baby Doge",
+            "charge": "80X"
+          },
+          "price": { "amount": "0.0000003", "symbol": "$" },
+          "chart": {
+            "lineColor": "red",
+            "data": [0.0000002, 0.0000004, 0.0000003, 0.0000005, 0.0000004, 0.0000006, 0.0000005, 0.0000007],
+            "label": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
+          },
+          "percentage": { "amount": "-1.80", "color": "red" },
+          "marketCap": { "amount": "1.2B", "symbol": "$" },
+          "volume": { "amount": "150M", "symbol": "$" },
+          "supply": { "amount": "420Q", "symbol": "$" },
+          "rank": { "amount": "40", "symbol": "" },
+          "liquidity": { "amount": "80K", "symbol": "$" },
+          "change": { "amount": "-0.00000005", "color": "red" }
+        },
+        {
+          "category": "Meme",
+          "asset": {
+            "image": "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/KISHU.png",
+            "title": "Kishu Inu",
+            "charge": "60X"
+          },
+          "price": { "amount": "0.0000001", "symbol": "$" },
+          "chart": {
+            "lineColor": "green",
+            "data": [0.00000005, 0.00000009, 0.00000007, 0.00000012, 0.0000001, 0.00000015, 0.00000013, 0.0000002],
+            "label": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
+          },
+          "percentage": { "amount": "3.80", "color": "green" },
+          "marketCap": { "amount": "600M", "symbol": "$" },
+          "volume": { "amount": "100M", "symbol": "$" },
+          "supply": { "amount": "100Q", "symbol": "$" },
+          "rank": { "amount": "50", "symbol": "" },
+          "liquidity": { "amount": "70K", "symbol": "$" },
+          "change": { "amount": "0.00000002", "color": "green" }
+        },
+        {
+          "category": "AI & Big Data",
+          "asset": {
+            "image": "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/FET.png",
+            "title": "Fetch.ai",
+            "charge": "15X"
+          },
+          "price": { "amount": "1.20", "symbol": "$" },
+          "chart": {
+            "lineColor": "green",
+            "data": [0.8, 0.9, 1.0, 1.2, 1.1, 1.3, 1.25, 1.4],
+            "label": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
+          },
+          "percentage": { "amount": "4.20", "color": "green" },
+          "marketCap": { "amount": "900M", "symbol": "$" },
+          "volume": { "amount": "350M", "symbol": "$" },
+          "supply": { "amount": "1.15B", "symbol": "$" },
+          "rank": { "amount": "35", "symbol": "" },
+          "liquidity": { "amount": "150K", "symbol": "$" },
+          "change": { "amount": "0.10", "color": "green" }
+        },
+        {
+          "category": "AI & Big Data",
+          "asset": {
+            "image": "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/OCEAN.png",
+            "title": "Ocean Protocol",
+            "charge": "20X"
+          },
+          "price": { "amount": "0.85", "symbol": "$" },
+          "chart": {
+            "lineColor": "green",
+            "data": [0.6, 0.7, 0.65, 0.75, 0.8, 0.9, 0.85, 1.0],
+            "label": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
+          },
+          "percentage": { "amount": "3.80", "color": "green" },
+          "marketCap": { "amount": "500M", "symbol": "$" },
+          "volume": { "amount": "200M", "symbol": "$" },
+          "supply": { "amount": "613M", "symbol": "$" },
+          "rank": { "amount": "40", "symbol": "" },
+          "liquidity": { "amount": "120K", "symbol": "$" },
+          "change": { "amount": "0.08", "color": "green" }
+        },
+        {
+          "category": "AI & Big Data",
+          "asset": {
+            "image": "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/AGIX.png",
+            "title": "SingularityNET",
+            "charge": "25X"
+          },
+          "price": { "amount": "0.50", "symbol": "$" },
+          "chart": {
+            "lineColor": "red",
+            "data": [0.4, 0.45, 0.5, 0.55, 0.52, 0.6, 0.58, 0.65],
+            "label": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
+          },
+          "percentage": { "amount": "-2.00", "color": "red" },
+          "marketCap": { "amount": "600M", "symbol": "$" },
+          "volume": { "amount": "180M", "symbol": "$" },
+          "supply": { "amount": "1.2B", "symbol": "$" },
+          "rank": { "amount": "45", "symbol": "" },
+          "liquidity": { "amount": "110K", "symbol": "$" },
+          "change": { "amount": "-0.02", "color": "red" }
+        },
+        {
+          "category": "AI & Big Data",
+          "asset": {
+            "image": "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/GRT.png",
+            "title": "The Graph",
+            "charge": "12X"
+          },
+          "price": { "amount": "0.35", "symbol": "$" },
+          "chart": {
+            "lineColor": "green",
+            "data": [0.3, 0.33, 0.32, 0.36, 0.35, 0.38, 0.37, 0.40],
+            "label": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
+          },
+          "percentage": { "amount": "1.50", "color": "green" },
+          "marketCap": { "amount": "1.5B", "symbol": "$" },
+          "volume": { "amount": "250M", "symbol": "$" },
+          "supply": { "amount": "4.2B", "symbol": "$" },
+          "rank": { "amount": "30", "symbol": "" },
+          "liquidity": { "amount": "90K", "symbol": "$" },
+          "change": { "amount": "0.01", "color": "green" }
+        },
+        {
+          "category": "AI & Big Data, Layer 2",
+          "asset": {
+            "image": "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/NMR.png",
+            "title": "Numeraire",
+            "charge": "18X"
+          },
+          "price": { "amount": "18.75", "symbol": "$" },
+          "chart": {
+            "lineColor": "green",
+            "data": [15, 16, 17, 18.5, 18, 19, 18.8, 20],
+            "label": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
+          },
+          "percentage": { "amount": "2.80", "color": "green" },
+          "marketCap": { "amount": "120M", "symbol": "$" },
+          "volume": { "amount": "75M", "symbol": "$" },
+          "supply": { "amount": "6.8M", "symbol": "$" },
+          "rank": { "amount": "60", "symbol": "" },
+          "liquidity": { "amount": "80K", "symbol": "$" },
+          "change": { "amount": "0.50", "color": "green" }
+        },
+        {
+          "category": "AI & Big Data",
+          "asset": {
+            "image": "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/RLC.png",
+            "title": "iExec RLC",
+            "charge": "22X"
+          },
+          "price": { "amount": "2.80", "symbol": "$" },
+          "chart": {
+            "lineColor": "red",
+            "data": [2.4, 2.5, 2.7, 2.9, 2.85, 3.0, 2.95, 3.2],
+            "label": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
+          },
+          "percentage": { "amount": "-1.20", "color": "red" },
+          "marketCap": { "amount": "200M", "symbol": "$" },
+          "volume": { "amount": "90M", "symbol": "$" },
+          "supply": { "amount": "72M", "symbol": "$" },
+          "rank": { "amount": "55", "symbol": "" },
+          "liquidity": { "amount": "70K", "symbol": "$" },
+          "change": { "amount": "-0.05", "color": "red" }
+        },
+        {
+          "category": "DeFi",
+          "asset": {
+            "image": "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/UNI.png",
+            "title": "Uniswap",
+            "charge": "12X"
+          },
+          "price": { "amount": "6.50", "symbol": "$" },
+          "chart": {
+            "lineColor": "green",
+            "data": [5.2, 5.5, 5.8, 6.1, 6.3, 6.7, 6.6, 7.0],
+            "label": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
+          },
+          "percentage": { "amount": "2.50", "color": "green" },
+          "marketCap": { "amount": "4B", "symbol": "$" },
+          "volume": { "amount": "350M", "symbol": "$" },
+          "supply": { "amount": "753M", "symbol": "$" },
+          "rank": { "amount": "20", "symbol": "" },
+          "liquidity": { "amount": "180K", "symbol": "$" },
+          "change": { "amount": "0.25", "color": "green" }
+        },
+        {
+          "category": "DeFi",
+          "asset": {
+            "image": "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/AAVE.png",
+            "title": "Aave",
+            "charge": "15X"
+          },
+          "price": { "amount": "92.80", "symbol": "$" },
+          "chart": {
+            "lineColor": "green",
+            "data": [85, 88, 90, 91, 93, 95, 94, 98],
+            "label": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
+          },
+          "percentage": { "amount": "3.80", "color": "green" },
+          "marketCap": { "amount": "1.3B", "symbol": "$" },
+          "volume": { "amount": "250M", "symbol": "$" },
+          "supply": { "amount": "16M", "symbol": "$" },
+          "rank": { "amount": "35", "symbol": "" },
+          "liquidity": { "amount": "140K", "symbol": "$" },
+          "change": { "amount": "1.20", "color": "green" }
+        },
+        {
+          "category": "DeFi",
+          "asset": {
+            "image": "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/CRV.png",
+            "title": "Curve DAO",
+            "charge": "8X"
+          },
+          "price": { "amount": "0.75", "symbol": "$" },
+          "chart": {
+            "lineColor": "red",
+            "data": [0.9, 0.85, 0.8, 0.78, 0.76, 0.74, 0.73, 0.7],
+            "label": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
+          },
+          "percentage": { "amount": "-4.00", "color": "red" },
+          "marketCap": { "amount": "600M", "symbol": "$" },
+          "volume": { "amount": "180M", "symbol": "$" },
+          "supply": { "amount": "950M", "symbol": "$" },
+          "rank": { "amount": "45", "symbol": "" },
+          "liquidity": { "amount": "120K", "symbol": "$" },
+          "change": { "amount": "-0.04", "color": "red" }
+        },
+        {
+          "category": "DeFi",
+          "asset": {
+            "image": "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/SUSHI.png",
+            "title": "SushiSwap",
+            "charge": "10X"
+          },
+          "price": { "amount": "1.40", "symbol": "$" },
+          "chart": {
+            "lineColor": "green",
+            "data": [1.2, 1.25, 1.3, 1.35, 1.38, 1.45, 1.43, 1.5],
+            "label": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
+          },
+          "percentage": { "amount": "1.80", "color": "green" },
+          "marketCap": { "amount": "300M", "symbol": "$" },
+          "volume": { "amount": "100M", "symbol": "$" },
+          "supply": { "amount": "222M", "symbol": "$" },
+          "rank": { "amount": "50", "symbol": "" },
+          "liquidity": { "amount": "90K", "symbol": "$" },
+          "change": { "amount": "0.05", "color": "green" }
+        },
+        {
+          "category": "DeFi",
+          "asset": {
+            "image": "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/COMP.png",
+            "title": "Compound",
+            "charge": "18X"
+          },
+          "price": { "amount": "45.60", "symbol": "$" },
+          "chart": {
+            "lineColor": "green",
+            "data": [42, 43, 44, 45, 46, 47, 46.5, 48],
+            "label": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
+          },
+          "percentage": { "amount": "2.10", "color": "green" },
+          "marketCap": { "amount": "500M", "symbol": "$" },
+          "volume": { "amount": "150M", "symbol": "$" },
+          "supply": { "amount": "11M", "symbol": "$" },
+          "rank": { "amount": "40", "symbol": "" },
+          "liquidity": { "amount": "110K", "symbol": "$" },
+          "change": { "amount": "0.90", "color": "green" }
+        },
+        {
+          "category": "DeFi, Layer 1",
+          "asset": {
+            "image": "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/YFI.png",
+            "title": "Yearn Finance",
+            "charge": "22X"
+          },
+          "price": { "amount": "8,200", "symbol": "$" },
+          "chart": {
+            "lineColor": "red",
+            "data": [8200, 8100, 8050, 8000, 7950, 7900, 7800, 7700],
+            "label": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
+          },
+          "percentage": { "amount": "-1.50", "color": "red" },
+          "marketCap": { "amount": "300M", "symbol": "$" },
+          "volume": { "amount": "75M", "symbol": "$" },
+          "supply": { "amount": "36K", "symbol": "$" },
+          "rank": { "amount": "55", "symbol": "" },
+          "liquidity": { "amount": "80K", "symbol": "$" },
+          "change": { "amount": "-50", "color": "red" }
+        },
+        {
+          "category": "DePIN",
+          "asset": {
+            "image": "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/HNT.png",
+            "title": "Helium",
+            "charge": "14X"
+          },
+          "price": { "amount": "5.20", "symbol": "$" },
+          "chart": {
+            "lineColor": "green",
+            "data": [4.8, 4.9, 5.0, 5.1, 5.2, 5.3, 5.4, 5.5],
+            "label": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
+          },
+          "percentage": { "amount": "1.90", "color": "green" },
+          "marketCap": { "amount": "700M", "symbol": "$" },
+          "volume": { "amount": "90M", "symbol": "$" },
+          "supply": { "amount": "160M", "symbol": "$" },
+          "rank": { "amount": "45", "symbol": "" },
+          "liquidity": { "amount": "75K", "symbol": "$" },
+          "change": { "amount": "0.10", "color": "green" }
+        },
+        {
+          "category": "DePIN, Bookmark",
+          "asset": {
+            "image": "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/AKT.png",
+            "title": "Akash Network",
+            "charge": "10X"
+          },
+          "price": { "amount": "3.75", "symbol": "$" },
+          "chart": {
+            "lineColor": "red",
+            "data": [3.9, 3.8, 3.7, 3.6, 3.5, 3.4, 3.3, 3.2],
+            "label": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
+          },
+          "percentage": { "amount": "-3.50", "color": "red" },
+          "marketCap": { "amount": "500M", "symbol": "$" },
+          "volume": { "amount": "120M", "symbol": "$" },
+          "supply": { "amount": "150M", "symbol": "$" },
+          "rank": { "amount": "55", "symbol": "" },
+          "liquidity": { "amount": "65K", "symbol": "$" },
+          "change": { "amount": "-0.20", "color": "red" }
+        },
+        {
+          "category": "DePIN, Bookmark",
+          "asset": {
+            "image": "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/STRK.png",
+            "title": "Storj",
+            "charge": "8X"
+          },
+          "price": { "amount": "0.95", "symbol": "$" },
+          "chart": {
+            "lineColor": "green",
+            "data": [0.85, 0.88, 0.89, 0.90, 0.91, 0.92, 0.93, 0.95],
+            "label": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
+          },
+          "percentage": { "amount": "1.80", "color": "green" },
+          "marketCap": { "amount": "350M", "symbol": "$" },
+          "volume": { "amount": "80M", "symbol": "$" },
+          "supply": { "amount": "425M", "symbol": "$" },
+          "rank": { "amount": "65", "symbol": "" },
+          "liquidity": { "amount": "55K", "symbol": "$" },
+          "change": { "amount": "0.05", "color": "green" }
+        },
+        {
+          "category": "DePIN",
+          "asset": {
+            "image": "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/RENDER.png",
+            "title": "Render Network",
+            "charge": "20X"
+          },
+          "price": { "amount": "7.80", "symbol": "$" },
+          "chart": {
+            "lineColor": "green",
+            "data": [7.2, 7.4, 7.5, 7.6, 7.7, 7.8, 7.9, 8.0],
+            "label": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
+          },
+          "percentage": { "amount": "3.40", "color": "green" },
+          "marketCap": { "amount": "2B", "symbol": "$" },
+          "volume": { "amount": "300M", "symbol": "$" },
+          "supply": { "amount": "500M", "symbol": "$" },
+          "rank": { "amount": "30", "symbol": "" },
+          "liquidity": { "amount": "95K", "symbol": "$" },
+          "change": { "amount": "0.35", "color": "green" }
+        },
+        {
+          "category": "DePIN, Layer 1",
+          "asset": {
+            "image": "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/FILE.png",
+            "title": "Filecoin",
+            "charge": "12X"
+          },
+          "price": { "amount": "4.30", "symbol": "$" },
+          "chart": {
+            "lineColor": "green",
+            "data": [4.0, 4.1, 4.15, 4.2, 4.25, 4.3, 4.35, 4.4],
+            "label": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
+          },
+          "percentage": { "amount": "1.20", "color": "green" },
+          "marketCap": { "amount": "1.5B", "symbol": "$" },
+          "volume": { "amount": "200M", "symbol": "$" },
+          "supply": { "amount": "400M", "symbol": "$" },
+          "rank": { "amount": "40", "symbol": "" },
+          "liquidity": { "amount": "85K", "symbol": "$" },
+          "change": { "amount": "0.15", "color": "green" }
+        },
+        {
+          "category": "DePIN, Layer 2, Bookmark",
+          "asset": {
+            "image": "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/AR.png",
+            "title": "Arweave",
+            "charge": "16X"
+          },
+          "price": { "amount": "12.50", "symbol": "$" },
+          "chart": {
+            "lineColor": "red",
+            "data": [13.0, 12.8, 12.6, 12.4, 12.2, 12.0, 11.8, 11.5],
+            "label": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
+          },
+          "percentage": { "amount": "-2.50", "color": "red" },
+          "marketCap": { "amount": "800M", "symbol": "$" },
+          "volume": { "amount": "150M", "symbol": "$" },
+          "supply": { "amount": "66M", "symbol": "$" },
+          "rank": { "amount": "50", "symbol": "" },
+          "liquidity": { "amount": "70K", "symbol": "$" },
+          "change": { "amount": "-0.30", "color": "red" }
+        },
+        {
+          category: "RWA",
+          asset: {
+            image: "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/USDT.png",
+            title: "Tether Gold",
+            charge: "5X"
+          },
+          price: { amount: "2,100", symbol: "$" },
+          chart: {
+            lineColor: "green",
+            data: [10, 15, 12, 18, 22, 25, 30, 35],
+            label: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
+          },
+          percentage: { amount: "1.2", color: "green" },
+          marketCap: { amount: "800M", symbol: "$" },
+          volume: { amount: "250M", symbol: "$" },
+          supply: { amount: "400K", symbol: "$" },
+          rank: { amount: "25", symbol: "" },
+          liquidity: { amount: "90K", symbol: "$" },
+          change: { amount: "0.002", color: "green" }
+        },
+        {
+          category: "RWA, Launchable",
+          asset: {
+            image: "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/USDC.png",
+            title: "RealUSD",
+            charge: "3X"
+          },
+          price: { amount: "1.00", symbol: "$" },
+          chart: {
+            lineColor: "red",
+            data: [1.00, 0.98, 0.99, 1.02, 1.01, 1.00, 0.97, 0.99],
+            label: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
+          },
+          percentage: { amount: "-0.5", color: "red" },
+          marketCap: { amount: "2B", symbol: "$" },
+          volume: { amount: "600M", symbol: "$" },
+          supply: { amount: "2B", symbol: "$" },
+          rank: { amount: "10", symbol: "" },
+          liquidity: { amount: "500K", symbol: "$" },
+          change: { amount: "-0.001", color: "red" }
+        },
+        {
+          category: "RWA",
+          asset: {
+            image: "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/WBTC.png",
+            title: "Wrapped Bitcoin",
+            charge: "8X"
+          },
+          price: { amount: "40,500", symbol: "$" },
+          chart: {
+            lineColor: "green",
+            data: [35, 38, 37, 39, 41, 42, 45, 40],
+            label: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
+          },
+          percentage: { amount: "2.5", color: "green" },
+          marketCap: { amount: "5B", symbol: "$" },
+          volume: { amount: "1.2B", symbol: "$" },
+          supply: { amount: "120K", symbol: "$" },
+          rank: { amount: "5", symbol: "" },
+          liquidity: { amount: "600K", symbol: "$" },
+          change: { amount: "0.004", color: "green" }
+        },
+        {
+          category: "RWA, Launchable, Bookmark",
+          asset: {
+            image: "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/PAXG.png",
+            title: "PAX Gold",
+            charge: "4X"
+          },
+          price: { amount: "1,920", symbol: "$" },
+          chart: {
+            lineColor: "red",
+            data: [1900, 1920, 1915, 1930, 1925, 1910, 1905, 1940],
+            label: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
+          },
+          percentage: { amount: "-0.3", color: "red" },
+          marketCap: { amount: "700M", symbol: "$" },
+          volume: { amount: "180M", symbol: "$" },
+          supply: { amount: "350K", symbol: "$" },
+          rank: { amount: "30", symbol: "" },
+          liquidity: { amount: "85K", symbol: "$" },
+          change: { amount: "-0.002", color: "red" }
+        },
+        {
+          category: "RWA, Launchable",
+          asset: {
+            image: "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/REAL.png",
+            title: "Real Estate Coin",
+            charge: "6X"
+          },
+          price: { amount: "150", symbol: "$" },
+          chart: {
+            lineColor: "green",
+            data: [140, 145, 148, 152, 155, 160, 162, 158],
+            label: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
+          },
+          percentage: { amount: "3.0", color: "green" },
+          marketCap: { amount: "1.5B", symbol: "$" },
+          volume: { amount: "500M", symbol: "$" },
+          supply: { amount: "10M", symbol: "$" },
+          rank: { amount: "15", symbol: "" },
+          liquidity: { amount: "200K", symbol: "$" },
+          change: { amount: "0.008", color: "green" }
+        },
+        {
+          category: "RWA, Launchable",
+          asset: {
+            image: "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/USDP.png",
+            title: "Pax Dollar",
+            charge: "2X"
+          },
+          price: { amount: "1.01", symbol: "$" },
+          chart: {
+            lineColor: "red",
+            data: [1.01, 1.00, 0.99, 1.02, 1.01, 1.00, 0.97, 0.98],
+            label: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
+          },
+          percentage: { amount: "-0.2", color: "red" },
+          marketCap: { amount: "900M", symbol: "$" },
+          volume: { amount: "300M", symbol: "$" },
+          supply: { amount: "900M", symbol: "$" },
+          rank: { amount: "20", symbol: "" },
+          liquidity: { amount: "400K", symbol: "$" },
+          change: { amount: "-0.001", color: "red" }
+        },
+        {
+          category: "Gaming",
+          asset: {
+            image: "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/AXS.png",
+            title: "Axie Infinity",
+            charge: "7X"
+          },
+          price: { amount: "6.50", symbol: "$" },
+          chart: {
+            lineColor: "green",
+            data: [5.2, 5.5, 5.8, 6.1, 6.3, 6.6, 6.8, 7.0],
+            label: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
+          },
+          percentage: { amount: "4.5", color: "green" },
+          marketCap: { amount: "1.2B", symbol: "$" },
+          volume: { amount: "200M", symbol: "$" },
+          supply: { amount: "270M", symbol: "$" },
+          rank: { amount: "50", symbol: "" },
+          liquidity: { amount: "300K", symbol: "$" },
+          change: { amount: "0.05", color: "green" }
+        },
+        {
+          category: "Gaming",
+          asset: {
+            image: "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/ENJ.png",
+            title: "Enjin Coin",
+            charge: "5X"
+          },
+          price: { amount: "0.45", symbol: "$" },
+          chart: {
+            lineColor: "red",
+            data: [0.50, 0.48, 0.46, 0.44, 0.42, 0.43, 0.41, 0.40],
+            label: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
+          },
+          percentage: { amount: "-3.2", color: "red" },
+          marketCap: { amount: "500M", symbol: "$" },
+          volume: { amount: "100M", symbol: "$" },
+          supply: { amount: "800M", symbol: "$" },
+          rank: { amount: "75", symbol: "" },
+          liquidity: { amount: "150K", symbol: "$" },
+          change: { amount: "-0.02", color: "red" }
+        },
+        {
+          category: "Gaming",
+          asset: {
+            image: "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/SAND.png",
+            title: "The Sandbox",
+            charge: "6X"
+          },
+          price: { amount: "0.85", symbol: "$" },
+          chart: {
+            lineColor: "green",
+            data: [0.75, 0.78, 0.80, 0.83, 0.87, 0.90, 0.92, 0.89],
+            label: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
+          },
+          percentage: { amount: "2.8", color: "green" },
+          marketCap: { amount: "1.0B", symbol: "$" },
+          volume: { amount: "180M", symbol: "$" },
+          supply: { amount: "1.5B", symbol: "$" },
+          rank: { amount: "40", symbol: "" },
+          liquidity: { amount: "250K", symbol: "$" },
+          change: { amount: "0.03", color: "green" }
+        },
+        {
+          category: "Gaming",
+          asset: {
+            image: "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/MANA.png",
+            title: "Decentraland",
+            charge: "4X"
+          },
+          price: { amount: "0.60", symbol: "$" },
+          chart: {
+            lineColor: "red",
+            data: [0.70, 0.68, 0.65, 0.63, 0.60, 0.58, 0.57, 0.55],
+            label: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
+          },
+          percentage: { amount: "-2.5", color: "red" },
+          marketCap: { amount: "900M", symbol: "$" },
+          volume: { amount: "150M", symbol: "$" },
+          supply: { amount: "2.0B", symbol: "$" },
+          rank: { amount: "55", symbol: "" },
+          liquidity: { amount: "220K", symbol: "$" },
+          change: { amount: "-0.04", color: "red" }
+        },
+        {
+          category: "Gaming",
+          asset: {
+            image: "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/GALA.png",
+            title: "Gala",
+            charge: "8X"
+          },
+          price: { amount: "0.12", symbol: "$" },
+          chart: {
+            lineColor: "green",
+            data: [0.10, 0.11, 0.12, 0.13, 0.14, 0.13, 0.15, 0.16],
+            label: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
+          },
+          percentage: { amount: "6.1", color: "green" },
+          marketCap: { amount: "600M", symbol: "$" },
+          volume: { amount: "170M", symbol: "$" },
+          supply: { amount: "3.5B", symbol: "$" },
+          rank: { amount: "60", symbol: "" },
+          liquidity: { amount: "180K", symbol: "$" },
+          change: { amount: "0.06", color: "green" }
+        },
+        {
+          category: "Gaming",
+          asset: {
+            image: "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/ILV.png",
+            title: "Illuvium",
+            charge: "10X"
+          },
+          price: { amount: "80.50", symbol: "$" },
+          chart: {
+            lineColor: "green",
+            data: [75, 78, 80, 82, 85, 88, 90, 85],
+            label: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
+          },
+          percentage: { amount: "4.0", color: "green" },
+          marketCap: { amount: "450M", symbol: "$" },
+          volume: { amount: "120M", symbol: "$" },
+          supply: { amount: "5M", symbol: "$" },
+          rank: { amount: "70", symbol: "" },
+          liquidity: { amount: "160K", symbol: "$" },
+          change: { amount: "0.02", color: "green" }
+        },
+        {
+          category: "Forex",
+          asset: {
+            image: "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/TRY.png",
+            title: "Turkish Lira",
+            charge: "3X"
+          },
+          price: { amount: "147.85", symbol: "¥" },
+          chart: {
+            lineColor: "green",
+            data: [145.2, 146.5, 146.8, 147.1, 147.5, 147.7, 147.9, 148.0],
+            label: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
+          },
+          percentage: { amount: "0.50", color: "green" },
+          marketCap: { amount: "1.5T", symbol: "$" },
+          volume: { amount: "300B", symbol: "$" },
+          supply: { amount: "N/A", symbol: "" },
+          rank: { amount: "1", symbol: "" },
+          liquidity: { amount: "500K", symbol: "$" },
+          change: { amount: "0.25", color: "green" }
+        },
+        {
+          category: "Forex",
+          asset: {
+            image: "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/EUR.png",
+            title: "EURO",
+            charge: "5X"
+          },
+          price: { amount: "1.08", symbol: "$" },
+          chart: {
+            lineColor: "red",
+            data: [1.10, 1.09, 1.09, 1.08, 1.08, 1.07, 1.06, 1.06],
+            label: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
+          },
+          percentage: { amount: "-0.30", color: "red" },
+          marketCap: { amount: "800B", symbol: "$" },
+          volume: { amount: "250B", symbol: "$" },
+          supply: { amount: "N/A", symbol: "" },
+          rank: { amount: "2", symbol: "" },
+          liquidity: { amount: "400K", symbol: "$" },
+          change: { amount: "-0.01", color: "red" }
+        },
+        {
+          category: "Forex",
+          asset: {
+            image: "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/BRL.png",
+            title: "Brazilian Real",
+            charge: "4X"
+          },
+          price: { amount: "1.26", symbol: "$" },
+          chart: {
+            lineColor: "green",
+            data: [1.24, 1.25, 1.26, 1.27, 1.26, 1.28, 1.29, 1.30],
+            label: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
+          },
+          percentage: { amount: "1.20", color: "green" },
+          marketCap: { amount: "700B", symbol: "$" },
+          volume: { amount: "200B", symbol: "$" },
+          supply: { amount: "N/A", symbol: "" },
+          rank: { amount: "3", symbol: "" },
+          liquidity: { amount: "350K", symbol: "$" },
+          change: { amount: "0.02", color: "green" }
+        },
+  ]);
 
 const emit = defineEmits([ 
   "update:currentPage"
@@ -1196,54 +1197,61 @@ let short_data = [
 
 
 <template>
-    <div class="row px-3 py-3 mt-3">
-        <div class="col-md-4 mb-3">
-          <div class="row mb-3">
-            <TradingCardWidget 
-            title="Trading Volume"
-            label="24h"
-            content="$136,436,705"
-            />
-            
-        </div>
-        <div class="row mb-3">
-            <TradingCardWidget 
-            title="Open Intrest"
-            label="Current"
-            content="$236,436,705"
-            />
-            
-        </div>
-        <div class="row mb-3">
-            <TradingCardWidget 
-            title="Earned by stakers"
-            label="24h"
-            content="$13,605"
-            />
-            
-        </div>
-        </div>
-        <div class="col-md-4 mb-3">
-           <ShortTableWidget
-           title="Recently Listed"
-           label="New"
-           :filterButton=false
-           :data="short_data"
-           />
-        </div>
-        <div class="col-md-4 mb-3">
-           <ShortTableWidget
-           title="Biggest Movers"
-           label="24h"
-           :filterButton=true
-           :filters="['Gainers', 'Losers']"
-           :data="short_data"
-           />
-        </div>
+  <div class="container-xxl"> 
+    <div class="row py-3 mt-3">
+        <div class="row mt-3">
         
+          <div class="col-md-3 mb-3">
+                <div class="row mb-3 justify-content-center">
+                  <TradingCardWidget 
+                  title="Trading Volume"
+                  label="24h"
+                  height="80px"
+                  content="$136,436,705"
+                  />
+                  
+              </div>
+              <div class="row mb-3">
+                  <TradingCardWidget 
+                  title="Open Intrest"
+                  label="Current"
+                  content="$236,436,705"
+                  />
+                  
+              </div>
+            <div class="row mb-3">
+                <TradingCardWidget 
+                title="Earned by stakers"
+                label="24h"
+                content="$13,605"
+                />
+                
+            </div>
+          </div>
 
-        <div class="card mt-3" style="background:#212124;">
-          <div class="input-group input-group-merge w-100 mt-2 mb-4">
+          <div class="col-md-5 px-2 mb-3">
+            <ShortTableWidget
+            title="Recently Listed"
+            label="New"
+            height="80px"
+            :filterButton=false
+            :data="short_data"
+            />
+          </div>
+          <div class="col-md-4 px-1 mb-3">
+            <ShortTableWidget
+            title="Biggest Movers"
+            label="24h"
+            height="80px"
+            :filterButton=true
+            :filters="['Gainers', 'Losers']"
+            :data="short_data"
+            />
+          </div>
+        </div>
+    </div>
+    <div class="card border-0 mt-3" style="background:#212124;">
+          <div class="input-group input-group-merge px-3 w-100 mt-2 mb-4">
               <span class="input-group-text " 
                   style="background:#3b3b3f;
                   border-top-left-radius:25px;
@@ -1433,7 +1441,7 @@ let short_data = [
             </div>
 
             <div class="mt-2 table-responsive text-nowrap " style="max-height: 500px; overflow-y: auto;">
-                <table class="table table-hover" >
+                <table  class="table table-hover d-none d-md-block border-0 " >
                 <thead>
                     <tr class="border-0">
                     <th class="text-capitalize border-0 " style="background:#212124;">Market</th>
@@ -1482,10 +1490,10 @@ let short_data = [
                         <PillWidget :title="stock.asset.charge"/>
                         </div>
                       </td>
-                      <td class="lay" style="border-bottom:0 solid">
+                      <td class="lay" style="border-bottom:0 solid;min-width: 100px;max-width: 150;">
                         <PriceWidget :amount="stock.price.amount" :symbol="stock.price.symbol" />
                       </td>
-                      <td class="lay" style="border-bottom:0 solid">
+                      <td class="lay" style="border-bottom:0 solid;min-width: 100px;max-width: 150;">
                         <LineChartWidget 
                         :lineColor="stock.chart.lineColor" 
                         :data="Array.from({ length: 30 }, () => Math.floor(Math.random() * 100))" 
@@ -1497,7 +1505,7 @@ let short_data = [
                         :label="stock.chart.label"
                          /> -->
                       </td>
-                      <td class="lay" style="border-bottom:0 solid">
+                      <td class="lay" style="border-bottom:0 solid;min-width: 100px;max-width: 150;">
                         <PercentageWidget :amount="stock.percentage.amount" :color="stock.percentage.color" />
                       </td>
                       <td class="lay" style="border-bottom:0 solid">
@@ -1520,12 +1528,11 @@ let short_data = [
                       </td>
                     </tr>
                 </tbody>
-                <tfoot>
-                    <tr style="position:sticky;">
-                      <td  style="background:#212124;">Showing {{ startItem }} - {{ endItem }} out of {{ assetCount }}</td>
-                      <td  style="background:#212124;"></td>
-                      <td  style="background:#212124;"></td>
-                      <td  style="background:#212124;">
+                <tfoot style="border-top: 0px solid;position:sticky;">
+                    <tr>
+                      <td colspan="100"  style="background:#212124;">
+                        <div class="d-flex " style="gap:20.5rem;">
+                          <div> Showing {{ startItem }} - {{ endItem }} out of {{ assetCount }}</div>
                         <div class="pagination-container">
                               <!-- Prev Button -->
                               <button 
@@ -1566,12 +1573,7 @@ let short_data = [
                               </button>
                             </div>
 
-
-                      </td>
-                      <td  style="background:#212124;"></td>
-                      <td  style="background:#212124;"> </td>
-                      <td  style="background:#212124;">
-                        <div class="display:flex;gap:5px;">
+                            <div class="display:flex;gap:5px;">
                           Show
                           <select v-model="ItemsPerPage" @change="updatePagination" style="background:transparent;color:rgb(119, 119, 126);border:0;">
                             <option :value="5">5</option>
@@ -1583,31 +1585,146 @@ let short_data = [
                           </select>
 
                         </div>
-                         
-                         
-                       </td>
-                      <td  style="background:#212124;"> </td>
-                      <td  style="background:#212124;"> </td>
-                      <td  style="background:#212124;">  </td>
+                        </div>
+                      </td>
+                     </tr>
+                  </tfoot>
+                </table>
+                <table class="table table-hover d-block d-md-none border-0 " >
+                 
+                <tbody class="table-border-bottom-0">
+                  <tr v-if="paginatedItems.length === 0">
+                    <td colspan="100" v-if="searchQuery"><h4> '{{searchQuery}}' Was not found </h4></td>
+                    <td  colspan="100" v-if="!searchQuery"><h4 class="font"> No data found </h4></td>
+                  </tr>
+                  <tr v-for="(stock, index) in paginatedItems" :key="index">
+                       <td class="lay" style="border-bottom:0 solid">
+                        <div style="display: flex; min-width:250px; align-items: center; gap: 8px;">
+                        <button v-if="stock.category.includes('Bookmark')" style="background:transparent;border:0;"
+                         @click="handleBookmark(index)"
+                        >
+                          <svg width="20" height="20" viewBox="0 0 14 14" fill="#feb647" xmlns="http://www.w3.org/2000/svg" class="sc-17s7t24-0 wZEdK"><path d="M6.58894 1.40623C6.61665 1.33537 6.66385 1.27476 6.72453 1.2321C6.78521 1.18944 6.85662 1.16666 6.92969 1.16666C7.00275 1.16666 7.07416 1.18944 7.13484 1.2321C7.19552 1.27476 7.24272 1.33537 7.27043 1.40623L8.6629 4.91643C8.68896 4.98211 8.73181 5.03898 8.78673 5.08079C8.84164 5.12259 8.9065 5.14771 8.97415 5.15337L12.59 5.45694C12.917 5.48441 13.0493 5.91228 12.8003 6.13549L10.0455 8.60932C9.99406 8.65547 9.95571 8.71557 9.93467 8.78305C9.91364 8.85053 9.91073 8.92277 9.92627 8.99187L10.7683 12.6903C10.7852 12.7645 10.7808 12.8422 10.7556 12.9138C10.7303 12.9854 10.6854 13.0475 10.6265 13.0923C10.5676 13.1371 10.4974 13.1627 10.4246 13.1657C10.3519 13.1687 10.28 13.149 10.2179 13.1092L7.12168 11.1278C7.06387 11.0908 6.99743 11.0712 6.92969 11.0712C6.86194 11.0712 6.7955 11.0908 6.73769 11.1278L3.6415 13.1099C3.57942 13.1497 3.50746 13.1694 3.43473 13.1664C3.362 13.1634 3.29175 13.1378 3.23285 13.093C3.17395 13.0482 3.12905 12.986 3.10381 12.9145C3.07858 12.8429 3.07414 12.7651 3.09107 12.6909L3.9331 8.99187C3.94871 8.92277 3.94584 8.85051 3.9248 8.78301C3.90376 8.71552 3.86536 8.65542 3.81384 8.60932L1.05905 6.13549C1.00357 6.08593 0.963382 6.02022 0.943562 5.9467C0.923742 5.87318 0.925185 5.79515 0.94771 5.72249C0.970234 5.64982 1.01283 5.5858 1.07009 5.53853C1.12736 5.49126 1.19672 5.46286 1.26939 5.45694L4.88522 5.15337C4.95287 5.14771 5.01773 5.12259 5.07264 5.08079C5.12756 5.03898 5.17041 4.98211 5.19647 4.91643L6.58894 1.40623Z" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                        </button>
+                        <button v-if="!stock.category.includes('Bookmark')" style="background:transparent;border:0;"
+                        @click="handleBookmark(index)"
+                        >
+                          <svg width="20" height="20" viewBox="0 0 14 14" fill="rgb(119, 119, 126)" xmlns="http://www.w3.org/2000/svg" class="sc-17s7t24-0 wZEdK"><path d="M6.58894 1.40623C6.61665 1.33537 6.66385 1.27476 6.72453 1.2321C6.78521 1.18944 6.85662 1.16666 6.92969 1.16666C7.00275 1.16666 7.07416 1.18944 7.13484 1.2321C7.19552 1.27476 7.24272 1.33537 7.27043 1.40623L8.6629 4.91643C8.68896 4.98211 8.73181 5.03898 8.78673 5.08079C8.84164 5.12259 8.9065 5.14771 8.97415 5.15337L12.59 5.45694C12.917 5.48441 13.0493 5.91228 12.8003 6.13549L10.0455 8.60932C9.99406 8.65547 9.95571 8.71557 9.93467 8.78305C9.91364 8.85053 9.91073 8.92277 9.92627 8.99187L10.7683 12.6903C10.7852 12.7645 10.7808 12.8422 10.7556 12.9138C10.7303 12.9854 10.6854 13.0475 10.6265 13.0923C10.5676 13.1371 10.4974 13.1627 10.4246 13.1657C10.3519 13.1687 10.28 13.149 10.2179 13.1092L7.12168 11.1278C7.06387 11.0908 6.99743 11.0712 6.92969 11.0712C6.86194 11.0712 6.7955 11.0908 6.73769 11.1278L3.6415 13.1099C3.57942 13.1497 3.50746 13.1694 3.43473 13.1664C3.362 13.1634 3.29175 13.1378 3.23285 13.093C3.17395 13.0482 3.12905 12.986 3.10381 12.9145C3.07858 12.8429 3.07414 12.7651 3.09107 12.6909L3.9331 8.99187C3.94871 8.92277 3.94584 8.85051 3.9248 8.78301C3.90376 8.71552 3.86536 8.65542 3.81384 8.60932L1.05905 6.13549C1.00357 6.08593 0.963382 6.02022 0.943562 5.9467C0.923742 5.87318 0.925185 5.79515 0.94771 5.72249C0.970234 5.64982 1.01283 5.5858 1.07009 5.53853C1.12736 5.49126 1.19672 5.46286 1.26939 5.45694L4.88522 5.15337C4.95287 5.14771 5.01773 5.12259 5.07264 5.08079C5.12756 5.03898 5.17041 4.98211 5.19647 4.91643L6.58894 1.40623Z" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+                        </button>
+                        <AssetWidget :image="stock.asset.image" :title="stock.asset.title" />
+                        <PillWidget :title="stock.asset.charge"/>
+                        </div>
+                      </td>
+                      <td class="lay" style="border-bottom:0 solid;min-width: 100px;max-width: 150;">
+                        <PriceWidget :amount="stock.price.amount" :symbol="stock.price.symbol" />
+                      </td>
+                      <td class="lay" style="border-bottom:0 solid;min-width: 100px;max-width: 150;">
+                        <LineChartWidget 
+                        :lineColor="stock.chart.lineColor" 
+                        :data="Array.from({ length: 30 }, () => Math.floor(Math.random() * 100))" 
+                        :label="label"
+                         />
+                         <!-- <LineChartWidget 
+                        :lineColor="stock.chart.lineColor" 
+                        :data="stock.chart.data" 
+                        :label="stock.chart.label"
+                         /> -->
+                      </td>
+                      <td class="lay" style="border-bottom:0 solid;min-width: 100px;max-width: 150;">
+                        <PercentageWidget :amount="stock.percentage.amount" :color="stock.percentage.color" />
+                      </td>
+                      <td class="lay" style="border-bottom:0 solid">
+                        <PriceWidget :amount="stock.marketCap.amount" :symbol="stock.marketCap.symbol" />
+                      </td>
+                      <td class="lay" style="border-bottom:0 solid">
+                        <PriceWidget :amount="stock.volume.amount" :symbol="stock.volume.symbol" />
+                      </td>
+                      <td class="lay" style="border-bottom:0 solid">
+                        <PriceWidget :amount="stock.supply.amount" :symbol="stock.supply.symbol" />
+                      </td>
+                      <td class="lay" style="border-bottom:0 solid">
+                        <PriceWidget :amount="stock.rank.amount" :symbol="stock.rank.symbol" />
+                      </td>
+                      <td class="lay" style="border-bottom:0 solid">
+                        <PriceWidget :amount="stock.liquidity.amount" :symbol="stock.liquidity.symbol" />
+                      </td>
+                      <td class="lay" style="border-bottom:0 solid">
+                        <PercentageWidget :amount="stock.change.amount" :color="stock.change.color" />
+                      </td>
                     </tr>
+                </tbody>
+                <tfoot style="border-top: 0px solid;position:sticky;">
+                    <tr>
+                      <td colspan="100"  style="background:#212124;">
+                        <div class="d-flex " style="gap:20.5rem;">
+                          <div> Showing {{ startItem }} - {{ endItem }} out of {{ assetCount }}</div>
+                        <div class="pagination-container">
+                              <!-- Prev Button -->
+                              <button 
+                                type="button" 
+                                :disabled="currentPage === 1" 
+                                class="pagination-button" 
+                                @click="changePage(currentPage - 1)">
+                                <svg width="11" height="19" viewBox="0 0 11 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                  <path d="M9.5 2L2.70711 8.79289C2.31658 9.18342 2.31658 9.81658 2.70711 10.2071L9.5 17" stroke="currentColor" stroke-width="3" stroke-linecap="round"></path>
+                                </svg>
+                              </button>
+
+                              <!-- Page Numbers with Ellipsis -->
+                              <div class="pagination-pages">
+                                <button 
+                                  v-for="page in displayedPages" 
+                                  :key="page" 
+                                  type="button" 
+                                  class="pagination-page" 
+                                  :class="{ active: currentPage === page }" 
+                                  @click="changePage(page)"
+                                  v-if="page !== '...'">
+                                  {{ page }}
+                                </button>
+
+                                <span v-if="displayedPages.includes('...')" class="pagination-ellipsis">...</span>
+                              </div>
+
+                              <!-- Next Button -->
+                              <button 
+                                type="button" 
+                                :disabled="currentPage === totalPages" 
+                                class="pagination-button" 
+                                @click="changePage(currentPage + 1)">
+                                <svg width="11" height="19" viewBox="0 0 11 19" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(180deg);">
+                                  <path d="M9.5 2L2.70711 8.79289C2.31658 9.18342 2.31658 9.81658 2.70711 10.2071L9.5 17" stroke="currentColor" stroke-width="3" stroke-linecap="round"></path>
+                                </svg>
+                              </button>
+                            </div>
+
+                            <div class="display:flex;gap:5px;">
+                          Show
+                          <select v-model="ItemsPerPage" @change="updatePagination" style="background:transparent;color:rgb(119, 119, 126);border:0;">
+                            <option :value="5">5</option>
+                            <option :value="15">15</option>
+                            <option :value="20">20</option>
+                            <option :value="50">50</option>
+                            <option :value="75">75</option>
+                            <option :value="100">100</option>
+                          </select>
+
+                        </div>
+                        </div>
+                      </td>
+                     </tr>
                   </tfoot>
                 </table>
             </div>
-        </div>
-    </div>
+       </div>
+  </div>
 </template>
 <style lang="scss">
-.font
-{
-  color: var(--color-text-1);
-  font: var(--font-medium-medium);
-  display: inline-block;
-  // overflow: hidden;
-  // text-overflow: ellipsis;
-  white-space: nowrap;
-  // min-width: 1px;
-  // max-width: 4.5rem;
-}
+// td {
+    
+//     white-space: nowrap; /* Prevents text wrapping */
+//     overflow: hidden;
+//     text-overflow: ellipsis; /* Adds "..." for long text */
+// }
 .pagination-container {
   display: flex;
   align-items: center;
@@ -1758,7 +1875,55 @@ body
     scroll-behavior: smooth;
   }
 }
-
+:root {
+  --bs-blue: #164fe8;
+  --bs-indigo: #6610f2;
+  --bs-purple: #696cff;
+  --bs-pink: #e83e8c;
+  --bs-red: #ff3e1d;
+  --bs-orange: #fd7e14;
+  --bs-yellow: #ffab00;
+  --bs-green: #71dd37;
+  --bs-teal: #20c997;
+  --bs-cyan: #03c3ec;
+  --bs-white: #fff;
+  --bs-gray: rgba(67, 89, 113, 0.6);
+  --bs-gray-dark: rgba(67, 89, 113, 0.8);
+  --bs-gray-25: rgba(67, 89, 113, 0.025);
+  --bs-gray-50: rgba(67, 89, 113, 0.05);
+  --bs-primary: var(--bs-blue);
+  --bs-secondary: #8592a3;
+  --bs-success: #71dd37;
+  --bs-info: #03c3ec;
+  --bs-warning: #ffab00;
+  --bs-danger: #ff3e1d;
+  --bs-light: #fcfdfd;
+  --bs-dark: #233446;
+  --bs-gray: rgba(67, 89, 113, 0.1);
+  --bs-primary-rgb: 105, 108, 255;
+  --bs-secondary-rgb: 133, 146, 163;
+  --bs-success-rgb: 113, 221, 55;
+  --bs-info-rgb: 3, 195, 236;
+  --bs-warning-rgb: 255, 171, 0;
+  --bs-danger-rgb: 255, 62, 29;
+  --bs-light-rgb: 252, 253, 253;
+  --bs-dark-rgb: 35, 52, 70;
+  --bs-gray-rgb: 67, 89, 113;
+  --bs-white-rgb: 255, 255, 255;
+  --bs-black-rgb: 67, 89, 113;
+  --bs-body-color-rgb: 105, 122, 141;
+  --bs-body-bg-rgb: 245, 245, 249;
+  --bs-font-sans-serif: "Poppins",sans-serif;
+  --bs-font-monospace: Arial, Helvetica, sans-serif;
+  --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+  --bs-root-font-size: 18px;
+  --bs-body-font-family: var(--bs-font-sans-serif);
+  --bs-body-font-size: 0.9375rem;
+  --bs-body-font-weight:50;
+  --bs-body-line-height: 1.53;
+  --bs-body-color: #697a8d;
+  --bs-body-bg: #212124;
+}
 
 :root {
   --fontFamily-base: "Satoshi", system-ui, -apple-system, Helvetica, Arial, sans-serif;
@@ -1814,11 +1979,6 @@ body {
   font-weight: var(--bs-body-font-weight);
   line-height: var(--bs-body-line-height);
   color: #7b7b84;
-  color: var(--color-text-1);
-  font: var(--font-medium-medium);
-  display: inline-block;
-  white-space: nowrap;
-  text-align: var(--bs-body-text-align);
   background-color: #212124;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(34, 48, 62, 0);

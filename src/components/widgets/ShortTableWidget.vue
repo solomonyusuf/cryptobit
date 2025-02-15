@@ -36,7 +36,7 @@ const filteredData = computed(() => {
   <div class="sc-10x8bpw-0 iivpzd">
     <div class="sc-10x8bpw-2 jFvpxj" style="background:#28282b;border-top-left-radius:15px;border-top-right-radius:15px;">
       <h4>{{ title }}</h4>
-      <span class="sc-dshm8q-0 sc-dshm8q-1 eGHGbY gOABuB" style="margin-top:-9px;">
+      <span class="sc-dshm8q-0 sc-dshm8q-1 eGHGbY gOABuB" style="margin-top:-15px;">
         {{ label }}
       </span>
 
@@ -47,7 +47,7 @@ const filteredData = computed(() => {
             :key="index"
             @click="handleClick(item)" 
             :class="getButtonClasses(item)" 
-            style="border:0.5px solid #fff;" 
+            style="border:0.5px solid #494950;" 
             type="button" 
             shape="Pill" 
             class="sc-l0nx5c-0 gdQHqL sc-1t8tdl7-0 eyyfia sc-1c1yrga-4 gAHlwY" 
