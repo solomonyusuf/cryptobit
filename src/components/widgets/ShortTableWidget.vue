@@ -1,130 +1,128 @@
 <script setup>
-import { defineProps } from 'vue';
+import { defineProps, ref, computed } from 'vue';
 
 const props = defineProps({
-    title :{type: String, default:""},
-    label :{type: String, default:""},
-    filterButton :{type: Boolean, default: false},
-    filter :{type: Array, default: []},
-    data :{type: Array, default: []},
- 
+    title: { type: String, default: "" },
+    label: { type: String, default: "" },
+    filterButton: { type: Boolean, default: false },
+    filters: { type: Array, default: [] },
+    data: { type: Array, default: [] },
 });
 
+const selectedCategory = ref(""); // Keeps track of the active filter
+
+const getButtonClasses = (label) => {
+    return {
+        'btn-black': selectedCategory.value === label,
+        'text-white': selectedCategory.value === label,
+        'border': selectedCategory.value === label,
+    };
+};
+
+const handleClick = (label) => {
+    selectedCategory.value = label; 
+};
+
+const filteredData = computed(() => {
+    if (!selectedCategory.value) {
+        return props.data; // Return full data if no category is selected
+    }
+    return props.data.filter(item => item[0].category === selectedCategory.value);
+});
 
 </script>
 
 <template>
   <div class="sc-10x8bpw-0 iivpzd">
-   <div class="sc-10x8bpw-2 jFvpxj" style="background:#28282b;border-top-left-radius:15px;border-top-right-radius:15px;">
-   <h4>{{ title }}</h4>
-   <span class="sc-dshm8q-0 sc-dshm8q-1 eGHGbY gOABuB" style="margin-top:-9px;">
-    {{label}}</span>
-   <div class="sc-10x8bpw-1 jBSbjn">
-      <div role="group" dir="ltr" overflow="scroll" class="sc-1c1yrga-0 sc-1c1yrga-1 jrvRSk kFlzVs" tabindex="0" style="outline: none;">
-         <button v-for="(item, index) in filterButton" style="border:0.5px solid #fff;" type="button" shape="Pill" class="sc-l0nx5c-0 gdQHqL sc-1t8tdl7-0 eyyfia sc-1c1yrga-4 gAHlwY" data-state="off" role="radio" aria-checked="false" tabindex="0" data-radix-collection-item="" aria-pressed="true">
-            <div class="sc-1c1yrga-2 gDkQlB">{{item}}Gainers</div>
-         </button>
-         <button style="border:0.5px solid #fff;" type="button" shape="Pill" class="sc-l0nx5c-0 gdQHqL sc-1t8tdl7-0 eyyfia sc-1c1yrga-4 gAHlwY" data-state="on" role="radio" aria-checked="true" tabindex="-1" data-radix-collection-item="" aria-pressed="false">
-            <div class="sc-1c1yrga-2 gDkQlB">Losers</div>
-         </button>
+    <div class="sc-10x8bpw-2 jFvpxj" style="background:#28282b;border-top-left-radius:15px;border-top-right-radius:15px;">
+      <h4>{{ title }}</h4>
+      <span class="sc-dshm8q-0 sc-dshm8q-1 eGHGbY gOABuB" style="margin-top:-9px;">
+        {{ label }}
+      </span>
+
+      <div v-if="filterButton" class="sc-10x8bpw-1 jBSbjn">
+        <div role="group" dir="ltr" overflow="scroll" class="sc-1c1yrga-0 sc-1c1yrga-1 jrvRSk kFlzVs" tabindex="0" style="outline: none;">
+          <button 
+            v-for="(item, index) in filters" 
+            :key="index"
+            @click="handleClick(item)" 
+            :class="getButtonClasses(item)" 
+            style="border:0.5px solid #fff;" 
+            type="button" 
+            shape="Pill" 
+            class="sc-l0nx5c-0 gdQHqL sc-1t8tdl7-0 eyyfia sc-1c1yrga-4 gAHlwY" 
+            data-state="off" 
+            role="radio" 
+            aria-checked="false" 
+            tabindex="0" 
+            data-radix-collection-item="" 
+            aria-pressed="true"
+          >
+            <div class="sc-1c1yrga-2 gDkQlB">{{ item }}</div>
+          </button>
+        </div>
       </div>
-   </div>
-</div>
+    </div>
 
-   <div class="sc-1drcdyj-0 feSemO sc-f2heqk-0 hsttkP">
-      <table style="background:var(--color-layer-5);" aria-label="Markets" id="react-aria4047133576-:r2g:" role="grid" tabindex="-1" aria-describedby="" class="sc-1drcdyj-2 gMycKc">
-         <tbody role="rowgroup" class="cqvzjM">
-            <tr  data-selected="false" role="row" aria-selected="false" tabindex="-1" data-key="IP-USD" aria-labelledby="react-aria4047133576-:r2g:-IP-USD-market" class="sc-1drcdyj-3 bjKQW">
-               <td tabindex="0" data-key="IP-USD-market" role="rowheader" id="react-aria4047133576-:r2g:-IP-USD-market" class="sc-1drcdyj-5 jZwOtN">
-                  <div class="hbPsAj">
-                     <img src="https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/IP.png" class="sc-1jee7u2-0 sc-1jee7u2-1 bvODzu kKjnke sc-eFHqgm cuigVv" alt="IP">
-                     <div class=" kqDFAg">
-                        <div class="sc-1eemviw-0 jrIzVR"><span class="sc-cbeHKN cYeLCX">Story</span><span class="sc-dshm8q-0 eGHGbY"><output title="20×" class="sc-17stuub-0 sc-17stuub-1 eqFWVL hsAYsL">20×</output></span></div>
-                     </div>
+    <div class="sc-1drcdyj-0 feSemO sc-f2heqk-0 hsttkP">
+      <table style="background:var(--color-layer-5);" aria-label="Markets" role="grid" tabindex="-1" class="sc-1drcdyj-2 gMycKc">
+        <tbody role="rowgroup" class="cqvzjM">
+          <tr v-for="(item, index) in filteredData" role="row" :key="index" class="sc-1drcdyj-3 bjKQW">
+            <td tabindex="0" role="rowheader" class="sc-1drcdyj-5 jZwOtN">
+              <div class="hbPsAj">
+                <img :src="item[0].image" class="sc-1jee7u2-0 sc-1jee7u2-1 bvODzu kKjnke sc-eFHqgm cuigVv" alt="IP">
+                <div class="kqDFAg">
+                  <div class="sc-1eemviw-0 jrIzVR">
+                    <span class="sc-cbeHKN cYeLCX">{{ item[0].title }}</span>
+                    <span class="sc-dshm8q-0 eGHGbY">
+                      <output class="sc-17stuub-0 sc-17stuub-1 eqFWVL hsAYsL">
+                        {{ item[0].label }}
+                      </output>
+                    </span>
                   </div>
-               </td>
-               <td tabindex="-1" data-key="IP-USD-oraclePrice" role="gridcell" class="sc-1drcdyj-5 jZwOtN">
-                  <div class="hbPsAj">
-                     <div class=" bsrGuR">
-                        <output title="1.81 USD" class="sc-17stuub-0 sc-17stuub-1 eqFWVL sc-f2heqk-6 feOvAs"><span class="sc-k94qe4-0 dwHERV">$1.810</span></output>
-                        <div class=" etWmOK"><output title=" USD" class="sc-17stuub-0 sc-17stuub-1 eqFWVL hsAYsL"></output></div>
-                     </div>
+                </div>
+              </div>
+            </td>
+
+            <td tabindex="-1" role="gridcell" class="sc-1drcdyj-5 jZwOtN">
+              <div class="hbPsAj">
+                <div class="bsrGuR">
+                  <output class="sc-17stuub-0 sc-17stuub-1 eqFWVL sc-f2heqk-6 feOvAs">
+                    <span class="sc-k94qe4-0 dwHERV">
+                      {{ item[1].upper }}
+                    </span>
+                  </output>
+                  <div class="etWmOK">
+                    <output :style="{color:item[1].lower.color}" class="sc-17stuub-0 sc-17stuub-1 eqFWVL hsAYsL">
+                      <svg width="0.5em" height="0.5em" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="sc-17s7t24-0 jmJoyh">
+                        <path d="M6.92525 14.1691C7.46819 15.0155 8.53182 15.0155 9.07476 14.1691L15.7159 3.81655C16.4025 2.74628 15.7667 1.19612 14.6412 1.19612H1.35883C0.23329 1.19612 -0.402506 2.74628 0.284066 3.81655L6.92525 14.1691Z" fill="currentColor"></path>
+                      </svg>&nbsp;
+                      {{ item[1].lower.value }}
+                    </output>
                   </div>
-               </td>
-               <td tabindex="-1" data-key="IP-USD-listing" role="gridcell" class="sc-1drcdyj-5 jZwOtN">
-                  <div class="hbPsAj sc-f2heqk-4 YiPoL">
-                     <div class=" dekweo"><span class="sc-dshm8q-0 sc-dshm8q-1 eGHGbY gOABuB">New</span></div>
-                     <svg width="11" height="19" viewBox="0 0 11 19" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(180deg);" class="sc-17s7t24-0 wZEdK">
-                        <path d="M9.5 2L2.70711 8.79289C2.31658 9.18342 2.31658 9.81658 2.70711 10.2071L9.5 17" stroke="currentColor" stroke-width="3" stroke-linecap="round"></path>
-                     </svg>
-                  </div>
-               </td>
-            </tr>
-            <tr data-selected="false" role="row" aria-selected="false" tabindex="-1" data-key="ME-USD" aria-labelledby="react-aria4047133576-:r2g:-ME-USD-market" class="sc-1drcdyj-3 bjKQW">
-               <td tabindex="-1" data-key="ME-USD-market" role="rowheader" id="react-aria4047133576-:r2g:-ME-USD-market" class="sc-1drcdyj-5 jZwOtN">
-                  <div class="hbPsAj">
-                     <img src="https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/ME.png" class="sc-1jee7u2-0 sc-1jee7u2-1 bvODzu kKjnke sc-eFHqgm cuigVv" alt="ME">
-                     <div class=" kqDFAg">
-                        <div class=" jrIzVR"><span class="sc-cbeHKN cYeLCX">Magic Eden</span><span class="sc-dshm8q-0 eGHGbY"><output title="20×" class="sc-17stuub-0 sc-17stuub-1 eqFWVL hsAYsL">20×</output></span></div>
-                     </div>
-                  </div>
-               </td>
-               <td tabindex="-1" data-key="ME-USD-oraclePrice" role="gridcell" class="sc-1drcdyj-5 jZwOtN">
-                  <div class="sc-pnndtc-0 hbPsAj">
-                     <div class="sc-pnndtc-1 bsrGuR">
-                        <output title="1.69 USD" class="sc-17stuub-0 sc-17stuub-1 eqFWVL sc-f2heqk-6 feOvAs"><span class="sc-k94qe4-0 dwHERV">$1.690</span></output>
-                        <div class="sc-f2heqk-1 etWmOK"><output title="0.12518936854918006" class="sc-17stuub-0 sc-17stuub-1 eqFWVL hsAYsL sc-f2heqk-2 eyeaig">12.52%</output></div>
-                     </div>
-                  </div>
-               </td>
-               <td tabindex="-1" data-key="ME-USD-listing" role="gridcell" class="sc-1drcdyj-5 jZwOtN">
-                  <div class="sc-pnndtc-0 hbPsAj sc-f2heqk-4 YiPoL">
-                     <div class="sc-f2heqk-5 dekweo"><span class="sc-dshm8q-0 sc-dshm8q-1 eGHGbY gOABuB">New</span></div>
-                     <svg width="11" height="19" viewBox="0 0 11 19" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(180deg);" class="sc-17s7t24-0 wZEdK">
-                        <path d="M9.5 2L2.70711 8.79289C2.31658 9.18342 2.31658 9.81658 2.70711 10.2071L9.5 17" stroke="currentColor" stroke-width="3" stroke-linecap="round"></path>
-                     </svg>
-                  </div>
-               </td>
-            </tr>
-            <tr data-selected="false" role="row" aria-selected="false" tabindex="-1" data-key="LAYER-USD" aria-labelledby="react-aria4047133576-:r2g:-LAYER-USD-market" class="sc-1drcdyj-3 bjKQW">
-               <td tabindex="-1" data-key="LAYER-USD-market" role="rowheader" id="react-aria4047133576-:r2g:-LAYER-USD-market" class="sc-1drcdyj-5 jZwOtN">
-                  <div class="sc-pnndtc-0 hbPsAj">
-                     <img src="https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/LAYER.png" class="sc-1jee7u2-0 sc-1jee7u2-1 bvODzu kKjnke sc-eFHqgm cuigVv" alt="LAYER">
-                     <div class="sc-tSpkn kqDFAg">
-                        <div class="sc-1eemviw-0 jrIzVR"><span class="sc-cbeHKN cYeLCX">Solayer</span><span class="sc-dshm8q-0 eGHGbY"><output title="20×" class="sc-17stuub-0 sc-17stuub-1 eqFWVL hsAYsL">20×</output></span></div>
-                     </div>
-                  </div>
-               </td>
-               <td tabindex="-1" data-key="LAYER-USD-oraclePrice" role="gridcell" class="sc-1drcdyj-5 jZwOtN">
-                  <div class="sc-pnndtc-0 hbPsAj">
-                     <div class="sc-pnndtc-1 bsrGuR">
-                        <output title="0.8607360736 USD" class="sc-17stuub-0 sc-17stuub-1 eqFWVL sc-f2heqk-6 feOvAs"><span class="sc-k94qe4-0 dwHERV">$0.8607</span></output>
-                        <div class="sc-f2heqk-1 etWmOK">
-                           <div class="sc-1eb4q90-0 dEJaBR" style="height:10px;width:10px;">
-                              <svg width="1em" height="1em" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="sc-17s7t24-0 jmJoyh">
-                                 <path d="M6.92525 14.1691C7.46819 15.0155 8.53182 15.0155 9.07476 14.1691L15.7159 3.81655C16.4025 2.74628 15.7667 1.19612 14.6412 1.19612H1.35883C0.23329 1.19612 -0.402506 2.74628 0.284066 3.81655L6.92525 14.1691Z" fill="currentColor"></path>
-                              </svg>
-                           </div>
-                           <output title="0.04379411542983384" class="sc-17stuub-0 sc-17stuub-1 eqFWVL hsAYsL sc-f2heqk-2 gdQusg">4.38%</output>
-                        </div>
-                     </div>
-                  </div>
-               </td>
-               <td tabindex="-1" data-key="LAYER-USD-listing" role="gridcell" class="sc-1drcdyj-5 jZwOtN">
-                  <div class="sc-pnndtc-0 hbPsAj sc-f2heqk-4 YiPoL">
-                     <div class="sc-f2heqk-5 dekweo"><span class="sc-dshm8q-0 sc-dshm8q-1 eGHGbY gOABuB">New</span></div>
-                     <svg width="11" height="19" viewBox="0 0 11 19" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(180deg);" class="sc-17s7t24-0 wZEdK">
-                        <path d="M9.5 2L2.70711 8.79289C2.31658 9.18342 2.31658 9.81658 2.70711 10.2071L9.5 17" stroke="currentColor" stroke-width="3" stroke-linecap="round"></path>
-                     </svg>
-                  </div>
-               </td>
-            </tr>
-         </tbody>
+                </div>
+              </div>
+            </td>
+
+            <td tabindex="-1" role="gridcell" class="sc-1drcdyj-5 jZwOtN">
+              <div class="hbPsAj sc-f2heqk-4 YiPoL">
+                <div class="dekweo">
+                  <span class="sc-dshm8q-0 sc-dshm8q-1 eGHGbY gOABuB">{{ item[2].label }}</span>
+                </div>
+                <a :href="item[2].link">
+                  <svg width="11" height="19" viewBox="0 0 11 19" fill="none" xmlns="http://www.w3.org/2000/svg" style="transform: rotate(180deg);" class="sc-17s7t24-0 wZEdK">
+                    <path d="M9.5 2L2.70711 8.79289C2.31658 9.18342 2.31658 9.81658 2.70711 10.2071L9.5 17" stroke="currentColor" stroke-width="3" stroke-linecap="round"></path>
+                  </svg>
+                </a>
+              </div>
+            </td>
+          </tr>
+        </tbody>
       </table>
-   </div>
-</div>
-
+    </div>
+  </div>
 </template>
+
 <style lang="scss">
 
 

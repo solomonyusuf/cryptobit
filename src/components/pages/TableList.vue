@@ -1108,7 +1108,85 @@ const SortItems = (order = "asc") => {
 };
 
 
-
+let short_data = [
+              [
+                {
+                image: "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/IP.png",
+                title: "Story",
+                label: "20X",
+                category: "Losers",
+                },
+                {
+                  upper: "$1.800",
+                  lower: {
+                    value : "12.72%",
+                    color : "red",
+                  },
+                },
+                {
+                  label: "New",
+                  link: "test.com",
+                }
+              ],
+               [
+                {
+                image: "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/IP.png",
+                title: "Story",
+                label: "20X",
+                category: "Gainers",
+                },
+                {
+                  upper: "$1.800",
+                  lower: {
+                    value : "$112.72",
+                    color : "green",
+                  },
+                },
+                {
+                  label: "New",
+                  link: "test.com",
+                }
+              ],
+              
+              [
+                {
+                category: "Gainers",
+                image: "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/ME.png",
+                title: "Magic coin",
+                label: "20X",
+                },
+                {
+                  upper: "$1.800",
+                  lower: {
+                    value : "12.72%",
+                    color : "green",
+                  },
+                },
+                {
+                  label: "New",
+                  link: "test.com",
+                }
+              ],            
+              [
+                {
+                  category: "Losers",
+                image: "https://mainnet-metadata-service-logos.s3.ap-northeast-1.amazonaws.com/LAYER.png",
+                title: "Solayer",
+                label: "20X",
+                },
+                {
+                  upper: "$1.800",
+                  lower: {
+                    value : "$0.8607",
+                    color : "green",
+                  },
+                },
+                {
+                  label: "New",
+                  link: "test.com",
+                }
+              ],
+           ];
 
 
 
@@ -1145,15 +1223,24 @@ const SortItems = (order = "asc") => {
             
         </div>
         </div>
-        <!-- <div class="col-md-4 px-4">
-           <ShortTableWidget/>
-        </div> -->
+        <div class="col-md-4 px-4">
+           <ShortTableWidget
+           title="Recently Listed"
+           label="New"
+           :filterButton=false
+           :data="short_data"
+           />
+        </div>
         <div class="col-md-4 px-4">
            <ShortTableWidget
            title="Biggest Movers"
-           show
+           label="24h"
+           :filterButton=true
+           :filters="['Gainers', 'Losers']"
+           :data="short_data"
            />
         </div>
+        
 
         <div class="card" style="background:#212124;">
           <div class="input-group input-group-merge w-100 mb-4">
