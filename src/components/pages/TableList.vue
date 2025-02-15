@@ -1242,7 +1242,7 @@ let short_data = [
         </div>
         
 
-        <div class="card" style="background:#212124;">
+        <div class="card mt-3" style="background:#212124;">
           <div class="input-group input-group-merge w-100 mb-4">
               <span class="input-group-text " 
                   style="background:#3b3b3f;
@@ -1466,7 +1466,7 @@ let short_data = [
                     <td></td>
                   </tr>
                   <tr v-for="(stock, index) in paginatedItems" :key="index">
-                       <td class="lay">
+                       <td class="lay" style="border-bottom:0 solid">
                         <div style="display: flex; min-width:250px; align-items: center; gap: 8px;">
                         <button v-if="stock.category.includes('Bookmark')" style="background:transparent;border:0;"
                          @click="handleBookmark(index)"
@@ -1482,10 +1482,10 @@ let short_data = [
                         <PillWidget :title="stock.asset.charge"/>
                         </div>
                       </td>
-                      <td class="lay">
+                      <td class="lay" style="border-bottom:0 solid">
                         <PriceWidget :amount="stock.price.amount" :symbol="stock.price.symbol" />
                       </td>
-                      <td class="lay">
+                      <td class="lay" style="border-bottom:0 solid">
                         <LineChartWidget 
                         :lineColor="stock.chart.lineColor" 
                         :data="Array.from({ length: 30 }, () => Math.floor(Math.random() * 100))" 
@@ -1497,25 +1497,25 @@ let short_data = [
                         :label="stock.chart.label"
                          /> -->
                       </td>
-                      <td class="lay">
+                      <td class="lay" style="border-bottom:0 solid">
                         <PercentageWidget :amount="stock.percentage.amount" :color="stock.percentage.color" />
                       </td>
-                      <td class="lay">
+                      <td class="lay" style="border-bottom:0 solid">
                         <PriceWidget :amount="stock.marketCap.amount" :symbol="stock.marketCap.symbol" />
                       </td>
-                      <td class="lay">
+                      <td class="lay" style="border-bottom:0 solid">
                         <PriceWidget :amount="stock.volume.amount" :symbol="stock.volume.symbol" />
                       </td>
-                      <td class="lay">
+                      <td class="lay" style="border-bottom:0 solid">
                         <PriceWidget :amount="stock.supply.amount" :symbol="stock.supply.symbol" />
                       </td>
-                      <td class="lay">
+                      <td class="lay" style="border-bottom:0 solid">
                         <PriceWidget :amount="stock.rank.amount" :symbol="stock.rank.symbol" />
                       </td>
-                      <td class="lay">
+                      <td class="lay" style="border-bottom:0 solid">
                         <PriceWidget :amount="stock.liquidity.amount" :symbol="stock.liquidity.symbol" />
                       </td>
-                      <td class="lay">
+                      <td class="lay" style="border-bottom:0 solid">
                         <PercentageWidget :amount="stock.change.amount" :color="stock.change.color" />
                       </td>
                     </tr>
@@ -1709,7 +1709,7 @@ body
     background: #212124;
 }
 .bg-label-primary {
-  background-color: #e7e7ff !important;
+  background-color: #e7e7ff38 !important;
   color: #696cff !important;
 }
 .rounded-pill {
@@ -1751,7 +1751,7 @@ body
 
 body {
   margin: 0;
-  font-family: "Poppins",sans-serif;
+  font-family:  -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, 'Helvetica Neue', sans-serif;
   font-size:13px;
   font-weight: var(--bs-body-font-weight);
   line-height: var(--bs-body-line-height);
@@ -9604,7 +9604,7 @@ textarea.form-control-lg {
 
 b,
 strong {
-  font-weight: 700;
+  font-weight: 600;
 }
 
 a:not([href]) {
