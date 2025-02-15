@@ -1199,10 +1199,113 @@ let short_data = [
 
 <template>
   <div class="container-xxl"> 
+    <div class="row">
+      <header style="border-bottom: 0.2px solid #5c6b7b" class="sc-6q7ny7-0 cChuYf">
+          <a class="sc-6q7ny7-4 bQbFa-d" href="/">
+              <svg width="50" height="30" viewBox="0 0 135 145" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M100.986 0L0 144.988H31.0048L132.514 0H100.986Z" fill="#FFFFFF"></path>
+                <path d="M34.2346 0L63.9475 42.7232L48.4451 66.0268L2.58386 0H34.2346Z" fill="url(#paint0_linear)"></path>
+                <path d="M103.995 145L71.0526 97.7455L86.555 75.0893L135 145H103.995Z" fill="url(#paint1_linear)"></path>
+                <defs>
+                    <linearGradient id="paint0_linear" x1="27.1293" y1="9.0625" x2="69.773" y2="60.4324" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#FFFFFF"></stop>
+                      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.55"></stop>
+                    </linearGradient>
+                    <linearGradient id="paint1_linear" x1="111.1" y1="133.996" x2="58.6959" y2="63.4999" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#6966FF"></stop>
+                      <stop offset="1" stop-color="#6966FF" stop-opacity="0.36"></stop>
+                    </linearGradient>
+                </defs>
+              </svg>
+          </a>
+          <div style="border: 0.2px solid #5c6b7b" data-orientation="vertical" aria-orientation="vertical" role="separator" class="sc-1btbymu-0 dWlZvr"></div>
+          <div class="sc-6q7ny7-3 hqWplr">
+              <button type="button" id="radix-:r1i:" aria-haspopup="menu" aria-expanded="false" data-state="closed" class="px-2 Fvuha sc-6q7ny7-7 fnWuGD">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="currentColor" class="sc-17s7t24-0 bHNZrm">
+                    <path d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"></path>
+                </svg>
+                <span aria-hidden="true" class="sc-1m5wuqo-1 biAalT">
+                    <svg fill="none" height="10" viewBox="0 0 15 10" width="15" xmlns="http://www.w3.org/2000/svg" class="sc-17s7t24-0 cPaiGI" aria-hidden="true">
+                      <path clip-rule="evenodd" d="m.321829 1.09389c.200562-.192959.469529-.298401.747791-.29315.27827.00525.54307.120763.73621.32115l5.194 5.5132 5.19397-5.5132c.0944-.10408.2088-.188152.3363-.247234.1275-.059081.2655-.091968.406-.096713.1404-.004746.2804.018748.4116.069088s.2509.126504.3522.223979c.1012.09747.1818.21427.2371.34347.0552.12921.084.26819.0845.40871.0006.14052-.0271.27972-.0813.40936s-.1339.24707-.2344.34534l-5.94997 6.3c-.09795.10163-.21538.18245-.34527.23766-.1299.05521-.26959.08367-.41073.08367s-.28083-.02846-.41073-.08367c-.12989-.05521-.24732-.13603-.34527-.23766l-5.950001-6.3c-.192962-.20056-.29840394-.46953-.29315364-.74779.00525031-.27827.12076264-.54307.32115364-.73621z" fill="currentColor" fill-rule="evenodd"></path>
+                    </svg>
+                </span>
+              </button>
+              <div data-orientation="vertical" aria-orientation="vertical" role="separator" style="border: 0.2px solid #5c6b7b" class="sc-1btbymu-0 dWlZvr"></div>
+              <button type="button" id="radix-:r1k:" aria-haspopup="menu" aria-expanded="false" data-state="closed" data-disabled="" disabled="" class="px-2 Fvuha sc-1vhpqxr-0 dGEaks">
+                <span class="sc-1m5wuqo-4 bIlymG px-3" >Mainnet</span></button>
+          </div>
+          <div data-orientation="vertical" style="border: 0.2px solid #5c6b7b" aria-orientation="vertical" role="separator" class="sc-1btbymu-0 dWlZvr"></div>
+          <div class="sc-6q7ny7-1 iFqZxr">
+              <nav aria-label="Main" data-orientation="horizontal" dir="ltr" class="sc-48njmk-0 gcJXqa sc-6q7ny7-2 eizhqM">
+                <section class="sc-48njmk-5 hplNAL">
+                    <div style="position: relative;">
+                      <ul data-orientation="horizontal" class="sc-48njmk-2 gdiyOc mb-0" dir="ltr">
+                          <li data-item="TRADE" class="sc-48njmk-7 dLlIdR"><a type="undefined" orientation="horizontal" data-radix-collection-item="" class="sc-48njmk-11 iYkVuL sc-48njmk-9 bnzEoj" href="/trade"><span>Trade</span></a></li>
+                          <li data-item="MARKETS" class="sc-48njmk-7 dLlIdR"><a type="undefined" orientation="horizontal" data-active="" data-radix-collection-item="" aria-current="page" class="sc-48njmk-11 iYkVuL sc-48njmk-9 bnzEoj active" href="/markets"><span>Markets</span></a></li>
+                          <li data-item="PORTFOLIO" class="sc-48njmk-7 dLlIdR"><a type="undefined" orientation="horizontal" data-radix-collection-item="" class="sc-48njmk-11 iYkVuL sc-48njmk-9 bnzEoj" href="/portfolio"><span>Portfolio</span></a></li>
+                          <li data-item="VAULT" class="sc-48njmk-7 dLlIdR"><a type="undefined" orientation="horizontal" data-radix-collection-item="" class="sc-48njmk-11 iYkVuL sc-48njmk-9 bnzEoj" href="/vault">
+                            <span>MegaVault
+                             <strong type="Number" class="sc-dshm8q-0 AehHs">
+                            <output title="0.13541290504919956" class="sc-17stuub-0 sc-17stuub-1 eqFWVL hsAYsL sc-3i56se-5 hcfdxE">14%</output>&nbsp; APR</strong>
+                          </span></a></li>
+                          <li data-item="REFERRALS" class="sc-48njmk-7 dLlIdR"><a type="undefined" orientation="horizontal" data-radix-collection-item="" class="sc-48njmk-11 iYkVuL sc-48njmk-9 bnzEoj" href="/referrals"><span>Referrals</span></a></li>
+                          <li data-item="DYDX" class="sc-48njmk-7 dLlIdR">
+                            <a type="undefined" orientation="horizontal" data-radix-collection-item="" class="sc-48njmk-11 iYkVuL sc-48njmk-9 bnzEoj" href="/DYDX">
+                                <span>DYDX</span>
+                                <div class="sc-6q7ny7-8 iWmuNb"></div>
+                            </a>
+                          </li>
+                          <li data-item="MORE" class="sc-48njmk-7 dLlIdR">
+                            <button orientation="horizontal" id="radix-:r1m:-trigger-MORE" data-state="closed" aria-expanded="false" aria-controls="radix-:r1m:-content-MORE" class="sc-48njmk-9 ljClTp sc-48njmk-8 dZXSXz" data-radix-collection-item="" type="button">
+                                <span>More</span>
+                                <svg fill="none" height="10" viewBox="0 0 15 10" width="15" xmlns="http://www.w3.org/2000/svg" class="sc-17s7t24-0 sc-48njmk-10 cPaiGI dBTAfA">
+                                  <path clip-rule="evenodd" d="m.321829 1.09389c.200562-.192959.469529-.298401.747791-.29315.27827.00525.54307.120763.73621.32115l5.194 5.5132 5.19397-5.5132c.0944-.10408.2088-.188152.3363-.247234.1275-.059081.2655-.091968.406-.096713.1404-.004746.2804.018748.4116.069088s.2509.126504.3522.223979c.1012.09747.1818.21427.2371.34347.0552.12921.084.26819.0845.40871.0006.14052-.0271.27972-.0813.40936s-.1339.24707-.2344.34534l-5.94997 6.3c-.09795.10163-.21538.18245-.34527.23766-.1299.05521-.26959.08367-.41073.08367s-.28083-.02846-.41073-.08367c-.12989-.05521-.24732-.13603-.34527-.23766l-5.950001-6.3c-.192962-.20056-.29840394-.46953-.29315364-.74779.00525031-.27827.12076264-.54307.32115364-.73621z" fill="currentColor" fill-rule="evenodd"></path>
+                                </svg>
+                            </button>
+                          </li>
+                      </ul>
+                    </div>
+                </section>
+              </nav>
+          </div>
+          <div role="separator" ></div>
+          <div class="sc-6q7ny7-5 cYMRwx">
+              <button type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="radix-:r1u:" data-state="closed" class="sc-6jcv3m-0 ghSBqK">
+                <button type="button" shape="Square" class="sc-l0nx5c-0 hXySKe sc-1xochuw-0 cDUNfF sc-mg0yzv-0 fpsZnf sc-gPARCI gkTmE" action="Secondary">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="sc-17s7t24-0 wZEdK">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3"></path>
+                  </svg>
+                </button>
+              </button>
+              <div data-orientation="vertical" aria-orientation="vertical" role="separator" style="border: 1px solid #5c6b7b" class="sc-1btbymu-0 dWlZvr"></div>
+              <button type="button" shape="Rectangle" class="sc-l0nx5c-0 jpRLbK sc-1xochuw-0 cDUNfF sc-mg0yzv-0 fpsZnf sc-6q7ny7-6 glRmCt" action="Secondary">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="sc-17s7t24-0 wZEdK">
+                    <rect x="0.5" y="0.5" width="15" height="15" rx="7.5" stroke="currentColor"></rect>
+                    <path d="M8.05814 12C8.52326 12 8.81395 11.6643 8.81395 11.2727C8.81395 10.8811 8.52326 10.5455 8.05814 10.5455C7.59302 10.5455 7.30233 10.8811 7.30233 11.2727C7.30233 11.6643 7.59302 12 8.05814 12ZM7.4186 9.09091C7.4186 9.36898 7.64403 9.59441 7.9221 9.59441H8.0779C8.35597 9.59441 8.5814 9.36898 8.5814 9.09091C8.5814 7.8042 10.5 7.86014 10.5 6.06993C10.5 4.78322 9.45349 4 8 4C6.88596 4 6.01403 4.54361 5.65318 5.53378C5.53189 5.86659 5.81281 6.18182 6.16703 6.18182C6.45355 6.18182 6.68586 5.9675 6.81593 5.71221C7.03159 5.28895 7.4344 5.00699 8 5.00699C8.81395 5.00699 9.27907 5.45455 9.27907 6.06993C9.27907 7.41259 7.4186 7.18881 7.4186 9.09091Z" fill="currentColor"></path>
+                </svg>
+              </button>
+              <div data-orientation="vertical" style="border: 1px solid #5c6b7b" aria-orientation="vertical" role="separator" class="sc-1btbymu-0 dWlZvr"></div>
+              <div type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="radix-:r1v:" data-state="closed" class="sc-1m3koiq-5 dYNmrH">
+                <button type="button" shape="Rectangle" class="sc-l0nx5c-0 jpRLbK sc-1xochuw-0 cDUNfF sc-mg0yzv-0 fpsZnf sc-6q7ny7-6 glRmCt" action="Secondary">
+                    <svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg" class="sc-17s7t24-0 wZEdK">
+                      <path d="M10.3811 13.235C11.9338 13.0512 13.4593 12.6847 14.9261 12.1433C13.6839 10.7673 12.9975 8.97875 13.0003 7.125V6.54167V6.5C13.0003 5.17392 12.4735 3.90215 11.5358 2.96447C10.5981 2.02678 9.32636 1.5 8.00028 1.5C6.67419 1.5 5.40242 2.02678 4.46474 2.96447C3.52706 3.90215 3.00028 5.17392 3.00028 6.5V7.125C3.00279 8.97886 2.3161 10.7675 1.07361 12.1433C2.51778 12.6767 4.04027 13.0475 5.61944 13.235M10.3811 13.235C8.79943 13.4226 7.20112 13.4226 5.61944 13.235M10.3811 13.235C10.5012 13.6099 10.5311 14.0078 10.4683 14.3964C10.4055 14.785 10.2518 15.1533 10.0198 15.4713C9.78772 15.7893 9.48386 16.048 9.13293 16.2263C8.78201 16.4047 8.39392 16.4976 8.00028 16.4976C7.60663 16.4976 7.21854 16.4047 6.86762 16.2263C6.51669 16.048 6.21283 15.7893 5.98079 15.4713C5.74875 15.1533 5.59508 14.785 5.53229 14.3964C5.46949 14.0078 5.49936 13.6099 5.61944 13.235" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </button>
+              </div>
+              <div data-orientation="vertical" style="border: 1px solid #5c6b7b" aria-orientation="vertical" role="separator" class="sc-1btbymu-0 dWlZvr"></div>
+              <button type="button" shape="Rectangle" class="sc-l0nx5c-0 jpRLbK sc-1xochuw-0 kwYHWz" action="Primary" style="background:#7774ff;color:white;">Connect wallet</button>
+          </div>
+        </header>
+
+    </div>
     <div class="row py-3 mt-3">
+        <div class="row ms-2 d-none d-md-block" style="height:100px;width:97%;background:#28282b;border-radius:15px;">
+
+        </div>
         <div class="row mt-3">
-        
-          <div class="col-md-3 mb-3 ms-4">
+          
+          <div class="col-md-3 mb-3 ">
                 <div class="row mb-3 justify-content-center">
                   <TradingCardWidget 
                   title="Trading Volume"
@@ -1690,12 +1793,444 @@ let short_data = [
   </div>
 </template>
 <style lang="scss">
-// td {
-    
-//     white-space: nowrap; /* Prevents text wrapping */
-//     overflow: hidden;
-//     text-overflow: ellipsis; /* Adds "..." for long text */
-// }
+.hVjCkK > * {
+  box-shadow: 0 0 0 var(--border-width) var(--border-color);
+}
+.cChuYf {
+  --header-horizontal-padding-mobile: 0.5rem;
+  --trigger-height: 2.25rem;
+  --logo-width: 3.5rem;
+  isolation: isolate;
+  position: sticky;
+  top: var(--stickyArea-totalInsetTop,0px);
+  bottom: var(--stickyArea-totalInsetBottom,0px);
+  left: var(--stickyArea-totalInsetLeft,0px);
+  right: var(--stickyArea-totalInsetRight,0px);
+  min-height: var(--stickyArea-topHeight);
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  scroll-margin-top: var(--stickyArea-totalInsetTop);
+  scroll-margin-bottom: var(--stickyArea-totalInsetBottom);
+  scroll-margin-left: var(--stickyArea-totalInsetLeft);
+  scroll-margin-right: var(--stickyArea-totalInsetRight);
+  backdrop-filter: none;
+  background-color: var(--color-layer-2);
+  height: var(--page-currentHeaderHeight);
+  grid-area: Header;
+  display: grid;
+  align-items: stretch;
+  grid-auto-flow: column;
+  grid-template: 'Logo . NavBefore . Nav . NavAfter' 100%/var(--logo-width) var(--border-width) auto var(--border-width) 1fr var(--border-width) auto;
+  z-index: 2;
+  font-size: 0.9375rem;
+}
+a:visited {
+  color: var(--link-color);
+}
+.bQbFa-d {
+  display: flex;
+  align-self: stretch;
+}
+a {
+  text-decoration: inherit;
+}
+.bQbFa-d > svg {
+  margin: auto;
+  width: auto;
+  height: 45%;
+}
+.dWlZvr[data-orientation="vertical"] {
+  align-self: center;
+  width: 0px;
+  margin: 0px !important;
+  border-right: solid var(--border-width) var(--color-border);
+  height: calc(100% - var(--separatorHeight-padding));
+}
+.dWlZvr {
+  --separatorHeight-padding: 1.5rem;
+  flex: 0 1 0% !important;
+  z-index: -1;
+}
+.hqWplr {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.dWlZvr[data-orientation="vertical"] {
+  align-self: center;
+  width: 0px;
+  margin: 0px !important;
+  border-right: solid var(--border-width) var(--color-border);
+  height: calc(100% - var(--separatorHeight-padding));
+}
+.dWlZvr {
+  --separatorHeight-padding: 1.5rem;
+  flex: 0 1 0% !important;
+  z-index: -1;
+}
+.iFqZxr {
+  --scrollArea-fade-zIndex: 1;
+  --scrollArea-fadeWidth: 1.5rem;
+  position: relative;
+}
+.gcJXqa[data-orientation="horizontal"] {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  margin: calc((var(--navigationMenu-height) - var(--navigationMenu-item-height)) / 2) 0;
+  height: max-content;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .eizhqM {
+    scroll-behavior: smooth;
+  }
+}
+.eizhqM {
+  --navigationMenu-height: var(--stickyArea-topHeight);
+  --navigationMenu-item-height: var(--stickyArea-topHeight);
+}
+.eizhqM {
+  --scrollArea-height: 100%;
+  --scrollArea-width: 100%;
+  isolation: isolate;
+  height: var(--scrollArea-height);
+  position: relative;
+  overflow: auto;
+  padding: 0px 1rem;
+  scroll-padding: 0px 0.5rem;
+}
+.gcJXqa {
+  --navigationMenu-height: auto;
+  --navigationMenu-item-height: 2rem;
+  --navigationMenu-tab-item-checked-backgroundColor: var(--color-layer-1);
+  --navigationMenu-tab-item-highlighted-backgroundColor: var(--color-layer-4);
+  --navigationMenu-underline-item-highlighted-backgroundColor: transparent;
+  --navigationMenu-tab-item-radius: 0.5rem;
+  --navigationMenu-underline-item-radius: 0px;
+  --navigationMenu-tab-item-padding: 0.5rem 1rem;
+  --navigationMenu-underline-item-padding: 0.5rem;
+  --navigationMenu-item-checked-textColor: var(--color-text-2);
+  --navigationMenu-item-highlighted-textColor: var(--color-text-2);
+  align-self: stretch;
+  --submenu-side-offset: 0.75rem;
+  position: relative;
+}
+.hplNAL {
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-columns: minmax(0px, 1fr);
+  color: var(--color-text-0);
+}
+.gcJXqa div[style="position: relative;"] {
+  display: grid;
+}
+.gdiyOc[data-orientation="horizontal"] {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  align-items: start;
+}
+.gdiyOc {
+  align-self: center;
+}
+.sc-48njmk-2[data-orientation="horizontal"] > .dLlIdR {
+  gap: var(--submenu-side-offset);
+}
+.dLlIdR {
+  display: grid;
+  position: relative;
+}
+.iYkVuL {
+  white-space: nowrap;
+}
+.bnzEoj {
+  --item-font-size: inherit;
+  --item-gap: 0.5em;
+  justify-content: space-between;
+  padding: var(--item-padding);
+  border-radius: var(--item-radius);
+  font-size: var(--item-font-size);
+  transition: 0.1s;
+  cursor: pointer;
+  --item-checked-backgroundColor: var( --navigationMenu-underline-item-checked-backgroundColor );
+  --item-highlighted-backgroundColor: var( --navigationMenu-underline-item-highlighted-backgroundColor );
+  --item-radius: var(--navigationMenu-underline-item-radius);
+  --item-padding: var(--navigationMenu-underline-item-padding);
+  --item-checked-textColor: var(--navigationMenu-item-checked-textColor);
+  --item-highlighted-textColor: var(--navigationMenu-item-highlighted-textColor);
+  scroll-snap-align: start;
+  scroll-margin-top: var(--stickyArea-totalInsetTop);
+  scroll-margin-bottom: var(--stickyArea-totalInsetBottom);
+  scroll-margin-left: var(--stickyArea-totalInsetLeft);
+  scroll-margin-right: var(--stickyArea-totalInsetRight);
+  min-height: var(--navigationMenu-item-height);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.7rem 0.5rem;
+}
+a {
+  text-decoration: inherit;
+}
+.cYMRwx {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-self: end;
+  padding: 0px 0.75rem;
+  gap: 0.5rem;
+}
+.ghSBqK {
+  --trigger-radius: 0.5em;
+  --trigger-border: none;
+  --trigger-textColor: var(--color-text-0);
+  --trigger-open-textColor: var(--color-text-2);
+  --trigger-active-filter: brightness(var(--active-filter));
+  --trigger-hover-filter: brightness(var(--hover-filter-base));
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: var(--trigger-padding);
+  border-radius: var(--trigger-radius);
+  border: var(--trigger-border);
+  background-color: var(--trigger-backgroundColor);
+  color: var(--trigger-textColor);
+  cursor: pointer;
+  --button-backgroundColor: transparent;
+  --button-textColor: var(--color-text-0);
+  --button-hover-backgroundColor: var(--color-layer-4);
+  --button-hover-textColor: var(--color-text-2);
+  --trigger-backgroundColor: transparent;
+  --trigger-open-backgroundColor: var(--button-hover-backgroundColor);
+  height: var(--button-height);
+  --trigger-padding: 0;
+}
+button {
+  appearance: none;
+  background: none;
+    background-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+  transition: .25s var(--ease-out-expo);
+}
+.bnzEoj[data-state="checked"], .bnzEoj[aria-current="page"] {
+  box-shadow: inset 0 -2px 0 var(--color-accent);
+}
+.bnzEoj[data-state="checked"], .bnzEoj[aria-current="page"] {
+  background-color: var( --item-checked-backgroundColor,var(--trigger-selected-color,var(--popover-backgroundColor,inherit)) );
+  color: var(--item-checked-textColor,var(--trigger-textColor,inherit));
+}
+a:visited {
+  color: var(--link-color);
+}
+.iYkVuL {
+  white-space: nowrap;
+}
+.bnzEoj {
+  --item-font-size: inherit;
+  --item-gap: 0.5em;
+  justify-content: space-between;
+  padding: var(--item-padding);
+  border-radius: var(--item-radius);
+  font-size: var(--item-font-size);
+  transition: 0.1s;
+  cursor: pointer;
+  --item-checked-backgroundColor: var( --navigationMenu-underline-item-checked-backgroundColor );
+  --item-highlighted-backgroundColor: var( --navigationMenu-underline-item-highlighted-backgroundColor );
+  --item-radius: var(--navigationMenu-underline-item-radius);
+  --item-padding: var(--navigationMenu-underline-item-padding);
+  --item-checked-textColor: var(--navigationMenu-item-checked-textColor);
+  --item-highlighted-textColor: var(--navigationMenu-item-highlighted-textColor);
+  scroll-snap-align: start;
+  scroll-margin-top: var(--stickyArea-totalInsetTop);
+  scroll-margin-bottom: var(--stickyArea-totalInsetBottom);
+  scroll-margin-left: var(--stickyArea-totalInsetLeft);
+  scroll-margin-right: var(--stickyArea-totalInsetRight);
+  min-height: var(--navigationMenu-item-height);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.7rem 0.5rem;
+}
+a {
+  text-decoration: inherit;
+}
+.bnzEoj > span {
+  flex: 1 1 0%;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5ch;
+}
+.AehHs {
+  display: inline-flex;
+  border-radius: 0.25rem;
+  letter-spacing: 0.04em;
+  padding: 0.125rem 0.344rem;
+  font: var(--font-tiny-book);
+  color: var(--color-positive);
+  background-color: var(--color-gradient-positive);
+}
+.iWmuNb {
+  height: 0.4375rem;
+  width: 0.4375rem;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+}
+.ljClTp {
+  --trigger-padding: 0.5em 1em;
+  --trigger-radius: 0.5em;
+  --trigger-border: none;
+  --trigger-backgroundColor: var(--color-layer-2);
+  --trigger-textColor: var(--color-text-0);
+  --trigger-open-textColor: var(--color-text-2);
+  height: var(--trigger-height);
+  border: var(--trigger-border);
+  background-color: var(--trigger-backgroundColor);
+  color: var(--trigger-textColor);
+  --trigger-open-backgroundColor: var( --navigationMenu-underline-item-checked-backgroundColor );
+  --trigger-active-filter: none;
+  --trigger-hover-filter: none;
+  --item-font-size: inherit;
+  --item-gap: 0.5em;
+  justify-content: space-between;
+  padding: var(--item-padding);
+  border-radius: var(--item-radius);
+  font-size: var(--item-font-size);
+  transition: 0.1s;
+  cursor: pointer;
+  --item-checked-backgroundColor: var( --navigationMenu-underline-item-checked-backgroundColor );
+  --item-highlighted-backgroundColor: var( --navigationMenu-underline-item-highlighted-backgroundColor );
+  --item-radius: var(--navigationMenu-underline-item-radius);
+  --item-padding: var(--navigationMenu-underline-item-padding);
+  --item-checked-textColor: var(--navigationMenu-item-checked-textColor);
+  --item-highlighted-textColor: var(--navigationMenu-item-highlighted-textColor);
+  scroll-snap-align: start;
+  scroll-margin-top: var(--stickyArea-totalInsetTop);
+  scroll-margin-bottom: var(--stickyArea-totalInsetBottom);
+  scroll-margin-left: var(--stickyArea-totalInsetLeft);
+  scroll-margin-right: var(--stickyArea-totalInsetRight);
+  min-height: var(--navigationMenu-item-height);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.7rem 0.5rem;
+}
+.dZXSXz {
+  border-radius: var(--navigationMenu-underline-item-radius);
+  outline-offset: -2px;
+}
+.dWlZvr[data-orientation="vertical"] {
+  align-self: center;
+  width: 0px;
+  margin: 0px !important;
+  border-right: solid var(--border-width) var(--color-border);
+  height: calc(100% - var(--separatorHeight-padding));
+}
+.dWlZvr {
+  --separatorHeight-padding: 1.5rem;
+  flex: 0 1 0% !important;
+  z-index: -1;
+}
+.cYMRwx {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-self: end;
+  padding: 0px 0.75rem;
+  gap: 0.5rem;
+}
+.ghSBqK {
+  --trigger-radius: 0.5em;
+  --trigger-border: none;
+  --trigger-textColor: var(--color-text-0);
+  --trigger-open-textColor: var(--color-text-2);
+  --trigger-active-filter: brightness(var(--active-filter));
+  --trigger-hover-filter: brightness(var(--hover-filter-base));
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: var(--trigger-padding);
+  border-radius: var(--trigger-radius);
+  border: var(--trigger-border);
+  background-color: var(--trigger-backgroundColor);
+  color: var(--trigger-textColor);
+  cursor: pointer;
+  --button-backgroundColor: transparent;
+  --button-textColor: var(--color-text-0);
+  --button-hover-backgroundColor: var(--color-layer-4);
+  --button-hover-textColor: var(--color-text-2);
+  --trigger-backgroundColor: transparent;
+  --trigger-open-backgroundColor: var(--button-hover-backgroundColor);
+  height: var(--button-height);
+  --trigger-padding: 0;
+}
+button {
+  appearance: none;
+  background: none;
+    background-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+  transition: .25s var(--ease-out-expo);
+}
+.glRmCt {
+  --button-backgroundColor: transparent;
+  --button-textColor: var(--color-text-0);
+  --button-hover-backgroundColor: var(--color-layer-4);
+  --button-hover-textColor: var(--color-text-2);
+  --button-border: none;
+  --button-icon-size: 1rem;
+  --button-padding: 0 0.5em;
+}
+.fpsZnf {
+  --button-icon-size: 1.125em;
+  --button-padding: 0;
+}
+.cDUNfF {
+  --button-textColor: var(--color-text-1);
+  --button-backgroundColor: var(--color-layer-3);
+  --button-border: solid var(--border-width) var(--color-border);
+}
+.dYNmrH {
+  display: grid;
+  grid-template-areas:
+"stack";
+}
+.kwYHWz {
+  --button-textColor: var(--color-text-button);
+  --button-backgroundColor: var(--color-accent);
+  --button-border: solid var(--border-width) var(--color-accent);
+  --button-hover-filter: brightness(var(--hover-filter-variant));
+}
+.jpRLbK {
+  --button-width: auto;
+  --button-padding: 0 0.625rem;
+  --button-textColor: var(--color-text-0);
+  --button-backgroundColor: transparent;
+  --button-active-filter: brightness(var(--active-filter));
+  --button-hover-filter: brightness(var(--hover-filter-base));
+  --button-hover-textColor: var(--button-textColor);
+  --button-border: solid var(--border-width) var(--color-layer-6);
+  --button-cursor: pointer;
+  --button-font: var(--font-mini-book);
+  --button-height: 1.75rem;
+  --button-radius: 0.5em;
+  font: var(--button-font);
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: var(--button-width);
+  height: var(--button-height);
+  padding: var(--button-padding);
+  gap: 0.5ch;
+  background-color: var(--button-backgroundColor);
+  border: var(--button-border);
+  border-radius: var(--button-radius);
+  color: var(--button-textColor);
+  text-align: center;
+  white-space: nowrap;
+  cursor: var(--button-cursor);
+}
+
+
 .pagination-container {
   display: flex;
   align-items: center;
