@@ -1202,7 +1202,7 @@ let short_data = [
     <div class="row py-3 mt-3">
         <div class="row mt-3">
         
-          <div class="col-md-3 mb-3">
+          <div class="col-md-3 mb-3 ms-4">
                 <div class="row mb-3 justify-content-center">
                   <TradingCardWidget 
                   title="Trading Volume"
