@@ -1243,7 +1243,7 @@ let short_data = [
         
 
         <div class="card mt-3" style="background:#212124;">
-          <div class="input-group input-group-merge w-100 mb-4">
+          <div class="input-group input-group-merge w-100 mt-2 mb-4">
               <span class="input-group-text " 
                   style="background:#3b3b3f;
                   border-top-left-radius:25px;

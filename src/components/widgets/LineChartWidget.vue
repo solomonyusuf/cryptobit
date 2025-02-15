@@ -11,7 +11,7 @@
     labels:{ type: Array, default: [ 1,2,3,4,5,6,7,8,9,10] } , // Labels for x-axis
     data: { type: Array, default: [0,0,0,0,0,0,0,0,0,0,0] }, // Data points
     width:{ type: String, default: "20vh" },
-    height:{ type: String, default: "60px" },
+    height:{ type: String, default: "40px" },
     lineColor: { type: String, default: "rgba(75, 192, 192, 1)" },  
     showGrid: { type: Boolean, default: false },  
     gridColor: { type: String, default: "rgba(200, 200, 200, 0.2)" }  
