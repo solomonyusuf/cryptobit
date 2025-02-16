@@ -65,10 +65,10 @@ const filteredData = computed(() => {
     </div>
 
     <div class="sc-1drcdyj-0 feSemO sc-f2heqk-0 hsttkP">
-      <table style="background:var(--color-layer-5);" aria-label="Markets" role="grid" tabindex="-1" class="sc-1drcdyj-2 gMycKc">
+      <table style="background:var(--color-layer-5);border-top:thin solid #4b4b4d" aria-label="Markets" role="grid" tabindex="-1" class="sc-1drcdyj-2 gMycKc">
         <tbody role="rowgroup" class="cqvzjM">
-          <tr v-for="(item, index) in filteredData" role="row" :key="index" class="sc-1drcdyj-3 bjKQW">
-            <td tabindex="0" role="rowheader" class="sc-1drcdyj-5 jZwOtN">
+          <tr v-for="(item, index) in filteredData" role="row" :key="index"  class="sc-1drcdyj-3 bjKQW">
+            <td tabindex="0" role="rowheader" style="border-bottom:thin solid #4b4b4d" class="sc-1drcdyj-5 jZwOtN">
               <div class="hbPsAj">
                 <img :src="item[0].image" class="sc-1jee7u2-0 sc-1jee7u2-1 bvODzu kKjnke sc-eFHqgm cuigVv" alt="IP">
                 <div class="kqDFAg">
@@ -84,7 +84,7 @@ const filteredData = computed(() => {
               </div>
             </td>
 
-            <td tabindex="-1" role="gridcell" class="sc-1drcdyj-5 jZwOtN">
+            <td tabindex="-1" role="gridcell" style="border-bottom:thin solid #4b4b4d" class="sc-1drcdyj-5 jZwOtN">
               <div class="hbPsAj">
                 <div class="bsrGuR">
                   <output class="sc-17stuub-0 sc-17stuub-1 eqFWVL sc-f2heqk-6 feOvAs">
@@ -104,7 +104,7 @@ const filteredData = computed(() => {
               </div>
             </td>
 
-            <td tabindex="-1" role="gridcell" class="sc-1drcdyj-5 jZwOtN">
+            <td tabindex="-1" role="gridcell" style="border-bottom:thin solid #4b4b4d" class="sc-1drcdyj-5 jZwOtN">
               <div class="hbPsAj sc-f2heqk-4 YiPoL">
                 <div class="dekweo">
                   <span class="sc-dshm8q-0 sc-dshm8q-1 eGHGbY gOABuB">{{ item[2].label }}</span>
