@@ -75,16 +75,18 @@
                         <h3 class="MuiTypography-root MuiTypography-h3 css-1kwyw2c">Proposals</h3>
                         <p class="MuiTypography-root MuiTypography-description css-1nkijli">Filter</p>
                         <div class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary css-1l0z8s3">
-                           <div tabindex="0" role="combobox" aria-controls=":r0:" aria-expanded="false" aria-haspopup="listbox" aria-labelledby="filter" id="filter" class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-1dyf9qo">All proposals</div>
-                           <input aria-invalid="false" aria-hidden="true" tabindex="-1" class="MuiSelect-nativeInput css-1k3x8v3" value="all">
+                           <select class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-1dyf9qo" style="border: thin solid white;" id="filter">
+                              <option value="all">All proposals</option>
+                              <option value="approved">Approved</option>
+                              <option value="pending">Pending</option>
+                              <option value="rejected">Rejected</option>
+                            </select>
                            <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-1tif1u7" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
                               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
                                  <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
                               </svg>
                            </svg>
-                           <fieldset aria-hidden="true" class="MuiOutlinedInput-notchedOutline css-nqlg3w">
-                              <legend class="css-ihdtdm"><span class="notranslate">​</span></legend>
-                           </fieldset>
+                          
                         </div>
                         <div class="MuiBox-root css-c6rw7y">
                            <div class="MuiBox-root css-14aub4a">
