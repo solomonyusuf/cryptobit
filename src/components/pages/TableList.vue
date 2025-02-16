@@ -1198,7 +1198,7 @@ let short_data = [
 
 
 <template>
-  <div class="container-xxl"> 
+  <div class="container-xxl" style="background: #212124;"> 
     <div class="row">
       <header style="border-bottom: 0.2px solid #5c6b7b" class="sc-6q7ny7-0  cChuYf">
           <a class="sc-6q7ny7-4 bQbFa-d" href="/">
@@ -1793,6 +1793,10 @@ let short_data = [
   </div>
 </template>
 <style lang="scss" scoped>
+body
+{
+  background: #212124;
+}
 .hVjCkK > * {
   box-shadow: 0 0 0 var(--border-width) var(--border-color);
 }
@@ -2348,6 +2352,7 @@ body
 .rounded-pill {
   border-radius: 50rem !important;
 }
+
 .badge {
   --bs-badge-padding-x: 0.77em;
   --bs-badge-padding-y: 0.4235em;
