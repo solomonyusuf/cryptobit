@@ -1200,7 +1200,7 @@ let short_data = [
 <template>
   <div class="container-xxl"> 
     <div class="row">
-      <header style="border-bottom: 0.2px solid #5c6b7b" class="sc-6q7ny7-0 d-none d-md-block cChuYf">
+      <header style="border-bottom: 0.2px solid #5c6b7b" class="sc-6q7ny7-0  cChuYf">
           <a class="sc-6q7ny7-4 bQbFa-d" href="/">
               <svg width="50" height="30" viewBox="0 0 135 145" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M100.986 0L0 144.988H31.0048L132.514 0H100.986Z" fill="#FFFFFF"></path>
