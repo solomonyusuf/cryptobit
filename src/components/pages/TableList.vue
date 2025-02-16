@@ -1319,7 +1319,7 @@ let short_data = [
                   <TradingCardWidget 
                   title="Open Intrest"
                   label="Current"
-                  height="80px"
+                  height="75px"
                   content="$236,436,705"
                   />
                   
@@ -1328,7 +1328,7 @@ let short_data = [
                 <TradingCardWidget 
                 title="Earned by stakers"
                 label="24h"
-                height="80px"
+                height="75px"
                 content="$13,605"
                 />
                 
@@ -1339,7 +1339,7 @@ let short_data = [
             <ShortTableWidget
             title="Recently Listed"
             label="New"
-            height="80px"
+            height="75px"
             :filterButton=false
             :data="short_data"
             />

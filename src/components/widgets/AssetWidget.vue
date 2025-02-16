@@ -13,11 +13,12 @@ const props = defineProps({
 
 </script>
 <template>
-  <div :style="{margin}">
+  <div :style="{margin}"style="display:flex;gap:4px;">
     <img v-if="image2" class="" :src="image2" :style="{height:imageHeight}" style="border-radius:15px;" />
     <img v-if="image" class=" " :src="image" :style="{height:imageHeight}" style="border-radius:20px;" />
     <strong class="px-1" 
-    style=""  
-    :style="{color, fontSize:'17px',}">{{ title }}</strong> <span class="text-gray">{{ symbol }}</span>
+    style="margin-top:5px;"  
+    :style="{color, fontSize:'17px',}" 
+    >{{ title }}</strong> <span class="text-gray">{{ symbol }}</span>
   </div>
  </template> 

@@ -36,7 +36,7 @@ const filteredData = computed(() => {
   <div class="sc-10x8bpw-0 iivpzd">
     <div class="sc-10x8bpw-2 jFvpxj" style="background:#28282b;border-top-left-radius:15px;border-top-right-radius:15px;">
       <h4>{{ title }}</h4>
-      <span class="sc-dshm8q-0 sc-dshm8q-1 eGHGbY gOABuB" style="margin-top:-15px;">
+      <span class="sc-dshm8q-0 sc-dshm8q-1 eGHGbY gOABuB" style="">
         {{ label }}
       </span>
 
