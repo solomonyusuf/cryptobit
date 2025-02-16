@@ -1272,11 +1272,11 @@ let short_data = [
           <div role="separator" ></div>
           <div class="sc-6q7ny7-5 cYMRwx">
               <button type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="radix-:r1u:" data-state="closed" class="sc-6jcv3m-0 ghSBqK">
-                <button type="button" shape="Square" class="sc-l0nx5c-0 hXySKe sc-1xochuw-0 cDUNfF sc-mg0yzv-0 fpsZnf sc-gPARCI gkTmE" action="Secondary">
+                <div shape="Square" class="sc-l0nx5c-0 hXySKe sc-1xochuw-0 cDUNfF sc-mg0yzv-0 fpsZnf sc-gPARCI gkTmE" action="Secondary">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="sc-17s7t24-0 wZEdK">
                       <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3"></path>
                   </svg>
-                </button>
+                </div>
               </button>
               <div data-orientation="vertical" aria-orientation="vertical" role="separator" style="border: 1px solid #5c6b7b" class="sc-1btbymu-0 dWlZvr"></div>
               <button type="button" shape="Rectangle" class="sc-l0nx5c-0 jpRLbK sc-1xochuw-0 cDUNfF sc-mg0yzv-0 fpsZnf sc-6q7ny7-6 glRmCt" action="Secondary">
