@@ -432,7 +432,7 @@ const handleDropdown = (event:any) => {
         </div>
   </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 
 
 .hide-row{

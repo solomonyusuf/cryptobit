@@ -61,6 +61,6 @@ const sampleData = [
     <CurrencyPairWidget class="bit-md-12" :priceData="sampleData" theme="dark" :height="500" />
   </div>
 </template>
-<style lang="scss">
+<style lang="scss" scoped>
 @import url('../../assets/base.scss');
 </style>

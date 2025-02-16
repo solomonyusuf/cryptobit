@@ -340,6 +340,6 @@ const handleDropdown = (event:any, filter:any) => {
     </div>
   </template>
 
-  <style lang="scss">
+  <style lang="scss" scoped>
   @import url('../../assets/base.scss');
 </style>

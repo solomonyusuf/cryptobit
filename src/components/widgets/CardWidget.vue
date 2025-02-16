@@ -51,7 +51,7 @@ defineProps({
     </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 
 $card_color: #164fe8;
 

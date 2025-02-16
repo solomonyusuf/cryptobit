@@ -1792,7 +1792,7 @@ let short_data = [
        </div>
   </div>
 </template>
-<style lang="scss">
+<style lang="scss" scoped>
 .hVjCkK > * {
   box-shadow: 0 0 0 var(--border-width) var(--border-color);
 }
