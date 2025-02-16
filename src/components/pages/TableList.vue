@@ -1300,7 +1300,7 @@ let short_data = [
 
     </div>
     <div class="row py-3 mt-3">
-        <div class="row ms-2 d-none d-md-block" style="height:100px;width:97%;background:#28282b;border-radius:15px;">
+        <div class="row ms-1 d-none d-md-block" style="height:100px;width:97%;background:#28282b;border-radius:15px;">
 
         </div>
         <div class="row mt-3">
