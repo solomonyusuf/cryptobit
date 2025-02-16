@@ -1319,6 +1319,7 @@ let short_data = [
                   <TradingCardWidget 
                   title="Open Intrest"
                   label="Current"
+                  height="80px"
                   content="$236,436,705"
                   />
                   
@@ -1327,6 +1328,7 @@ let short_data = [
                 <TradingCardWidget 
                 title="Earned by stakers"
                 label="24h"
+                height="80px"
                 content="$13,605"
                 />
                 
