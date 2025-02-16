@@ -1580,7 +1580,7 @@ let short_data = [
                     <td></td>
                   </tr>
                   <tr v-for="(stock, index) in paginatedItems" :key="index">
-                       <td class="lay" style="border-bottom:0 solid">
+                       <td class="lay" style="border-bottom:thin solid #4b4b4d">
                         <div style="display: flex; min-width:250px; align-items: center; gap: 8px;">
                         <button v-if="stock.category.includes('Bookmark')" style="background:transparent;border:0;"
                          @click="handleBookmark(index)"
@@ -1596,10 +1596,10 @@ let short_data = [
                         <PillWidget :title="stock.asset.charge"/>
                         </div>
                       </td>
-                      <td class="lay" style="border-bottom:0 solid;min-width: 100px;max-width: 150;">
+                      <td class="lay" style="border-bottom:thin solid #4b4b4d;min-width: 100px;max-width: 150;">
                         <PriceWidget :amount="stock.price.amount" :symbol="stock.price.symbol" />
                       </td>
-                      <td class="lay" style="border-bottom:0 solid;min-width: 100px;max-width: 150;">
+                      <td class="lay" style="border-bottom:thin solid #4b4b4d;min-width: 100px;max-width: 150;">
                         <LineChartWidget 
                         :lineColor="stock.chart.lineColor" 
                         :data="Array.from({ length: 30 }, () => Math.floor(Math.random() * 100))" 
@@ -1611,30 +1611,30 @@ let short_data = [
                         :label="stock.chart.label"
                          /> -->
                       </td>
-                      <td class="lay" style="border-bottom:0 solid;min-width: 100px;max-width: 150;">
+                      <td class="lay" style="border-bottom:thin solid #4b4b4d;min-width: 100px;max-width: 150;">
                         <PercentageWidget :amount="stock.percentage.amount" :color="stock.percentage.color" />
                       </td>
-                      <td class="lay" style="border-bottom:0 solid">
+                      <td class="lay" style="border-bottom:thin solid #4b4b4d;">
                         <PriceWidget :amount="stock.marketCap.amount" :symbol="stock.marketCap.symbol" />
                       </td>
-                      <td class="lay" style="border-bottom:0 solid">
+                      <td class="lay" style="border-bottom:thin solid #4b4b4d;">
                         <PriceWidget :amount="stock.volume.amount" :symbol="stock.volume.symbol" />
                       </td>
-                      <td class="lay" style="border-bottom:0 solid">
+                      <td class="lay" style="border-bottom:thin solid #4b4b4d;">
                         <PriceWidget :amount="stock.supply.amount" :symbol="stock.supply.symbol" />
                       </td>
-                      <td class="lay" style="border-bottom:0 solid">
+                      <td class="lay" style="border-bottom:thin solid #4b4b4d;">
                         <PriceWidget :amount="stock.rank.amount" :symbol="stock.rank.symbol" />
                       </td>
-                      <td class="lay" style="border-bottom:0 solid">
+                      <td class="lay" style="border-bottom:thin solid #4b4b4d;">
                         <PriceWidget :amount="stock.liquidity.amount" :symbol="stock.liquidity.symbol" />
                       </td>
-                      <td class="lay" style="border-bottom:0 solid">
+                      <td class="lay" style="border-bottom:thin solid #4b4b4d;">
                         <PercentageWidget :amount="stock.change.amount" :color="stock.change.color" />
                       </td>
                     </tr>
                 </tbody>
-                <tfoot style="border-top: 0px solid;position:sticky;">
+                <tfoot style="border-top:thin solid #4b4b4d;position:sticky;">
                     <tr>
                       <td colspan="100"  style="background:#212124;">
                         <div class="d-flex " style="gap:20.5rem;">
