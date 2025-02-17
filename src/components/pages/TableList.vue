@@ -1225,7 +1225,7 @@ let short_data = [
                     <path d="M0 0h24v24H0z" fill="none"></path>
                     <path d="M12.87 15.07l-2.54-2.51.03-.03c1.74-1.94 2.98-4.17 3.71-6.53H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12zm-2.62 7l1.62-4.33L19.12 17h-3.24z"></path>
                 </svg>
-                <span aria-hidden="true" class=" biAalT">
+                <span aria-hidden="true" class="px-2 biAalT">
                     <svg fill="none" height="10" viewBox="0 0 15 10" width="15" xmlns="http://www.w3.org/2000/svg" class="sc-17s7t24-0 cPaiGI" aria-hidden="true">
                       <path clip-rule="evenodd" d="m.321829 1.09389c.200562-.192959.469529-.298401.747791-.29315.27827.00525.54307.120763.73621.32115l5.194 5.5132 5.19397-5.5132c.0944-.10408.2088-.188152.3363-.247234.1275-.059081.2655-.091968.406-.096713.1404-.004746.2804.018748.4116.069088s.2509.126504.3522.223979c.1012.09747.1818.21427.2371.34347.0552.12921.084.26819.0845.40871.0006.14052-.0271.27972-.0813.40936s-.1339.24707-.2344.34534l-5.94997 6.3c-.09795.10163-.21538.18245-.34527.23766-.1299.05521-.26959.08367-.41073.08367s-.28083-.02846-.41073-.08367c-.12989-.05521-.24732-.13603-.34527-.23766l-5.950001-6.3c-.192962-.20056-.29840394-.46953-.29315364-.74779.00525031-.27827.12076264-.54307.32115364-.73621z" fill="currentColor" fill-rule="evenodd"></path>
                     </svg>
@@ -1310,7 +1310,7 @@ let short_data = [
                   <TradingCardWidget 
                   title="Trading Volume"
                   label="24h"
-                  height="77px"
+                  height="78px"
                   content="$136,436,705"
                   />
                   
@@ -1319,7 +1319,7 @@ let short_data = [
                   <TradingCardWidget 
                   title="Open Intrest"
                   label="Current"
-                  height="77px"
+                  height="78px"
                   content="$236,436,705"
                   />
                   
@@ -1328,7 +1328,7 @@ let short_data = [
                 <TradingCardWidget 
                 title="Earned by stakers"
                 label="24h"
-                height="77px"
+                height="78px"
                 content="$13,605"
                 />
                 
