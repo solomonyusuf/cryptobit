@@ -528,7 +528,7 @@ html { box-sizing: border-box; }
 strong, b { font-weight: 700; }
 body { margin: 0px; color: rgb(241, 241, 243);}
 @media print {
-  body { background-color: rgb(255, 255, 255); }
+  body { background-color: rgb(255, 255, 255); font-family:Inter, Arial;}
 }
 body::backdrop { background-color: rgb(27, 32, 48); }
 body { font-family: Inter, Arial; font-weight: 400; font-size: 0.875rem; min-width: 375px; }

@@ -10,6 +10,7 @@ import TableList from './components/pages/TableList.vue';
 import Dashboard from './components/pages/Dashboard.vue';
 import Governance from './components/pages/Governance.vue';
 import Stake from './components/pages/Stake.vue';
+import Transactions from './components/pages/Transactions.vue';
 
 const router = createRouter({
   history: createWebHashHistory(), // Use hash mode
@@ -21,7 +22,7 @@ const router = createRouter({
     { path: '/governance', name: 'Governance', component: Governance },
     { path: '/dashboard', name: 'Dashboard', component: Dashboard },
     { path: '/stake', name: 'stake', component: Stake },
-    { path: '/transactions', name: 'transactions', component: Dashboard },
+    { path: '/transactions', name: 'transactions', component: Transactions },
   ],
 });
 

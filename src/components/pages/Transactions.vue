@@ -1,14 +1,18 @@
 <template>
-<div class="MuiBox-root css-b95f0i">
-   <div class=" css-1e6kcma">
+
+<div class="MuiBox-root css-b95f0i" style="background:#1b2030;">
+   <div class="MuiBox-root css-1e6kcma">
       <div class="MuiContainer-root MuiContainer-maxWidthLg css-ycl373">
          <div class="MuiBox-root css-nkvznt">
-            <div class="MuiBox-root css-70qvj9">
-               <div class="MuiBox-root css-1czjwln">
-                  <div class="MuiBox-root css-gr0tg3">
+            <div class="MuiBox-root css-0">
+               <div class="MuiBox-root css-70qvj9">
+                  <h3 class="MuiTypography-root MuiTypography-h3 css-e3dznl">Transaction history</h3>
+               </div>
+               <div class="MuiBox-root css-b7cbkx">
+                  <div class="MuiBox-root css-7ia8wy">
                      <div class="MuiFormControl-root MuiTextField-root css-1s2gcw8" aria-label="select market" data-cy="marketSelector">
                         <div class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MarketSwitcher__select css-1ypy5va">
-                           <div tabindex="0" role="combobox" aria-controls=":r5:" aria-expanded="false" aria-haspopup="listbox" aria-labelledby=":r4:" id=":r4:" class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-1dyf9qo">
+                           <div tabindex="0" role="combobox" aria-controls=":r49:" aria-expanded="false" aria-haspopup="listbox" aria-labelledby=":r48:" id=":r48:" class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-1dyf9qo">
                               <div class="MuiBox-root css-0">
                                  <div class="MuiBox-root css-70qvj9">
                                     <div class="MuiBox-root css-hjllk8"><img src="https://app.aave.com/icons/networks/ethereum.svg" alt="" width="100%" height="100%"></div>
@@ -37,836 +41,331 @@
                      </div>
                   </div>
                </div>
+               <div class="MuiBox-root css-15nlx8z"></div>
             </div>
-            <div class="MuiBox-root css-k7vncv">
-               <div class="MuiBox-root css-ltjh6b">
-                  <div class="MuiBox-root css-j7qwjs">
-                     <div class="MuiBox-root css-18biwo">
-                        <div class="MuiTypography-root MuiTypography-description css-1t8x1s2">Net worth</div>
-                     </div>
-                     <p class="MuiTypography-root MuiTypography-main21 MuiTypography-noWrap css-1x4zjhu"><span class="MuiTypography-root MuiTypography-secondary21 css-vj5di1">$</span>0</p>
-                  </div>
-               </div>
-               <div class="MuiBox-root css-ltjh6b">
-                  <div class="MuiBox-root css-j7qwjs">
-                     <div class="MuiBox-root css-18biwo">
-                        <div class="MuiTypography-root MuiTypography-description css-1t8x1s2">
-                           <div style="display: flex;">
-                              Net APY
-                              <div class="MuiBox-root css-70qvj9">
-                                 <div class="MuiBox-root css-ulme3a">
-                                    <button class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1osfq0k" tabindex="0" type="button">
-                                       <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-jmow5f" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
-                                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
-                                             <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                          </svg>
-                                       </svg>
-                                       <span class="MuiTouchRipple-root css-w0pj6f"></span>
-                                    </button>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                     <p class="MuiTypography-root MuiTypography-secondary21 css-1fgc1cp">—</p>
-                  </div>
-               </div>
-            </div>
+            <div class="MuiBox-root css-k7vncv"></div>
          </div>
       </div>
    </div>
-   <div class="MuiBox-root css-159pi92" style="background: #1b2030;"> 
+   <div class="MuiBox-root css-159pi92" style="background:#1b2030;">
       <div class="MuiContainer-root MuiContainer-maxWidthLg css-1a8qn2o">
-         
-         <div class="MuiBox-root css-0">
-            <div class="MuiBox-root css-1qdyvok">
-               <div class="MuiBox-root css-bf0ye5">
-                  <div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-133srx4">
-                     <div class="MuiBox-root css-19zr2gl">
-                        <div class="MuiBox-root css-iwds49">
-                           <div class="MuiTypography-root MuiTypography-h3 css-upncnh">Your supplies</div>
-                        </div>
-                     </div>
-                     <div class="MuiBox-root css-1dm56o2"></div>
-                     <div class="MuiBox-root css-13o7eu2">
-                           <div class="MuiBox-root css-1wsmwia">
-                              <div class="MuiBox-root css-15czs8k">
-                                 <div class="MuiTypography-root MuiTypography-subheader2 MuiTypography-noWrap css-18phtf6">
-                                    Assets
-                                    <div class="MuiBox-root css-14dkifd"><span class="MuiBox-root css-1hf8ilx"></span><span class="MuiBox-root css-1ojixww"></span></div>
-                                 </div>
-                              </div>
-                              <div class="MuiBox-root css-11udp8r">
-                                 <div class="MuiTypography-root MuiTypography-subheader2 MuiTypography-noWrap css-18phtf6">
-                                    Balance
-                                    <div class="MuiBox-root css-14dkifd"><span class="MuiBox-root css-1hf8ilx"></span><span class="MuiBox-root css-1ojixww"></span></div>
-                                 </div>
-                              </div>
-                              <div class="MuiBox-root css-11udp8r">
-                                 <div class="MuiTypography-root MuiTypography-subheader2 MuiTypography-noWrap css-18phtf6">
-                                    APY
-                                    <div class="MuiBox-root css-14dkifd"><span class="MuiBox-root css-1hf8ilx"></span><span class="MuiBox-root css-1ojixww"></span></div>
-                                 </div>
-                              </div>
-                              <div class="MuiBox-root css-11udp8r">
-                                 <div class="MuiTypography-root MuiTypography-subheader2 MuiTypography-noWrap css-18phtf6">
-                                    Collateral
-                                    <div class="MuiBox-root css-14dkifd"><span class="MuiBox-root css-1hf8ilx"></span><span class="MuiBox-root css-1ojixww"></span></div>
-                                 </div>
-                              </div>
-                              <div class="MuiBox-root css-1xwkwbj"></div>
-                           </div>
-                           <div class="MuiBox-root css-1qm0evb" data-cy="dashboardSupplyListItem_1INCH">
-                              <div class="MuiBox-root css-15czs8k">
-                                 <a class="MuiTypography-root MuiTypography-description MuiTypography-noWrap MuiLink-root MuiLink-underlineNone css-17910yg" href="/reserve-overview/?underlyingAsset=0x111111111117dc0aa78b770fa6a738034120c302&amp;marketName=proto_mainnet_v3">
-                                    <span class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeLarge css-1ux336h" aria-hidden="true"><img src="https://app.aave.com/icons/tokens/1inch.svg" width="100%" height="100%" alt="1INCH icon"></span>
-                                    <p class="MuiTypography-root MuiTypography-subheader1 MuiTypography-noWrap css-mgqwsh" data-cy="assetName" aria-label="1inch Network (1INCH)">1INCH</p>
-                                 </a>
-                              </div>
-                              <div class="MuiBox-root css-11udp8r">
-                                 <div class="MuiBox-root css-u6v8er">
-                                    <div class="MuiBox-root css-70qvj9">
-                                       <p class="MuiTypography-root MuiTypography-secondary14 MuiTypography-noWrap css-1r4ptf4" data-cy="nativeAmount">0</p>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="MuiBox-root css-11udp8r">
-                                 <div class="MuiBox-root css-1241y0n">
-                                    <div class="MuiBox-root css-19el3v">
-                                       <div class="MuiBox-root css-k008qs">
-                                          <p class="MuiTypography-root MuiTypography-secondary14 MuiTypography-noWrap css-uefm4v" data-cy="apy">0.57<span class="MuiTypography-root MuiTypography-secondary14 css-d8aql2">%</span></p>
-                                       </div>
-                                       <div class="MuiBox-root css-1yxnkj0"></div>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="MuiBox-root css-11udp8r">
-                                 <div class="MuiBox-root css-gmuwbf">
-                                    <div class="MuiBox-root css-1rzcn8q">
-                                       <div class="MuiBox-root css-5wpzg3">
-                                          <div class="MuiBox-root css-1do422x">
-                                             <p class="MuiTypography-root MuiTypography-secondary12 css-1yhzaxq">Isolated</p>
-                                             <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-nqvctb" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
-                                                   <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                                </svg>
-                                             </svg>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="MuiBox-root css-1xwkwbj"><button class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation css-moyn3y" tabindex="-1" type="button" >Supply</button><button class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation css-uhikff" tabindex="0" type="button" id="supply-extra-button" aria-haspopup="true">...<span class="MuiTouchRipple-root css-w0pj6f"></span></button></div>
-                           </div>
-                           
-                     </div>
-                  </div>
-                  <div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-7l9tvd">
-                     <div class="MuiBox-root css-19zr2gl">
-                        <div class="MuiBox-root css-iwds49">
-                           <div class="MuiTypography-root MuiTypography-h3 css-upncnh">Assets to supply</div>
-                        </div>
-                        <div class="MuiBox-root css-l9ry6i">
-                           <p class="MuiTypography-root MuiTypography-buttonM css-1p541t6">Hide</p>
-                           <span></span>
-                        </div>
-                     </div>
-                     <div class="MuiBox-root css-35dwn7">
-                        <div class="MuiBox-root css-t0051x">
-                           <div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAlert-root MuiAlert-colorInfo MuiAlert-standardInfo MuiAlert-standard css-1lh2l3q" role="alert">
-                              <div class="MuiAlert-icon css-1l54tgj">
-                                 <svg class="MuiSvgIcon-root MuiSvgIcon-colorInfo MuiSvgIcon-fontSizeMedium css-115dves" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
-                                       <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                    </svg>
+         <div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-133srx4">
+            <div class="MuiBox-root css-19zr2gl">
+               <div class="MuiBox-root css-iwds49">
+                  <div class="MuiTypography-root MuiTypography-h2 css-1m26qky">Transactions</div>
+               </div>
+            </div>
+            <div class="MuiBox-root css-13o7eu2">
+               <div class="MuiBox-root css-2tja52">
+                  <div class="MuiBox-root css-vxcmzt">
+                     <div class="MuiBox-root css-0">
+                        <button class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-disableElevation css-pmwx2x" tabindex="0" type="button">
+                           <div class="MuiBox-root css-1mervjy">
+                              <svg class="MuiSvgIcon-root MuiSvgIcon-colorPrimary MuiSvgIcon-fontSizeMedium css-114k0zz" focusable="false" aria-hidden="true" viewBox="0 0 24 24" height="9" width="9">
+                                 <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-10dohqv" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="SortIcon">
+                                    <path d="M3 18h6v-2H3zM3 6v2h18V6zm0 7h12v-2H3z"></path>
                                  </svg>
-                              </div>
-                              <div class="MuiAlert-message css-1xsto0d">Your Ethereum wallet is empty. Purchase or transfer assets.</div>
+                              </svg>
+                              <p class="MuiTypography-root MuiTypography-subheader1 css-qy04vp">All transactions</p>
                            </div>
+                           <span class="MuiTouchRipple-root css-w0pj6f"></span>
+                        </button>
+                     </div>
+                     <div class="MuiBox-root css-c6rw7y">
+                        <div class="MuiBox-root css-14aub4a">
+                           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" height="16">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                           </svg>
                         </div>
+                        <div class="MuiInputBase-root MuiInputBase-colorPrimary css-bhhpxe"><input placeholder="Search assets..." type="text" class="MuiInputBase-input css-8crlfm" value=""></div>
+                        <button class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1iwk9i3" tabindex="0" type="button">
+                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" height="16">
+                              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path>
+                           </svg>
+                           <span class="MuiTouchRipple-root css-w0pj6f"></span>
+                        </button>
                      </div>
-                     <div class="MuiBox-root css-13o7eu2">
-                           <div class="MuiBox-root css-1wsmwia">
-                              <div class="MuiBox-root css-15czs8k">
-                                 <div class="MuiTypography-root MuiTypography-subheader2 MuiTypography-noWrap css-18phtf6">
-                                    Assets
-                                    <div class="MuiBox-root css-14dkifd"><span class="MuiBox-root css-1hf8ilx"></span><span class="MuiBox-root css-1ojixww"></span></div>
-                                 </div>
-                              </div>
-                              <div class="MuiBox-root css-11udp8r">
-                                 <div class="MuiTypography-root MuiTypography-subheader2 MuiTypography-noWrap css-18phtf6">
-                                    Wallet balance
-                                    <div class="MuiBox-root css-14dkifd"><span class="MuiBox-root css-1hf8ilx"></span><span class="MuiBox-root css-1ojixww"></span></div>
-                                 </div>
-                              </div>
-                              <div class="MuiBox-root css-11udp8r">
-                                 <div class="MuiTypography-root MuiTypography-subheader2 MuiTypography-noWrap css-18phtf6">
-                                    APY
-                                    <div class="MuiBox-root css-14dkifd"><span class="MuiBox-root css-1hf8ilx"></span><span class="MuiBox-root css-1ojixww"></span></div>
-                                 </div>
-                              </div>
-                              <div class="MuiBox-root css-11udp8r">
-                                 <div class="MuiTypography-root MuiTypography-subheader2 MuiTypography-noWrap css-18phtf6">
-                                    Can be collateral
-                                    <div class="MuiBox-root css-14dkifd"><span class="MuiBox-root css-1hf8ilx"></span><span class="MuiBox-root css-1ojixww"></span></div>
-                                 </div>
-                              </div>
-                              <div class="MuiBox-root css-1xwkwbj"></div>
-                           </div>
-                           <div class="MuiBox-root css-1qm0evb" data-cy="dashboardSupplyListItem_1INCH">
-                              <div class="MuiBox-root css-15czs8k">
-                                 <a class="MuiTypography-root MuiTypography-description MuiTypography-noWrap MuiLink-root MuiLink-underlineNone css-17910yg" href="/reserve-overview/?underlyingAsset=0x111111111117dc0aa78b770fa6a738034120c302&amp;marketName=proto_mainnet_v3">
-                                    <span class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeLarge css-1ux336h" aria-hidden="true"><img src="https://app.aave.com/icons/tokens/1inch.svg" width="100%" height="100%" alt="1INCH icon"></span>
-                                    <p class="MuiTypography-root MuiTypography-subheader1 MuiTypography-noWrap css-mgqwsh" data-cy="assetName" aria-label="1inch Network (1INCH)">1INCH</p>
-                                 </a>
-                              </div>
-                              <div class="MuiBox-root css-11udp8r">
-                                 <div class="MuiBox-root css-u6v8er">
-                                    <div class="MuiBox-root css-70qvj9">
-                                       <p class="MuiTypography-root MuiTypography-secondary14 MuiTypography-noWrap css-1r4ptf4" data-cy="nativeAmount">0</p>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="MuiBox-root css-11udp8r">
-                                 <div class="MuiBox-root css-1241y0n">
-                                    <div class="MuiBox-root css-19el3v">
-                                       <div class="MuiBox-root css-k008qs">
-                                          <p class="MuiTypography-root MuiTypography-secondary14 MuiTypography-noWrap css-uefm4v" data-cy="apy">0.57<span class="MuiTypography-root MuiTypography-secondary14 css-d8aql2">%</span></p>
-                                       </div>
-                                       <div class="MuiBox-root css-1yxnkj0"></div>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="MuiBox-root css-11udp8r">
-                                 <div class="MuiBox-root css-gmuwbf">
-                                    <div class="MuiBox-root css-1rzcn8q">
-                                       <div class="MuiBox-root css-5wpzg3">
-                                          <div class="MuiBox-root css-1do422x">
-                                             <p class="MuiTypography-root MuiTypography-secondary12 css-1yhzaxq">Isolated</p>
-                                             <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-nqvctb" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
-                                                   <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                                </svg>
-                                             </svg>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="MuiBox-root css-1xwkwbj"><button class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation css-moyn3y" tabindex="-1" type="button" >Supply</button><button class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation css-uhikff" tabindex="0" type="button" id="supply-extra-button" aria-haspopup="true">...<span class="MuiTouchRipple-root css-w0pj6f"></span></button></div>
-                           </div>
-                           <div class="MuiBox-root css-1qm0evb" data-cy="dashboardSupplyListItem_FRAX">
-                              <div class="MuiBox-root css-15czs8k">
-                                 <a class="MuiTypography-root MuiTypography-description MuiTypography-noWrap MuiLink-root MuiLink-underlineNone css-17910yg" href="/reserve-overview/?underlyingAsset=0x853d955acef822db058eb8505911ed77f175b99e&amp;marketName=proto_mainnet_v3">
-                                    <span class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeLarge css-1ux336h" aria-hidden="true"><img src="https://app.aave.com/icons/tokens/frax.svg" width="100%" height="100%" alt="FRAX icon"></span>
-                                    <p class="MuiTypography-root MuiTypography-subheader1 MuiTypography-noWrap css-mgqwsh" data-cy="assetName" aria-label="Frax (FRAX)">FRAX</p>
-                                 </a>
-                              </div>
-                              <div class="MuiBox-root css-11udp8r">
-                                 <div class="MuiBox-root css-u6v8er">
-                                    <div class="MuiBox-root css-70qvj9">
-                                       <p class="MuiTypography-root MuiTypography-secondary14 MuiTypography-noWrap css-1r4ptf4" data-cy="nativeAmount">0</p>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="MuiBox-root css-11udp8r">
-                                 <div class="MuiBox-root css-1241y0n">
-                                    <div class="MuiBox-root css-19el3v">
-                                       <div class="MuiBox-root css-k008qs">
-                                          <p class="MuiTypography-root MuiTypography-secondary14 MuiTypography-noWrap css-uefm4v" data-cy="apy">4.98<span class="MuiTypography-root MuiTypography-secondary14 css-d8aql2">%</span></p>
-                                       </div>
-                                       <div class="MuiBox-root css-1yxnkj0"></div>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="MuiBox-root css-11udp8r">
-                                 <div class="MuiBox-root css-gmuwbf">
-                                    <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-hqkm93" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
-                                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
-                                          <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
-                                       </svg>
-                                    </svg>
-                                 </div>
-                              </div>
-                              <div class="MuiBox-root css-1xwkwbj"><button class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation css-moyn3y" tabindex="-1" type="button" >Supply</button><button class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation css-uhikff" tabindex="0" type="button" id="supply-extra-button" aria-haspopup="true">...<span class="MuiTouchRipple-root css-w0pj6f"></span></button></div>
-                           </div>
-                           <div class="MuiBox-root css-1qm0evb" data-cy="dashboardSupplyListItem_SNX">
-                              <div class="MuiBox-root css-15czs8k">
-                                 <a class="MuiTypography-root MuiTypography-description MuiTypography-noWrap MuiLink-root MuiLink-underlineNone css-17910yg" href="/reserve-overview/?underlyingAsset=0xc011a73ee8576fb46f5e1c5751ca3b9fe0af2a6f&amp;marketName=proto_mainnet_v3">
-                                    <span class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeLarge css-1ux336h" aria-hidden="true"><img src="https://app.aave.com/icons/tokens/snx.svg" width="100%" height="100%" alt="SNX icon"></span>
-                                    <p class="MuiTypography-root MuiTypography-subheader1 MuiTypography-noWrap css-mgqwsh" data-cy="assetName" aria-label="Synthetix Network Token (SNX)">SNX</p>
-                                 </a>
-                              </div>
-                              <div class="MuiBox-root css-11udp8r">
-                                 <div class="MuiBox-root css-u6v8er">
-                                    <div class="MuiBox-root css-70qvj9">
-                                       <p class="MuiTypography-root MuiTypography-secondary14 MuiTypography-noWrap css-1r4ptf4" data-cy="nativeAmount">0</p>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="MuiBox-root css-11udp8r">
-                                 <div class="MuiBox-root css-1241y0n">
-                                    <div class="MuiBox-root css-19el3v">
-                                       <div class="MuiBox-root css-k008qs">
-                                          <p class="MuiTypography-root MuiTypography-secondary14 MuiTypography-noWrap css-uefm4v" data-cy="apy">0.87<span class="MuiTypography-root MuiTypography-secondary14 css-d8aql2">%</span></p>
-                                       </div>
-                                       <div class="MuiBox-root css-1yxnkj0"></div>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="MuiBox-root css-11udp8r">
-                                 <div class="MuiBox-root css-gmuwbf">
-                                    <div class="MuiBox-root css-1rzcn8q">
-                                       <div class="MuiBox-root css-5wpzg3">
-                                          <div class="MuiBox-root css-1do422x">
-                                             <p class="MuiTypography-root MuiTypography-secondary12 css-1yhzaxq">Isolated</p>
-                                             <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-nqvctb" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
-                                                   <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                                </svg>
-                                             </svg>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="MuiBox-root css-1xwkwbj"><button class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation css-moyn3y" tabindex="-1" type="button" >Supply</button><button class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation css-uhikff" tabindex="0" type="button" id="supply-extra-button" aria-haspopup="true">...<span class="MuiTouchRipple-root css-w0pj6f"></span></button></div>
-                           </div>
-                           <div class="MuiBox-root css-1qm0evb" data-cy="dashboardSupplyListItem_CRVUSD">
-                              <div class="MuiBox-root css-15czs8k">
-                                 <a class="MuiTypography-root MuiTypography-description MuiTypography-noWrap MuiLink-root MuiLink-underlineNone css-17910yg" href="/reserve-overview/?underlyingAsset=0xf939e0a03fb07f59a73314e73794be0e57ac1b4e&amp;marketName=proto_mainnet_v3">
-                                    <span class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeLarge css-1ux336h" aria-hidden="true"><img src="https://app.aave.com/icons/tokens/crvusd.svg" width="100%" height="100%" alt="CRVUSD icon"></span>
-                                    <p class="MuiTypography-root MuiTypography-subheader1 MuiTypography-noWrap css-mgqwsh" data-cy="assetName" aria-label="Curve.Fi USD Stablecoin (crvUSD)">crvUSD</p>
-                                 </a>
-                              </div>
-                              <div class="MuiBox-root css-11udp8r">
-                                 <div class="MuiBox-root css-u6v8er">
-                                    <div class="MuiBox-root css-70qvj9">
-                                       <p class="MuiTypography-root MuiTypography-secondary14 MuiTypography-noWrap css-1r4ptf4" data-cy="nativeAmount">0</p>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="MuiBox-root css-11udp8r">
-                                 <div class="MuiBox-root css-1241y0n">
-                                    <div class="MuiBox-root css-19el3v">
-                                       <div class="MuiBox-root css-k008qs">
-                                          <p class="MuiTypography-root MuiTypography-secondary14 MuiTypography-noWrap css-uefm4v" data-cy="apy">3.75<span class="MuiTypography-root MuiTypography-secondary14 css-d8aql2">%</span></p>
-                                       </div>
-                                       <div class="MuiBox-root css-1yxnkj0"></div>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="MuiBox-root css-11udp8r">
-                                 <div class="MuiBox-root css-gmuwbf">
-                                    <p class="MuiTypography-root MuiTypography-main14 css-zj82os">—</p>
-                                 </div>
-                              </div>
-                              <div class="MuiBox-root css-1xwkwbj"><button class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation css-moyn3y" tabindex="-1" type="button" >Supply</button><button class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation css-uhikff" tabindex="0" type="button" id="supply-extra-button" aria-haspopup="true">...<span class="MuiTouchRipple-root css-w0pj6f"></span></button></div>
-                           </div>
-                           <div class="MuiBox-root css-1qm0evb" data-cy="dashboardSupplyListItem_LDO">
-                              <div class="MuiBox-root css-15czs8k">
-                                 <a class="MuiTypography-root MuiTypography-description MuiTypography-noWrap MuiLink-root MuiLink-underlineNone css-17910yg" href="/reserve-overview/?underlyingAsset=0x5a98fcbea516cf06857215779fd812ca3bef1b32&amp;marketName=proto_mainnet_v3">
-                                    <span class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeLarge css-1ux336h" aria-hidden="true"><img src="https://app.aave.com/icons/tokens/ldo.svg" width="100%" height="100%" alt="LDO icon"></span>
-                                    <p class="MuiTypography-root MuiTypography-subheader1 MuiTypography-noWrap css-mgqwsh" data-cy="assetName" aria-label="Lido DAO Token (LDO)">LDO</p>
-                                 </a>
-                              </div>
-                              <div class="MuiBox-root css-11udp8r">
-                                 <div class="MuiBox-root css-u6v8er">
-                                    <div class="MuiBox-root css-70qvj9">
-                                       <p class="MuiTypography-root MuiTypography-secondary14 MuiTypography-noWrap css-1r4ptf4" data-cy="nativeAmount">0</p>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="MuiBox-root css-11udp8r">
-                                 <div class="MuiBox-root css-1241y0n">
-                                    <div class="MuiBox-root css-19el3v">
-                                       <div class="MuiBox-root css-k008qs">
-                                          <p class="MuiTypography-root MuiTypography-secondary14 MuiTypography-noWrap css-uefm4v" data-cy="apy"><span class="MuiTypography-root MuiTypography-secondary14 css-1th707o">&lt;</span>0.01<span class="MuiTypography-root MuiTypography-secondary14 css-d8aql2">%</span></p>
-                                       </div>
-                                       <div class="MuiBox-root css-1yxnkj0"></div>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="MuiBox-root css-11udp8r">
-                                 <div class="MuiBox-root css-gmuwbf">
-                                    <div class="MuiBox-root css-1rzcn8q">
-                                       <div class="MuiBox-root css-5wpzg3">
-                                          <div class="MuiBox-root css-1do422x">
-                                             <p class="MuiTypography-root MuiTypography-secondary12 css-1yhzaxq">Isolated</p>
-                                             <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-nqvctb" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
-                                                   <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                                </svg>
-                                             </svg>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="MuiBox-root css-1xwkwbj"><button class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation css-moyn3y" tabindex="-1" type="button" >Supply</button><button class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation css-uhikff" tabindex="0" type="button" id="supply-extra-button" aria-haspopup="true">...<span class="MuiTouchRipple-root css-w0pj6f"></span></button></div>
-                           </div>
-                           <div class="MuiBox-root css-1qm0evb" data-cy="dashboardSupplyListItem_RPL">
-                              <div class="MuiBox-root css-15czs8k">
-                                 <a class="MuiTypography-root MuiTypography-description MuiTypography-noWrap MuiLink-root MuiLink-underlineNone css-17910yg" href="/reserve-overview/?underlyingAsset=0xd33526068d116ce69f19a9ee46f0bd304f21a51f&amp;marketName=proto_mainnet_v3">
-                                    <span class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeLarge css-1ux336h" aria-hidden="true"><img src="https://app.aave.com/icons/tokens/rpl.svg" width="100%" height="100%" alt="RPL icon"></span>
-                                    <p class="MuiTypography-root MuiTypography-subheader1 MuiTypography-noWrap css-mgqwsh" data-cy="assetName" aria-label="Rocket Pool Protocol (RPL)">RPL</p>
-                                 </a>
-                              </div>
-                              <div class="MuiBox-root css-11udp8r">
-                                 <div class="MuiBox-root css-u6v8er">
-                                    <div class="MuiBox-root css-70qvj9">
-                                       <p class="MuiTypography-root MuiTypography-secondary14 MuiTypography-noWrap css-1r4ptf4" data-cy="nativeAmount">0</p>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="MuiBox-root css-11udp8r">
-                                 <div class="MuiBox-root css-1241y0n">
-                                    <div class="MuiBox-root css-19el3v">
-                                       <div class="MuiBox-root css-k008qs">
-                                          <p class="MuiTypography-root MuiTypography-secondary14 MuiTypography-noWrap css-uefm4v" data-cy="apy">1.24<span class="MuiTypography-root MuiTypography-secondary14 css-d8aql2">%</span></p>
-                                       </div>
-                                       <div class="MuiBox-root css-1yxnkj0"></div>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="MuiBox-root css-11udp8r">
-                                 <div class="MuiBox-root css-gmuwbf">
-                                    <p class="MuiTypography-root MuiTypography-main14 css-zj82os">—</p>
-                                 </div>
-                              </div>
-                              <div class="MuiBox-root css-1xwkwbj"><button class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation css-moyn3y" tabindex="-1" type="button" >Supply</button><button class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation css-uhikff" tabindex="0" type="button" id="supply-extra-button" aria-haspopup="true">...<span class="MuiTouchRipple-root css-w0pj6f"></span></button></div>
-                           </div>
-                           <div class="MuiBox-root css-1qm0evb" data-cy="dashboardSupplyListItem_LUSD">
-                              <div class="MuiBox-root css-15czs8k">
-                                 <a class="MuiTypography-root MuiTypography-description MuiTypography-noWrap MuiLink-root MuiLink-underlineNone css-17910yg" href="/reserve-overview/?underlyingAsset=0x5f98805a4e8be255a32880fdec7f6728c6568ba0&amp;marketName=proto_mainnet_v3">
-                                    <span class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeLarge css-1ux336h" aria-hidden="true"><img src="https://app.aave.com/icons/tokens/lusd.svg" width="100%" height="100%" alt="LUSD icon"></span>
-                                    <p class="MuiTypography-root MuiTypography-subheader1 MuiTypography-noWrap css-mgqwsh" data-cy="assetName" aria-label="LUSD Stablecoin (LUSD)">LUSD</p>
-                                 </a>
-                              </div>
-                              <div class="MuiBox-root css-11udp8r">
-                                 <div class="MuiBox-root css-u6v8er">
-                                    <div class="MuiBox-root css-70qvj9">
-                                       <p class="MuiTypography-root MuiTypography-secondary14 MuiTypography-noWrap css-1r4ptf4" data-cy="nativeAmount">0</p>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="MuiBox-root css-11udp8r">
-                                 <div class="MuiBox-root css-1241y0n">
-                                    <div class="MuiBox-root css-19el3v">
-                                       <div class="MuiBox-root css-k008qs">
-                                          <p class="MuiTypography-root MuiTypography-secondary14 MuiTypography-noWrap css-uefm4v" data-cy="apy">3.49<span class="MuiTypography-root MuiTypography-secondary14 css-d8aql2">%</span></p>
-                                       </div>
-                                       <div class="MuiBox-root css-1yxnkj0"></div>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="MuiBox-root css-11udp8r">
-                                 <div class="MuiBox-root css-gmuwbf">
-                                    <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-hqkm93" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
-                                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
-                                          <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
-                                       </svg>
-                                    </svg>
-                                 </div>
-                              </div>
-                              <div class="MuiBox-root css-1xwkwbj"><button class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation css-moyn3y" tabindex="-1" type="button" >Supply</button><button class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation css-uhikff" tabindex="0" type="button" id="supply-extra-button" aria-haspopup="true">...<span class="MuiTouchRipple-root css-w0pj6f"></span></button></div>
-                           </div>
-                           <div class="MuiBox-root css-1qm0evb" data-cy="dashboardSupplyListItem_SDAI">
-                              <div class="MuiBox-root css-15czs8k">
-                                 <a class="MuiTypography-root MuiTypography-description MuiTypography-noWrap MuiLink-root MuiLink-underlineNone css-17910yg" href="/reserve-overview/?underlyingAsset=0x83f20f44975d03b1b09e64809b757c47f942beea&amp;marketName=proto_mainnet_v3">
-                                    <span class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeLarge css-1ux336h" aria-hidden="true"><img src="https://app.aave.com/icons/tokens/sdai.svg" width="100%" height="100%" alt="SDAI icon"></span>
-                                    <p class="MuiTypography-root MuiTypography-subheader1 MuiTypography-noWrap css-mgqwsh" data-cy="assetName" aria-label="Savings Dai (sDAI)">sDAI</p>
-                                 </a>
-                              </div>
-                              <div class="MuiBox-root css-11udp8r">
-                                 <div class="MuiBox-root css-u6v8er">
-                                    <div class="MuiBox-root css-70qvj9">
-                                       <p class="MuiTypography-root MuiTypography-secondary14 MuiTypography-noWrap css-1r4ptf4" data-cy="nativeAmount">0</p>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="MuiBox-root css-11udp8r">
-                                 <div class="MuiBox-root css-1241y0n">
-                                    <div class="MuiBox-root css-19el3v">
-                                       <div class="MuiBox-root css-k008qs">
-                                          <p class="MuiTypography-root MuiTypography-secondary14 MuiTypography-noWrap css-uefm4v" data-cy="apy">0<span class="MuiTypography-root MuiTypography-secondary14 css-d8aql2">%</span></p>
-                                       </div>
-                                       <div class="MuiBox-root css-1yxnkj0"></div>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="MuiBox-root css-11udp8r">
-                                 <div class="MuiBox-root css-gmuwbf">
-                                    <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-hqkm93" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
-                                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
-                                          <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
-                                       </svg>
-                                    </svg>
-                                 </div>
-                              </div>
-                              <div class="MuiBox-root css-1xwkwbj"><button class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation css-moyn3y" tabindex="-1" type="button" >Supply</button><button class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation css-uhikff" tabindex="0" type="button" id="supply-extra-button" aria-haspopup="true">...<span class="MuiTouchRipple-root css-w0pj6f"></span></button></div>
-                           </div>
+                  </div>
+                  <div class="MuiBox-root css-12jejuo">
+                     <div class="MuiBox-root css-gdm2id">
+                        <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-10dohqv" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
+                           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" width="22" height="22">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                           </svg>
+                        </svg>
+                        <p class="MuiTypography-root MuiTypography-buttonM css-1nghpm7">.CSV</p>
                      </div>
-
+                     <div class="MuiBox-root css-1xur86b">
+                        <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-10dohqv" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
+                           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" width="22" height="22">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                           </svg>
+                        </svg>
+                        <p class="MuiTypography-root MuiTypography-buttonM css-1nghpm7">.JSON</p>
+                     </div>
                   </div>
                </div>
-
-               <div class="MuiBox-root css-1wbia9h">
-               <div class="MuiBox-root css-mddclq">
-                  <a class="MuiButtonBase-root MuiButton-root MuiButton-surface MuiButton-surfacePrimary MuiButton-sizeSmall MuiButton-surfaceSizeSmall MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-surface MuiButton-surfacePrimary MuiButton-sizeSmall MuiButton-surfaceSizeSmall MuiButton-colorPrimary MuiButton-disableElevation css-kw8qku" tabindex="0" role="button">View Transactions<span class="MuiTouchRipple-root css-w0pj6f"></span></a></div>
-                     
-                    <div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-133srx4">
-                        <div class="MuiBox-root css-19zr2gl">
-                           <div class="MuiBox-root css-iwds49">
-                              <div class="MuiTypography-root MuiTypography-h3 css-upncnh">Your borrows</div>
-                              <div class="MuiBox-root css-18biwo">
-                                 <p class="MuiTypography-root MuiTypography-description css-ykfiyn">E-Mode</p>
-                                 <button class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeSmall MuiButton-outlinedSizeSmall MuiButton-colorPrimary MuiButton-disableElevation css-1tyyx5" tabindex="0" type="button" data-cy="emode-open">
-                                    <div class="MuiBox-root css-k6v5ma">
-                                       <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1vxbxc4" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
-                                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                             <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"></path>
-                                          </svg>
-                                       </svg>
-                                       <p class="MuiTypography-root MuiTypography-buttonS css-5bxqbt">Disabled</p>
-                                       <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1mwg2jh" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
-                                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                                             <path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"></path>
-                                          </svg>
-                                       </svg>
-                                    </div>
-                                    <span class="MuiTouchRipple-root css-w0pj6f"></span>
-                                 </button>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="MuiBox-root css-1dm56o2"></div>
-                        <div class="MuiBox-root css-13o7eu2">
-                           <div class="MuiBox-root css-1xifpgy">
-                              <div class="MuiBox-root css-13o7eu2">
-                           <div class="MuiBox-root css-1wsmwia">
+               <div class="MuiBox-root css-iotmz5">
+                    <div class="MuiBox-root css-1wsmwia">
                               <div class="MuiBox-root css-15czs8k">
-                                 <div class="MuiTypography-root MuiTypography-subheader2 MuiTypography-noWrap css-18phtf6">
-                                    Assets
-                                    <div class="MuiBox-root css-14dkifd"><span class="MuiBox-root css-1hf8ilx"></span><span class="MuiBox-root css-1ojixww"></span></div>
-                                 </div>
+                                 <div class="MuiTypography-root MuiTypography-header2 MuiTypography-noWrap css-18phtf6">
+                                    31 May 2024
+                                </div>
                               </div>
-                              <div class="MuiBox-root css-11udp8r">
-                                 <div class="MuiTypography-root MuiTypography-subheader2 MuiTypography-noWrap css-18phtf6">
-                                    Debt
-                                    <div class="MuiBox-root css-14dkifd"><span class="MuiBox-root css-1hf8ilx"></span><span class="MuiBox-root css-1ojixww"></span></div>
-                                 </div>
-                              </div>
-                              <div class="MuiBox-root css-11udp8r">
-                                 <div class="MuiTypography-root MuiTypography-subheader2 MuiTypography-noWrap css-18phtf6">
-                                    APY
-                                    <div class="MuiBox-root css-14dkifd"><span class="MuiBox-root css-1hf8ilx"></span><span class="MuiBox-root css-1ojixww"></span></div>
-                                 </div>
-                              </div>
-                               
+                            
                               <div class="MuiBox-root css-1xwkwbj"></div>
-                           </div>
-                           <div class="MuiBox-root css-1qm0evb" data-cy="dashboardSupplyListItem_1INCH">
-                              <div class="MuiBox-root css-15czs8k">
-                                 <a class="MuiTypography-root MuiTypography-description MuiTypography-noWrap MuiLink-root MuiLink-underlineNone css-17910yg" href="/reserve-overview/?underlyingAsset=0x111111111117dc0aa78b770fa6a738034120c302&amp;marketName=proto_mainnet_v3">
-                                    <span class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeLarge css-1ux336h" aria-hidden="true"><img src="https://app.aave.com/icons/tokens/1inch.svg" width="100%" height="100%" alt="1INCH icon"></span>
-                                    <p class="MuiTypography-root MuiTypography-subheader1 MuiTypography-noWrap css-mgqwsh" data-cy="assetName" aria-label="1inch Network (1INCH)">1INCH</p>
-                                 </a>
-                              </div>
-                              <div class="MuiBox-root css-11udp8r">
-                                 <div class="MuiBox-root css-u6v8er">
-                                    <div class="MuiBox-root css-70qvj9">
-                                       <p class="MuiTypography-root MuiTypography-secondary14 MuiTypography-noWrap css-1r4ptf4" data-cy="nativeAmount">10%</p>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="MuiBox-root css-11udp8r">
-                                 <div class="MuiBox-root css-1241y0n">
-                                    <div class="MuiBox-root css-19el3v">
-                                       <div class="MuiBox-root css-k008qs">
-                                          <p class="MuiTypography-root MuiTypography-secondary14 MuiTypography-noWrap css-uefm4v" data-cy="apy">0.57<span class="MuiTypography-root MuiTypography-secondary14 css-d8aql2">%</span></p>
-                                       </div>
-                                       <div class="MuiBox-root css-1yxnkj0"></div>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="MuiBox-root css-11udp8r">
-                                 <div class="MuiBox-root css-gmuwbf">
-                                    <div class="MuiBox-root css-1rzcn8q">
-                                       <div class="MuiBox-root css-5wpzg3">
-                                          <div class="MuiBox-root css-1do422x">
-                                             <p class="MuiTypography-root MuiTypography-secondary12 css-1yhzaxq">Isolated</p>
-                                             <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-nqvctb" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
-                                                   <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                                </svg>
-                                             </svg>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="MuiBox-root css-1xwkwbj"><button class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation css-moyn3y" tabindex="-1" type="button" >Supply</button><button class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation css-uhikff" tabindex="0" type="button" id="supply-extra-button" aria-haspopup="true">...<span class="MuiTouchRipple-root css-w0pj6f"></span></button></div>
-                           </div>
-                           
-                     </div>
-                           </div>
+                    </div>
+                    <div class="MuiBox-root css-1qm0evb" data-cy="dashboardSupplyListItem_1INCH">
+                      
+                    <div class="MuiBox-root css-11udp8r">
+                        <p class="MuiTypography-root MuiTypography-main16 MuiTypography-noWrap css-1ogi1pb" style="font-weight:600;">Repay</p>
+                        <div class="MuiBox-root css-1xwiwhj">
+                            <p class="MuiTypography-root MuiTypography-secondary12 MuiTypography-noWrap css-cyw6g5" >
+                            7:16am 
+                            </p>
                         </div>
-                     </div>
-                     <div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-7l9tvd">
-                           <div class="MuiBox-root css-19zr2gl">
-                              <div class="MuiBox-root css-iwds49">
-                                 <div class="MuiTypography-root MuiTypography-h3 css-upncnh">Assets to borrow</div>
-                              </div>
-                              <div class="MuiBox-root css-l9ry6i">
-                                 <p class="MuiTypography-root MuiTypography-buttonM css-1p541t6">Hide</p>
-                                 <span></span>
-                              </div>
-                           </div>
-                           <div class="MuiBox-root css-35dwn7">
-                              <div class="MuiBox-root css-186lrzm">
-                                 <div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAlert-root MuiAlert-colorInfo MuiAlert-standardInfo MuiAlert-standard css-1lh2l3q" role="alert">
-                                    <div class="MuiAlert-icon css-1l54tgj">
-                                       <svg class="MuiSvgIcon-root MuiSvgIcon-colorInfo MuiSvgIcon-fontSizeMedium css-115dves" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
-                                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
-                                             <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                          </svg>
-                                       </svg>
-                                    </div>
-                                    <div class="MuiAlert-message css-1xsto0d">To borrow you need to supply any asset to be used as collateral.</div>
-                                 </div>
-                              </div>
-                              <div class="MuiBox-root css-u35d3s" data-cy="dashboardBorrowListItem_GHO">
-                                 <div class="MuiBox-root css-15czs8k">
-                                    <a class="MuiTypography-root MuiTypography-description MuiTypography-noWrap MuiLink-root MuiLink-underlineNone css-17910yg" href="/reserve-overview/?underlyingAsset=0x40d16fc0246ad3160ccc09b8d0d3a2cd28ae6c2f&amp;marketName=proto_mainnet_v3">
-                                       <span class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeLarge css-1ux336h" aria-hidden="true"><img src="https://app.aave.com/icons/tokens/gho.svg" width="100%" height="100%" alt="GHO icon"></span>
-                                       <p class="MuiTypography-root MuiTypography-subheader1 MuiTypography-noWrap css-mgqwsh" data-cy="assetName" aria-label="Gho Token (GHO)">GHO</p>
-                                    </a>
-                                 </div>
-                                 <div class="MuiBox-root css-11udp8r">
-                                    <div class="MuiBox-root css-j7qwjs">
-                                       <div class="MuiBox-root css-70qvj9">
-                                          <p class="MuiTypography-root MuiTypography-subheader2 css-15z4zan">Available</p>
-                                          <div class="MuiBox-root css-ulme3a">
-                                             <button class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1osfq0k" tabindex="0" type="button">
-                                                <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-jmow5f" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
-                                                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
-                                                      <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                                   </svg>
-                                                </svg>
-                                                <span class="MuiTouchRipple-root css-w0pj6f"></span>
-                                             </button>
-                                          </div>
-                                       </div>
-                                       <div class="MuiBox-root css-mjvr3">
-                                          <div class="MuiBox-root css-u6v8er">
-                                             <div class="MuiBox-root css-70qvj9">
-                                                <p class="MuiTypography-root MuiTypography-secondary14 MuiTypography-noWrap css-1r4ptf4" data-cy="nativeAmount">0</p>
-                                             </div>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="MuiBox-root css-11udp8r">
-                                    <div class="MuiBox-root css-70qvj9">
-                                       <p class="MuiTypography-root MuiTypography-subheader2 css-my2x37">APY, borrow rate</p>
-                                       <div class="MuiBox-root css-ulme3a">
-                                          <button class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1osfq0k" tabindex="0" type="button">
-                                             <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-jmow5f" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
-                                                   <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                                </svg>
-                                             </svg>
-                                             <span class="MuiTouchRipple-root css-w0pj6f"></span>
-                                          </button>
-                                       </div>
-                                    </div>
-                                    <div class="MuiBox-root css-1bwr8lm">
-                                       <div class="MuiBox-root css-70qvj9">
-                                          <div class="MuiBox-root css-gmuwbf">
-                                             <p class="MuiTypography-root MuiTypography-secondary14 MuiTypography-noWrap css-uefm4v" data-cy="apy-gho-from">4.89</p>
-                                             <p class="MuiTypography-root MuiTypography-secondary14 css-cr32lm">-</p>
-                                             <p class="MuiTypography-root MuiTypography-secondary14 MuiTypography-noWrap css-uefm4v" data-cy="apy-gho-till">6.98<span class="MuiTypography-root MuiTypography-secondary14 css-d8aql2">%</span></p>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="MuiBox-root css-1xwkwbj"><button class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation css-moyn3y" tabindex="-1" type="button" >Borrow</button><a class="MuiTypography-root MuiTypography-description MuiLink-root MuiLink-underlineNone MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation css-10ybyyq" tabindex="0" href="/reserve-overview/?underlyingAsset=0x40d16fc0246ad3160ccc09b8d0d3a2cd28ae6c2f&amp;marketName=proto_mainnet_v3">Details<span class="MuiTouchRipple-root css-w0pj6f"></span></a></div>
-                              </div>
-                           </div>
-                           <div class="MuiBox-root css-13o7eu2">
-                              <div class="MuiBox-root css-1wsmwia">
-                                 <div class="MuiBox-root css-15czs8k">
-                                    <div class="MuiTypography-root MuiTypography-subheader2 MuiTypography-noWrap css-18phtf6">
-                                       Asset
-                                       <div class="MuiBox-root css-14dkifd"><span class="MuiBox-root css-1hf8ilx"></span><span class="MuiBox-root css-1ojixww"></span></div>
-                                    </div>
-                                 </div>
-                                 <div class="MuiBox-root css-11udp8r">
-                                    <div class="MuiTypography-root MuiTypography-subheader2 MuiTypography-noWrap css-18phtf6">
-                                       <div class="MuiBox-root css-70qvj9">
-                                          <p class="MuiTypography-root MuiTypography-subheader2 css-my2x37">Available</p>
-                                          <div class="MuiBox-root css-ulme3a">
-                                             <button class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1osfq0k" tabindex="0" type="button">
-                                                <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-jmow5f" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
-                                                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
-                                                      <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                                   </svg>
-                                                </svg>
-                                                <span class="MuiTouchRipple-root css-w0pj6f"></span>
-                                             </button>
-                                          </div>
-                                       </div>
-                                       <div class="MuiBox-root css-14dkifd"><span class="MuiBox-root css-1hf8ilx"></span><span class="MuiBox-root css-1ojixww"></span></div>
-                                    </div>
-                                 </div>
-                                 <div class="MuiBox-root css-11udp8r">
-                                    <div class="MuiTypography-root MuiTypography-subheader2 MuiTypography-noWrap css-18phtf6">
-                                       <div class="MuiBox-root css-70qvj9">
-                                          <p class="MuiTypography-root MuiTypography-subheader2 css-my2x37">APY, variable</p>
-                                          <div class="MuiBox-root css-ulme3a">
-                                             <button class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1osfq0k" tabindex="0" type="button">
-                                                <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-jmow5f" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
-                                                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
-                                                      <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                                   </svg>
-                                                </svg>
-                                                <span class="MuiTouchRipple-root css-w0pj6f"></span>
-                                             </button>
-                                          </div>
-                                       </div>
-                                       <div class="MuiBox-root css-14dkifd"><span class="MuiBox-root css-1hf8ilx"></span><span class="MuiBox-root css-1ojixww"></span></div>
-                                    </div>
-                                 </div>
-                                 <div class="MuiBox-root css-1xwkwbj"></div>
-                              </div>
-                              <div class="MuiBox-root css-1qm0evb" data-cy="dashboardBorrowListItem_ETH">
-                                 <div class="MuiBox-root css-15czs8k">
-                                    <a class="MuiTypography-root MuiTypography-description MuiTypography-noWrap MuiLink-root MuiLink-underlineNone css-17910yg" href="/reserve-overview/?underlyingAsset=0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2&amp;marketName=proto_mainnet_v3">
-                                       <span class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeLarge css-1ux336h" aria-hidden="true"><img src="https://app.aave.com/icons/tokens/eth.svg" width="100%" height="100%" alt="ETH icon"></span>
-                                       <p class="MuiTypography-root MuiTypography-subheader1 MuiTypography-noWrap css-mgqwsh" data-cy="assetName" aria-label="Ethereum (ETH)">ETH</p>
-                                    </a>
-                                 </div>
-                                 <div class="MuiBox-root css-11udp8r">
-                                    <div class="MuiBox-root css-70qvj9">
-                                       <p class="MuiTypography-root MuiTypography-secondary14 MuiTypography-noWrap css-1r4ptf4" data-cy="nativeAmount">0</p>
-                                    </div>
-                                 </div>
-                                 <div class="MuiBox-root css-11udp8r">
-                                    <div class="MuiBox-root css-1241y0n">
-                                       <div class="MuiBox-root css-19el3v">
-                                          <div class="MuiBox-root css-k008qs">
-                                             <p class="MuiTypography-root MuiTypography-secondary14 MuiTypography-noWrap css-uefm4v" data-cy="apy">2.51<span class="MuiTypography-root MuiTypography-secondary14 css-d8aql2">%</span></p>
-                                          </div>
-                                          <div class="MuiBox-root css-1yxnkj0"></div>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="MuiBox-root css-1xwkwbj"><button class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation css-moyn3y" tabindex="-1" type="button" >Borrow</button><a class="MuiTypography-root MuiTypography-description MuiLink-root MuiLink-underlineNone MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation css-10ybyyq" tabindex="0" href="/reserve-overview/?underlyingAsset=0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2&amp;marketName=proto_mainnet_v3">Details<span class="MuiTouchRipple-root css-w0pj6f"></span></a></div>
-                              </div>
-                              <div class="MuiBox-root css-1qm0evb" data-cy="dashboardBorrowListItem_USDT">
-                                 <div class="MuiBox-root css-15czs8k">
-                                    <a class="MuiTypography-root MuiTypography-description MuiTypography-noWrap MuiLink-root MuiLink-underlineNone css-17910yg" href="/reserve-overview/?underlyingAsset=0xdac17f958d2ee523a2206206994597c13d831ec7&amp;marketName=proto_mainnet_v3">
-                                       <span class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeLarge css-1ux336h" aria-hidden="true"><img src="https://app.aave.com/icons/tokens/usdt.svg" width="100%" height="100%" alt="USDT icon"></span>
-                                       <p class="MuiTypography-root MuiTypography-subheader1 MuiTypography-noWrap css-mgqwsh" data-cy="assetName" aria-label="Tether (USDT)">USDT</p>
-                                    </a>
-                                 </div>
-                                 <div class="MuiBox-root css-11udp8r">
-                                    <div class="MuiBox-root css-70qvj9">
-                                       <p class="MuiTypography-root MuiTypography-secondary14 MuiTypography-noWrap css-1r4ptf4" data-cy="nativeAmount">0</p>
-                                    </div>
-                                 </div>
-                                 <div class="MuiBox-root css-11udp8r">
-                                    <div class="MuiBox-root css-1241y0n">
-                                       <div class="MuiBox-root css-19el3v">
-                                          <div class="MuiBox-root css-k008qs">
-                                             <p class="MuiTypography-root MuiTypography-secondary14 MuiTypography-noWrap css-uefm4v" data-cy="apy">6.79<span class="MuiTypography-root MuiTypography-secondary14 css-d8aql2">%</span></p>
-                                          </div>
-                                          <div class="MuiBox-root css-1yxnkj0"></div>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="MuiBox-root css-1xwkwbj"><button class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation css-moyn3y" tabindex="-1" type="button" >Borrow</button><a class="MuiTypography-root MuiTypography-description MuiLink-root MuiLink-underlineNone MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation css-10ybyyq" tabindex="0" href="/reserve-overview/?underlyingAsset=0xdac17f958d2ee523a2206206994597c13d831ec7&amp;marketName=proto_mainnet_v3">Details<span class="MuiTouchRipple-root css-w0pj6f"></span></a></div>
-                              </div>
-                              <div class="MuiBox-root css-1qm0evb" data-cy="dashboardBorrowListItem_WBTC">
-                                 <div class="MuiBox-root css-15czs8k">
-                                    <a class="MuiTypography-root MuiTypography-description MuiTypography-noWrap MuiLink-root MuiLink-underlineNone css-17910yg" href="/reserve-overview/?underlyingAsset=0x2260fac5e5542a773aa44fbcfedf7c193bc2c599&amp;marketName=proto_mainnet_v3">
-                                       <span class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeLarge css-1ux336h" aria-hidden="true"><img src="https://app.aave.com/icons/tokens/wbtc.svg" width="100%" height="100%" alt="WBTC icon"></span>
-                                       <p class="MuiTypography-root MuiTypography-subheader1 MuiTypography-noWrap css-mgqwsh" data-cy="assetName" aria-label="Wrapped BTC (WBTC)">WBTC</p>
-                                    </a>
-                                 </div>
-                                 <div class="MuiBox-root css-11udp8r">
-                                    <div class="MuiBox-root css-70qvj9">
-                                       <p class="MuiTypography-root MuiTypography-secondary14 MuiTypography-noWrap css-1r4ptf4" data-cy="nativeAmount">0</p>
-                                    </div>
-                                 </div>
-                                 <div class="MuiBox-root css-11udp8r">
-                                    <div class="MuiBox-root css-1241y0n">
-                                       <div class="MuiBox-root css-19el3v">
-                                          <div class="MuiBox-root css-k008qs">
-                                             <p class="MuiTypography-root MuiTypography-secondary14 MuiTypography-noWrap css-uefm4v" data-cy="apy">0.42<span class="MuiTypography-root MuiTypography-secondary14 css-d8aql2">%</span></p>
-                                          </div>
-                                          <div class="MuiBox-root css-1yxnkj0"></div>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="MuiBox-root css-1xwkwbj"><button class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation css-moyn3y" tabindex="-1" type="button" >Borrow</button><a class="MuiTypography-root MuiTypography-description MuiLink-root MuiLink-underlineNone MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation css-10ybyyq" tabindex="0" href="/reserve-overview/?underlyingAsset=0x2260fac5e5542a773aa44fbcfedf7c193bc2c599&amp;marketName=proto_mainnet_v3">Details<span class="MuiTouchRipple-root css-w0pj6f"></span></a></div>
-                              </div>
-                           
-                           </div>
-                  </div>
-
+                      </div>
+                    <div class="MuiBox-root css-15czs8k">
+                          <a class="MuiTypography-root MuiTypography-description MuiTypography-noWrap MuiLink-root MuiLink-underlineNone css-17910yg" href="/reserve-overview/?underlyingAsset=0x111111111117dc0aa78b770fa6a738034120c302&amp;marketName=proto_mainnet_v3">
+                            <span class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeLarge css-1ux336h" aria-hidden="true"><img src="https://app.aave.com/icons/tokens/usdt.svg" width="100%" height="100%" alt="1INCH icon"></span>
+                            <p class="MuiTypography-root MuiTypography-subheader1 MuiTypography-noWrap css-mgqwsh" data-cy="assetName" > + 500,000.00 USDT</p>
+                          </a>
+                      </div>
+                      <div class="MuiBox-root css-15czs8k1">
+                          <a class="MuiTypography-root MuiTypography-description MuiTypography-noWrap MuiLink-root MuiLink-underlineNone css-17910yg" href="/reserve-overview/?underlyingAsset=0x111111111117dc0aa78b770fa6a738034120c302&amp;marketName=proto_mainnet_v3">
+                          <div class="MuiBox-root css-171onha">To Hash
+                            <h4 class="MuiTypography-root MuiTypography-h4 css-cg4wfg">0xb9b6b...4b40</h4>  <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-26dwcd" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
+                                  <svg 
+                                    xmlns="http://www.w3.org/2000/svg" 
+                                    width="24" 
+                                    height="24" 
+                                    viewBox="0 0 24 24" 
+                                    fill="none" 
+                                    stroke="currentColor" 
+                                    stroke-width="2" 
+                                    stroke-linecap="round" 
+                                    stroke-linejoin="round">
+                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+                                </svg>
+                                </svg><div>
+                              
+                              <a class="MuiTypography-root MuiTypography-description MuiLink-root MuiLink-underlineAlways css-1fxq9g4" href="https://etherscan.io/address/0xb9b6bc2e327aa8bbbacc5ff8f07cfcfccdfd4b40" target="_blank">
+                                <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-26dwcd" focusable="false" aria-hidden="true" viewBox="0 0 24 24"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"></path><path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"></path></svg></svg>
+                              </a>
+                            </div>
+                          </div>
+                          </a>
+                      </div>
+                    </div>
+                    <div class="MuiBox-root css-1qm0evb" data-cy="dashboardSupplyListItem_1INCH">
+                      
+                    <div class="MuiBox-root css-11udp8r">
+                        <p class="MuiTypography-root MuiTypography-main16 MuiTypography-noWrap css-1ogi1pb" style="font-weight:600;">Loan</p>
+                        <div class="MuiBox-root css-1xwiwhj">
+                            <p class="MuiTypography-root MuiTypography-secondary12 MuiTypography-noWrap css-cyw6g5" >
+                            5:16am 
+                            </p>
+                        </div>
+                      </div>
+                    <div class="MuiBox-root css-15czs8k">
+                          <a class="MuiTypography-root MuiTypography-description MuiTypography-noWrap MuiLink-root MuiLink-underlineNone css-17910yg" href="/reserve-overview/?underlyingAsset=0x111111111117dc0aa78b770fa6a738034120c302&amp;marketName=proto_mainnet_v3">
+                            <span class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeLarge css-1ux336h" aria-hidden="true"><img src="https://app.aave.com/icons/tokens/usdt.svg" width="100%" height="100%" alt="1INCH icon"></span>
+                            <p class="MuiTypography-root MuiTypography-subheader1 MuiTypography-noWrap css-mgqwsh" data-cy="assetName" > + 60,000.00 USDT</p>
+                          </a>
+                      </div>
+                      <div class="MuiBox-root css-15czs8k1">
+                          <a class="MuiTypography-root MuiTypography-description MuiTypography-noWrap MuiLink-root MuiLink-underlineNone css-17910yg" href="/reserve-overview/?underlyingAsset=0x111111111117dc0aa78b770fa6a738034120c302&amp;marketName=proto_mainnet_v3">
+                          <div class="MuiBox-root css-171onha">To Hash
+                            <h4 class="MuiTypography-root MuiTypography-h4 css-cg4wfg">0xb9b6b...4b40</h4>  <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-26dwcd" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
+                                  <svg 
+                                    xmlns="http://www.w3.org/2000/svg" 
+                                    width="24" 
+                                    height="24" 
+                                    viewBox="0 0 24 24" 
+                                    fill="none" 
+                                    stroke="currentColor" 
+                                    stroke-width="2" 
+                                    stroke-linecap="round" 
+                                    stroke-linejoin="round">
+                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+                                </svg>
+                                </svg><div>
+                              
+                              <a class="MuiTypography-root MuiTypography-description MuiLink-root MuiLink-underlineAlways css-1fxq9g4" href="https://etherscan.io/address/0xb9b6bc2e327aa8bbbacc5ff8f07cfcfccdfd4b40" target="_blank">
+                                <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-26dwcd" focusable="false" aria-hidden="true" viewBox="0 0 24 24"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"></path><path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"></path></svg></svg>
+                              </a>
+                            </div>
+                          </div>
+                          </a>
+                      </div>
+                    </div>
                </div>
-
+               <div class="MuiBox-root css-iotmz5">
+                    <div class="MuiBox-root css-1wsmwia">
+                              <div class="MuiBox-root css-15czs8k">
+                                 <div class="MuiTypography-root MuiTypography-header2 MuiTypography-noWrap css-18phtf6">
+                                    1 June 2024
+                                </div>
+                              </div>
+                            
+                              <div class="MuiBox-root css-1xwkwbj"></div>
+                    </div>
+                    <div class="MuiBox-root css-1qm0evb" data-cy="dashboardSupplyListItem_1INCH">
+                      
+                    <div class="MuiBox-root css-11udp8r">
+                        <p class="MuiTypography-root MuiTypography-main16 MuiTypography-noWrap css-1ogi1pb" style="font-weight:600;">Supply</p>
+                        <div class="MuiBox-root css-1xwiwhj">
+                            <p class="MuiTypography-root MuiTypography-secondary12 MuiTypography-noWrap css-cyw6g5" >
+                            7:16am 
+                            </p>
+                        </div>
+                      </div>
+                    <div class="MuiBox-root css-15czs8k">
+                          <a class="MuiTypography-root MuiTypography-description MuiTypography-noWrap MuiLink-root MuiLink-underlineNone css-17910yg" href="/reserve-overview/?underlyingAsset=0x111111111117dc0aa78b770fa6a738034120c302&amp;marketName=proto_mainnet_v3">
+                            <span class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeLarge css-1ux336h" aria-hidden="true"><img src="https://app.aave.com/icons/tokens/usdt.svg" width="100%" height="100%" alt="1INCH icon"></span>
+                            <p class="MuiTypography-root MuiTypography-subheader1 MuiTypography-noWrap css-mgqwsh" data-cy="assetName" > + 500,000.00 USDT</p>
+                          </a>
+                      </div>
+                      <div class="MuiBox-root css-15czs8k1">
+                          <a class="MuiTypography-root MuiTypography-description MuiTypography-noWrap MuiLink-root MuiLink-underlineNone css-17910yg" href="/reserve-overview/?underlyingAsset=0x111111111117dc0aa78b770fa6a738034120c302&amp;marketName=proto_mainnet_v3">
+                          <div class="MuiBox-root css-171onha">To Hash
+                            <h4 class="MuiTypography-root MuiTypography-h4 css-cg4wfg">0xb9b6b...4b40</h4>  <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-26dwcd" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
+                                  <svg 
+                                    xmlns="http://www.w3.org/2000/svg" 
+                                    width="24" 
+                                    height="24" 
+                                    viewBox="0 0 24 24" 
+                                    fill="none" 
+                                    stroke="currentColor" 
+                                    stroke-width="2" 
+                                    stroke-linecap="round" 
+                                    stroke-linejoin="round">
+                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+                                </svg>
+                                </svg><div>
+                              
+                              <a class="MuiTypography-root MuiTypography-description MuiLink-root MuiLink-underlineAlways css-1fxq9g4" href="https://etherscan.io/address/0xb9b6bc2e327aa8bbbacc5ff8f07cfcfccdfd4b40" target="_blank">
+                                <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-26dwcd" focusable="false" aria-hidden="true" viewBox="0 0 24 24"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"></path><path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"></path></svg></svg>
+                              </a>
+                            </div>
+                          </div>
+                          </a>
+                      </div>
+                    </div>
+                    <div class="MuiBox-root css-1qm0evb" data-cy="dashboardSupplyListItem_1INCH">
+                      
+                    <div class="MuiBox-root css-11udp8r">
+                        <p class="MuiTypography-root MuiTypography-main16 MuiTypography-noWrap css-1ogi1pb" style="font-weight:600;">Withdraw</p>
+                        <div class="MuiBox-root css-1xwiwhj">
+                            <p class="MuiTypography-root MuiTypography-secondary12 MuiTypography-noWrap css-cyw6g5" >
+                            5:16am 
+                            </p>
+                        </div>
+                      </div>
+                    <div class="MuiBox-root css-15czs8k">
+                          <a class="MuiTypography-root MuiTypography-description MuiTypography-noWrap MuiLink-root MuiLink-underlineNone css-17910yg" href="/reserve-overview/?underlyingAsset=0x111111111117dc0aa78b770fa6a738034120c302&amp;marketName=proto_mainnet_v3">
+                            <span class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeLarge css-1ux336h" aria-hidden="true"><img src="https://app.aave.com/icons/tokens/usdt.svg" width="100%" height="100%" alt="1INCH icon"></span>
+                            <p class="MuiTypography-root MuiTypography-subheader1 MuiTypography-noWrap css-mgqwsh" data-cy="assetName" > + 60,000.00 USDT</p>
+                          </a>
+                      </div>
+                      <div class="MuiBox-root css-15czs8k1">
+                          <a class="MuiTypography-root MuiTypography-description MuiTypography-noWrap MuiLink-root MuiLink-underlineNone css-17910yg" href="/reserve-overview/?underlyingAsset=0x111111111117dc0aa78b770fa6a738034120c302&amp;marketName=proto_mainnet_v3">
+                          <div class="MuiBox-root css-171onha">To Hash
+                            <h4 class="MuiTypography-root MuiTypography-h4 css-cg4wfg">0xb9b6b...4b40</h4>  <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-26dwcd" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
+                                  <svg 
+                                    xmlns="http://www.w3.org/2000/svg" 
+                                    width="24" 
+                                    height="24" 
+                                    viewBox="0 0 24 24" 
+                                    fill="none" 
+                                    stroke="currentColor" 
+                                    stroke-width="2" 
+                                    stroke-linecap="round" 
+                                    stroke-linejoin="round">
+                                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+                                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1" />
+                                </svg>
+                                </svg><div>
+                              
+                              <a class="MuiTypography-root MuiTypography-description MuiLink-root MuiLink-underlineAlways css-1fxq9g4" href="https://etherscan.io/address/0xb9b6bc2e327aa8bbbacc5ff8f07cfcfccdfd4b40" target="_blank">
+                                <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-26dwcd" focusable="false" aria-hidden="true" viewBox="0 0 24 24"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"></path><path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"></path></svg></svg>
+                              </a>
+                            </div>
+                          </div>
+                          </a>
+                      </div>
+                    </div>
+               </div>
+               <div class="MuiBox-root css-1n40sif"></div>
             </div>
          </div>
       </div>
    </div>
 </div>
 
- 
- </template>
- 
- <style lang="scss" scoped>
- html { box-sizing: border-box; }
+</template>
+
+<style lang="scss" scoped>
+
+html { box-sizing: border-box; }
 *, ::before, ::after { box-sizing: inherit; }
 strong, b { font-weight: 700; }
 body { margin: 0px; color: rgb(241, 241, 243); background-color: rgb(27, 32, 48); }
 @media print {
-  body { background-color: rgb(255, 255, 255); }
+  body { background-color: rgb(255, 255, 255); font-family:Inter, Arial; }
 }
 body::backdrop { background-color: rgb(27, 32, 48); }
 body { font-family: Inter, Arial; font-weight: 400; font-size: 0.875rem; min-width: 375px; }
 body > div:first-of-type { min-height: 100vh; display: flex; flex-direction: column; }
-.css-kw8qku {
-  display: inline-flex;
+.css-171onha {
+  display: flex;
   -moz-box-align: center;
   align-items: center;
-  -moz-box-pack: center;
-  justify-content: center;
-  position: relative;
-  box-sizing: border-box;
-  outline: 0px;
-  margin: 0px;
-  cursor: pointer;
+  gap: 4px;
+}
+.css-26dwcd {
   user-select: none;
-  vertical-align: middle;
-  appearance: none;
-  text-decoration: none;
-  min-width: 64px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: none;
-  border-radius: 4px;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  fill: currentcolor;
+  flex-shrink: 0;
+  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 16px;
+}
+.css-cg4wfg {
+  margin: 0px;
   font-family: Inter, Arial;
   font-weight: 600;
-  letter-spacing: 0.02875rem;
-  line-height: 1.25rem;
-  text-transform: uppercase;
-  font-size: 0.625rem;
-  padding: 0px 6px;
-  color: rgb(255, 255, 255);
-  border: 1px solid rgba(235, 235, 237, 0.12);
-  background-color: rgb(56, 61, 81);
+  letter-spacing: 0.009375rem;
+  line-height: 1.5rem;
+  font-size: 1rem;
+}
+.css-1fxq9g4 {
+  margin: 0px;
+  font-family: Inter, Arial;
+  font-weight: 400;
+  letter-spacing: 0.009375rem;
+  line-height: 143%;
+  font-size: 0.875rem;
+  color: rgb(234, 235, 239);
+  text-decoration: underline rgba(234, 235, 239, 0.4);
+  display: flex;
+}
+@keyframes mui-auto-fill {
+0% { display: block; }
+}
+@keyframes mui-auto-fill {
+0% { display: block; }
+}
+@keyframes mui-auto-fill-cancel {
+0% { display: block; }
+}
+@keyframes mui-auto-fill-cancel {
+0% { display: block; }
 }
 @keyframes mui-auto-fill {
 0% { display: block; }
@@ -1129,15 +628,80 @@ body > div:first-of-type { min-height: 100vh; display: flex; flex-direction: col
 @media (min-width: 640px) {
   .css-nkvznt { padding-left: 24px; padding-right: 24px; }
 }
-.css-1qm1lh { margin-bottom: 16px; }
-.css-1coeexk { display: flex; -moz-box-align: center; align-items: center; margin-bottom: 16px; }
-.css-1vfaaju { margin: 0px 8px 0px 0px; font-family: Inter, Arial; font-weight: 500; letter-spacing: 0.00625rem; line-height: 1rem; font-size: 0.75rem; color: rgb(192, 203, 246); }
-.css-1570kgy { height: 16px; width: 16px; }
-.css-fodyq8 { margin: 0px 0px 0px 4px; font-family: Inter, Arial; font-weight: 500; letter-spacing: 0.00625rem; line-height: 1rem; font-size: 0.75rem; color: rgb(192, 203, 246); }
-.css-16489wl { margin: 0px 12px 0px 8px; font-family: Inter, Arial; font-weight: 700; letter-spacing: 0.015625rem; line-height: 123.5%; font-size: 2rem; }
-.css-mg5q4r { margin: 0px; font-family: Inter, Arial; font-weight: 400; letter-spacing: 0.009375rem; line-height: 143%; font-size: 0.875rem; color: rgb(142, 146, 163); max-width: 824px; }
-.css-1t7a0z4 { text-decoration: underline; color: rgb(142, 146, 163); }
-.css-1qtstx3 { margin: 0px; font-family: Inter, Arial; font-weight: 400; letter-spacing: 0.009375rem; line-height: 143%; font-size: 0.875rem; text-decoration: underline; color: rgb(142, 146, 163); }
+.css-70qvj9 { display: flex; -moz-box-align: center; align-items: center; }
+.css-e3dznl { margin: 0px; font-family: Inter, Arial; font-weight: 600; letter-spacing: 0.009375rem; line-height: 160%; font-size: 1.125rem; color: rgb(165, 168, 182); }
+.css-b7cbkx { display: flex; margin-bottom: 0px; }
+@media (min-width: 0px) {
+  .css-b7cbkx { align-items: flex-start; flex-direction: column; }
+}
+@media (min-width: 640px) {
+  .css-b7cbkx { -moz-box-align: center; align-items: center; flex-direction: row; }
+}
+.css-7ia8wy { display: flex; align-items: flex-start; flex-wrap: wrap; margin-bottom: 16px; }
+.css-115cb67 { margin-right: 8px; }
+.css-115cb67 .MuiOutlinedInput-notchedOutline { border: medium; }
+.css-1s2gcw8 { display: inline-flex; flex-direction: column; position: relative; min-width: 0px; padding: 0px; margin: 0px 8px 0px 0px; border: 0px; vertical-align: top; }
+.css-1s2gcw8 .MuiOutlinedInput-notchedOutline { border: medium; }
+.css-1ypy5va { color: rgb(241, 241, 243); line-height: 1.4375em; box-sizing: border-box; cursor: text; display: inline-flex; -moz-box-align: center; align-items: center; position: relative; border-radius: 6px; border-color: rgba(235, 235, 239, 0.08); }
+.css-1ypy5va.Mui-disabled { color: rgb(98, 103, 123); cursor: default; }
+.css-1ypy5va:hover .MuiOutlinedInput-notchedOutline { border-color: rgb(241, 241, 243); }
+@media (hover: none) {
+  .css-1ypy5va:hover .MuiOutlinedInput-notchedOutline { border-color: rgba(255, 255, 255, 0.23); }
+}
+.css-1ypy5va.Mui-focused .MuiOutlinedInput-notchedOutline { border-color: rgb(234, 235, 239); border-width: 2px; }
+.css-1ypy5va.Mui-error .MuiOutlinedInput-notchedOutline { border-color: rgb(244, 67, 54); }
+.css-1ypy5va.Mui-disabled .MuiOutlinedInput-notchedOutline { border-color: rgba(235, 235, 239, 0.3); }
+.css-1ypy5va:hover .MuiOutlinedInput-notchedOutline { border-color: rgb(203, 205, 216); }
+.css-1ypy5va.Mui-focused .MuiOutlinedInput-notchedOutline { border-color: rgb(203, 205, 216); }
+.css-1ypy5va.MarketSwitcher__select .MuiSelect-outlined { padding-left: 0px; padding-top: 0px; padding-bottom: 0px; background-color: transparent !important; }
+.css-1ypy5va .MuiSelect-icon { color: rgb(241, 241, 243); }
+.css-wvdg9f { font: inherit; letter-spacing: inherit; color: currentcolor; border: 0px; box-sizing: content-box; background: none; height: 1.4375em; margin: 0px; display: block; min-width: 0px; width: 100%; animation-name: mui-auto-fill-cancel; animation-duration: 10ms; padding: 16.5px 14px; }
+.css-wvdg9f::-webkit-input-placeholder { color: currentcolor; opacity: 0.5; transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1); }
+.css-wvdg9f::placeholder { color: currentcolor; opacity: 0.5; transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1); }
+.css-wvdg9f:focus { outline: 0px; }
+.css-wvdg9f:invalid { box-shadow: none; }
+.css-wvdg9f::-webkit-search-decoration { appearance: none; }
+label[data-shrink="false"] + .MuiInputBase-formControl .css-wvdg9f::-webkit-input-placeholder { opacity: 0 !important; }
+label[data-shrink="false"] + .MuiInputBase-formControl .css-wvdg9f::placeholder { opacity: 0 !important; }
+label[data-shrink="false"] + .MuiInputBase-formControl .css-wvdg9f:focus::-webkit-input-placeholder { opacity: 0.5; }
+label[data-shrink="false"] + .MuiInputBase-formControl .css-wvdg9f:focus::placeholder { opacity: 0.5; }
+.css-wvdg9f.Mui-disabled { opacity: 1; -webkit-text-fill-color: rgb(98, 103, 123); }
+.css-wvdg9f:autofill { animation-duration: 5000s; animation-name: mui-auto-fill; }
+.css-wvdg9f:autofill { box-shadow: rgb(38, 103, 152) 0px 0px 0px 100px inset; -webkit-text-fill-color: rgb(255, 255, 255); caret-color: rgb(255, 255, 255); border-radius: inherit; }
+.css-1dyf9qo { appearance: none; user-select: none; border-radius: 4px; cursor: pointer; font: inherit; letter-spacing: inherit; color: currentcolor; border: 0px; box-sizing: content-box; background: none; height: 1.4375em; margin: 0px; display: block; min-width: 0px; width: 100%; animation-name: mui-auto-fill-cancel; animation-duration: 10ms; padding: 16.5px 14px; }
+.css-1dyf9qo:focus { border-radius: 4px; }
+.css-1dyf9qo.Mui-disabled { cursor: default; }
+.css-1dyf9qo[multiple] { height: auto; }
+.css-1dyf9qo:not([multiple]) option, .css-1dyf9qo:not([multiple]) optgroup { background-color: rgb(41, 46, 65); }
+.css-1dyf9qo.css-1dyf9qo.css-1dyf9qo { padding-right: 32px; }
+.css-1dyf9qo.MuiSelect-select { height: auto; min-height: 1.4375em; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; }
+.css-1dyf9qo.MuiSelect-select { background-color: rgb(56, 61, 81); font-family: Inter, Arial; font-weight: 500; line-height: 1.5rem; font-size: 0.875rem; padding: 6px 12px; color: rgb(241, 241, 243); }
+.css-1dyf9qo::-webkit-input-placeholder { color: currentcolor; opacity: 0.5; transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1); }
+.css-1dyf9qo::placeholder { color: currentcolor; opacity: 0.5; transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1); }
+.css-1dyf9qo:focus { outline: 0px; }
+.css-1dyf9qo:invalid { box-shadow: none; }
+.css-1dyf9qo::-webkit-search-decoration { appearance: none; }
+label[data-shrink="false"] + .MuiInputBase-formControl .css-1dyf9qo::-webkit-input-placeholder { opacity: 0 !important; }
+label[data-shrink="false"] + .MuiInputBase-formControl .css-1dyf9qo::placeholder { opacity: 0 !important; }
+label[data-shrink="false"] + .MuiInputBase-formControl .css-1dyf9qo:focus::-webkit-input-placeholder { opacity: 0.5; }
+label[data-shrink="false"] + .MuiInputBase-formControl .css-1dyf9qo:focus::placeholder { opacity: 0.5; }
+.css-1dyf9qo.Mui-disabled { opacity: 1; -webkit-text-fill-color: rgb(98, 103, 123); }
+.css-1dyf9qo:autofill { animation-duration: 5000s; animation-name: mui-auto-fill; }
+.css-1dyf9qo:autofill { box-shadow: rgb(38, 103, 152) 0px 0px 0px 100px inset; -webkit-text-fill-color: rgb(255, 255, 255); caret-color: rgb(255, 255, 255); border-radius: inherit; }
+.css-hjllk8 { margin-right: 8px; width: 32px; height: 32px; position: relative; }
+.css-171onha { display: flex; -moz-box-align: center; align-items: center; gap: 4px; }
+.css-15vg6gj { margin: 0px 4px 0px 0px; font-family: Inter, Arial; font-weight: 700; letter-spacing: 0.015625rem; line-height: 123.5%; font-size: 2rem; color: rgb(255, 255, 255); }
+.css-1tgkox5 { color: rgb(255, 255, 255); padding-left: 8px; padding-right: 8px; border-radius: 12px; background: linear-gradient(248.86deg, rgb(182, 80, 158) 10.51%, rgb(46, 186, 198) 93.41%); display: flex; -moz-box-align: center; align-items: center; }
+.css-my2x37 { margin: 0px; font-family: Inter, Arial; font-weight: 500; letter-spacing: 0.00625rem; line-height: 1rem; font-size: 0.75rem; }
+.css-fo7h32 { user-select: none; width: 1em; height: 1em; display: inline-block; fill: currentcolor; flex-shrink: 0; transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1); font-size: 1.5rem; margin-left: 4px; color: rgb(241, 241, 243); }
+.css-10qjsex { margin: 2px 0px 0px; font-family: Inter, Arial; font-weight: 400; letter-spacing: 0.009375rem; color: rgb(255, 255, 255); font-size: 0.85rem; overflow-wrap: break-word; white-space: normal; line-height: 1.3; max-width: 100%; }
+.css-1k3x8v3 { bottom: 0px; left: 0px; position: absolute; opacity: 0; pointer-events: none; width: 100%; box-sizing: border-box; }
+.css-dzdoo0 { position: absolute; right: 7px; top: calc(50% - 0.5em); pointer-events: none; color: rgba(235, 235, 239, 0.56); }
+.css-dzdoo0.Mui-disabled { color: rgba(235, 235, 239, 0.3); }
+.css-7z4qiw { border-color: rgba(255, 255, 255, 0.23); }
+.css-nqlg3w { text-align: left; position: absolute; inset: -5px 0px 0px; margin: 0px; padding: 0px 8px; pointer-events: none; border-radius: inherit; border-style: solid; border-width: 1px; overflow: hidden; min-width: 0%; border-color: rgba(255, 255, 255, 0.23); }
+.css-ihdtdm { float: unset; width: auto; overflow: hidden; padding: 0px; line-height: 11px; transition: width 150ms cubic-bezier(0, 0, 0.2, 1); }
+.css-15nlx8z { width: 860px; }
 .css-k7vncv { display: flex; align-items: flex-start; flex-wrap: wrap; width: 100%; }
 @media (min-width: 0px) {
   .css-k7vncv { gap: 12px; }
@@ -1145,68 +709,6 @@ body > div:first-of-type { min-height: 100vh; display: flex; flex-direction: col
 @media (min-width: 640px) {
   .css-k7vncv { gap: 32px; }
 }
-.css-gc7fdh { display: flex; -moz-box-align: center; align-items: center; gap: 16px; flex-wrap: wrap; max-width: 760px; }
-.css-1c8qlxq { transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1); box-shadow: none; border-radius: 4px; font-family: Inter, Arial; font-weight: 600; letter-spacing: 0.02875rem; line-height: 1.25rem; text-transform: uppercase; font-size: 0.625rem; padding: 0px 6px; color: rgb(255, 255, 255); border: 1px solid rgba(235, 235, 237, 0.12); background-color: rgb(56, 61, 81); min-width: unset; }
-.css-1c8qlxq:hover { text-decoration: none; background-color: rgba(241, 241, 243, 0.08); }
-@media (hover: none) {
-  .css-1c8qlxq:hover { background-color: transparent; }
-}
-.css-1c8qlxq.Mui-disabled { color: rgba(235, 235, 239, 0.3); }
-.css-1c8qlxq:hover { box-shadow: none; }
-.css-1c8qlxq.Mui-focusVisible { box-shadow: none; }
-.css-1c8qlxq:active { box-shadow: none; }
-.css-1c8qlxq.Mui-disabled { box-shadow: none; }
-.css-1c8qlxq:hover, .css-1c8qlxq.Mui-focusVisible { background-color: rgb(27, 32, 48); }
-.css-1x7geuk { display: inline-flex; -moz-box-align: center; align-items: center; -moz-box-pack: center; justify-content: center; position: relative; box-sizing: border-box; outline: 0px; margin: 0px; cursor: pointer; user-select: none; vertical-align: middle; appearance: none; text-decoration: none; transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1); box-shadow: none; border-radius: 4px; font-family: Inter, Arial; font-weight: 600; letter-spacing: 0.02875rem; line-height: 1.25rem; text-transform: uppercase; font-size: 0.625rem; padding: 0px 6px; color: rgb(255, 255, 255); border: 1px solid rgba(235, 235, 237, 0.12); background-color: rgb(56, 61, 81); min-width: unset; }
-.css-1x7geuk::-moz-focus-inner { border-style: none; }
-.css-1x7geuk.Mui-disabled { pointer-events: none; cursor: default; }
-@media print {
-  .css-1x7geuk { print-color-adjust: exact; }
-}
-.css-1x7geuk:hover { text-decoration: none; background-color: rgba(241, 241, 243, 0.08); }
-@media (hover: none) {
-  .css-1x7geuk:hover { background-color: transparent; }
-}
-.css-1x7geuk.Mui-disabled { color: rgba(235, 235, 239, 0.3); }
-.css-1x7geuk:hover { box-shadow: none; }
-.css-1x7geuk.Mui-focusVisible { box-shadow: none; }
-.css-1x7geuk:active { box-shadow: none; }
-.css-1x7geuk.Mui-disabled { box-shadow: none; }
-.css-1x7geuk:hover, .css-1x7geuk.Mui-focusVisible { background-color: rgb(27, 32, 48); }
-.css-1fflchg { display: inline-flex; -moz-box-align: center; align-items: center; -moz-box-pack: center; justify-content: center; position: relative; box-sizing: border-box; outline: 0px; margin: 0px; cursor: pointer; user-select: none; vertical-align: middle; appearance: none; text-decoration: none; transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1); box-shadow: none; border-radius: 4px; font-family: Inter, Arial; font-weight: 600; letter-spacing: 0.02875rem; line-height: 1.25rem; text-transform: uppercase; font-size: 0.625rem; padding: 0px 6px; color: rgb(255, 255, 255); border: 1px solid rgba(235, 235, 237, 0.12); background-color: rgb(56, 61, 81); min-width: unset; }
-.css-1fflchg::-moz-focus-inner { border-style: none; }
-.css-1fflchg.Mui-disabled { pointer-events: none; cursor: default; }
-@media print {
-  .css-1fflchg { print-color-adjust: exact; }
-}
-.css-1fflchg:hover { text-decoration: none; background-color: rgba(241, 241, 243, 0.08); }
-@media (hover: none) {
-  .css-1fflchg:hover { background-color: transparent; }
-}
-.css-1fflchg.Mui-disabled { color: rgba(235, 235, 239, 0.3); }
-.css-1fflchg:hover { box-shadow: none; }
-.css-1fflchg.Mui-focusVisible { box-shadow: none; }
-.css-1fflchg:active { box-shadow: none; }
-.css-1fflchg.Mui-disabled { box-shadow: none; }
-.css-1fflchg:hover, .css-1fflchg.Mui-focusVisible { background-color: rgb(27, 32, 48); }
-.css-1qyv9ui { display: inline-flex; -moz-box-align: center; align-items: center; -moz-box-pack: center; justify-content: center; position: relative; box-sizing: border-box; outline: 0px; margin: 0px; cursor: pointer; user-select: none; vertical-align: middle; appearance: none; text-decoration: none; transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1); box-shadow: none; border-radius: 4px; font-family: Inter, Arial; font-weight: 600; letter-spacing: 0.02875rem; line-height: 1.25rem; text-transform: uppercase; font-size: 0.625rem; padding: 0px 6px; color: rgb(255, 255, 255); border: 1px solid rgba(235, 235, 237, 0.12); background-color: rgb(56, 61, 81); min-width: unset; }
-.css-1qyv9ui::-moz-focus-inner { border-style: none; }
-.css-1qyv9ui.Mui-disabled { pointer-events: none; cursor: default; }
-@media print {
-  .css-1qyv9ui { print-color-adjust: exact; }
-}
-.css-1qyv9ui:hover { text-decoration: none; background-color: rgba(241, 241, 243, 0.08); }
-@media (hover: none) {
-  .css-1qyv9ui:hover { background-color: transparent; }
-}
-.css-1qyv9ui.Mui-disabled { color: rgba(235, 235, 239, 0.3); }
-.css-1qyv9ui:hover { box-shadow: none; }
-.css-1qyv9ui.Mui-focusVisible { box-shadow: none; }
-.css-1qyv9ui:active { box-shadow: none; }
-.css-1qyv9ui.Mui-disabled { box-shadow: none; }
-.css-1qyv9ui:hover, .css-1qyv9ui.Mui-focusVisible { background-color: rgb(27, 32, 48); }
-.css-70qvj9 { display: flex; -moz-box-align: center; align-items: center; }
-.css-1ej2kgu { user-select: none; width: 1em; height: 1em; display: inline-block; fill: currentcolor; flex-shrink: 0; transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1); margin-left: 4px; font-size: 14px; }
 .css-159pi92 { display: flex; flex-direction: column; flex: 1 1 0%; }
 @media (min-width: 0px) {
   .css-159pi92 { margin-top: -32px; }
@@ -1248,270 +750,8 @@ body > div:first-of-type { min-height: 100vh; display: flex; flex-direction: col
 @media (min-width: 1800px) {
   .css-1a8qn2o { padding-left: 0px; padding-right: 0px; max-width: 1440px; }
 }
-.css-1pt9rie { background-color: rgb(56, 61, 81); border: 1px solid rgba(235, 235, 237, 0.12); padding: 4px; height: 44px; margin-bottom: 16px; }
-@media (min-width: 0px) {
-  .css-1pt9rie { width: 100%; display: flex; }
-}
-@media (min-width: 640px) {
-  .css-1pt9rie { width: 359px; }
-}
-@media (min-width: 1280px) {
-  .css-1pt9rie { display: none; }
-}
-.css-k33mgu { display: inline-flex; border-radius: 4px; background-color: rgb(56, 61, 81); border: 1px solid rgba(235, 235, 237, 0.12); padding: 4px; height: 44px; margin-bottom: 16px; }
-.css-k33mgu .MuiToggleButtonGroup-grouped.Mui-selected + .MuiToggleButtonGroup-grouped.Mui-selected { border-left: 0px; margin-left: 0px; }
-.css-k33mgu .MuiToggleButtonGroup-firstButton, .css-k33mgu .MuiToggleButtonGroup-middleButton { border-top-right-radius: 0px; border-bottom-right-radius: 0px; }
-.css-k33mgu .MuiToggleButtonGroup-lastButton, .css-k33mgu .MuiToggleButtonGroup-middleButton { margin-left: -1px; border-left: 1px solid transparent; border-top-left-radius: 0px; border-bottom-left-radius: 0px; }
-.css-k33mgu .MuiToggleButtonGroup-lastButton.Mui-disabled, .css-k33mgu .MuiToggleButtonGroup-middleButton.Mui-disabled { border-left: 1px solid transparent; }
-@media (min-width: 0px) {
-  .css-k33mgu { width: 100%; display: flex; }
-}
-@media (min-width: 640px) {
-  .css-k33mgu { width: 359px; }
-}
-@media (min-width: 1280px) {
-  .css-k33mgu { display: none; }
-}
-.css-1my42hl { border: 0px; flex: 1 1 0%; background-color: rgb(56, 61, 81); border-radius: 4px; }
-.css-1my42hl.Mui-selected, .css-1my42hl.Mui-selected:hover { background-color: rgb(255, 255, 255); border-radius: 4px !important; }
-.css-1my42hl.Mui-selected, .css-1my42hl.Mui-disabled { z-index: 100; height: 100%; display: flex; -moz-box-pack: center; justify-content: center; }
-.css-1my42hl.Mui-selected .MuiTypography-subheader1, .css-1my42hl.Mui-disabled .MuiTypography-subheader1 { background: linear-gradient(248.86deg, rgb(182, 80, 158) 10.51%, rgb(46, 186, 198) 93.41%) padding-box text; -webkit-text-fill-color: transparent; }
-.css-1my42hl.Mui-selected .MuiTypography-secondary14, .css-1my42hl.Mui-disabled .MuiTypography-secondary14 { background: linear-gradient(248.86deg, rgb(182, 80, 158) 10.51%, rgb(46, 186, 198) 93.41%) padding-box text; -webkit-text-fill-color: transparent; }
-.css-1h4fsi7 { padding: 11px; color: rgba(235, 235, 239, 0.56); border: 0px; flex: 1 1 0%; background-color: rgb(56, 61, 81); border-radius: 4px; }
-.css-1h4fsi7.Mui-disabled { color: rgba(235, 235, 239, 0.3); border: 1px solid rgba(235, 235, 239, 0.12); }
-.css-1h4fsi7:hover { text-decoration: none; background-color: rgba(241, 241, 243, 0.08); }
-@media (hover: none) {
-  .css-1h4fsi7:hover { background-color: transparent; }
-}
-.css-1h4fsi7.Mui-selected { color: rgb(234, 235, 239); background-color: rgba(234, 235, 239, 0.16); }
-.css-1h4fsi7.Mui-selected:hover { background-color: rgba(234, 235, 239, 0.24); }
-@media (hover: none) {
-  .css-1h4fsi7.Mui-selected:hover { background-color: rgba(234, 235, 239, 0.16); }
-}
-.css-1h4fsi7.Mui-selected, .css-1h4fsi7.Mui-selected:hover { background-color: rgb(255, 255, 255); border-radius: 4px !important; }
-.css-1h4fsi7.Mui-selected, .css-1h4fsi7.Mui-disabled { z-index: 100; height: 100%; display: flex; -moz-box-pack: center; justify-content: center; }
-.css-1h4fsi7.Mui-selected .MuiTypography-subheader1, .css-1h4fsi7.Mui-disabled .MuiTypography-subheader1 { background: linear-gradient(248.86deg, rgb(182, 80, 158) 10.51%, rgb(46, 186, 198) 93.41%) padding-box text; -webkit-text-fill-color: transparent; }
-.css-1h4fsi7.Mui-selected .MuiTypography-secondary14, .css-1h4fsi7.Mui-disabled .MuiTypography-secondary14 { background: linear-gradient(248.86deg, rgb(182, 80, 158) 10.51%, rgb(46, 186, 198) 93.41%) padding-box text; -webkit-text-fill-color: transparent; }
-.css-la5cf0 { display: inline-flex; -moz-box-align: center; align-items: center; -moz-box-pack: center; justify-content: center; position: relative; box-sizing: border-box; outline: 0px; margin: 0px; cursor: pointer; user-select: none; vertical-align: middle; appearance: none; text-decoration: none; padding: 11px; color: rgba(235, 235, 239, 0.56); border: 0px; flex: 1 1 0%; background-color: rgb(56, 61, 81); border-radius: 4px; }
-.css-la5cf0::-moz-focus-inner { border-style: none; }
-.css-la5cf0.Mui-disabled { pointer-events: none; cursor: default; }
-@media print {
-  .css-la5cf0 { print-color-adjust: exact; }
-}
-.css-la5cf0.Mui-disabled { color: rgba(235, 235, 239, 0.3); border: 1px solid rgba(235, 235, 239, 0.12); }
-.css-la5cf0:hover { text-decoration: none; background-color: rgba(241, 241, 243, 0.08); }
-@media (hover: none) {
-  .css-la5cf0:hover { background-color: transparent; }
-}
-.css-la5cf0.Mui-selected { color: rgb(234, 235, 239); background-color: rgba(234, 235, 239, 0.16); }
-.css-la5cf0.Mui-selected:hover { background-color: rgba(234, 235, 239, 0.24); }
-@media (hover: none) {
-  .css-la5cf0.Mui-selected:hover { background-color: rgba(234, 235, 239, 0.16); }
-}
-.css-la5cf0.Mui-selected, .css-la5cf0.Mui-selected:hover { background-color: rgb(255, 255, 255); border-radius: 4px !important; }
-.css-la5cf0.Mui-selected, .css-la5cf0.Mui-disabled { z-index: 100; height: 100%; display: flex; -moz-box-pack: center; justify-content: center; }
-.css-la5cf0.Mui-selected .MuiTypography-subheader1, .css-la5cf0.Mui-disabled .MuiTypography-subheader1 { background: linear-gradient(248.86deg, rgb(182, 80, 158) 10.51%, rgb(46, 186, 198) 93.41%) padding-box text; -webkit-text-fill-color: transparent; }
-.css-la5cf0.Mui-selected .MuiTypography-secondary14, .css-la5cf0.Mui-disabled .MuiTypography-secondary14 { background: linear-gradient(248.86deg, rgb(182, 80, 158) 10.51%, rgb(46, 186, 198) 93.41%) padding-box text; -webkit-text-fill-color: transparent; }
-.css-fu4g2f { margin: 0px; font-family: Inter, Arial; font-weight: 600; letter-spacing: 0.009375rem; line-height: 1.25rem; font-size: 0.875rem; }
-.css-isbt42 { box-sizing: border-box; display: flex; flex-flow: wrap; margin-top: -16px; width: calc(100% + 16px); margin-left: -16px; }
-.css-isbt42 > .MuiGrid-item { padding-top: 16px; }
-.css-isbt42 > .MuiGrid-item { padding-left: 16px; }
-.css-3nwm7d { box-sizing: border-box; margin: 0px; flex-direction: row; }
-@media (min-width: 960px) {
-  .css-3nwm7d { flex-basis: 66.6667%; -moz-box-flex: 0; flex-grow: 0; max-width: 66.6667%; }
-}
-@media (min-width: 1280px) {
-  .css-3nwm7d { flex-basis: 66.6667%; -moz-box-flex: 0; flex-grow: 0; max-width: 66.6667%; }
-}
-@media (min-width: 1575px) {
-  .css-3nwm7d { flex-basis: 66.6667%; -moz-box-flex: 0; flex-grow: 0; max-width: 66.6667%; }
-}
-@media (min-width: 1800px) {
-  .css-3nwm7d { flex-basis: 66.6667%; -moz-box-flex: 0; flex-grow: 0; max-width: 66.6667%; }
-}
-.css-1gl5nn9 { background-color: rgb(41, 46, 65); color: rgb(241, 241, 243); transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1); border-radius: 4px; box-shadow: rgba(0, 0, 0, 0.05) 0px 2px 1px, rgba(0, 0, 0, 0.25) 0px 0px 1px; background-image: none; }
-.css-1j98xai { padding: 16px 24px; display: flex; gap: 12px; border-bottom: 1px solid rgba(235, 235, 239, 0.08); border-color: rgba(235, 235, 239, 0.08); }
-@media (min-width: 0px) {
-  .css-1j98xai { flex-direction: column; align-items: flex-start; }
-}
-@media (min-width: 960px) {
-  .css-1j98xai { flex-direction: row; -moz-box-align: center; align-items: center; }
-}
-.css-1kwyw2c { margin: 0px; font-family: Inter, Arial; font-weight: 600; letter-spacing: 0.009375rem; line-height: 160%; font-size: 1.125rem; -moz-box-flex: 1; flex-grow: 1; }
-.css-1nkijli { margin: 0px; font-family: Inter, Arial; font-weight: 400; letter-spacing: 0.009375rem; line-height: 143%; font-size: 0.875rem; }
-.css-1470kbw { min-width: 140px; }
-.css-1l0z8s3 { color: rgb(241, 241, 243); line-height: 1.4375em; box-sizing: border-box; cursor: text; display: inline-flex; -moz-box-align: center; align-items: center; position: relative; border-radius: 6px; border-color: rgba(235, 235, 239, 0.08); min-width: 140px; }
-.css-1l0z8s3.Mui-disabled { color: rgb(98, 103, 123); cursor: default; }
-.css-1l0z8s3:hover .MuiOutlinedInput-notchedOutline { border-color: rgb(241, 241, 243); }
-@media (hover: none) {
-  .css-1l0z8s3:hover .MuiOutlinedInput-notchedOutline { border-color: rgba(255, 255, 255, 0.23); }
-}
-.css-1l0z8s3.Mui-focused .MuiOutlinedInput-notchedOutline { border-color: rgb(234, 235, 239); border-width: 2px; }
-.css-1l0z8s3.Mui-error .MuiOutlinedInput-notchedOutline { border-color: rgb(244, 67, 54); }
-.css-1l0z8s3.Mui-disabled .MuiOutlinedInput-notchedOutline { border-color: rgba(235, 235, 239, 0.3); }
-.css-1l0z8s3:hover .MuiOutlinedInput-notchedOutline { border-color: rgb(203, 205, 216); }
-.css-1l0z8s3.Mui-focused .MuiOutlinedInput-notchedOutline { border-color: rgb(203, 205, 216); }
-.css-wvdg9f { font: inherit; letter-spacing: inherit; color: currentcolor; border: 0px; box-sizing: content-box; background: none; height: 1.4375em; margin: 0px; display: block; min-width: 0px; width: 100%; animation-name: mui-auto-fill-cancel; animation-duration: 10ms; padding: 16.5px 14px; }
-.css-wvdg9f::-webkit-input-placeholder { color: currentcolor; opacity: 0.5; transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1); }
-.css-wvdg9f::placeholder { color: currentcolor; opacity: 0.5; transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1); }
-.css-wvdg9f:focus { outline: 0px; }
-.css-wvdg9f:invalid { box-shadow: none; }
-.css-wvdg9f::-webkit-search-decoration { appearance: none; }
-label[data-shrink="false"] + .MuiInputBase-formControl .css-wvdg9f::-webkit-input-placeholder { opacity: 0 !important; }
-label[data-shrink="false"] + .MuiInputBase-formControl .css-wvdg9f::placeholder { opacity: 0 !important; }
-label[data-shrink="false"] + .MuiInputBase-formControl .css-wvdg9f:focus::-webkit-input-placeholder { opacity: 0.5; }
-label[data-shrink="false"] + .MuiInputBase-formControl .css-wvdg9f:focus::placeholder { opacity: 0.5; }
-.css-wvdg9f.Mui-disabled { opacity: 1; -webkit-text-fill-color: rgb(98, 103, 123); }
-.css-wvdg9f:autofill { animation-duration: 5000s; animation-name: mui-auto-fill; }
-.css-wvdg9f:autofill { box-shadow: rgb(38, 103, 152) 0px 0px 0px 100px inset; -webkit-text-fill-color: rgb(255, 255, 255); caret-color: rgb(255, 255, 255); border-radius: inherit; }
-.css-1dyf9qo { appearance: none; user-select: none; border-radius: 4px; cursor: pointer; font: inherit; letter-spacing: inherit; color: currentcolor; border: 0px; box-sizing: content-box; background: none; height: 1.4375em; margin: 0px; display: block; min-width: 0px; width: 100%; animation-name: mui-auto-fill-cancel; animation-duration: 10ms; padding: 16.5px 14px; }
-.css-1dyf9qo:focus { border-radius: 4px; }
-.css-1dyf9qo.Mui-disabled { cursor: default; }
-.css-1dyf9qo[multiple] { height: auto; }
-.css-1dyf9qo:not([multiple]) option, .css-1dyf9qo:not([multiple]) optgroup { background-color: rgb(41, 46, 65); }
-.css-1dyf9qo.css-1dyf9qo.css-1dyf9qo { padding-right: 32px; }
-.css-1dyf9qo.MuiSelect-select { height: auto; min-height: 1.4375em; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; }
-.css-1dyf9qo.MuiSelect-select { background-color: rgb(56, 61, 81); font-family: Inter, Arial; font-weight: 500; line-height: 1.5rem; font-size: 0.875rem; padding: 6px 12px; color: rgb(241, 241, 243); }
-.css-1dyf9qo::-webkit-input-placeholder { color: currentcolor; opacity: 0.5; transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1); }
-.css-1dyf9qo::placeholder { color: currentcolor; opacity: 0.5; transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1); }
-.css-1dyf9qo:focus { outline: 0px; }
-.css-1dyf9qo:invalid { box-shadow: none; }
-.css-1dyf9qo::-webkit-search-decoration { appearance: none; }
-label[data-shrink="false"] + .MuiInputBase-formControl .css-1dyf9qo::-webkit-input-placeholder { opacity: 0 !important; }
-label[data-shrink="false"] + .MuiInputBase-formControl .css-1dyf9qo::placeholder { opacity: 0 !important; }
-label[data-shrink="false"] + .MuiInputBase-formControl .css-1dyf9qo:focus::-webkit-input-placeholder { opacity: 0.5; }
-label[data-shrink="false"] + .MuiInputBase-formControl .css-1dyf9qo:focus::placeholder { opacity: 0.5; }
-.css-1dyf9qo.Mui-disabled { opacity: 1; -webkit-text-fill-color: rgb(98, 103, 123); }
-.css-1dyf9qo:autofill { animation-duration: 5000s; animation-name: mui-auto-fill; }
-.css-1dyf9qo:autofill { box-shadow: rgb(38, 103, 152) 0px 0px 0px 100px inset; -webkit-text-fill-color: rgb(255, 255, 255); caret-color: rgb(255, 255, 255); border-radius: inherit; }
-.css-1k3x8v3 { bottom: 0px; left: 0px; position: absolute; opacity: 0; pointer-events: none; width: 100%; box-sizing: border-box; }
-.css-dzdoo0 { position: absolute; right: 7px; top: calc(50% - 0.5em); pointer-events: none; color: rgba(235, 235, 239, 0.56); }
-.css-dzdoo0.Mui-disabled { color: rgba(235, 235, 239, 0.3); }
-.css-1tif1u7 { user-select: none; width: 1em; height: 1em; display: inline-block; fill: currentcolor; flex-shrink: 0; transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1); font-size: 16px; position: absolute; right: 7px; top: calc(50% - 0.5em); pointer-events: none; color: rgba(235, 235, 239, 0.56); }
-.css-1tif1u7.Mui-disabled { color: rgba(235, 235, 239, 0.3); }
-.css-7z4qiw { border-color: rgba(255, 255, 255, 0.23); }
-.css-nqlg3w { text-align: left; position: absolute; inset: -5px 0px 0px; margin: 0px; padding: 0px 8px; pointer-events: none; border-radius: inherit; border-style: solid; border-width: 1px; overflow: hidden; min-width: 0%; border-color: rgba(255, 255, 255, 0.23); }
-.css-ihdtdm { float: unset; width: auto; overflow: hidden; padding: 0px; line-height: 11px; transition: width 150ms cubic-bezier(0, 0, 0.2, 1); }
-.css-c6rw7y { display: flex; -moz-box-align: center; align-items: center; gap: 8px; border: 1px solid rgba(235, 235, 239, 0.08); border-radius: 6px; height: 36px; width: 280px; }
-.css-14aub4a { margin-left: 8px; margin-top: 4px; }
-.css-bhhpxe { color: rgb(241, 241, 243); line-height: 1.4375em; box-sizing: border-box; position: relative; cursor: text; display: inline-flex; -moz-box-align: center; align-items: center; width: 100%; }
-.css-bhhpxe.Mui-disabled { color: rgb(98, 103, 123); cursor: default; }
-@media (min-width: 0px) {
-  .css-bhhpxe { font-size: 16px; }
-}
-@media (min-width: 760px) {
-  .css-bhhpxe { font-size: 14px; }
-}
-.css-8crlfm { font: inherit; letter-spacing: inherit; color: currentcolor; padding: 4px 0px 5px; border: 0px; box-sizing: content-box; background: none; height: 1.4375em; margin: 0px; display: block; min-width: 0px; width: 100%; animation-name: mui-auto-fill-cancel; animation-duration: 10ms; }
-.css-8crlfm::-webkit-input-placeholder { color: currentcolor; opacity: 0.5; transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1); }
-.css-8crlfm::placeholder { color: currentcolor; opacity: 0.5; transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1); }
-.css-8crlfm:focus { outline: 0px; }
-.css-8crlfm:invalid { box-shadow: none; }
-.css-8crlfm::-webkit-search-decoration { appearance: none; }
-label[data-shrink="false"] + .MuiInputBase-formControl .css-8crlfm::-webkit-input-placeholder { opacity: 0 !important; }
-label[data-shrink="false"] + .MuiInputBase-formControl .css-8crlfm::placeholder { opacity: 0 !important; }
-label[data-shrink="false"] + .MuiInputBase-formControl .css-8crlfm:focus::-webkit-input-placeholder { opacity: 0.5; }
-label[data-shrink="false"] + .MuiInputBase-formControl .css-8crlfm:focus::placeholder { opacity: 0.5; }
-.css-8crlfm.Mui-disabled { opacity: 1; -webkit-text-fill-color: rgb(98, 103, 123); }
-.css-8crlfm:autofill { animation-duration: 5000s; animation-name: mui-auto-fill; }
-.css-zbr2pe { text-align: center; flex: 0 0 auto; font-size: 1.5rem; border-radius: 50%; overflow: visible; color: rgba(235, 235, 239, 0.56); transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1); padding: 0px; margin-right: 8px; visibility: hidden; }
-.css-zbr2pe:hover { background-color: rgba(235, 235, 239, 0.08); }
-@media (hover: none) {
-  .css-zbr2pe:hover { background-color: transparent; }
-}
-.css-zbr2pe.Mui-disabled { background-color: transparent; color: rgba(235, 235, 239, 0.3); }
-.css-1iwk9i3 { display: inline-flex; -moz-box-align: center; align-items: center; -moz-box-pack: center; justify-content: center; position: relative; box-sizing: border-box; background-color: transparent; outline: 0px; border: 0px; margin: 0px 8px 0px 0px; cursor: pointer; user-select: none; vertical-align: middle; appearance: none; text-decoration: none; text-align: center; flex: 0 0 auto; font-size: 1.5rem; border-radius: 50%; overflow: visible; color: rgba(235, 235, 239, 0.56); transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1); padding: 0px; visibility: hidden; }
-.css-1iwk9i3::-moz-focus-inner { border-style: none; }
-.css-1iwk9i3.Mui-disabled { pointer-events: none; cursor: default; }
-@media print {
-  .css-1iwk9i3 { print-color-adjust: exact; }
-}
-.css-1iwk9i3:hover { background-color: rgba(235, 235, 239, 0.08); }
-@media (hover: none) {
-  .css-1iwk9i3:hover { background-color: transparent; }
-}
-.css-1iwk9i3.Mui-disabled { background-color: transparent; color: rgba(235, 235, 239, 0.3); }
-.css-11oqd2y { padding: 24px; display: flex; flex-wrap: wrap; -moz-box-pack: justify; justify-content: space-between; border-bottom: 1px solid rgba(235, 235, 239, 0.08); }
-.css-17apsd8 { display: flex; flex-direction: column; -moz-box-pack: justify; justify-content: space-between; }
-@media (min-width: 0px) {
-  .css-17apsd8 { width: 100%; padding-right: 0px; }
-}
-@media (min-width: 1280px) {
-  .css-17apsd8 { width: 70%; padding-right: 32px; }
-}
-.css-132hyst { display: flex; flex-direction: column; }
-@media (min-width: 0px) {
-  .css-132hyst { width: 100%; padding-right: 0px; gap: 12px; }
-}
-@media (min-width: 1280px) {
-  .css-132hyst { width: 70%; padding-right: 32px; gap: 24px; }
-}
-.css-n94y4 { display: block; background-color: rgba(241, 241, 243, 0.13); height: 1.2em; animation: 2s ease-in-out 0.5s infinite animation-c7515d; transform: unset; }
-@keyframes animation-c7515d {
-0% { opacity: 1; }
-50% { opacity: 0.4; }
-100% { opacity: 1; }
-}
-@keyframes animation-c7515d {
-0% { opacity: 1; }
-50% { opacity: 0.4; }
-100% { opacity: 1; }
-}
-.css-1jvvlbg { display: flex; flex-direction: column; -moz-box-flex: 1; flex-grow: 1; -moz-box-pack: center; justify-content: center; }
-@media (min-width: 0px) {
-  .css-1jvvlbg { padding-left: 0px; margin-top: 28px; }
-}
-@media (min-width: 1280px) {
-  .css-1jvvlbg { padding-left: 72px; margin-top: 0px; }
-}
-.css-k008qs { display: flex; }
-.css-181zdd { margin: 0px 8px 0px 0px; font-family: Inter, Arial; font-weight: 400; letter-spacing: 0.009375rem; line-height: 143%; font-size: 0.875rem; }
-.css-1jeg5k1 { margin: 0px; font-family: Inter, Arial; font-weight: 500; letter-spacing: 0.009375rem; font-size: 0.875rem; -moz-box-flex: 1; flex-grow: 1; line-height: 1rem; }
-.css-1f9djdl { display: block; background-color: rgba(241, 241, 243, 0.13); height: auto; margin-top: 0px; margin-bottom: 0px; transform-origin: 0px 55% 0px; border-radius: 4px / 6.7px; animation: 2s ease-in-out 0.5s infinite animation-c7515d; transform: unset; }
-.css-1f9djdl:empty::before { content: " "; }
-@keyframes animation-c7515d {
-0% { opacity: 1; }
-50% { opacity: 0.4; }
-100% { opacity: 1; }
-}
-@keyframes animation-c7515d {
-0% { opacity: 1; }
-50% { opacity: 0.4; }
-100% { opacity: 1; }
-}
-.css-1o62gjw { margin: 0px; font-family: Inter, Arial; font-weight: 400; letter-spacing: 0.009375rem; line-height: 1rem; font-size: 0.75rem; }
-.css-107rh76 { display: block; background-color: rgba(241, 241, 243, 0.13); height: 1.2em; animation: 2s ease-in-out 0.5s infinite animation-c7515d; transform: unset; border-radius: 6px; }
-@keyframes animation-c7515d {
-0% { opacity: 1; }
-50% { opacity: 0.4; }
-100% { opacity: 1; }
-}
-@keyframes animation-c7515d {
-0% { opacity: 1; }
-50% { opacity: 0.4; }
-100% { opacity: 1; }
-}
-.css-emkqy0 { box-sizing: border-box; margin: 0px; flex-direction: row; }
-@media (min-width: 960px) {
-  .css-emkqy0 { flex-basis: 33.3333%; -moz-box-flex: 0; flex-grow: 0; max-width: 33.3333%; }
-}
-@media (min-width: 1280px) {
-  .css-emkqy0 { flex-basis: 33.3333%; -moz-box-flex: 0; flex-grow: 0; max-width: 33.3333%; }
-}
-@media (min-width: 1575px) {
-  .css-emkqy0 { flex-basis: 33.3333%; -moz-box-flex: 0; flex-grow: 0; max-width: 33.3333%; }
-}
-@media (min-width: 1800px) {
-  .css-emkqy0 { flex-basis: 33.3333%; -moz-box-flex: 0; flex-grow: 0; max-width: 33.3333%; }
-}
-.css-jfz5gy { background-color: rgb(41, 46, 65); color: rgb(241, 241, 243); transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1); border-radius: 4px; box-shadow: rgba(0, 0, 0, 0.05) 0px 2px 1px, rgba(0, 0, 0, 0.25) 0px 0px 1px; background-image: none; padding: 24px; }
-.css-zezzla { margin: 0px; font-family: Inter, Arial; font-weight: 600; letter-spacing: 0.009375rem; line-height: 160%; font-size: 1.125rem; }
-@media (min-width: 0px) {
-  .css-zezzla { margin-bottom: 24px; }
-}
-@media (min-width: 640px) {
-  .css-zezzla { margin-bottom: 40px; }
-}
+.css-17qu3ne { background-color: rgb(41, 46, 65); color: rgb(241, 241, 243); transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1); border-radius: 4px; box-shadow: rgba(0, 0, 0, 0.05) 0px 2px 1px, rgba(0, 0, 0, 0.25) 0px 0px 1px; background-image: none; display: flex; flex-direction: column; -moz-box-align: center; align-items: center; -moz-box-pack: center; justify-content: center; text-align: center; padding: 16px; flex: 1 1 0%; }
+.css-11zj654 { margin: 0px 0px 8px; font-family: Inter, Arial; font-weight: 600; letter-spacing: unset; line-height: 133.4%; font-size: 1.3125rem; }
 .css-1p4wjs1 { margin: 0px 0px 24px; font-family: Inter, Arial; font-weight: 400; letter-spacing: 0.009375rem; line-height: 143%; font-size: 0.875rem; color: rgb(165, 168, 182); }
 .css-103kn7e { display: flex; width: 100%; -moz-box-pack: justify; justify-content: space-between; -moz-box-align: center; align-items: center; gap: 22px; box-shadow: rgba(255, 255, 255, 0.12) 0px 1px 0px inset; }
 @media (min-width: 0px) {
@@ -1530,6 +770,7 @@ label[data-shrink="false"] + .MuiInputBase-formControl .css-8crlfm:focus::placeh
 .css-gdpe9y:hover { color: rgb(241, 241, 243); }
 .css-tgjpic { margin: 0px; font-family: Inter, Arial; font-weight: 400; letter-spacing: 0.009375rem; line-height: 143%; font-size: 0.875rem; text-decoration: none; color: rgb(142, 146, 163); display: flex; -moz-box-align: center; align-items: center; }
 .css-tgjpic:hover { color: rgb(241, 241, 243); }
+.css-1o62gjw { margin: 0px; font-family: Inter, Arial; font-weight: 400; letter-spacing: 0.009375rem; line-height: 1rem; font-size: 0.75rem; }
 .css-1poxqjx { margin: 0px; font-family: Inter, Arial; font-weight: 400; letter-spacing: 0.009375rem; line-height: 143%; font-size: 0.875rem; text-decoration: none; color: rgb(142, 146, 163); display: flex; -moz-box-align: center; align-items: center; }
 .css-1poxqjx:hover { color: rgb(241, 241, 243); }
 .css-qe1uop { user-select: none; width: 1em; height: 1em; display: inline-block; fill: currentcolor; flex-shrink: 0; transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1); font-size: 1.5rem; }
@@ -1676,6 +917,7 @@ label[data-shrink="false"] + .MuiInputBase-formControl .css-8crlfm:focus::placeh
 @media (min-width: 760px) {
   .css-14d7i0e { min-height: auto; }
 }
+.css-fu4g2f { margin: 0px; font-family: Inter, Arial; font-weight: 600; letter-spacing: 0.009375rem; line-height: 1.25rem; font-size: 0.875rem; }
 .css-1qvb7oz { display: flex; -moz-box-pack: start; justify-content: flex-start; -moz-box-align: center; align-items: center; position: relative; text-decoration: none; min-height: 48px; box-sizing: border-box; white-space: nowrap; padding: 12px 16px; }
 .css-1qvb7oz:hover { text-decoration: none; background-color: rgba(235, 235, 239, 0.08); }
 @media (hover: none) {
@@ -2030,6 +1272,7 @@ label[data-shrink="false"] + .MuiInputBase-formControl .css-8crlfm:focus::placeh
 .css-1m9pwf3 { cursor: inherit; position: absolute; opacity: 0; width: 100%; height: 100%; top: 0px; left: 0px; margin: 0px; padding: 0px; z-index: 1; }
 .css-uz25m2 { background-color: currentcolor; color: rgb(255, 255, 255); border-radius: 6px; width: 16px; height: 16px; box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 1px; }
 .css-5w2f18 { height: 100%; width: 100%; z-index: -1; transition: opacity 150ms cubic-bezier(0.4, 0, 0.2, 1), background-color 150ms cubic-bezier(0.4, 0, 0.2, 1); opacity: 1; background-color: rgba(235, 235, 239, 0.56); border-radius: 8px; }
+.css-1nkijli { margin: 0px; font-family: Inter, Arial; font-weight: 400; letter-spacing: 0.009375rem; line-height: 143%; font-size: 0.875rem; }
 .css-9bat2v { cursor: pointer; }
 @media (min-width: 0px) {
   .css-9bat2v { color: rgb(241, 241, 243); padding-top: 6px; padding-bottom: 6px; }
@@ -2193,7 +1436,6 @@ label[data-shrink="false"] + .MuiInputBase-formControl .css-8crlfm:focus::placeh
 @media (min-width: 960px) {
   .css-1jrnzya { color: rgb(241, 241, 243); }
 }
-.css-my2x37 { margin: 0px; font-family: Inter, Arial; font-weight: 500; letter-spacing: 0.00625rem; line-height: 1rem; font-size: 0.75rem; }
 @media (min-width: 0px) {
   .css-16mujtn { color: rgb(241, 241, 243); }
 }
@@ -2302,38 +1544,6 @@ label[data-shrink="false"] + .MuiInputBase-formControl .css-8crlfm:focus::placeh
 .css-1y4kwyt:active { box-shadow: none; }
 .css-1y4kwyt.Mui-disabled { box-shadow: none; }
 .css-1y4kwyt:hover, .css-1y4kwyt.Mui-focusVisible { background: linear-gradient(248.86deg, rgb(182, 80, 158) 10.51%, rgb(46, 186, 198) 93.41%); opacity: 0.9; }
-.css-19ri5qq { opacity: 0; position: absolute; }
-.css-19ri5qq.MuiTouchRipple-rippleVisible { opacity: 0.3; transform: scale(1); animation-name: animation-1taevns; animation-duration: 550ms; animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
-.css-19ri5qq.MuiTouchRipple-ripplePulsate { animation-duration: 200ms; }
-.css-19ri5qq .MuiTouchRipple-child { opacity: 1; display: block; width: 100%; height: 100%; border-radius: 50%; background-color: currentcolor; }
-.css-19ri5qq .MuiTouchRipple-childLeaving { opacity: 0; animation-name: animation-5ich1p; animation-duration: 550ms; animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
-.css-19ri5qq .MuiTouchRipple-childPulsate { position: absolute; left: 0px; top: 0px; animation-name: animation-f6tr5a; animation-duration: 2500ms; animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); animation-iteration-count: infinite; animation-delay: 200ms; }
-@keyframes animation-f6tr5a {
-0% { transform: scale(1); }
-50% { transform: scale(0.92); }
-100% { transform: scale(1); }
-}
-@keyframes animation-f6tr5a {
-0% { transform: scale(1); }
-50% { transform: scale(0.92); }
-100% { transform: scale(1); }
-}
-@keyframes animation-5ich1p {
-0% { opacity: 1; }
-100% { opacity: 0; }
-}
-@keyframes animation-5ich1p {
-0% { opacity: 1; }
-100% { opacity: 0; }
-}
-@keyframes animation-1taevns {
-0% { transform: scale(0); opacity: 0.1; }
-100% { transform: scale(1); opacity: 0.3; }
-}
-@keyframes animation-1taevns {
-0% { transform: scale(0); opacity: 0.1; }
-100% { transform: scale(1); opacity: 0.3; }
-}
 .css-i1lkld { min-width: 64px; transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1); box-shadow: none; border-radius: 4px; font-family: Inter, Arial; font-weight: 500; line-height: 1.5rem; font-size: 0.875rem; padding: 6px 12px; color: rgb(255, 255, 255); border: 1px solid rgba(235, 235, 237, 0.12); background-color: rgb(56, 61, 81); }
 .css-i1lkld:hover { text-decoration: none; background-color: rgba(241, 241, 243, 0.08); }
 @media (hover: none) {
@@ -2368,8 +1578,102 @@ label[data-shrink="false"] + .MuiInputBase-formControl .css-8crlfm:focus::placeh
 .css-g2bxhl { display: flex; flex-flow: wrap; -moz-box-pack: center; place-content: center; -moz-box-align: center; align-items: center; position: absolute; box-sizing: border-box; font-family: Inter, Arial; font-weight: 500; font-size: 0.75rem; min-width: 20px; line-height: 1; padding: 0px 6px; height: 20px; border-radius: 10px; z-index: 1; bottom: 14%; right: 14%; transform: scale(1) translate(50%, 50%); transform-origin: 100% 100% 0px; transition: transform 195ms cubic-bezier(0.4, 0, 0.2, 1); }
 .css-g2bxhl.MuiBadge-invisible { transform: scale(0) translate(50%, 50%); }
 .css-j7qwjs { display: flex; flex-direction: column; }
-.css-171onha { display: flex; -moz-box-align: center; align-items: center; gap: 4px; }
 .css-1cwblkd { margin: 0px; font-family: Inter, Arial; font-weight: 500; line-height: 1.5rem; font-size: 0.875rem; }
+.css-133srx4 { background-color: rgb(41, 46, 65); color: rgb(241, 241, 243); transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1); border-radius: 4px; box-shadow: rgba(0, 0, 0, 0.05) 0px 2px 1px, rgba(0, 0, 0, 0.25) 0px 0px 1px; background-image: none; margin-top: 0px; border: 1px solid rgba(235, 235, 239, 0.08); }
+.css-19zr2gl { display: flex; -moz-box-align: center; align-items: center; -moz-box-pack: justify; justify-content: space-between; }
+@media (min-width: 0px) {
+  .css-19zr2gl { padding: 14px 16px; }
+}
+@media (min-width: 640px) {
+  .css-19zr2gl { padding: 16px 24px; }
+}
+.css-iwds49 { width: 100%; display: flex; padding-top: 3.6px; padding-bottom: 3.6px; }
+@media (min-width: 0px) {
+  .css-iwds49 { align-items: flex-start; flex-direction: column; }
+}
+@media (min-width: 640px) {
+  .css-iwds49 { -moz-box-align: center; align-items: center; flex-direction: row; }
+}
+.css-1m26qky { margin: 0px 16px 0px 0px; font-family: Inter, Arial; font-weight: 600; letter-spacing: unset; line-height: 133.4%; font-size: 1.3125rem; }
+.css-13o7eu2 { display: block; }
+.css-2tja52 { display: flex; -moz-box-pack: justify; justify-content: space-between; margin: 24px 32px 16px; }
+.css-vxcmzt { display: inline-flex; }
+.css-oocb0u { transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1); color: rgb(234, 235, 239); box-shadow: none; font-family: Inter, Arial; font-weight: 500; line-height: 1.5rem; font-size: 0.875rem; padding: 6px 4px 6px 8px; min-width: 148px; max-width: 360px; display: flex; -moz-box-pack: justify; justify-content: space-between; -moz-box-align: center; align-items: center; height: 36px; border: 1px solid rgba(235, 235, 239, 0.08); border-radius: 4px; margin-right: 8px; margin-left: 0px; }
+.css-oocb0u:hover { text-decoration: none; background-color: rgba(234, 235, 239, 0.08); }
+@media (hover: none) {
+  .css-oocb0u:hover { background-color: transparent; }
+}
+.css-oocb0u.Mui-disabled { color: rgba(235, 235, 239, 0.3); }
+.css-oocb0u:hover { box-shadow: none; }
+.css-oocb0u.Mui-focusVisible { box-shadow: none; }
+.css-oocb0u:active { box-shadow: none; }
+.css-oocb0u.Mui-disabled { box-shadow: none; }
+.css-pmwx2x { position: relative; box-sizing: border-box; background-color: transparent; outline: 0px; margin: 0px 8px 0px 0px; cursor: pointer; user-select: none; vertical-align: middle; appearance: none; text-decoration: none; transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1); color: rgb(234, 235, 239); box-shadow: none; font-family: Inter, Arial; font-weight: 500; line-height: 1.5rem; font-size: 0.875rem; padding: 6px 4px 6px 8px; min-width: 148px; max-width: 360px; display: flex; -moz-box-pack: justify; justify-content: space-between; -moz-box-align: center; align-items: center; height: 36px; border: 1px solid rgba(235, 235, 239, 0.08); border-radius: 4px; }
+.css-pmwx2x::-moz-focus-inner { border-style: none; }
+.css-pmwx2x.Mui-disabled { pointer-events: none; cursor: default; }
+@media print {
+  .css-pmwx2x { print-color-adjust: exact; }
+}
+.css-pmwx2x:hover { text-decoration: none; background-color: rgba(234, 235, 239, 0.08); }
+@media (hover: none) {
+  .css-pmwx2x:hover { background-color: transparent; }
+}
+.css-pmwx2x.Mui-disabled { color: rgba(235, 235, 239, 0.3); }
+.css-pmwx2x:hover { box-shadow: none; }
+.css-pmwx2x.Mui-focusVisible { box-shadow: none; }
+.css-pmwx2x:active { box-shadow: none; }
+.css-pmwx2x.Mui-disabled { box-shadow: none; }
+.css-1mervjy { display: flex; -moz-box-align: center; align-items: center; overflow: hidden; }
+.css-114k0zz { user-select: none; width: 1em; height: 1em; display: inline-block; fill: currentcolor; flex-shrink: 0; transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1); font-size: 1.5rem; color: rgb(241, 241, 243); }
+.css-qy04vp { margin: 0px 4px; font-family: Inter, Arial; font-weight: 600; letter-spacing: 0.009375rem; line-height: 1.25rem; font-size: 0.875rem; color: rgb(241, 241, 243); text-overflow: ellipsis; white-space: nowrap; overflow: hidden; }
+.css-c6rw7y { display: flex; -moz-box-align: center; align-items: center; gap: 8px; border: 1px solid rgba(235, 235, 239, 0.08); border-radius: 6px; height: 36px; width: 280px; }
+.css-14aub4a { margin-left: 8px; margin-top: 4px; }
+.css-bhhpxe { color: rgb(241, 241, 243); line-height: 1.4375em; box-sizing: border-box; position: relative; cursor: text; display: inline-flex; -moz-box-align: center; align-items: center; width: 100%; }
+.css-bhhpxe.Mui-disabled { color: rgb(98, 103, 123); cursor: default; }
+@media (min-width: 0px) {
+  .css-bhhpxe { font-size: 16px; }
+}
+@media (min-width: 760px) {
+  .css-bhhpxe { font-size: 14px; }
+}
+.css-8crlfm { font: inherit; letter-spacing: inherit; color: currentcolor; padding: 4px 0px 5px; border: 0px; box-sizing: content-box; background: none; height: 1.4375em; margin: 0px; display: block; min-width: 0px; width: 100%; animation-name: mui-auto-fill-cancel; animation-duration: 10ms; }
+.css-8crlfm::-webkit-input-placeholder { color: currentcolor; opacity: 0.5; transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1); }
+.css-8crlfm::placeholder { color: currentcolor; opacity: 0.5; transition: opacity 200ms cubic-bezier(0.4, 0, 0.2, 1); }
+.css-8crlfm:focus { outline: 0px; }
+.css-8crlfm:invalid { box-shadow: none; }
+.css-8crlfm::-webkit-search-decoration { appearance: none; }
+label[data-shrink="false"] + .MuiInputBase-formControl .css-8crlfm::-webkit-input-placeholder { opacity: 0 !important; }
+label[data-shrink="false"] + .MuiInputBase-formControl .css-8crlfm::placeholder { opacity: 0 !important; }
+label[data-shrink="false"] + .MuiInputBase-formControl .css-8crlfm:focus::-webkit-input-placeholder { opacity: 0.5; }
+label[data-shrink="false"] + .MuiInputBase-formControl .css-8crlfm:focus::placeholder { opacity: 0.5; }
+.css-8crlfm.Mui-disabled { opacity: 1; -webkit-text-fill-color: rgb(98, 103, 123); }
+.css-8crlfm:autofill { animation-duration: 5000s; animation-name: mui-auto-fill; }
+.css-zbr2pe { text-align: center; flex: 0 0 auto; font-size: 1.5rem; border-radius: 50%; overflow: visible; color: rgba(235, 235, 239, 0.56); transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1); padding: 0px; margin-right: 8px; visibility: hidden; }
+.css-zbr2pe:hover { background-color: rgba(235, 235, 239, 0.08); }
+@media (hover: none) {
+  .css-zbr2pe:hover { background-color: transparent; }
+}
+.css-zbr2pe.Mui-disabled { background-color: transparent; color: rgba(235, 235, 239, 0.3); }
+.css-1iwk9i3 { display: inline-flex; -moz-box-align: center; align-items: center; -moz-box-pack: center; justify-content: center; position: relative; box-sizing: border-box; background-color: transparent; outline: 0px; border: 0px; margin: 0px 8px 0px 0px; cursor: pointer; user-select: none; vertical-align: middle; appearance: none; text-decoration: none; text-align: center; flex: 0 0 auto; font-size: 1.5rem; border-radius: 50%; overflow: visible; color: rgba(235, 235, 239, 0.56); transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1); padding: 0px; visibility: hidden; }
+.css-1iwk9i3::-moz-focus-inner { border-style: none; }
+.css-1iwk9i3.Mui-disabled { pointer-events: none; cursor: default; }
+@media print {
+  .css-1iwk9i3 { print-color-adjust: exact; }
+}
+.css-1iwk9i3:hover { background-color: rgba(235, 235, 239, 0.08); }
+@media (hover: none) {
+  .css-1iwk9i3:hover { background-color: transparent; }
+}
+.css-1iwk9i3.Mui-disabled { background-color: transparent; color: rgba(235, 235, 239, 0.3); }
+.css-12jejuo { display: flex; -moz-box-align: center; align-items: center; height: 36px; gap: 2px; }
+.css-gdm2id { cursor: pointer; height: auto; width: auto; display: flex; -moz-box-align: center; align-items: center; margin-right: 24px; }
+.css-gdm2id color { }
+.css-1nghpm7 { margin: 0px; font-family: Inter, Arial; font-weight: 500; line-height: 1.5rem; font-size: 0.875rem; color: rgb(241, 241, 243); }
+.css-1xur86b { cursor: pointer; height: auto; width: auto; display: flex; -moz-box-align: center; align-items: center; }
+.css-1xur86b color { }
+.css-iotmz5 { display: flex; flex-direction: column; -moz-box-align: center; align-items: center; -moz-box-pack: center; justify-content: center; text-align: center; padding: 16px; flex: 1 1 0%; }
+.css-1ftrdw1 { margin: 96px 0px; font-family: Inter, Arial; font-weight: 600; letter-spacing: 0.009375rem; line-height: 160%; font-size: 1.125rem; color: rgb(241, 241, 243); }
+.css-1n40sif { display: flex; -moz-box-pack: center; justify-content: center; margin-bottom: 0px; margin-top: 40px; }
 .css-1mu7wm0 { display: block; background-color: rgba(241, 241, 243, 0.13); height: 1.2em; border-radius: 50%; animation: 2s ease-in-out 0.5s infinite animation-c7515d; transform: unset; }
 @keyframes animation-c7515d {
 0% { opacity: 1; }
@@ -2381,72 +1685,91 @@ label[data-shrink="false"] + .MuiInputBase-formControl .css-8crlfm:focus::placeh
 50% { opacity: 0.4; }
 100% { opacity: 1; }
 }
-.css-vlwc29 { background-color: rgb(41, 46, 65); color: rgb(241, 241, 243); transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1); border-radius: 4px; box-shadow: rgba(0, 0, 0, 0.05) 0px 2px 1px, rgba(0, 0, 0, 0.25) 0px 0px 1px; background-image: none; padding: 16px 24px 24px; }
-.css-94tddk { margin: 0px 0px 16px; font-family: Inter, Arial; font-weight: 600; letter-spacing: 0.009375rem; line-height: 160%; font-size: 1.125rem; height: 36px; display: flex; -moz-box-align: center; align-items: center; }
-.css-cg4wfg { margin: 0px; font-family: Inter, Arial; font-weight: 600; letter-spacing: 0.009375rem; line-height: 1.5rem; font-size: 1rem; }
-.css-1s10ee8 { text-decoration: underline rgba(234, 235, 239, 0.4); display: flex; }
-.css-1s10ee8:hover { text-decoration-color: inherit; }
-.css-1fxq9g4 { margin: 0px; font-family: Inter, Arial; font-weight: 400; letter-spacing: 0.009375rem; line-height: 143%; font-size: 0.875rem; color: rgb(234, 235, 239); text-decoration: underline rgba(234, 235, 239, 0.4); display: flex; }
-.css-1fxq9g4:hover { text-decoration-color: inherit; }
-.css-26dwcd { user-select: none; width: 1em; height: 1em; display: inline-block; fill: currentcolor; flex-shrink: 0; transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1); font-size: 16px; }
-.css-1e2dcm1 { z-index: 1500; pointer-events: none; }
-.css-okvapm { z-index: 1500; pointer-events: none; }
-.css-30ugv3 { background-color: rgb(41, 46, 65); color: rgb(241, 241, 243); transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1); border-radius: 4px; box-shadow: rgba(0, 0, 0, 0.05) 0px 2px 1px, rgba(0, 0, 0, 0.25) 0px 0px 1px; background-image: none; margin-top: 8px; }
-.css-1vfij0r { padding: 16px 24px 24px; }
-.css-1ialerq { display: flex; flex-direction: row; -moz-box-align: center; align-items: center; -moz-box-pack: justify; justify-content: space-between; }
-.css-1936jdx { margin: 0px; font-family: Inter, Arial; font-weight: 600; letter-spacing: 0.009375rem; line-height: 160%; font-size: 1.125rem; }
-.css-2o0msg { min-width: 64px; transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1); color: rgb(234, 235, 239); box-shadow: none; border-radius: 4px; font-family: Inter, Arial; font-weight: 500; line-height: 1.5rem; font-size: 0.875rem; padding: 6px 12px; }
-.css-2o0msg:hover { text-decoration: none; background-color: rgba(234, 235, 239, 0.08); }
-@media (hover: none) {
-  .css-2o0msg:hover { background-color: transparent; }
+.css-1f9djdl { display: block; background-color: rgba(241, 241, 243, 0.13); height: auto; margin-top: 0px; margin-bottom: 0px; transform-origin: 0px 55% 0px; border-radius: 4px / 6.7px; animation: 2s ease-in-out 0.5s infinite animation-c7515d; transform: unset; }
+.css-1f9djdl:empty::before { content: " "; }
+@keyframes animation-c7515d {
+0% { opacity: 1; }
+50% { opacity: 0.4; }
+100% { opacity: 1; }
 }
-.css-2o0msg.Mui-disabled { color: rgba(235, 235, 239, 0.3); }
-.css-2o0msg:hover { box-shadow: none; }
-.css-2o0msg.Mui-focusVisible { box-shadow: none; }
-.css-2o0msg:active { box-shadow: none; }
-.css-2o0msg.Mui-disabled { box-shadow: none; }
-.css-19dxac3 { display: inline-flex; -moz-box-align: center; align-items: center; -moz-box-pack: center; justify-content: center; position: relative; box-sizing: border-box; background-color: transparent; outline: 0px; border: 0px; margin: 0px; cursor: pointer; user-select: none; vertical-align: middle; appearance: none; text-decoration: none; min-width: 64px; transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1); color: rgb(234, 235, 239); box-shadow: none; border-radius: 4px; font-family: Inter, Arial; font-weight: 500; line-height: 1.5rem; font-size: 0.875rem; padding: 6px 12px; }
-.css-19dxac3::-moz-focus-inner { border-style: none; }
-.css-19dxac3.Mui-disabled { pointer-events: none; cursor: default; }
-@media print {
-  .css-19dxac3 { print-color-adjust: exact; }
+@keyframes animation-c7515d {
+0% { opacity: 1; }
+50% { opacity: 0.4; }
+100% { opacity: 1; }
 }
-.css-19dxac3:hover { text-decoration: none; background-color: rgba(234, 235, 239, 0.08); }
-@media (hover: none) {
-  .css-19dxac3:hover { background-color: transparent; }
+.css-18rvte8 { display: flex; -moz-box-align: center; align-items: center; min-height: 68px; padding-left: 24px; padding-right: 24px; }
+.css-18rvte8:not(:last-child) { border-bottom: 1px solid rgba(235, 235, 239, 0.08); border-color: rgba(235, 235, 239, 0.08); }
+.css-1r4itzd { display: flex; flex-direction: column; align-items: flex-start; -moz-box-pack: end; justify-content: flex-end; flex: 1 1 0%; min-width: 70px; overflow: visible; padding: 4px; }
+.css-1t4qof0 { display: block; background-color: rgba(241, 241, 243, 0.13); height: auto; margin-top: 0px; margin-bottom: 0px; transform-origin: 0px 55% 0px; border-radius: 4px / 6.7px; animation: 2s ease-in-out 0.5s infinite animation-c7515d; transform: translateY(8px); }
+.css-1t4qof0:empty::before { content: " "; }
+@keyframes animation-c7515d {
+0% { opacity: 1; }
+50% { opacity: 0.4; }
+100% { opacity: 1; }
 }
-.css-19dxac3.Mui-disabled { color: rgba(235, 235, 239, 0.3); }
-.css-19dxac3:hover { box-shadow: none; }
-.css-19dxac3.Mui-focusVisible { box-shadow: none; }
-.css-19dxac3:active { box-shadow: none; }
-.css-19dxac3.Mui-disabled { box-shadow: none; }
-.css-bi23zc { display: flex; flex-direction: column; gap: 32px; margin-top: 8px; }
+@keyframes animation-c7515d {
+0% { opacity: 1; }
+50% { opacity: 0.4; }
+100% { opacity: 1; }
+}
+.css-1qutw7v { display: flex; flex-direction: row; -moz-box-align: center; align-items: center; -moz-box-pack: start; justify-content: flex-start; flex: 1 1 0%; min-width: 70px; max-width: 280px; overflow: visible; padding: 4px; }
+.css-1w1fdw9 { padding-left: 24px; overflow: hidden; }
+.css-zl0cma { display: flex; flex-direction: row; -moz-box-align: center; align-items: center; -moz-box-pack: start; justify-content: flex-start; flex: 1 1 0%; min-width: 70px; overflow: visible; padding: 4px; }
+.css-3clldn { padding-left: 20px; display: flex; gap: 4px; -moz-box-align: center; align-items: center; }
+.css-1nhp3li { display: flex; flex-direction: column; align-items: flex-end; -moz-box-pack: end; justify-content: flex-end; flex: 1 1 0%; min-width: 70px; overflow: visible; padding: 4px; }
+.css-1utx3w7 { display: flex; gap: 4px; }
+.css-6zxo4b { user-select: none; display: inline-block; fill: currentcolor; flex-shrink: 0; transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1); font-size: 1.5rem; color: rgb(255, 167, 38); width: 15px; height: 15px; border-radius: 50%; background: rgb(56, 61, 81); }
+.css-19ri5qq { opacity: 0; position: absolute; }
+.css-19ri5qq.MuiTouchRipple-rippleVisible { opacity: 0.3; transform: scale(1); animation-name: animation-1taevns; animation-duration: 550ms; animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+.css-19ri5qq.MuiTouchRipple-ripplePulsate { animation-duration: 200ms; }
+.css-19ri5qq .MuiTouchRipple-child { opacity: 1; display: block; width: 100%; height: 100%; border-radius: 50%; background-color: currentcolor; }
+.css-19ri5qq .MuiTouchRipple-childLeaving { opacity: 0; animation-name: animation-5ich1p; animation-duration: 550ms; animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+.css-19ri5qq .MuiTouchRipple-childPulsate { position: absolute; left: 0px; top: 0px; animation-name: animation-f6tr5a; animation-duration: 2500ms; animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1); animation-iteration-count: infinite; animation-delay: 200ms; }
+@keyframes animation-f6tr5a {
+0% { transform: scale(1); }
+50% { transform: scale(0.92); }
+100% { transform: scale(1); }
+}
+@keyframes animation-f6tr5a {
+0% { transform: scale(1); }
+50% { transform: scale(0.92); }
+100% { transform: scale(1); }
+}
+@keyframes animation-5ich1p {
+0% { opacity: 1; }
+100% { opacity: 0; }
+}
+@keyframes animation-5ich1p {
+0% { opacity: 1; }
+100% { opacity: 0; }
+}
+@keyframes animation-1taevns {
+0% { transform: scale(0); opacity: 0.1; }
+100% { transform: scale(1); opacity: 0.3; }
+}
+@keyframes animation-1taevns {
+0% { transform: scale(0); opacity: 0.1; }
+100% { transform: scale(1); opacity: 0.3; }
+}
+.css-1czjwln { display: flex; margin-bottom: 16px; }
+@media (min-width: 0px) {
+  .css-1czjwln { align-items: flex-start; flex-direction: column; }
+}
+@media (min-width: 640px) {
+  .css-1czjwln { -moz-box-align: center; align-items: center; flex-direction: row; }
+}
+.css-gr0tg3 { display: flex; align-items: flex-start; flex-wrap: wrap; margin-bottom: 0px; }
+.css-ltjh6b { display: flex; -moz-box-align: center; align-items: center; }
+@media (min-width: 0px) {
+  .css-ltjh6b { width: calc(50% - 12px); }
+}
+@media (min-width: 640px) {
+  .css-ltjh6b { width: unset; }
+}
+.css-18biwo { display: inline-flex; -moz-box-align: center; align-items: center; }
 .css-1t8x1s2 { margin: 0px; font-family: Inter, Arial; font-weight: 400; letter-spacing: 0.009375rem; line-height: 143%; font-size: 0.875rem; color: rgb(165, 168, 182); }
-.css-1dvntee { display: flex; flex-direction: column; -moz-box-align: start; align-items: start; gap: 24px; }
-.css-ucb7px { display: flex; flex-direction: column; gap: 16px; align-items: self-start; }
-.css-8v90jo { display: flex; flex-direction: row; -moz-box-align: center; align-items: center; gap: 8px; }
-.css-1r9kwv0 { display: flex; flex-direction: row; gap: 4px; -moz-box-align: center; align-items: center; }
-.css-jc5wi5 { text-align: center; flex: 0 0 auto; font-size: 1.5rem; padding: 8px; border-radius: 50%; overflow: visible; color: rgba(235, 235, 239, 0.56); transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1); height: 24px; width: 24px; background: rgba(235, 235, 239, 0.08); }
-.css-jc5wi5:hover { background-color: rgba(235, 235, 239, 0.08); }
-@media (hover: none) {
-  .css-jc5wi5:hover { background-color: transparent; }
-}
-.css-jc5wi5.Mui-disabled { background-color: transparent; color: rgba(235, 235, 239, 0.3); }
-.css-17pel43 { display: inline-flex; -moz-box-align: center; align-items: center; -moz-box-pack: center; justify-content: center; position: relative; box-sizing: border-box; outline: 0px; border: 0px; margin: 0px; cursor: pointer; user-select: none; vertical-align: middle; appearance: none; text-decoration: none; text-align: center; flex: 0 0 auto; font-size: 1.5rem; padding: 8px; border-radius: 50%; overflow: visible; color: rgba(235, 235, 239, 0.56); transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1); height: 24px; width: 24px; background: rgba(235, 235, 239, 0.08); }
-.css-17pel43::-moz-focus-inner { border-style: none; }
-.css-17pel43.Mui-disabled { pointer-events: none; cursor: default; }
-@media print {
-  .css-17pel43 { print-color-adjust: exact; }
-}
-.css-17pel43:hover { background-color: rgba(235, 235, 239, 0.08); }
-@media (hover: none) {
-  .css-17pel43:hover { background-color: transparent; }
-}
-.css-17pel43.Mui-disabled { background-color: transparent; color: rgba(235, 235, 239, 0.3); }
-.css-180iv8j { user-select: none; width: 1em; height: 1em; display: inline-block; fill: currentcolor; flex-shrink: 0; transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1); font-size: 1.5rem; padding: 4px; }
-.css-1kqxfxi { margin: 0px; font-family: Inter, Arial; font-weight: 600; letter-spacing: 0.009375rem; line-height: 1.25rem; font-size: 0.875rem; color: rgb(142, 146, 163); }
-.css-1rwr66l { display: flex; margin-top: 24px; }
-.css-1ir4d68 { display: flex; flex-direction: column; margin-right: 25%; }
+.css-1x4zjhu { margin: 0px; font-family: Inter, Arial; font-weight: 800; line-height: 133.4%; font-size: 1.3125rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; display: inline-flex; flex-direction: row; -moz-box-align: center; align-items: center; position: relative; }
+.css-vj5di1 { margin: 0px 2px 0px 0px; font-family: Inter, Arial; font-weight: 500; line-height: 133.4%; font-size: 1.3125rem; color: rgb(165, 168, 182); }
 .css-ulme3a { display: inline-flex; cursor: pointer; transition: 0.2s; }
 .css-ulme3a:hover { opacity: 0.5; }
 .css-ampwg9 { text-align: center; flex: 0 0 auto; font-size: 1.5rem; overflow: visible; color: rgba(235, 235, 239, 0.56); transition: background-color 150ms cubic-bezier(0.4, 0, 0.2, 1); display: flex; -moz-box-align: center; align-items: center; -moz-box-pack: center; justify-content: center; width: 14px; height: 14px; border-radius: 50%; padding: 0px; min-width: 0px; margin-left: 2px; }
@@ -2501,101 +1824,6 @@ label[data-shrink="false"] + .MuiInputBase-formControl .css-8crlfm:focus::placeh
 .css-1ta9xnb[data-popper-placement*="right"] .MuiTooltip-arrow::before { transform-origin: 100% 100% 0px; }
 .css-1ta9xnb[data-popper-placement*="left"] .MuiTooltip-arrow { right: 0px; margin-right: -0.71em; height: 1em; width: 0.71em; }
 .css-1ta9xnb[data-popper-placement*="left"] .MuiTooltip-arrow::before { transform-origin: 0px 0px 0px; }
-.css-1ab1w3v { margin: 0px; font-family: Inter, Arial; font-weight: 600; letter-spacing: unset; line-height: 133.4%; font-size: 1.3125rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; display: inline-flex; flex-direction: row; -moz-box-align: center; align-items: center; position: relative; }
-.css-odk21d { margin: 4px 0px 0px; font-family: Inter, Arial; font-weight: 400; letter-spacing: 0.009375rem; line-height: 143%; font-size: 0.875rem; color: rgb(165, 168, 182); }
-.css-4pq6pi { color: rgb(165, 168, 182); text-decoration: underline; margin-left: 4px; }
-.css-14dz41l { margin: 0px 0px 0px 4px; font-family: Inter, Arial; font-weight: 400; letter-spacing: 0.009375rem; line-height: 143%; font-size: 0.875rem; color: rgb(165, 168, 182); text-decoration: underline; }
-.css-1j6cneu { margin: 24px 0px 0px; font-family: Inter, Arial; font-weight: 400; letter-spacing: 0.009375rem; line-height: 143%; font-size: 0.875rem; color: rgb(142, 146, 163); }
-.css-1301pmg { margin: 0px; flex-shrink: 0; border-width: 0px 0px thin; border-style: solid; border-color: rgba(235, 235, 239, 0.08); }
-.css-cyk6x5 { padding: 24px; display: flex; flex-direction: column; gap: 8px; }
-.css-kmmvcs { min-width: 64px; transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1); color: rgba(0, 0, 0, 0.87); background-color: rgb(234, 235, 239); box-shadow: none; border-radius: 4px; font-family: Inter, Arial; font-weight: 500; letter-spacing: 0.02875rem; line-height: 1.5rem; font-size: 1rem; padding: 10px 24px; width: 100%; }
-.css-kmmvcs:hover { text-decoration: none; background-color: rgb(210, 212, 220); box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px -1px, rgba(0, 0, 0, 0.14) 0px 4px 5px 0px, rgba(0, 0, 0, 0.12) 0px 1px 10px 0px; }
-@media (hover: none) {
-  .css-kmmvcs:hover { background-color: rgb(234, 235, 239); }
-}
-.css-kmmvcs:active { box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 5px -3px, rgba(0, 0, 0, 0.14) 0px 8px 10px 1px, rgba(0, 0, 0, 0.12) 0px 3px 14px 2px; }
-.css-kmmvcs.Mui-focusVisible { box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 5px -1px, rgba(0, 0, 0, 0.14) 0px 6px 10px 0px, rgba(0, 0, 0, 0.12) 0px 1px 18px 0px; }
-.css-kmmvcs.Mui-disabled { color: rgba(235, 235, 239, 0.3); box-shadow: none; background-color: rgba(235, 235, 239, 0.12); }
-.css-kmmvcs:hover { box-shadow: none; }
-.css-kmmvcs.Mui-focusVisible { box-shadow: none; }
-.css-kmmvcs:active { box-shadow: none; }
-.css-kmmvcs.Mui-disabled { box-shadow: none; }
-.css-1c7ud3q { display: inline-flex; -moz-box-align: center; align-items: center; -moz-box-pack: center; justify-content: center; position: relative; box-sizing: border-box; outline: 0px; border: 0px; margin: 0px; cursor: pointer; user-select: none; vertical-align: middle; appearance: none; text-decoration: none; min-width: 64px; transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1); color: rgba(0, 0, 0, 0.87); background-color: rgb(234, 235, 239); box-shadow: none; border-radius: 4px; font-family: Inter, Arial; font-weight: 500; letter-spacing: 0.02875rem; line-height: 1.5rem; font-size: 1rem; padding: 10px 24px; width: 100%; }
-.css-1c7ud3q::-moz-focus-inner { border-style: none; }
-.css-1c7ud3q.Mui-disabled { pointer-events: none; cursor: default; }
-@media print {
-  .css-1c7ud3q { print-color-adjust: exact; }
-}
-.css-1c7ud3q:hover { text-decoration: none; background-color: rgb(210, 212, 220); box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px -1px, rgba(0, 0, 0, 0.14) 0px 4px 5px 0px, rgba(0, 0, 0, 0.12) 0px 1px 10px 0px; }
-@media (hover: none) {
-  .css-1c7ud3q:hover { background-color: rgb(234, 235, 239); }
-}
-.css-1c7ud3q:active { box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 5px -3px, rgba(0, 0, 0, 0.14) 0px 8px 10px 1px, rgba(0, 0, 0, 0.12) 0px 3px 14px 2px; }
-.css-1c7ud3q.Mui-focusVisible { box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 5px -1px, rgba(0, 0, 0, 0.14) 0px 6px 10px 0px, rgba(0, 0, 0, 0.12) 0px 1px 18px 0px; }
-.css-1c7ud3q.Mui-disabled { color: rgba(235, 235, 239, 0.3); box-shadow: none; background-color: rgba(235, 235, 239, 0.12); }
-.css-1c7ud3q:hover { box-shadow: none; }
-.css-1c7ud3q.Mui-focusVisible { box-shadow: none; }
-.css-1c7ud3q:active { box-shadow: none; }
-.css-1c7ud3q.Mui-disabled { box-shadow: none; }
-.css-1gtu372 { text-decoration: none; padding: 24px; display: flex; flex-wrap: wrap; -moz-box-pack: justify; justify-content: space-between; border-bottom: 1px solid rgba(235, 235, 239, 0.08); }
-.css-bufqkx { margin: 0px; font-family: Inter, Arial; font-weight: 400; letter-spacing: 0.009375rem; line-height: 143%; font-size: 0.875rem; color: rgb(234, 235, 239); text-decoration: none; padding: 24px; display: flex; flex-wrap: wrap; -moz-box-pack: justify; justify-content: space-between; border-bottom: 1px solid rgba(235, 235, 239, 0.08); }
-.css-1oiqa56 { margin: 0px; font-family: Inter, Arial; font-weight: 400; letter-spacing: 0.009375rem; line-height: 143%; font-size: 0.875rem; color: rgb(234, 235, 239); text-decoration: none; padding: 24px; display: flex; flex-wrap: wrap; -moz-box-pack: justify; justify-content: space-between; border-bottom: 1px solid rgba(235, 235, 239, 0.08); }
-.css-1gb8agv { gap: 8px; display: flex; flex-direction: column; -moz-box-pack: justify; justify-content: space-between; }
-@media (min-width: 0px) {
-  .css-1gb8agv { width: 100%; padding-right: 0px; }
-}
-@media (min-width: 1280px) {
-  .css-1gb8agv { width: 70%; padding-right: 32px; }
-}
-.css-2j5iyq { display: flex; flex-direction: row; gap: 12px; -moz-box-align: center; align-items: center; }
-.css-5ck20f { font-family: Inter, Arial; font-weight: 500; letter-spacing: 0.00625rem; line-height: 1rem; font-size: 0.75rem; color: rgb(102, 187, 106); border: 1px solid rgba(102, 187, 106, 0.5); padding: 2px 8px; border-radius: 4px; display: inline-flex; -moz-box-align: center; align-items: center; }
-.css-1a8e2hd { margin: 0px; font-family: Inter, Arial; font-weight: 600; letter-spacing: 0.009375rem; line-height: 160%; font-size: 1.125rem; overflow: hidden; text-overflow: ellipsis; }
-.css-18g3jbb { margin: 0px 4px 0px 0px; font-family: Inter, Arial; font-weight: 500; letter-spacing: 0.009375rem; line-height: 1.25rem; font-size: 0.875rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; display: inline-flex; flex-direction: row; -moz-box-align: center; align-items: center; position: relative; }
-.css-1wdnhoq { margin: 0px; font-family: Inter, Arial; font-weight: 400; letter-spacing: 0.009375rem; line-height: 1rem; font-size: 0.75rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: rgb(165, 168, 182); display: inline-flex; flex-direction: row; -moz-box-align: center; align-items: center; position: relative; }
-.css-g4z180 { margin: 0px 0px 0px 2px; font-family: Inter, Arial; font-weight: 400; letter-spacing: 0.009375rem; line-height: 1rem; font-size: 0.75rem; color: rgb(165, 168, 182); }
-.css-oi2ryi { position: relative; width: 100%; height: 8px; background-color: rgba(235, 235, 239, 0.08); display: block; border-radius: 6px; }
-.css-14s30ua { position: absolute; top: 0px; left: 0px; width: 100%; max-width: 100%; height: 8px; background-color: rgb(102, 187, 106); display: block; border-radius: 6px; }
-.css-1qxqp2f { position: absolute; top: 0px; left: 0px; width: 0%; max-width: 100%; height: 8px; background-color: rgb(229, 115, 115); display: block; border-radius: 6px; }
-.css-1czjwln { display: flex; margin-bottom: 16px; }
-@media (min-width: 0px) {
-  .css-1czjwln { align-items: flex-start; flex-direction: column; }
-}
-@media (min-width: 640px) {
-  .css-1czjwln { -moz-box-align: center; align-items: center; flex-direction: row; }
-}
-.css-gr0tg3 { display: flex; align-items: flex-start; flex-wrap: wrap; margin-bottom: 0px; }
-.css-115cb67 { margin-right: 8px; }
-.css-115cb67 .MuiOutlinedInput-notchedOutline { border: medium; }
-.css-1s2gcw8 { display: inline-flex; flex-direction: column; position: relative; min-width: 0px; padding: 0px; margin: 0px 8px 0px 0px; border: 0px; vertical-align: top; }
-.css-1s2gcw8 .MuiOutlinedInput-notchedOutline { border: medium; }
-.css-1ypy5va { color: rgb(241, 241, 243); line-height: 1.4375em; box-sizing: border-box; cursor: text; display: inline-flex; -moz-box-align: center; align-items: center; position: relative; border-radius: 6px; border-color: rgba(235, 235, 239, 0.08); }
-.css-1ypy5va.Mui-disabled { color: rgb(98, 103, 123); cursor: default; }
-.css-1ypy5va:hover .MuiOutlinedInput-notchedOutline { border-color: rgb(241, 241, 243); }
-@media (hover: none) {
-  .css-1ypy5va:hover .MuiOutlinedInput-notchedOutline { border-color: rgba(255, 255, 255, 0.23); }
-}
-.css-1ypy5va.Mui-focused .MuiOutlinedInput-notchedOutline { border-color: rgb(234, 235, 239); border-width: 2px; }
-.css-1ypy5va.Mui-error .MuiOutlinedInput-notchedOutline { border-color: rgb(244, 67, 54); }
-.css-1ypy5va.Mui-disabled .MuiOutlinedInput-notchedOutline { border-color: rgba(235, 235, 239, 0.3); }
-.css-1ypy5va:hover .MuiOutlinedInput-notchedOutline { border-color: rgb(203, 205, 216); }
-.css-1ypy5va.Mui-focused .MuiOutlinedInput-notchedOutline { border-color: rgb(203, 205, 216); }
-.css-1ypy5va.MarketSwitcher__select .MuiSelect-outlined { padding-left: 0px; padding-top: 0px; padding-bottom: 0px; background-color: transparent !important; }
-.css-1ypy5va .MuiSelect-icon { color: rgb(241, 241, 243); }
-.css-hjllk8 { margin-right: 8px; width: 32px; height: 32px; position: relative; }
-.css-15vg6gj { margin: 0px 4px 0px 0px; font-family: Inter, Arial; font-weight: 700; letter-spacing: 0.015625rem; line-height: 123.5%; font-size: 2rem; color: rgb(255, 255, 255); }
-.css-1tgkox5 { color: rgb(255, 255, 255); padding-left: 8px; padding-right: 8px; border-radius: 12px; background: linear-gradient(248.86deg, rgb(182, 80, 158) 10.51%, rgb(46, 186, 198) 93.41%); display: flex; -moz-box-align: center; align-items: center; }
-.css-fo7h32 { user-select: none; width: 1em; height: 1em; display: inline-block; fill: currentcolor; flex-shrink: 0; transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1); font-size: 1.5rem; margin-left: 4px; color: rgb(241, 241, 243); }
-.css-10qjsex { margin: 2px 0px 0px; font-family: Inter, Arial; font-weight: 400; letter-spacing: 0.009375rem; color: rgb(255, 255, 255); font-size: 0.85rem; overflow-wrap: break-word; white-space: normal; line-height: 1.3; max-width: 100%; }
-.css-ltjh6b { display: flex; -moz-box-align: center; align-items: center; }
-@media (min-width: 0px) {
-  .css-ltjh6b { width: calc(50% - 12px); }
-}
-@media (min-width: 640px) {
-  .css-ltjh6b { width: unset; }
-}
-.css-18biwo { display: inline-flex; -moz-box-align: center; align-items: center; }
-.css-1x4zjhu { margin: 0px; font-family: Inter, Arial; font-weight: 800; line-height: 133.4%; font-size: 1.3125rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; display: inline-flex; flex-direction: row; -moz-box-align: center; align-items: center; position: relative; }
-.css-vj5di1 { margin: 0px 2px 0px 0px; font-family: Inter, Arial; font-weight: 500; line-height: 133.4%; font-size: 1.3125rem; color: rgb(165, 168, 182); }
 .css-1fgc1cp { margin: 0px; font-family: Inter, Arial; font-weight: 500; line-height: 133.4%; font-size: 1.3125rem; opacity: 0.7; }
 @media (min-width: 0px) {
   .css-duo07e { display: flex; -moz-box-pack: center; justify-content: center; margin-bottom: 12px; }
@@ -2624,6 +1852,46 @@ label[data-shrink="false"] + .MuiInputBase-formControl .css-8crlfm:focus::placeh
 @media (min-width: 640px) {
   .css-mehr4l { width: 359px; }
 }
+.css-1my42hl { border: 0px; flex: 1 1 0%; background-color: rgb(56, 61, 81); border-radius: 4px; }
+.css-1my42hl.Mui-selected, .css-1my42hl.Mui-selected:hover { background-color: rgb(255, 255, 255); border-radius: 4px !important; }
+.css-1my42hl.Mui-selected, .css-1my42hl.Mui-disabled { z-index: 100; height: 100%; display: flex; -moz-box-pack: center; justify-content: center; }
+.css-1my42hl.Mui-selected .MuiTypography-subheader1, .css-1my42hl.Mui-disabled .MuiTypography-subheader1 { background: linear-gradient(248.86deg, rgb(182, 80, 158) 10.51%, rgb(46, 186, 198) 93.41%) padding-box text; -webkit-text-fill-color: transparent; }
+.css-1my42hl.Mui-selected .MuiTypography-secondary14, .css-1my42hl.Mui-disabled .MuiTypography-secondary14 { background: linear-gradient(248.86deg, rgb(182, 80, 158) 10.51%, rgb(46, 186, 198) 93.41%) padding-box text; -webkit-text-fill-color: transparent; }
+.css-1h4fsi7 { padding: 11px; color: rgba(235, 235, 239, 0.56); border: 0px; flex: 1 1 0%; background-color: rgb(56, 61, 81); border-radius: 4px; }
+.css-1h4fsi7.Mui-disabled { color: rgba(235, 235, 239, 0.3); border: 1px solid rgba(235, 235, 239, 0.12); }
+.css-1h4fsi7:hover { text-decoration: none; background-color: rgba(241, 241, 243, 0.08); }
+@media (hover: none) {
+  .css-1h4fsi7:hover { background-color: transparent; }
+}
+.css-1h4fsi7.Mui-selected { color: rgb(234, 235, 239); background-color: rgba(234, 235, 239, 0.16); }
+.css-1h4fsi7.Mui-selected:hover { background-color: rgba(234, 235, 239, 0.24); }
+@media (hover: none) {
+  .css-1h4fsi7.Mui-selected:hover { background-color: rgba(234, 235, 239, 0.16); }
+}
+.css-1h4fsi7.Mui-selected, .css-1h4fsi7.Mui-selected:hover { background-color: rgb(255, 255, 255); border-radius: 4px !important; }
+.css-1h4fsi7.Mui-selected, .css-1h4fsi7.Mui-disabled { z-index: 100; height: 100%; display: flex; -moz-box-pack: center; justify-content: center; }
+.css-1h4fsi7.Mui-selected .MuiTypography-subheader1, .css-1h4fsi7.Mui-disabled .MuiTypography-subheader1 { background: linear-gradient(248.86deg, rgb(182, 80, 158) 10.51%, rgb(46, 186, 198) 93.41%) padding-box text; -webkit-text-fill-color: transparent; }
+.css-1h4fsi7.Mui-selected .MuiTypography-secondary14, .css-1h4fsi7.Mui-disabled .MuiTypography-secondary14 { background: linear-gradient(248.86deg, rgb(182, 80, 158) 10.51%, rgb(46, 186, 198) 93.41%) padding-box text; -webkit-text-fill-color: transparent; }
+.css-la5cf0 { display: inline-flex; -moz-box-align: center; align-items: center; -moz-box-pack: center; justify-content: center; position: relative; box-sizing: border-box; outline: 0px; margin: 0px; cursor: pointer; user-select: none; vertical-align: middle; appearance: none; text-decoration: none; padding: 11px; color: rgba(235, 235, 239, 0.56); border: 0px; flex: 1 1 0%; background-color: rgb(56, 61, 81); border-radius: 4px; }
+.css-la5cf0::-moz-focus-inner { border-style: none; }
+.css-la5cf0.Mui-disabled { pointer-events: none; cursor: default; }
+@media print {
+  .css-la5cf0 { print-color-adjust: exact; }
+}
+.css-la5cf0.Mui-disabled { color: rgba(235, 235, 239, 0.3); border: 1px solid rgba(235, 235, 239, 0.12); }
+.css-la5cf0:hover { text-decoration: none; background-color: rgba(241, 241, 243, 0.08); }
+@media (hover: none) {
+  .css-la5cf0:hover { background-color: transparent; }
+}
+.css-la5cf0.Mui-selected { color: rgb(234, 235, 239); background-color: rgba(234, 235, 239, 0.16); }
+.css-la5cf0.Mui-selected:hover { background-color: rgba(234, 235, 239, 0.24); }
+@media (hover: none) {
+  .css-la5cf0.Mui-selected:hover { background-color: rgba(234, 235, 239, 0.16); }
+}
+.css-la5cf0.Mui-selected, .css-la5cf0.Mui-selected:hover { background-color: rgb(255, 255, 255); border-radius: 4px !important; }
+.css-la5cf0.Mui-selected, .css-la5cf0.Mui-disabled { z-index: 100; height: 100%; display: flex; -moz-box-pack: center; justify-content: center; }
+.css-la5cf0.Mui-selected .MuiTypography-subheader1, .css-la5cf0.Mui-disabled .MuiTypography-subheader1 { background: linear-gradient(248.86deg, rgb(182, 80, 158) 10.51%, rgb(46, 186, 198) 93.41%) padding-box text; -webkit-text-fill-color: transparent; }
+.css-la5cf0.Mui-selected .MuiTypography-secondary14, .css-la5cf0.Mui-disabled .MuiTypography-secondary14 { background: linear-gradient(248.86deg, rgb(182, 80, 158) 10.51%, rgb(46, 186, 198) 93.41%) padding-box text; -webkit-text-fill-color: transparent; }
 .css-1qdyvok { display: flex; -moz-box-pack: justify; justify-content: space-between; align-items: flex-start; }
 .css-bf0ye5 { position: relative; width: calc(50% - 8px); }
 @media (min-width: 0px) {
@@ -2631,21 +1899,6 @@ label[data-shrink="false"] + .MuiInputBase-formControl .css-8crlfm:focus::placeh
 }
 @media (min-width: 1280px) {
   .css-bf0ye5 { display: block; }
-}
-.css-133srx4 { background-color: rgb(41, 46, 65); color: rgb(241, 241, 243); transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1); border-radius: 4px; box-shadow: rgba(0, 0, 0, 0.05) 0px 2px 1px, rgba(0, 0, 0, 0.25) 0px 0px 1px; background-image: none; margin-top: 0px; border: 1px solid rgba(235, 235, 239, 0.08); }
-.css-19zr2gl { display: flex; -moz-box-align: center; align-items: center; -moz-box-pack: justify; justify-content: space-between; }
-@media (min-width: 0px) {
-  .css-19zr2gl { padding: 14px 16px; }
-}
-@media (min-width: 640px) {
-  .css-19zr2gl { padding: 16px 24px; }
-}
-.css-iwds49 { width: 100%; display: flex; padding-top: 3.6px; padding-bottom: 3.6px; }
-@media (min-width: 0px) {
-  .css-iwds49 { align-items: flex-start; flex-direction: column; }
-}
-@media (min-width: 640px) {
-  .css-iwds49 { -moz-box-align: center; align-items: center; flex-direction: row; }
 }
 .css-upncnh { margin: 0px 16px 0px 0px; font-family: Inter, Arial; font-weight: 600; letter-spacing: 0.009375rem; line-height: 160%; font-size: 1.125rem; }
 .css-1dm56o2 { display: flex; -moz-box-align: center; align-items: center; overflow-x: auto; }
@@ -2655,7 +1908,6 @@ label[data-shrink="false"] + .MuiInputBase-formControl .css-8crlfm:focus::placeh
 @media (min-width: 640px) {
   .css-1dm56o2 { padding-left: 24px; padding-right: 24px; padding-bottom: 0px; }
 }
-.css-13o7eu2 { display: block; }
 .css-1xifpgy { }
 @media (min-width: 0px) {
   .css-1xifpgy { padding: 14px 16px 24px; }
@@ -2664,13 +1916,12 @@ label[data-shrink="false"] + .MuiInputBase-formControl .css-8crlfm:focus::placeh
   .css-1xifpgy { padding-left: 24px; padding-right: 24px; padding-top: 22px; }
 }
 .css-7l9tvd { background-color: rgb(41, 46, 65); color: rgb(241, 241, 243); transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1); border-radius: 4px; box-shadow: rgba(0, 0, 0, 0.05) 0px 2px 1px, rgba(0, 0, 0, 0.25) 0px 0px 1px; background-image: none; margin-top: 16px; border: 1px solid rgba(235, 235, 239, 0.08); }
-.css-1wsmwia { display: flex; align-items: flex-end; padding: 16px 16px 4px; position: sticky; top: 0px; z-index: 100; background-color: rgb(41, 46, 65); border-bottom: 1px solid rgba(235, 235, 239, 0.08); border-color: rgba(235, 235, 239, 0.08); }
-.css-zl0cma { display: flex; flex-direction: row; -moz-box-align: center; align-items: center; -moz-box-pack: start; justify-content: flex-start; flex: 1 1 0%; min-width: 70px; overflow: visible; padding: 4px; }
+.css-1wsmwia { display: flex; align-items: flex-end; padding: 16px 16px 4px; position: sticky; top: 0px; z-index: 100; background-color: rgb(41, 46, 65); border-bottom: 1px solid rgba(235, 235, 239, 0.08); border-color: rgba(235, 235, 239, 0.08); width:100%;}
 .css-zmw4em { margin: 0px; font-family: Inter, Arial; font-weight: 500; letter-spacing: 0.00625rem; line-height: 1rem; font-size: 0.75rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: rgb(165, 168, 182); cursor: default; display: inline-flex; -moz-box-align: center; align-items: center; }
-.css-11udp8r { display: flex; flex-direction: column; -moz-box-align: center; align-items: center; -moz-box-pack: end; justify-content: flex-end; flex: 1 1 0%; min-width: 70px; overflow: visible; padding: 4px; }
+.css-11udp8r { display: flex; flex-direction: column; -moz-box-align: center; align-items: center; -moz-box-pack: end; justify-content: start; flex: 1 1 0%; min-width: 70px;max-width:100px; overflow: visible; padding: 4px; }
 .css-1xwkwbj { display: flex; -moz-box-align: center; align-items: center; -moz-box-pack: end; justify-content: flex-end; max-width: 160px; min-width: 160px; flex: 1 1 0%; }
 .css-1xwkwbj .MuiButton-root { margin-left: 6px; }
-.css-1qm0evb { display: flex; -moz-box-align: center; align-items: center; min-height: 71px; padding-left: 16px; padding-right: 16px; }
+.css-1qm0evb { width:100%; display: flex; -moz-box-align: center; align-items: center; min-height: 71px; padding-left: 16px; padding-right: 16px; }
 .css-1qm0evb:not(:last-child) { border-bottom: 1px solid rgba(235, 235, 239, 0.08); border-color: rgba(235, 235, 239, 0.08); }
 .css-b3rrrh { display: flex; flex-direction: row; -moz-box-align: center; align-items: center; -moz-box-pack: start; justify-content: flex-start; flex: 1 1 0%; min-width: 70px; max-width: 160px; overflow: visible; padding: 4px; }
 .css-1gk33hh { display: block; background-color: rgba(241, 241, 243, 0.13); height: auto; margin-top: 0px; margin-bottom: 0px; transform-origin: 0px 55% 0px; border-radius: 4px / 6.7px; animation: 2s ease-in-out 0.5s infinite animation-c7515d; transform: unset; margin-left: 12px; }
@@ -2700,9 +1951,6 @@ label[data-shrink="false"] + .MuiInputBase-formControl .css-8crlfm:focus::placeh
 .css-1wbia9h { position: relative; width: calc(50% - 8px); }
 @media (min-width: 0px) {
   .css-1wbia9h { display: none; }
-}
-@media (min-width: 720px) {
-  .css-1wbia9h { display: block; }
 }
 @media (min-width: 1280px) {
   .css-1wbia9h { display: block; }
@@ -2807,7 +2055,8 @@ label[data-shrink="false"] + .MuiInputBase-formControl .css-8crlfm:focus::placeh
 .css-1xsto0d { padding: 8px 0px; min-width: 0px; overflow: auto; }
 .css-u35d3s { display: flex; -moz-box-align: center; align-items: center; min-height: 71px; padding-left: 16px; padding-right: 16px; border-top-width: 1px; border-top-style: solid; border-bottom: 1px solid rgba(235, 235, 239, 0.08); border-color: rgba(235, 235, 239, 0.08); margin-bottom: 8px; }
 .css-u35d3s:not(:last-child) { border-bottom: 1px solid rgba(235, 235, 239, 0.08); border-color: rgba(235, 235, 239, 0.08); }
-.css-15czs8k { display: flex; flex-direction: row; -moz-box-align: center; align-items: center; -moz-box-pack: start; justify-content: flex-start; flex: 1 1 0%; min-width: 70px; max-width: 130px; overflow: visible; padding: 4px; }
+.css-15czs8k { display: flex; flex-direction: row; -moz-box-align: center; align-items: center; -moz-box-pack: start; justify-content: flex-start; flex: 1 1 0%; min-width: 100px; max-width: 180px; overflow: visible; padding: 4px; }
+.css-15czs8k1 { display: flex; flex-direction: row; -moz-box-align: center; align-items: flex-end; -moz-box-pack: start; justify-content: flex-end; flex: 1 1 0%; min-width: 100px;  overflow: visible; padding: 4px; }
 .css-100tx80 { text-decoration: none; display: inline-flex; -moz-box-align: center; align-items: center; }
 .css-q97pgc { margin: 0px; font-family: Inter, Arial; font-weight: 400; letter-spacing: 0.009375rem; line-height: 143%; font-size: 0.875rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: rgb(234, 235, 239); text-decoration: none; display: inline-flex; -moz-box-align: center; align-items: center; }
 .css-17910yg { margin: 0px; font-family: Inter, Arial; font-weight: 400; letter-spacing: 0.009375rem; line-height: 143%; font-size: 0.875rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: rgb(234, 235, 239); text-decoration: none; display: inline-flex; -moz-box-align: center; align-items: center; }
@@ -2936,7 +2185,7 @@ label[data-shrink="false"] + .MuiInputBase-formControl .css-8crlfm:focus::placeh
 .css-10ybyyq.Mui-focusVisible { box-shadow: none; }
 .css-10ybyyq:active { box-shadow: none; }
 .css-10ybyyq.Mui-disabled { box-shadow: none; }
-.css-18phtf6 { margin: 0px; font-family: Inter, Arial; font-weight: 500; letter-spacing: 0.00625rem; line-height: 1rem; font-size: 0.75rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: rgb(165, 168, 182); cursor: pointer; display: inline-flex; -moz-box-align: center; align-items: center; }
+.css-18phtf6 { margin: 0px; font-family: Inter, Arial; font-weight: 700; letter-spacing: 0.00625rem; line-height: 1.5rem; font-size: 1.10rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: #fff; cursor: pointer; display: inline-flex; -moz-box-align: center; align-items: center; }
 .css-14dkifd { display: inline-flex; flex-direction: column; margin-left: 4px; }
 .css-1hf8ilx { width: 0px; height: 0px; border-style: solid; border-width: 0px 4px 4px; border-color: transparent transparent rgba(235, 235, 239, 0.08); margin-bottom: 2px; }
 .css-1ojixww { width: 0px; height: 0px; border-style: solid; border-width: 4px 4px 0px; border-color: rgba(235, 235, 239, 0.08) transparent transparent; }
@@ -2948,6 +2197,7 @@ label[data-shrink="false"] + .MuiInputBase-formControl .css-8crlfm:focus::placeh
 @media (min-width: 640px) {
   .css-19el3v { -moz-box-align: center; align-items: center; }
 }
+.css-k008qs { display: flex; }
 .css-1yxnkj0 { display: flex; -moz-box-pack: center; justify-content: center; gap: 4px; flex-wrap: wrap; flex: 0 0 50%; }
 .css-d4400k { display: flex; -moz-box-align: center; align-items: center; margin-left: 4px; }
 .css-17zttyw { user-select: none; width: 1em; height: 1em; display: inline-block; fill: currentcolor; flex-shrink: 0; transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1); font-size: 14px; color: rgb(244, 67, 54); }
@@ -3084,7 +2334,6 @@ label[data-shrink="false"] + .MuiInputBase-formControl .css-8crlfm:focus::placeh
 .css-12z0wuy { margin-right: 8px; }
 .css-cyw6g5 { margin: 0px; font-family: Inter, Arial; font-weight: 500; letter-spacing: 0.00625rem; line-height: 1rem; font-size: 0.75rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: rgb(165, 168, 182); display: inline-flex; flex-direction: row; -moz-box-align: center; align-items: center; position: relative; }
 .css-1336sl3 { margin: 0px 0px 0px 2px; font-family: Inter, Arial; font-weight: 500; letter-spacing: 0.00625rem; line-height: 1rem; font-size: 0.75rem; color: rgb(165, 168, 182); }
-.css-vxcmzt { display: inline-flex; }
 .css-1ae12c2 { user-select: none; width: 1em; height: 1em; overflow: hidden; text-align: center; flex-shrink: 0; display: flex; position: relative; border-radius: 50%; font-size: 12px; margin-left: -4px; }
 .css-bx9ij6 { position: absolute; overflow: hidden auto; min-height: 16px; max-width: calc(100% - 32px); outline: 0px; max-height: calc(100% - 96px); min-width: 120px; padding-top: 0px; padding-bottom: 0px; }
 .css-1hxfo15 { background-color: rgb(41, 46, 65); color: rgb(241, 241, 243); transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1); border-radius: 4px; box-shadow: rgba(0, 0, 0, 0.05) 0px 2px 1px, rgba(0, 0, 0, 0.25) 0px 0px 1px; background-image: none; position: absolute; overflow: hidden auto; min-height: 16px; max-width: calc(100% - 32px); outline: 0px; max-height: calc(100% - 96px); min-width: 120px; padding-top: 0px; padding-bottom: 0px; }
@@ -3216,7 +2465,165 @@ label[data-shrink="false"] + .MuiInputBase-formControl .css-8crlfm:focus::placeh
 @media (min-width: 760px) {
   .css-1mazm13 { min-height: auto; }
 }
-.css-6zxo4b { user-select: none; display: inline-block; fill: currentcolor; flex-shrink: 0; transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1); font-size: 1.5rem; color: rgb(255, 167, 38); width: 15px; height: 15px; border-radius: 50%; background: rgb(56, 61, 81); }
+.css-cw0b0c { position: absolute; right: 7px; top: calc(50% - 0.5em); pointer-events: none; color: rgba(235, 235, 239, 0.56); transform: rotate(180deg); }
+.css-cw0b0c.Mui-disabled { color: rgba(235, 235, 239, 0.3); }
+.css-1sucic7 { position: fixed; z-index: 1300; inset: 0px; }
+.css-itcqc2 { margin: 0px; font-family: Inter, Arial; font-weight: 500; letter-spacing: 0.00625rem; line-height: 1rem; font-size: 0.75rem; color: rgb(165, 168, 182); padding-left: 16px; padding-right: 16px; padding-top: 8px; }
+.css-1di6o49 { margin-left: 18px; margin-right: 18px; display: flex; -moz-box-pack: center; justify-content: center; }
+.css-1o4a4wd { width: 100%; height: 36px; background: rgb(234, 235, 239); border: 1px solid rgba(235, 235, 237, 0.12); border-radius: 6px; margin-top: 16px; margin-bottom: 12px; padding: 2px; }
+.css-1nak331 { display: inline-flex; width: 100%; height: 36px; background: rgb(234, 235, 239); border: 1px solid rgba(235, 235, 237, 0.12); border-radius: 6px; margin-top: 16px; margin-bottom: 12px; padding: 2px; }
+.css-1nak331 .MuiToggleButtonGroup-grouped.Mui-selected + .MuiToggleButtonGroup-grouped.Mui-selected { border-left: 0px; margin-left: 0px; }
+.css-1nak331 .MuiToggleButtonGroup-firstButton, .css-1nak331 .MuiToggleButtonGroup-middleButton { border-top-right-radius: 0px; border-bottom-right-radius: 0px; }
+.css-1nak331 .MuiToggleButtonGroup-lastButton, .css-1nak331 .MuiToggleButtonGroup-middleButton { margin-left: -1px; border-left: 1px solid transparent; border-top-left-radius: 0px; border-bottom-left-radius: 0px; }
+.css-1nak331 .MuiToggleButtonGroup-lastButton.Mui-disabled, .css-1nak331 .MuiToggleButtonGroup-middleButton.Mui-disabled { border-left: 1px solid transparent; }
+.css-1phkssf { border: 0px; flex: 1 1 0%; background-color: rgb(234, 235, 239); border-radius: 4px; }
+.css-1phkssf.Mui-selected, .css-1phkssf.Mui-selected:hover { background-color: rgb(255, 255, 255); border-radius: 4px !important; }
+.css-1phkssf.Mui-selected, .css-1phkssf.Mui-disabled { z-index: 100; height: 100%; display: flex; -moz-box-pack: center; justify-content: center; }
+.css-1phkssf.Mui-selected .MuiTypography-subheader1, .css-1phkssf.Mui-disabled .MuiTypography-subheader1 { background: linear-gradient(248.86deg, rgb(182, 80, 158) 10.51%, rgb(46, 186, 198) 93.41%) padding-box text; -webkit-text-fill-color: transparent; }
+.css-1phkssf.Mui-selected .MuiTypography-secondary14, .css-1phkssf.Mui-disabled .MuiTypography-secondary14 { background: linear-gradient(248.86deg, rgb(182, 80, 158) 10.51%, rgb(46, 186, 198) 93.41%) padding-box text; -webkit-text-fill-color: transparent; }
+.css-1phkssf.Mui-selected, .css-1phkssf.Mui-selected:hover { background-color: rgb(41, 46, 65); box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 0px; }
+.css-s5hrxy { padding: 11px; color: rgba(235, 235, 239, 0.56); border: 0px; flex: 1 1 0%; background-color: rgb(234, 235, 239); border-radius: 4px; }
+.css-s5hrxy.Mui-disabled { color: rgba(235, 235, 239, 0.3); border: 1px solid rgba(235, 235, 239, 0.12); }
+.css-s5hrxy:hover { text-decoration: none; background-color: rgba(241, 241, 243, 0.08); }
+@media (hover: none) {
+  .css-s5hrxy:hover { background-color: transparent; }
+}
+.css-s5hrxy.Mui-selected { color: rgb(241, 241, 243); background-color: rgba(241, 241, 243, 0.16); }
+.css-s5hrxy.Mui-selected:hover { background-color: rgba(241, 241, 243, 0.24); }
+@media (hover: none) {
+  .css-s5hrxy.Mui-selected:hover { background-color: rgba(241, 241, 243, 0.16); }
+}
+.css-s5hrxy.Mui-selected, .css-s5hrxy.Mui-selected:hover { background-color: rgb(255, 255, 255); border-radius: 4px !important; }
+.css-s5hrxy.Mui-selected, .css-s5hrxy.Mui-disabled { z-index: 100; height: 100%; display: flex; -moz-box-pack: center; justify-content: center; }
+.css-s5hrxy.Mui-selected .MuiTypography-subheader1, .css-s5hrxy.Mui-disabled .MuiTypography-subheader1 { background: linear-gradient(248.86deg, rgb(182, 80, 158) 10.51%, rgb(46, 186, 198) 93.41%) padding-box text; -webkit-text-fill-color: transparent; }
+.css-s5hrxy.Mui-selected .MuiTypography-secondary14, .css-s5hrxy.Mui-disabled .MuiTypography-secondary14 { background: linear-gradient(248.86deg, rgb(182, 80, 158) 10.51%, rgb(46, 186, 198) 93.41%) padding-box text; -webkit-text-fill-color: transparent; }
+.css-s5hrxy.Mui-selected, .css-s5hrxy.Mui-selected:hover { background-color: rgb(41, 46, 65); box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 0px; }
+.css-1py0i4u { display: inline-flex; -moz-box-align: center; align-items: center; -moz-box-pack: center; justify-content: center; position: relative; box-sizing: border-box; outline: 0px; margin: 0px; cursor: pointer; user-select: none; vertical-align: middle; appearance: none; text-decoration: none; padding: 11px; color: rgba(235, 235, 239, 0.56); border: 0px; flex: 1 1 0%; background-color: rgb(234, 235, 239); border-radius: 4px; }
+.css-1py0i4u::-moz-focus-inner { border-style: none; }
+.css-1py0i4u.Mui-disabled { pointer-events: none; cursor: default; }
+@media print {
+  .css-1py0i4u { print-color-adjust: exact; }
+}
+.css-1py0i4u.Mui-disabled { color: rgba(235, 235, 239, 0.3); border: 1px solid rgba(235, 235, 239, 0.12); }
+.css-1py0i4u:hover { text-decoration: none; background-color: rgba(241, 241, 243, 0.08); }
+@media (hover: none) {
+  .css-1py0i4u:hover { background-color: transparent; }
+}
+.css-1py0i4u.Mui-selected { color: rgb(241, 241, 243); background-color: rgba(241, 241, 243, 0.16); }
+.css-1py0i4u.Mui-selected:hover { background-color: rgba(241, 241, 243, 0.24); }
+@media (hover: none) {
+  .css-1py0i4u.Mui-selected:hover { background-color: rgba(241, 241, 243, 0.16); }
+}
+.css-1py0i4u.Mui-selected, .css-1py0i4u.Mui-selected:hover { background-color: rgb(255, 255, 255); border-radius: 4px !important; }
+.css-1py0i4u.Mui-selected, .css-1py0i4u.Mui-disabled { z-index: 100; height: 100%; display: flex; -moz-box-pack: center; justify-content: center; }
+.css-1py0i4u.Mui-selected .MuiTypography-subheader1, .css-1py0i4u.Mui-disabled .MuiTypography-subheader1 { background: linear-gradient(248.86deg, rgb(182, 80, 158) 10.51%, rgb(46, 186, 198) 93.41%) padding-box text; -webkit-text-fill-color: transparent; }
+.css-1py0i4u.Mui-selected .MuiTypography-secondary14, .css-1py0i4u.Mui-disabled .MuiTypography-secondary14 { background: linear-gradient(248.86deg, rgb(182, 80, 158) 10.51%, rgb(46, 186, 198) 93.41%) padding-box text; -webkit-text-fill-color: transparent; }
+.css-1py0i4u.Mui-selected, .css-1py0i4u.Mui-selected:hover { background-color: rgb(41, 46, 65); box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 0px; }
+.css-1jwecc6 { margin: 0px; font-family: Inter, Arial; font-weight: 500; line-height: 1.5rem; font-size: 0.875rem; color: transparent; background-image: linear-gradient(248.86deg, rgb(182, 80, 158) 10.51%, rgb(46, 186, 198) 93.41%); background-clip: text; }
+.css-y6pg4u { margin: 0px; font-family: Inter, Arial; font-weight: 500; line-height: 1.5rem; font-size: 0.875rem; color: rgb(15, 18, 29); }
+.css-wzm01k { -moz-box-pack: start; justify-content: flex-start; -moz-box-align: center; align-items: center; position: relative; text-decoration: none; min-height: 48px; box-sizing: border-box; white-space: nowrap; padding: 12px 16px; display: flex; }
+.css-wzm01k:hover { text-decoration: none; background-color: rgba(235, 235, 239, 0.08); }
+@media (hover: none) {
+  .css-wzm01k:hover { background-color: transparent; }
+}
+.css-wzm01k.Mui-selected { background-color: rgba(234, 235, 239, 0.16); }
+.css-wzm01k.Mui-selected.Mui-focusVisible { background-color: rgba(234, 235, 239, 0.28); }
+.css-wzm01k.Mui-selected:hover { background-color: rgba(234, 235, 239, 0.24); }
+@media (hover: none) {
+  .css-wzm01k.Mui-selected:hover { background-color: rgba(234, 235, 239, 0.16); }
+}
+.css-wzm01k.Mui-focusVisible { background-color: rgba(235, 235, 239, 0.12); }
+.css-wzm01k.Mui-disabled { opacity: 0.38; }
+.css-wzm01k + .MuiDivider-root { margin-top: 4px; margin-bottom: 4px; }
+.css-wzm01k + .MuiDivider-inset { margin-left: 52px; }
+.css-wzm01k .MuiListItemText-root { margin-top: 0px; margin-bottom: 0px; }
+.css-wzm01k .MuiListItemText-inset { padding-left: 36px; }
+.css-wzm01k .MuiListItemIcon-root { min-width: 36px; }
+@media (min-width: 760px) {
+  .css-wzm01k { min-height: auto; }
+}
+.css-wzm01k .MuiListItemIcon-root { min-width: unset; }
+.css-1437ts5 { background-color: transparent; outline: 0px; border: 0px; margin: 0px; border-radius: 0px; cursor: pointer; user-select: none; vertical-align: middle; appearance: none; color: inherit; -moz-box-pack: start; justify-content: flex-start; -moz-box-align: center; align-items: center; position: relative; text-decoration: none; min-height: 48px; box-sizing: border-box; white-space: nowrap; padding: 12px 16px; display: flex; }
+.css-1437ts5::-moz-focus-inner { border-style: none; }
+.css-1437ts5.Mui-disabled { pointer-events: none; cursor: default; }
+@media print {
+  .css-1437ts5 { print-color-adjust: exact; }
+}
+.css-1437ts5:hover { text-decoration: none; background-color: rgba(235, 235, 239, 0.08); }
+@media (hover: none) {
+  .css-1437ts5:hover { background-color: transparent; }
+}
+.css-1437ts5.Mui-selected { background-color: rgba(234, 235, 239, 0.16); }
+.css-1437ts5.Mui-selected.Mui-focusVisible { background-color: rgba(234, 235, 239, 0.28); }
+.css-1437ts5.Mui-selected:hover { background-color: rgba(234, 235, 239, 0.24); }
+@media (hover: none) {
+  .css-1437ts5.Mui-selected:hover { background-color: rgba(234, 235, 239, 0.16); }
+}
+.css-1437ts5.Mui-focusVisible { background-color: rgba(235, 235, 239, 0.12); }
+.css-1437ts5.Mui-disabled { opacity: 0.38; }
+.css-1437ts5 + .MuiDivider-root { margin-top: 4px; margin-bottom: 4px; }
+.css-1437ts5 + .MuiDivider-inset { margin-left: 52px; }
+.css-1437ts5 .MuiListItemText-root { margin-top: 0px; margin-bottom: 0px; }
+.css-1437ts5 .MuiListItemText-inset { padding-left: 36px; }
+.css-1437ts5 .MuiListItemIcon-root { min-width: 36px; }
+@media (min-width: 760px) {
+  .css-1437ts5 { min-height: auto; }
+}
+.css-1437ts5 .MuiListItemIcon-root { min-width: unset; }
+.css-3vef5u { flex: 1 1 auto; min-width: 0px; margin-top: 4px; margin-bottom: 4px; font-family: Inter, Arial; font-weight: 600; letter-spacing: 0.009375rem; line-height: 1.25rem; font-size: 0.875rem; margin-right: 0px; }
+.css-ib15t8 { flex: 1 1 auto; min-width: 0px; margin-top: 4px; margin-bottom: 4px; font-family: Inter, Arial; font-weight: 600; letter-spacing: 0.009375rem; line-height: 1.25rem; font-size: 0.875rem; text-align: right; }
+.css-joe7qy { margin: 0px; font-family: Inter, Arial; font-weight: 400; letter-spacing: 0.009375rem; line-height: 143%; font-size: 0.875rem; color: rgb(142, 146, 163); }
+.css-u8igx3 { -moz-box-pack: start; justify-content: flex-start; -moz-box-align: center; align-items: center; position: relative; text-decoration: none; min-height: 48px; box-sizing: border-box; white-space: nowrap; padding: 12px 16px; display: none; }
+.css-u8igx3:hover { text-decoration: none; background-color: rgba(235, 235, 239, 0.08); }
+@media (hover: none) {
+  .css-u8igx3:hover { background-color: transparent; }
+}
+.css-u8igx3.Mui-selected { background-color: rgba(234, 235, 239, 0.16); }
+.css-u8igx3.Mui-selected.Mui-focusVisible { background-color: rgba(234, 235, 239, 0.28); }
+.css-u8igx3.Mui-selected:hover { background-color: rgba(234, 235, 239, 0.24); }
+@media (hover: none) {
+  .css-u8igx3.Mui-selected:hover { background-color: rgba(234, 235, 239, 0.16); }
+}
+.css-u8igx3.Mui-focusVisible { background-color: rgba(235, 235, 239, 0.12); }
+.css-u8igx3.Mui-disabled { opacity: 0.38; }
+.css-u8igx3 + .MuiDivider-root { margin-top: 4px; margin-bottom: 4px; }
+.css-u8igx3 + .MuiDivider-inset { margin-left: 52px; }
+.css-u8igx3 .MuiListItemText-root { margin-top: 0px; margin-bottom: 0px; }
+.css-u8igx3 .MuiListItemText-inset { padding-left: 36px; }
+.css-u8igx3 .MuiListItemIcon-root { min-width: 36px; }
+@media (min-width: 760px) {
+  .css-u8igx3 { min-height: auto; }
+}
+.css-u8igx3 .MuiListItemIcon-root { min-width: unset; }
+.css-bk1mnm { background-color: transparent; outline: 0px; border: 0px; margin: 0px; border-radius: 0px; cursor: pointer; user-select: none; vertical-align: middle; appearance: none; color: inherit; -moz-box-pack: start; justify-content: flex-start; -moz-box-align: center; align-items: center; position: relative; text-decoration: none; min-height: 48px; box-sizing: border-box; white-space: nowrap; padding: 12px 16px; display: none; }
+.css-bk1mnm::-moz-focus-inner { border-style: none; }
+.css-bk1mnm.Mui-disabled { pointer-events: none; cursor: default; }
+@media print {
+  .css-bk1mnm { print-color-adjust: exact; }
+}
+.css-bk1mnm:hover { text-decoration: none; background-color: rgba(235, 235, 239, 0.08); }
+@media (hover: none) {
+  .css-bk1mnm:hover { background-color: transparent; }
+}
+.css-bk1mnm.Mui-selected { background-color: rgba(234, 235, 239, 0.16); }
+.css-bk1mnm.Mui-selected.Mui-focusVisible { background-color: rgba(234, 235, 239, 0.28); }
+.css-bk1mnm.Mui-selected:hover { background-color: rgba(234, 235, 239, 0.24); }
+@media (hover: none) {
+  .css-bk1mnm.Mui-selected:hover { background-color: rgba(234, 235, 239, 0.16); }
+}
+.css-bk1mnm.Mui-focusVisible { background-color: rgba(235, 235, 239, 0.12); }
+.css-bk1mnm.Mui-disabled { opacity: 0.38; }
+.css-bk1mnm + .MuiDivider-root { margin-top: 4px; margin-bottom: 4px; }
+.css-bk1mnm + .MuiDivider-inset { margin-left: 52px; }
+.css-bk1mnm .MuiListItemText-root { margin-top: 0px; margin-bottom: 0px; }
+.css-bk1mnm .MuiListItemText-inset { padding-left: 36px; }
+.css-bk1mnm .MuiListItemIcon-root { min-width: 36px; }
+@media (min-width: 760px) {
+  .css-bk1mnm { min-height: auto; }
+}
+.css-bk1mnm .MuiListItemIcon-root { min-width: unset; }
 body { --wcm-z-index: 1300; }
 
 </style>
+
+ 
