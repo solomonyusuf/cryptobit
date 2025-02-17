@@ -1580,8 +1580,8 @@ let short_data = [
                     <td></td>
                   </tr>
                   <tr v-for="(stock, index) in paginatedItems" :key="index">
-                       <td class="lay" style="border-bottom:thin solid #4b4b4d">
-                        <div style="display: flex; min-width:250px; align-items: center; gap: 8px;">
+                       <td class="lay" style="border-bottom:thin solid #4b4b4d;">
+                        <div style="display: flex;min-width:250px; align-items: center; gap: 8px;">
                         <button v-if="stock.category.includes('Bookmark')" style="background:transparent;border:0;"
                          @click="handleBookmark(index)"
                         >
@@ -1603,13 +1603,9 @@ let short_data = [
                         <LineChartWidget 
                         :lineColor="stock.chart.lineColor" 
                         :data="Array.from({ length: 30 }, () => Math.floor(Math.random() * 100))" 
-                        :label="label"
+                        :label="labels"
                          />
-                         <!-- <LineChartWidget 
-                        :lineColor="stock.chart.lineColor" 
-                        :data="stock.chart.data" 
-                        :label="stock.chart.label"
-                         /> -->
+                         
                       </td>
                       <td class="lay" style="border-bottom:thin solid #4b4b4d;min-width: 100px;max-width: 150;">
                         <PercentageWidget :amount="stock.percentage.amount" :color="stock.percentage.color" />

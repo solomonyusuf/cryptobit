@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref, onMounted, } from 'vue';
+import { computed, ref, onMounted, defineProps, defineEmits} from 'vue';
 import PaginationWidget from './PaginationWidget.vue';
 import ColumnWidget from './ColumnWidget.vue';
 import RowWidget from './RowWidget.vue';
