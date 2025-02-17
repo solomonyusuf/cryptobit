@@ -53,21 +53,7 @@
    </div>
    <div class="MuiBox-root css-159pi92" style="background: #1b2030;">
       <div class="MuiContainer-root MuiContainer-maxWidthLg css-1a8qn2o">
-         <div class="MuiBox-root css-duo07e">
-            <div role="group" class="MuiToggleButtonGroup-root css-9byq7">
-               <button class="MuiButtonBase-root Mui-disabled MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButton-root Mui-selected Mui-disabled MuiToggleButton-sizeMedium MuiToggleButton-primary MuiToggleButtonGroup-firstButton css-la5cf0" tabindex="-1" type="button"  value="aave" aria-pressed="true">
-                  <p class="MuiTypography-root MuiTypography-subheader1 css-fu4g2f">Stake AAVE</p>
-               </button>
-               <button class="MuiButtonBase-root MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButton-root MuiToggleButton-sizeMedium MuiToggleButton-primary MuiToggleButtonGroup-middleButton css-la5cf0" tabindex="0" type="button" value="gho" aria-pressed="false">
-                  <p class="MuiTypography-root MuiTypography-subheader1 css-fu4g2f">Stake GHO</p>
-                  <span class="MuiTouchRipple-root css-w0pj6f"></span>
-               </button>
-               <button class="MuiButtonBase-root MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButton-root MuiToggleButton-sizeMedium MuiToggleButton-primary MuiToggleButtonGroup-lastButton css-la5cf0" tabindex="0" type="button" value="bpt" aria-pressed="false">
-                  <p class="MuiTypography-root MuiTypography-subheader1 css-fu4g2f">Stake ABPT</p>
-                  <span class="MuiTouchRipple-root css-w0pj6f"></span>
-               </button>
-            </div>
-         </div>
+         
          <div class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-4 css-isbt42">
             <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-lg-6 css-10bqn9h">
                <div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-17ug2oi">
