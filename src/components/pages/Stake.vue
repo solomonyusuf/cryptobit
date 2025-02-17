@@ -380,9 +380,9 @@
                               </div>
                               <p class="MuiTypography-root MuiTypography-caption css-1k0qfa2">Total staked 
                               <p class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1g4nbks">483.47K</p>
-                              (
-                              <p class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1g4nbks"><span class="MuiTypography-root MuiTypography-caption css-1eqowsx">$</span>173.77M</p>
-                              )</p>
+                              
+                              <p class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1g4nbks"><span class="MuiTypography-root MuiTypography-caption css-1eqowsx">($</span>173.77M)</p>
+                              </p>
                            </div>
                         </div>
                         <div class="MuiBox-root css-186mupc">

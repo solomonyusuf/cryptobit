@@ -1310,7 +1310,7 @@ let short_data = [
                   <TradingCardWidget 
                   title="Trading Volume"
                   label="24h"
-                  height="80px"
+                  height="77px"
                   content="$136,436,705"
                   />
                   
@@ -1319,7 +1319,7 @@ let short_data = [
                   <TradingCardWidget 
                   title="Open Intrest"
                   label="Current"
-                  height="75px"
+                  height="77px"
                   content="$236,436,705"
                   />
                   
@@ -1328,14 +1328,14 @@ let short_data = [
                 <TradingCardWidget 
                 title="Earned by stakers"
                 label="24h"
-                height="75px"
+                height="77px"
                 content="$13,605"
                 />
                 
             </div>
           </div>
 
-          <div class="col-md-5 px-2 mb-3">
+          <div class="col-md-5 px-2">
             <ShortTableWidget
             title="Recently Listed"
             label="New"
