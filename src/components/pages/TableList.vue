@@ -1306,7 +1306,7 @@ let short_data = [
         <div class="row mt-3">
           
           <div class="col-md-3 mb-3 ">
-                <div class="row mb-3 justify-content-center">
+                <div class="row mb-3">
                   <TradingCardWidget 
                   title="Trading Volume"
                   label="24h"
@@ -1335,7 +1335,7 @@ let short_data = [
             </div>
           </div>
 
-          <div class="col-md-5 px-2">
+          <div class="col-md-5 px-2 mb-3">
             <ShortTableWidget
             title="Recently Listed"
             label="New"

@@ -10,7 +10,8 @@ const toggleAccordion = (type) => {
   isfOpen.value = !isfOpen.value;
   if(type === 'second')
   issOpen.value = !issOpen.value;
-  else isdOpen.value = !isdOpen.value;
+  if(type === 'dropdown')
+   isdOpen.value = !isdOpen.value;
 };
 
 
@@ -25,7 +26,7 @@ const toggleAccordion = (type) => {
                   <div class="MuiBox-root css-gr0tg3">
                      <div class="MuiFormControl-root MuiTextField-root css-1s2gcw8" aria-label="select market" data-cy="marketSelector">
                         <div class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MarketSwitcher__select css-1ypy5va">
-                           <div tabindex="0" role="combobox" aria-controls=":r5:" aria-expanded="false" aria-haspopup="listbox" aria-labelledby=":r4:" id=":r4:" class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-1dyf9qo">
+                           <div tabindex="0" role="combobox" aria-expanded="false" aria-haspopup="listbox"  class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-1dyf9qo">
                               <div class="MuiBox-root css-0">
                                  <div class="MuiBox-root css-70qvj9">
                                     <div class="MuiBox-root css-hjllk8"><img src="https://app.aave.com/icons/networks/ethereum.svg" alt="" width="100%" height="100%"></div>
@@ -35,13 +36,13 @@ const toggleAccordion = (type) => {
                                           <div class="MuiBox-root css-1tgkox5">
                                              <p class="MuiTypography-root MuiTypography-subheader2 css-my2x37">V3</p>
                                           </div>
-                                          <svg  @click="toggleAccordion('')" class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-fo7h32" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
+                                          <svg  @click="toggleAccordion('dropdown')" class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-fo7h32" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
                                              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
                                                 <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
                                              </svg>
                                           </svg>
                                           <div v-if="isdOpen" class="dropdown-menu" style="background:#383d51;border:0;">
-                                          <ul @click="toggleAccordion('')" class="MuiList-root MuiList-padding MuiMenu-list css-rl9mto" role="listbox" tabindex="-1" style="padding-right: 0px; width: calc(100% + 0px);">
+                                          <ul @click="toggleAccordion('dropdown')" class="MuiList-root MuiList-padding MuiMenu-list css-rl9mto" role="listbox" tabindex="-1" style="padding-right: 0px; width: calc(100% + 0px);">
                         <div class="MuiBox-root css-0" aria-selected="false" role="option">
                           <p class="MuiTypography-root MuiTypography-subheader2 css-itcqc2">Select Market</p>
                         </div>
@@ -212,6 +213,17 @@ const toggleAccordion = (type) => {
                </div>
             </div>
          </div>
+         <div class="MuiBox-root css-duo07e" style="margin-top:10px;">
+   <div role="group" class="MuiToggleButtonGroup-root css-mehr4l">
+      <button class="MuiButtonBase-root Mui-disabled MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButton-root Mui-selected Mui-disabled MuiToggleButton-sizeMedium MuiToggleButton-primary MuiToggleButtonGroup-firstButton css-la5cf0" tabindex="-1" type="button" value="supply" aria-pressed="true" disabled="">
+         <p class="MuiTypography-root MuiTypography-subheader1 css-fu4g2f">Supply</p>
+      </button>
+      <button class="MuiButtonBase-root MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButton-root MuiToggleButton-sizeMedium MuiToggleButton-primary MuiToggleButtonGroup-lastButton css-la5cf0" tabindex="0" type="button" value="borrow" aria-pressed="false">
+         <p class="MuiTypography-root MuiTypography-subheader1 css-fu4g2f">Borrow</p>
+         <span class="MuiTouchRipple-root css-w0pj6f"></span>
+      </button>
+   </div>
+</div>
       </div>
    </div>
    <div class="MuiBox-root css-159pi92" style="background: #1b2030;"> 
@@ -645,12 +657,15 @@ const toggleAccordion = (type) => {
                               </div>
                               <div class="MuiBox-root css-1xwkwbj"><button class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation css-moyn3y" tabindex="-1" type="button" >Supply</button><button class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation css-uhikff" tabindex="0" type="button" id="supply-extra-button" aria-haspopup="true">...<span class="MuiTouchRipple-root css-w0pj6f"></span></button></div>
                            </div>
+   
+
                      </div>
 
                   </div>
                </div>
 
                <div class="MuiBox-root css-1wbia9h">
+                
                <div class="MuiBox-root css-mddclq">
                   <a class="MuiButtonBase-root MuiButton-root MuiButton-surface MuiButton-surfacePrimary MuiButton-sizeSmall MuiButton-surfaceSizeSmall MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-surface MuiButton-surfacePrimary MuiButton-sizeSmall MuiButton-surfaceSizeSmall MuiButton-colorPrimary MuiButton-disableElevation css-kw8qku" tabindex="0" role="button">View Transactions<span class="MuiTouchRipple-root css-w0pj6f"></span></a></div>
                      
@@ -967,9 +982,88 @@ body::backdrop { background-color: rgb(27, 32, 48); }
 body { font-family: Inter, Arial; font-weight: 400; font-size: 0.875rem; min-width: 375px; }
 body > div:first-of-type { min-height: 100vh; display: flex; flex-direction: column; }
 
+@media (min-width: 0px) {
+  .css-1jdos5u {
+    display: block;
+  }
+}
+@media (min-width: 0px) {
+  .css-19zr2gl {
+    padding: 14px 16px;
+  }
+}
+@media (min-width: 0px) {
+  .css-1xifpgy {
+    padding: 14px 16px 24px;
+  }
+}
+@media (min-width: 0px) {
+  .css-1dm56o2 {
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 8px;
+  }
+}
+@media (min-width: 0px) {
+  .css-ycl373 {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+@media (min-width: 0px) {
+  .css-mehr4l {
+    width: 100%;
+  }
+}
+@media (min-width: 0px) {
+  .css-ycl373 {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+@media (min-width: 0px) {
+  .css-nkvznt {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+@media (min-width: 0px) {
+  .css-k7vncv {
+    gap: 12px;
+  }
+}
+.css-133srx4 {
+  background-color: rgb(41, 46, 65);
+  color: rgb(241, 241, 243);
+  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 2px 1px, rgba(0, 0, 0, 0.25) 0px 0px 1px;
+  background-image: none;
+  margin-top: 0px;
+  border: 1px solid rgba(235, 235, 239, 0.08);
+}
+.css-mehr4l {
+  display: inline-flex;
+  border-radius: 4px;
+  background-color: rgb(56, 61, 81);
+  border: 1px solid rgba(235, 235, 237, 0.12);
+  padding: 4px;
+  height: 44px;
+}
 .dropdown-container {
   position: relative;
   display: inline-block;
+  @media (min-width: 0px) {
+  .css-duo07e {
+    display: flex;
+    -moz-box-pack: center;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 12px;
+
+  }
+}
+
 }
 .css-1437ts5:hover {
   background-color: #292e41 !important;
@@ -1076,6 +1170,9 @@ body > div:first-of-type { min-height: 100vh; display: flex; flex-direction: col
   transition: max-height 0.3s ease-in-out;
 }
 
+.css-35dwn7[v-show] {
+  max-height: 700px; /* Adjust this height based on content */
+}
 .css-35dwn7[v-show] {
   max-height: 700px; /* Adjust this height based on content */
 }
@@ -2868,10 +2965,10 @@ label[data-shrink="false"] + .MuiInputBase-formControl .css-8crlfm:focus::placeh
 .css-1qdyvok { display: flex; -moz-box-pack: justify; justify-content: space-between; align-items: flex-start; }
 .css-bf0ye5 { position: relative; width: calc(50% - 8px); }
 @media (min-width: 0px) {
-  .css-bf0ye5 { display: block; }
+  .css-bf0ye5 { display: block; width: 100%; }
 }
 @media (min-width: 1280px) {
-  .css-bf0ye5 { display: block; }
+  .css-bf0ye5 { display: block;  }
 }
 .css-133srx4 { background-color: rgb(41, 46, 65); color: rgb(241, 241, 243); transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1); border-radius: 4px; box-shadow: rgba(0, 0, 0, 0.05) 0px 2px 1px, rgba(0, 0, 0, 0.25) 0px 0px 1px; background-image: none; margin-top: 0px; border: 1px solid rgba(235, 235, 239, 0.08); }
 .css-19zr2gl { display: flex; -moz-box-align: center; align-items: center; -moz-box-pack: justify; justify-content: space-between; }
