@@ -16,7 +16,7 @@ const router = createRouter({
   history: createWebHashHistory(), // Use hash mode
   routes: [
     { path: '/', name: 'Table4', component: TableList },
-    //{ path: '/list', name: 'List', component: ListView },
+    { path: '/list', name: 'Experiment', component: Experiment },
     { path: '/chart', name: 'Pair', component: ChartView },
     { path: '/login', name: 'Login', component: Login },
     { path: '/governance', name: 'Governance', component: Governance },
