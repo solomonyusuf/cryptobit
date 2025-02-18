@@ -1,3 +1,20 @@
+<script setup>
+import { ref } from 'vue';
+
+const isfOpen = ref(true);
+const issOpen = ref(true);
+const isdOpen = ref(false);
+
+const toggleAccordion = (type) => {
+  if(type === 'first')
+  isfOpen.value = !isfOpen.value;
+  if(type === 'second')
+  issOpen.value = !issOpen.value;
+  else isdOpen.value = !isdOpen.value;
+};
+
+
+</script>
 <template>
 <div class="MuiBox-root css-b95f0i">
    <div class=" css-1e6kcma">
@@ -18,11 +35,133 @@
                                           <div class="MuiBox-root css-1tgkox5">
                                              <p class="MuiTypography-root MuiTypography-subheader2 css-my2x37">V3</p>
                                           </div>
-                                          <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-fo7h32" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
+                                          <svg  @click="toggleAccordion('')" class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-fo7h32" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
                                              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
                                                 <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
                                              </svg>
                                           </svg>
+                                          <div v-if="isdOpen" class="dropdown-menu" style="background:#383d51;border:0;">
+                                          <ul @click="toggleAccordion('')" class="MuiList-root MuiList-padding MuiMenu-list css-rl9mto" role="listbox" tabindex="-1" style="padding-right: 0px; width: calc(100% + 0px);">
+                        <div class="MuiBox-root css-0" aria-selected="false" role="option">
+                          <p class="MuiTypography-root MuiTypography-subheader2 css-itcqc2">Select Market</p>
+                        </div>
+                        
+                        <li class="MuiButtonBase-root MuiMenuItem-root MuiMenuItem-gutters MuiMenuItem-root MuiMenuItem-gutters css-1437ts5" tabindex="-1" role="option" data-cy="marketSelector_proto_mainnet_v3" aria-selected="false" data-value="proto_mainnet_v3">
+                          <div class="MuiBox-root css-hjllk8"><img src="https://app.aave.com/icons/networks/ethereum.svg" alt="" width="100%" height="100%"></div>
+                          <div class="MuiListItemText-root css-3vef5u"><span class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-12sut97">Core </span></div>
+                          <div class="MuiListItemText-root css-ib15t8">
+                              <p class="MuiTypography-root MuiTypography-description css-joe7qy"></p>
+                          </div>
+                          <span class="MuiTouchRipple-root css-w0pj6f"></span>
+                        </li>
+                        <li class="MuiButtonBase-root MuiMenuItem-root MuiMenuItem-gutters MuiMenuItem-root MuiMenuItem-gutters css-1437ts5" tabindex="-1" role="option" data-cy="marketSelector_proto_lido_v3" aria-selected="false" data-value="proto_lido_v3">
+                          <div class="MuiBox-root css-hjllk8"><img src="https://app.aave.com/icons/markets/lido.svg" alt="" width="100%" height="100%"></div>
+                          <div class="MuiListItemText-root css-3vef5u"><span class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-12sut97">Prime </span></div>
+                          <div class="MuiListItemText-root css-ib15t8">
+                              <p class="MuiTypography-root MuiTypography-description css-joe7qy"></p>
+                          </div>
+                          <span class="MuiTouchRipple-root css-w0pj6f"></span>
+                        </li>
+                        <li class="MuiButtonBase-root MuiMenuItem-root MuiMenuItem-gutters MuiMenuItem-root MuiMenuItem-gutters css-1437ts5" tabindex="-1" role="option" data-cy="marketSelector_proto_etherfi_v3" aria-selected="false" data-value="proto_etherfi_v3">
+                          <div class="MuiBox-root css-hjllk8"><img src="https://app.aave.com/icons/markets/etherfi.svg" alt="" width="100%" height="100%"></div>
+                          <div class="MuiListItemText-root css-3vef5u"><span class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-12sut97">EtherFi </span></div>
+                          <div class="MuiListItemText-root css-ib15t8">
+                              <p class="MuiTypography-root MuiTypography-description css-joe7qy"></p>
+                          </div>
+                          <span class="MuiTouchRipple-root css-w0pj6f"></span>
+                        </li>
+                      
+                        <li class="MuiButtonBase-root MuiMenuItem-root MuiMenuItem-gutters MuiMenuItem-root MuiMenuItem-gutters css-1437ts5" tabindex="-1" role="option" data-cy="marketSelector_proto_base_v3" aria-selected="false" data-value="proto_base_v3">
+                          <div class="MuiBox-root css-hjllk8"><img src="https://app.aave.com/icons/networks/base.svg" alt="" width="100%" height="100%"></div>
+                          <div class="MuiListItemText-root css-3vef5u"><span class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-12sut97">Base </span></div>
+                          <div class="MuiListItemText-root css-ib15t8">
+                              <p class="MuiTypography-root MuiTypography-description css-joe7qy"></p>
+                          </div>
+                          <span class="MuiTouchRipple-root css-w0pj6f"></span>
+                        </li>
+                        <li class="MuiButtonBase-root MuiMenuItem-root MuiMenuItem-gutters MuiMenuItem-root MuiMenuItem-gutters css-1437ts5" tabindex="-1" role="option" data-cy="marketSelector_proto_arbitrum_v3" aria-selected="false" data-value="proto_arbitrum_v3">
+                          <div class="MuiBox-root css-hjllk8"><img src="https://app.aave.com/icons/networks/arbitrum.svg" alt="" width="100%" height="100%"></div>
+                          <div class="MuiListItemText-root css-3vef5u"><span class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-12sut97">Arbitrum </span></div>
+                          <div class="MuiListItemText-root css-ib15t8">
+                              <p class="MuiTypography-root MuiTypography-description css-joe7qy"></p>
+                          </div>
+                          <span class="MuiTouchRipple-root css-w0pj6f"></span>
+                        </li>
+                        <li class="MuiButtonBase-root MuiMenuItem-root MuiMenuItem-gutters MuiMenuItem-root MuiMenuItem-gutters css-1437ts5" tabindex="-1" role="option" data-cy="marketSelector_proto_avalanche_v3" aria-selected="false" data-value="proto_avalanche_v3">
+                          <div class="MuiBox-root css-hjllk8"><img src="https://app.aave.com/icons/networks/avalanche.svg" alt="" width="100%" height="100%"></div>
+                          <div class="MuiListItemText-root css-3vef5u"><span class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-12sut97">Avalanche </span></div>
+                          <div class="MuiListItemText-root css-ib15t8">
+                              <p class="MuiTypography-root MuiTypography-description css-joe7qy"></p>
+                          </div>
+                          <span class="MuiTouchRipple-root css-w0pj6f"></span>
+                        </li>
+                        <li class="MuiButtonBase-root MuiMenuItem-root MuiMenuItem-gutters MuiMenuItem-root MuiMenuItem-gutters css-1437ts5" tabindex="-1" role="option" data-cy="marketSelector_proto_optimism_v3" aria-selected="false" data-value="proto_optimism_v3">
+                          <div class="MuiBox-root css-hjllk8"><img src="https://app.aave.com/icons/networks/optimism.svg" alt="" width="100%" height="100%"></div>
+                          <div class="MuiListItemText-root css-3vef5u"><span class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-12sut97">OP </span></div>
+                          <div class="MuiListItemText-root css-ib15t8">
+                              <p class="MuiTypography-root MuiTypography-description css-joe7qy"></p>
+                          </div>
+                          <span class="MuiTouchRipple-root css-w0pj6f"></span>
+                        </li>
+                        <li class="MuiButtonBase-root MuiMenuItem-root MuiMenuItem-gutters MuiMenuItem-root MuiMenuItem-gutters css-1437ts5" tabindex="-1" role="option" data-cy="marketSelector_proto_polygon_v3" aria-selected="false" data-value="proto_polygon_v3">
+                          <div class="MuiBox-root css-hjllk8"><img src="https://app.aave.com/icons/networks/polygon.svg" alt="" width="100%" height="100%"></div>
+                          <div class="MuiListItemText-root css-3vef5u"><span class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-12sut97">Polygon </span></div>
+                          <div class="MuiListItemText-root css-ib15t8">
+                              <p class="MuiTypography-root MuiTypography-description css-joe7qy"></p>
+                          </div>
+                          <span class="MuiTouchRipple-root css-w0pj6f"></span>
+                        </li>
+                        <li class="MuiButtonBase-root MuiMenuItem-root MuiMenuItem-gutters MuiMenuItem-root MuiMenuItem-gutters css-1437ts5" tabindex="-1" role="option" data-cy="marketSelector_proto_metis_v3" aria-selected="false" data-value="proto_metis_v3">
+                          <div class="MuiBox-root css-hjllk8"><img src="https://app.aave.com/icons/networks/metis.svg" alt="" width="100%" height="100%"></div>
+                          <div class="MuiListItemText-root css-3vef5u"><span class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-12sut97">Metis </span></div>
+                          <div class="MuiListItemText-root css-ib15t8">
+                              <p class="MuiTypography-root MuiTypography-description css-joe7qy"></p>
+                          </div>
+                          <span class="MuiTouchRipple-root css-w0pj6f"></span>
+                        </li>
+                        <li class="MuiButtonBase-root MuiMenuItem-root MuiMenuItem-gutters MuiMenuItem-root MuiMenuItem-gutters css-1437ts5" tabindex="-1" role="option" data-cy="marketSelector_proto_gnosis_v3" aria-selected="false" data-value="proto_gnosis_v3">
+                          <div class="MuiBox-root css-hjllk8"><img src="https://app.aave.com/icons/networks/gnosis.svg" alt="" width="100%" height="100%"></div>
+                          <div class="MuiListItemText-root css-3vef5u"><span class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-12sut97">Gnosis </span></div>
+                          <div class="MuiListItemText-root css-ib15t8">
+                              <p class="MuiTypography-root MuiTypography-description css-joe7qy"></p>
+                          </div>
+                          <span class="MuiTouchRipple-root css-w0pj6f"></span>
+                        </li>
+                        <li class="MuiButtonBase-root MuiMenuItem-root MuiMenuItem-gutters Mui-selected MuiMenuItem-root MuiMenuItem-gutters Mui-selected css-1437ts5" tabindex="0" role="option" data-cy="marketSelector_proto_bnb_v3" aria-selected="true" data-value="proto_bnb_v3">
+                          <div class="MuiBox-root css-hjllk8"><img src="https://app.aave.com/icons/networks/binance.svg" alt="" width="100%" height="100%"></div>
+                          <div class="MuiListItemText-root css-3vef5u"><span class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-12sut97">BNB Chain </span></div>
+                          <div class="MuiListItemText-root css-ib15t8">
+                              <p class="MuiTypography-root MuiTypography-description css-joe7qy"></p>
+                          </div>
+                          <span class="MuiTouchRipple-root css-w0pj6f"></span>
+                        </li>
+                        <li class="MuiButtonBase-root MuiMenuItem-root MuiMenuItem-gutters MuiMenuItem-root MuiMenuItem-gutters css-1437ts5" tabindex="-1" role="option" data-cy="marketSelector_proto_scroll_v3" aria-selected="false" data-value="proto_scroll_v3">
+                          <div class="MuiBox-root css-hjllk8"><img src="https://app.aave.com/icons/networks/scroll.svg" alt="" width="100%" height="100%"></div>
+                          <div class="MuiListItemText-root css-3vef5u"><span class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-12sut97">Scroll </span></div>
+                          <div class="MuiListItemText-root css-ib15t8">
+                              <p class="MuiTypography-root MuiTypography-description css-joe7qy"></p>
+                          </div>
+                          <span class="MuiTouchRipple-root css-w0pj6f"></span>
+                        </li>
+                        <li class="MuiButtonBase-root MuiMenuItem-root MuiMenuItem-gutters MuiMenuItem-root MuiMenuItem-gutters css-1437ts5" tabindex="-1" role="option" data-cy="marketSelector_proto_zksync_v3" aria-selected="false" data-value="proto_zksync_v3">
+                          <div class="MuiBox-root css-hjllk8"><img src="https://app.aave.com/icons/networks/zksync.svg" alt="" width="100%" height="100%"></div>
+                          <div class="MuiListItemText-root css-3vef5u"><span class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-12sut97">ZKsync </span></div>
+                          <div class="MuiListItemText-root css-ib15t8">
+                              <p class="MuiTypography-root MuiTypography-description css-joe7qy"></p>
+                          </div>
+                          <span class="MuiTouchRipple-root css-w0pj6f"></span>
+                        </li>
+                        <li class="MuiButtonBase-root MuiMenuItem-root MuiMenuItem-gutters MuiMenuItem-root MuiMenuItem-gutters css-1437ts5" tabindex="-1" role="option" data-cy="marketSelector_proto_linea_v3" aria-selected="false" data-value="proto_linea_v3">
+                          <div class="MuiBox-root css-hjllk8"><img src="https://app.aave.com/icons/networks/linea.svg" alt="" width="100%" height="100%"></div>
+                          <div class="MuiListItemText-root css-3vef5u"><span class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-12sut97">Linea </span></div>
+                          <div class="MuiListItemText-root css-ib15t8">
+                              <p class="MuiTypography-root MuiTypography-description css-joe7qy"></p>
+                          </div>
+                          <span class="MuiTouchRipple-root css-w0pj6f"></span>
+                        </li>
+                                          </ul>
+
+                                          </div>
                                        </div>
                                     </div>
                                  </div>
@@ -166,12 +305,12 @@
                         <div class="MuiBox-root css-iwds49">
                            <div class="MuiTypography-root MuiTypography-h3 css-upncnh">Assets to supply</div>
                         </div>
-                        <div class="MuiBox-root css-l9ry6i">
+                        <div class="MuiBox-root css-l9ry6i" @click="toggleAccordion('first')">
                            <p class="MuiTypography-root MuiTypography-buttonM css-1p541t6">Hide</p>
                            <span></span>
                         </div>
                      </div>
-                     <div class="MuiBox-root css-35dwn7">
+                     <div class="MuiBox-root css-35dwn7" v-show="isfOpen">
                         <div class="MuiBox-root css-t0051x">
                            <div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAlert-root MuiAlert-colorInfo MuiAlert-standardInfo MuiAlert-standard css-1lh2l3q" role="alert">
                               <div class="MuiAlert-icon css-1l54tgj">
@@ -185,7 +324,7 @@
                            </div>
                         </div>
                      </div>
-                     <div class="MuiBox-root css-13o7eu2">
+                     <div class="MuiBox-root css-13o7eu2" v-show="isfOpen">
                            <div class="MuiBox-root css-1wsmwia">
                               <div class="MuiBox-root css-15czs8k">
                                  <div class="MuiTypography-root MuiTypography-subheader2 MuiTypography-noWrap css-18phtf6">
@@ -573,10 +712,14 @@
                                     <p class="MuiTypography-root MuiTypography-subheader1 MuiTypography-noWrap css-mgqwsh" data-cy="assetName" aria-label="1inch Network (1INCH)">1INCH</p>
                                  </a>
                               </div>
+                               
                               <div class="MuiBox-root css-11udp8r">
-                                 <div class="MuiBox-root css-u6v8er">
-                                    <div class="MuiBox-root css-70qvj9">
-                                       <p class="MuiTypography-root MuiTypography-secondary14 MuiTypography-noWrap css-1r4ptf4" data-cy="nativeAmount">10%</p>
+                                 <div class="MuiBox-root css-1241y0n">
+                                    <div class="MuiBox-root css-19el3v">
+                                       <div class="MuiBox-root css-k008qs">
+                                          <p class="MuiTypography-root MuiTypography-secondary14 MuiTypography-noWrap css-uefm4v" data-cy="apy">10<span class="MuiTypography-root MuiTypography-secondary14 css-d8aql2">%</span></p>
+                                       </div>
+                                       <div class="MuiBox-root css-1yxnkj0"></div>
                                     </div>
                                  </div>
                               </div>
@@ -590,22 +733,7 @@
                                     </div>
                                  </div>
                               </div>
-                              <div class="MuiBox-root css-11udp8r">
-                                 <div class="MuiBox-root css-gmuwbf">
-                                    <div class="MuiBox-root css-1rzcn8q">
-                                       <div class="MuiBox-root css-5wpzg3">
-                                          <div class="MuiBox-root css-1do422x">
-                                             <p class="MuiTypography-root MuiTypography-secondary12 css-1yhzaxq">Isolated</p>
-                                             <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-nqvctb" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
-                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
-                                                   <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                                </svg>
-                                             </svg>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
+                              
                               <div class="MuiBox-root css-1xwkwbj"><button class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation css-moyn3y" tabindex="-1" type="button" >Supply</button><button class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation css-uhikff" tabindex="0" type="button" id="supply-extra-button" aria-haspopup="true">...<span class="MuiTouchRipple-root css-w0pj6f"></span></button></div>
                            </div>
                            
@@ -618,12 +746,12 @@
                               <div class="MuiBox-root css-iwds49">
                                  <div class="MuiTypography-root MuiTypography-h3 css-upncnh">Assets to borrow</div>
                               </div>
-                              <div class="MuiBox-root css-l9ry6i">
+                              <div class="MuiBox-root css-l9ry6i" @click="toggleAccordion('second')">
                                  <p class="MuiTypography-root MuiTypography-buttonM css-1p541t6">Hide</p>
                                  <span></span>
                               </div>
                            </div>
-                           <div class="MuiBox-root css-35dwn7">
+                           <div class="MuiBox-root css-35dwn7" v-show="issOpen">
                               <div class="MuiBox-root css-186lrzm">
                                  <div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAlert-root MuiAlert-colorInfo MuiAlert-standardInfo MuiAlert-standard css-1lh2l3q" role="alert">
                                     <div class="MuiAlert-icon css-1l54tgj">
@@ -694,7 +822,7 @@
                                  <div class="MuiBox-root css-1xwkwbj"><button class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation css-moyn3y" tabindex="-1" type="button" >Borrow</button><a class="MuiTypography-root MuiTypography-description MuiLink-root MuiLink-underlineNone MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation css-10ybyyq" tabindex="0" href="/reserve-overview/?underlyingAsset=0x40d16fc0246ad3160ccc09b8d0d3a2cd28ae6c2f&amp;marketName=proto_mainnet_v3">Details<span class="MuiTouchRipple-root css-w0pj6f"></span></a></div>
                               </div>
                            </div>
-                           <div class="MuiBox-root css-13o7eu2">
+                           <div class="MuiBox-root css-13o7eu2" v-show="issOpen">
                               <div class="MuiBox-root css-1wsmwia">
                                  <div class="MuiBox-root css-15czs8k">
                                     <div class="MuiTypography-root MuiTypography-subheader2 MuiTypography-noWrap css-18phtf6">
@@ -814,7 +942,7 @@
                               </div>
                            
                            </div>
-                  </div>
+                    </div>
 
                </div>
 
@@ -831,13 +959,126 @@
  html { box-sizing: border-box; }
 *, ::before, ::after { box-sizing: inherit; }
 strong, b { font-weight: 700; }
-body { margin: 0px; color: rgb(241, 241, 243); background-color: rgb(27, 32, 48); }
+body { margin: 0px; color: rgb(241, 241, 243); background: rgb(27, 32, 48); }
 @media print {
   body { background-color: rgb(255, 255, 255); }
 }
 body::backdrop { background-color: rgb(27, 32, 48); }
 body { font-family: Inter, Arial; font-weight: 400; font-size: 0.875rem; min-width: 375px; }
 body > div:first-of-type { min-height: 100vh; display: flex; flex-direction: column; }
+
+.dropdown-container {
+  position: relative;
+  display: inline-block;
+}
+.css-1437ts5:hover {
+  background-color: #292e41 !important;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 30px;
+  //left: 0;
+  background: white;
+  border: 1px solid #ddd;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  min-width: 240px;
+  max-height:300px;
+  overflow-y:auto;
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 1000;
+}
+
+.dropdown-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-list li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.dropdown-list li:hover {
+  background-color: #f0f0f0;
+}
+.css-itcqc2 {
+  margin: 0px;
+  font-family: Inter, Arial;
+  font-weight: 500;
+  letter-spacing: 0.00625rem;
+  line-height: 1rem;
+  font-size: 0.75rem;
+  color: rgb(165, 168, 182);
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 8px;
+}
+@media (min-width: 760px) {
+  .css-1437ts5 {
+    min-height: auto;
+  }
+}
+.css-1437ts5 {
+  background-color: transparent;
+  outline: 0px;
+  border: 0px;
+  margin: 0px;
+  border-radius: 0px;
+  cursor: pointer;
+  user-select: none;
+  vertical-align: middle;
+  appearance: none;
+  color: inherit;
+  -moz-box-pack: start;
+  justify-content: flex-start;
+  -moz-box-align: center;
+  align-items: center;
+  position: relative;
+  text-decoration: none;
+  min-height: 48px;
+  box-sizing: border-box;
+  white-space: nowrap;
+  padding: 12px 16px;
+  display: flex;
+}
+.css-hjllk8 {
+  margin-right: 8px;
+  width: 32px;
+  height: 32px;
+  position: relative;
+}
+.css-1437ts5 .MuiListItemText-root {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.css-3vef5u {
+  flex: 1 1 auto;
+  min-width: 0px;
+  margin-top: 4px;
+  margin-bottom: 4px;
+  font-family: Inter, Arial;
+  font-weight: 600;
+  letter-spacing: 0.009375rem;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  margin-right: 0px;
+}
+.css-12sut97 {
+  margin: 0px;
+  display: block;
+}
+.css-35dwn7 {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.css-35dwn7[v-show] {
+  max-height: 700px; /* Adjust this height based on content */
+}
 .css-kw8qku {
   display: inline-flex;
   -moz-box-align: center;
