@@ -254,13 +254,15 @@ const togglePop = () => {
                         </div>
 
                      </div>
-                     <div class="MuiBox-root css-c6rw7y">
+                     <div class="MuiBox-root css-c6rw7y show-on-desktop">
                         <div class="MuiBox-root css-14aub4a">
                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" height="16">
                               <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
                            </svg>
                         </div>
-                        <div class="MuiInputBase-root MuiInputBase-colorPrimary css-bhhpxe"><input placeholder="Search assets..." type="text" class="MuiInputBase-input css-8crlfm" value=""></div>
+                        <div class="MuiInputBase-root MuiInputBase-colorPrimary css-bhhpxe">
+                        
+                        <input placeholder="Search assets..." type="text" class="MuiInputBase-input css-8crlfm" value=""></div>
                         <button class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1iwk9i3" tabindex="0" type="button">
                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" height="16">
                               <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path>
@@ -504,7 +506,17 @@ body::backdrop { background-color: rgb(27, 32, 48); }
 body { font-family: Inter, Arial; font-weight: 400; font-size: 0.875rem; min-width: 375px; }
 body > div:first-of-type { min-height: 100vh; display: flex; flex-direction: column; }
 
+@media (min-width: 720px) {
+  .show-on-mobile {
+    display: none !important;
+  }
+}
 
+@media (max-width: 719px) { /* Adjusted max-width to avoid overlap */
+  .show-on-desktop {
+    display: none !important;
+  }
+}
 .css-kaigmj {
   background-color: rgb(41, 46, 65);
   color: rgb(241, 241, 243);
