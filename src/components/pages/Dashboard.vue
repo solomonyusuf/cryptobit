@@ -3979,11 +3979,11 @@ label[data-shrink="false"] + .MuiInputBase-formControl .css-8crlfm:focus::placeh
 100% { opacity: 1; }
 }
 .css-1wbia9h { position: relative; width: calc(50% - 8px); }
-// @media (min-width: 0px) {
-//   .css-1wbia9h { display: none; }
-// }
+@media (min-width: 0px) {
+  .css-1wbia9h { display: none; }
+}
 @media (max-width: 720px) {
-  .css-1wbia9h { display: block; width:100%;}
+  .css-1wbia9h { width:100%;}
 }
 @media (min-width: 720px) {
   .css-1wbia9h { display: block; }
