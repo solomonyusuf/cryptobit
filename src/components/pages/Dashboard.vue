@@ -4,6 +4,7 @@ import { ref } from 'vue';
 const isfOpen = ref(true);
 const issOpen = ref(true);
 const isdOpen = ref(false);
+const tab = ref('supply');
 
 const toggleAccordion = (type) => {
   if(type === 'first')
@@ -12,6 +13,34 @@ const toggleAccordion = (type) => {
   issOpen.value = !issOpen.value;
   if(type === 'dropdown')
    isdOpen.value = !isdOpen.value;
+};
+ 
+const toggleElement = (param) => {
+  const element = document.querySelector(".css-bf0ye5"); 
+  const targetDiv = document.querySelector(".css-1wbia9h"); 
+
+  tab.value = param;
+
+  if (element && targetDiv) {
+    if(param === 'supply')
+    {
+      element.style.display = "block";
+      targetDiv.style.display = "none";
+    }
+    else
+    {
+      element.style.display = "none";
+      targetDiv.style.display = "block";
+    }
+  
+    // if (element.style.display === "none") {
+    //   element.style.display = "block";
+    //   targetDiv.style.display = "none";
+    // } else {
+    //   element.style.display = "none";
+    //   targetDiv.style.display = "block";
+    // }
+  }
 };
 
 
@@ -212,18 +241,22 @@ const toggleAccordion = (type) => {
                   </div>
                </div>
             </div>
+            <div class="MuiBox-root css-k7vncv">
+              <a class="MuiButtonBase-root MuiButton-root MuiButton-surface MuiButton-surfacePrimary MuiButton-sizeSmall MuiButton-surfaceSizeSmall MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-surface MuiButton-surfacePrimary MuiButton-sizeSmall MuiButton-surfaceSizeSmall MuiButton-colorPrimary MuiButton-disableElevation css-kw8qku show-on-mobile" tabindex="0" role="button" style="margin-top:10px;">View Transactions<span class="MuiTouchRipple-root css-w0pj6f"></span></a> 
+            </div>
          </div>
          <div class="MuiBox-root css-duo07e" style="margin-top:10px;">
-   <div role="group" class="MuiToggleButtonGroup-root css-mehr4l">
-      <button class="MuiButtonBase-root Mui-disabled MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButton-root Mui-selected Mui-disabled MuiToggleButton-sizeMedium MuiToggleButton-primary MuiToggleButtonGroup-firstButton css-la5cf0" tabindex="-1" type="button" value="supply" aria-pressed="true" disabled="">
-         <p class="MuiTypography-root MuiTypography-subheader1 css-fu4g2f">Supply</p>
-      </button>
-      <button class="MuiButtonBase-root MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButton-root MuiToggleButton-sizeMedium MuiToggleButton-primary MuiToggleButtonGroup-lastButton css-la5cf0" tabindex="0" type="button" value="borrow" aria-pressed="false">
-         <p class="MuiTypography-root MuiTypography-subheader1 css-fu4g2f">Borrow</p>
-         <span class="MuiTouchRipple-root css-w0pj6f"></span>
-      </button>
-   </div>
-</div>
+                 
+            <div role="group" class="MuiToggleButtonGroup-root css-mehr4l">
+                <button @click="toggleElement('supply')" :class="{'Mui-selected': tab == 'supply'}" class="MuiButtonBase-root MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButton-root  MuiToggleButton-sizeMedium MuiToggleButton-primary MuiToggleButtonGroup-firstButton css-la5cf0" tabindex="-1" type="button" value="supply" aria-pressed="true">
+                  <p class="MuiTypography-root MuiTypography-subheader1 css-fu4g2f">Supply</p>
+                </button>
+                <button @click="toggleElement('borrow')"  :class="{'Mui-selected': tab == 'borrow'}" class="MuiButtonBase-root MuiToggleButtonGroup-grouped MuiToggleButtonGroup-groupedHorizontal MuiToggleButton-root MuiToggleButton-sizeMedium MuiToggleButton-primary MuiToggleButtonGroup-lastButton css-la5cf0" tabindex="0" type="button" value="borrow" aria-pressed="false">
+                  <p class="MuiTypography-root MuiTypography-subheader1 css-fu4g2f">Borrow</p>
+                  <span class="MuiTouchRipple-root css-w0pj6f"></span>
+                </button>
+            </div>
+          </div>
       </div>
    </div>
    <div class="MuiBox-root css-159pi92" style="background: #1b2030;"> 
@@ -363,7 +396,7 @@ const toggleAccordion = (type) => {
                                 <div class="MuiBox-root css-16rgc74"><button class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-fullWidth css-23aapr" tabindex="-1" type="button" disabled="">Supply</button><a class="MuiTypography-root MuiTypography-description MuiLink-root MuiLink-underlineNone MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-fullWidth MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-fullWidth css-1haiorh" tabindex="0" href="/reserve-overview/?underlyingAsset=0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82&amp;marketName=proto_bnb_v3">Details<span class="MuiTouchRipple-root css-w0pj6f"></span></a></div>
                               </div>
                           </div>
-                          </div>
+                      </div>
                       
                     </div>
                     <div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-7l9tvd">
@@ -1145,7 +1178,7 @@ const toggleAccordion = (type) => {
                 <div class="MuiBox-root css-1wbia9h">
                   
                 <div class="MuiBox-root css-mddclq">
-                    <a class="MuiButtonBase-root MuiButton-root MuiButton-surface MuiButton-surfacePrimary MuiButton-sizeSmall MuiButton-surfaceSizeSmall MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-surface MuiButton-surfacePrimary MuiButton-sizeSmall MuiButton-surfaceSizeSmall MuiButton-colorPrimary MuiButton-disableElevation css-kw8qku" tabindex="0" role="button">View Transactions<span class="MuiTouchRipple-root css-w0pj6f"></span></a></div>
+                    <a class="MuiButtonBase-root MuiButton-root MuiButton-surface MuiButton-surfacePrimary MuiButton-sizeSmall MuiButton-surfaceSizeSmall MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-surface MuiButton-surfacePrimary MuiButton-sizeSmall MuiButton-surfaceSizeSmall MuiButton-colorPrimary MuiButton-disableElevation css-kw8qku show-on-desktop" tabindex="0" role="button">View Transactions<span class="MuiTouchRipple-root css-w0pj6f"></span></a></div>
                       
                       <div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 css-133srx4">
                           <div class="MuiBox-root css-19zr2gl">
@@ -1175,62 +1208,114 @@ const toggleAccordion = (type) => {
                           <div class="MuiBox-root css-1dm56o2"></div>
                           <div class="MuiBox-root css-13o7eu2">
                             <div class="MuiBox-root css-1xifpgy">
-                                <div class="MuiBox-root css-13o7eu2">
-                            <div class="MuiBox-root css-1wsmwia">
-                                <div class="MuiBox-root css-15czs8k">
-                                  <div class="MuiTypography-root MuiTypography-subheader2 MuiTypography-noWrap css-18phtf6">
-                                      Assets
-                                      <div class="MuiBox-root css-14dkifd"><span class="MuiBox-root css-1hf8ilx"></span><span class="MuiBox-root css-1ojixww"></span></div>
-                                  </div>
-                                </div>
-                                <div class="MuiBox-root css-11udp8r">
-                                  <div class="MuiTypography-root MuiTypography-subheader2 MuiTypography-noWrap css-18phtf6">
-                                      Debt
-                                      <div class="MuiBox-root css-14dkifd"><span class="MuiBox-root css-1hf8ilx"></span><span class="MuiBox-root css-1ojixww"></span></div>
-                                  </div>
-                                </div>
-                                <div class="MuiBox-root css-11udp8r">
-                                  <div class="MuiTypography-root MuiTypography-subheader2 MuiTypography-noWrap css-18phtf6">
-                                      APY
-                                      <div class="MuiBox-root css-14dkifd"><span class="MuiBox-root css-1hf8ilx"></span><span class="MuiBox-root css-1ojixww"></span></div>
-                                  </div>
-                                </div>
-                                
-                                <div class="MuiBox-root css-1xwkwbj"></div>
-                            </div>
-                            <div class="MuiBox-root css-1qm0evb" data-cy="dashboardSupplyListItem_1INCH">
-                                <div class="MuiBox-root css-15czs8k">
-                                  <a class="MuiTypography-root MuiTypography-description MuiTypography-noWrap MuiLink-root MuiLink-underlineNone css-17910yg" href="/reserve-overview/?underlyingAsset=0x111111111117dc0aa78b770fa6a738034120c302&amp;marketName=proto_mainnet_v3">
-                                      <span class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeLarge css-1ux336h" aria-hidden="true"><img src="https://app.aave.com/icons/tokens/1inch.svg" width="100%" height="100%" alt="1INCH icon"></span>
-                                      <p class="MuiTypography-root MuiTypography-subheader1 MuiTypography-noWrap css-mgqwsh" data-cy="assetName" aria-label="1inch Network (1INCH)">1INCH</p>
-                                  </a>
-                                </div>
-                                
-                                <div class="MuiBox-root css-11udp8r">
-                                  <div class="MuiBox-root css-1241y0n">
-                                      <div class="MuiBox-root css-19el3v">
-                                        <div class="MuiBox-root css-k008qs">
-                                            <p class="MuiTypography-root MuiTypography-secondary14 MuiTypography-noWrap css-uefm4v" data-cy="apy">10<span class="MuiTypography-root MuiTypography-secondary14 css-d8aql2">%</span></p>
+                              <div class="MuiBox-root css-13o7eu2 show-on-desktop">
+                                  <div class="MuiBox-root css-1wsmwia">
+                                      <div class="MuiBox-root css-15czs8k">
+                                        <div class="MuiTypography-root MuiTypography-subheader2 MuiTypography-noWrap css-18phtf6">
+                                            Assets
+                                            <div class="MuiBox-root css-14dkifd"><span class="MuiBox-root css-1hf8ilx"></span><span class="MuiBox-root css-1ojixww"></span></div>
                                         </div>
-                                        <div class="MuiBox-root css-1yxnkj0"></div>
+                                      </div>
+                                      <div class="MuiBox-root css-11udp8r">
+                                        <div class="MuiTypography-root MuiTypography-subheader2 MuiTypography-noWrap css-18phtf6">
+                                            Debt
+                                            <div class="MuiBox-root css-14dkifd"><span class="MuiBox-root css-1hf8ilx"></span><span class="MuiBox-root css-1ojixww"></span></div>
+                                        </div>
+                                      </div>
+                                      <div class="MuiBox-root css-11udp8r">
+                                        <div class="MuiTypography-root MuiTypography-subheader2 MuiTypography-noWrap css-18phtf6">
+                                            APY
+                                            <div class="MuiBox-root css-14dkifd"><span class="MuiBox-root css-1hf8ilx"></span><span class="MuiBox-root css-1ojixww"></span></div>
+                                        </div>
+                                      </div>
+                                      
+                                      <div class="MuiBox-root css-1xwkwbj"></div>
+                                  </div>
+                                  <div class="MuiBox-root css-1qm0evb" data-cy="dashboardSupplyListItem_1INCH">
+                                      <div class="MuiBox-root css-15czs8k">
+                                        <a class="MuiTypography-root MuiTypography-description MuiTypography-noWrap MuiLink-root MuiLink-underlineNone css-17910yg" href="/reserve-overview/?underlyingAsset=0x111111111117dc0aa78b770fa6a738034120c302&amp;marketName=proto_mainnet_v3">
+                                            <span class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeLarge css-1ux336h" aria-hidden="true"><img src="https://app.aave.com/icons/tokens/1inch.svg" width="100%" height="100%" alt="1INCH icon"></span>
+                                            <p class="MuiTypography-root MuiTypography-subheader1 MuiTypography-noWrap css-mgqwsh" data-cy="assetName" aria-label="1inch Network (1INCH)">1INCH</p>
+                                        </a>
+                                      </div>
+                                      
+                                      <div class="MuiBox-root css-11udp8r">
+                                        <div class="MuiBox-root css-1241y0n">
+                                            <div class="MuiBox-root css-19el3v">
+                                              <div class="MuiBox-root css-k008qs">
+                                                  <p class="MuiTypography-root MuiTypography-secondary14 MuiTypography-noWrap css-uefm4v" data-cy="apy">10<span class="MuiTypography-root MuiTypography-secondary14 css-d8aql2">%</span></p>
+                                              </div>
+                                              <div class="MuiBox-root css-1yxnkj0"></div>
+                                            </div>
+                                        </div>
+                                      </div>
+                                      <div class="MuiBox-root css-11udp8r">
+                                        <div class="MuiBox-root css-1241y0n">
+                                            <div class="MuiBox-root css-19el3v">
+                                              <div class="MuiBox-root css-k008qs">
+                                                  <p class="MuiTypography-root MuiTypography-secondary14 MuiTypography-noWrap css-uefm4v" data-cy="apy">0.57<span class="MuiTypography-root MuiTypography-secondary14 css-d8aql2">%</span></p>
+                                              </div>
+                                              <div class="MuiBox-root css-1yxnkj0"></div>
+                                            </div>
+                                        </div>
+                                      </div>
+                                      
+                                      <div class="MuiBox-root css-1xwkwbj"><button class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation css-moyn3y" tabindex="-1" type="button" >Supply</button><button class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation css-uhikff" tabindex="0" type="button" id="supply-extra-button" aria-haspopup="true">...<span class="MuiTouchRipple-root css-w0pj6f"></span></button></div>
+                                  </div>
+                              </div>
+                              <div class="MuiBox-root css-13o7eu2 show-on-mobile">
+                                      <div class="MuiBox-root css-0">
+                                          <hr class="MuiDivider-root MuiDivider-fullWidth css-1301pmg">
+                                          <div class="MuiBox-root css-1qo1gdh">
+                                            <div class="MuiBox-root css-111boms">
+                                                <a class="MuiTypography-root MuiTypography-description MuiLink-root MuiLink-underlineNone css-ekhp5c" href="/reserve-overview/?underlyingAsset=0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82&amp;marketName=proto_bnb_v3">
+                                                  <span class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeMedium css-188b5or" aria-hidden="true"><img src="https://app.aave.com/icons/tokens/cake.svg" width="100%" height="100%" alt="CAKE icon"></span>
+                                                  <div class="MuiBox-root css-1isemmb">
+                                                      <h4 class="MuiTypography-root MuiTypography-h4 css-cg4wfg">PancakeSwap Token</h4>
+                                                      <div class="MuiBox-root css-70qvj9">
+                                                        <p class="MuiTypography-root MuiTypography-subheader2 css-mtelhg">Cake</p>
+                                                      </div>
+                                                  </div>
+                                                </a>
+                                            </div>
+                                            <div class="MuiBox-root css-xrt28o">
+                                                <div class="MuiTypography-root MuiTypography-description css-181zdd">Supply balance</div>
+                                                <div class="MuiBox-root css-qfdd9t">
+                                                  <div class="MuiBox-root css-17m7cz6">
+                                                      <p class="MuiTypography-root MuiTypography-secondary14 MuiTypography-noWrap css-dlrh6v">0</p>
+                                                  </div>
+                                                </div>
+                                            </div>
+                                            <div class="MuiBox-root css-xrt28o">
+                                                <div class="MuiTypography-root MuiTypography-description css-181zdd">Supply APY</div>
+                                                <div class="MuiBox-root css-19el3v">
+                                                  <div class="MuiBox-root css-k008qs">
+                                                      <p class="MuiTypography-root MuiTypography-secondary14 MuiTypography-noWrap css-uefm4v" data-cy="apy">0.38<span class="MuiTypography-root MuiTypography-secondary14 css-d8aql2">%</span></p>
+                                                  </div>
+                                                  <div class="MuiBox-root css-rnjm1y"></div>
+                                                </div>
+                                            </div>
+                                            <div class="MuiBox-root css-xrt28o">
+                                                <div class="MuiTypography-root MuiTypography-description css-181zdd">Can be collateral</div>
+                                                <div class="MuiBox-root css-gmuwbf">
+                                                  <div class="MuiBox-root css-1rzcn8q">
+                                                      <div class="MuiBox-root css-5wpzg3">
+                                                        <div class="MuiBox-root css-1do422x">
+                                                            <p class="MuiTypography-root MuiTypography-secondary12 css-1yhzaxq">Isolated</p>
+                                                            <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-nqvctb" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
+                                                              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                                                                  <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                                              </svg>
+                                                            </svg>
+                                                        </div>
+                                                      </div>
+                                                  </div>
+                                                </div>
+                                            </div>
+                                            <div class="MuiBox-root css-16rgc74"><button class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-fullWidth css-23aapr" tabindex="-1" type="button" disabled="">Supply</button><a class="MuiTypography-root MuiTypography-description MuiLink-root MuiLink-underlineNone MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-fullWidth MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-fullWidth css-1haiorh" tabindex="0" href="/reserve-overview/?underlyingAsset=0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82&amp;marketName=proto_bnb_v3">Details<span class="MuiTouchRipple-root css-w0pj6f"></span></a></div>
+                                          </div>
                                       </div>
                                   </div>
-                                </div>
-                                <div class="MuiBox-root css-11udp8r">
-                                  <div class="MuiBox-root css-1241y0n">
-                                      <div class="MuiBox-root css-19el3v">
-                                        <div class="MuiBox-root css-k008qs">
-                                            <p class="MuiTypography-root MuiTypography-secondary14 MuiTypography-noWrap css-uefm4v" data-cy="apy">0.57<span class="MuiTypography-root MuiTypography-secondary14 css-d8aql2">%</span></p>
-                                        </div>
-                                        <div class="MuiBox-root css-1yxnkj0"></div>
-                                      </div>
-                                  </div>
-                                </div>
-                                
-                                <div class="MuiBox-root css-1xwkwbj"><button class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation css-moyn3y" tabindex="-1" type="button" >Supply</button><button class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation css-uhikff" tabindex="0" type="button" id="supply-extra-button" aria-haspopup="true">...<span class="MuiTouchRipple-root css-w0pj6f"></span></button></div>
-                            </div>
-                            
-                      </div>
                             </div>
                           </div>
                       </div>
@@ -1244,7 +1329,7 @@ const toggleAccordion = (type) => {
                                   <span></span>
                                 </div>
                             </div>
-                            <div class="MuiBox-root css-35dwn7" v-show="issOpen">
+                            <div class="MuiBox-root css-35dwn7 show-on-desktop" v-show="issOpen">
                                 <div class="MuiBox-root css-186lrzm">
                                   <div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation0 MuiAlert-root MuiAlert-colorInfo MuiAlert-standardInfo MuiAlert-standard css-1lh2l3q" role="alert">
                                       <div class="MuiAlert-icon css-1l54tgj">
@@ -1315,7 +1400,7 @@ const toggleAccordion = (type) => {
                                   <div class="MuiBox-root css-1xwkwbj"><button class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation css-moyn3y" tabindex="-1" type="button" >Borrow</button><a class="MuiTypography-root MuiTypography-description MuiLink-root MuiLink-underlineNone MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation css-10ybyyq" tabindex="0" href="/reserve-overview/?underlyingAsset=0x40d16fc0246ad3160ccc09b8d0d3a2cd28ae6c2f&amp;marketName=proto_mainnet_v3">Details<span class="MuiTouchRipple-root css-w0pj6f"></span></a></div>
                                 </div>
                             </div>
-                            <div class="MuiBox-root css-13o7eu2" v-show="issOpen">
+                            <div class="MuiBox-root css-13o7eu2 show-on-desktop" v-show="issOpen">
                                 <div class="MuiBox-root css-1wsmwia">
                                   <div class="MuiBox-root css-15czs8k">
                                       <div class="MuiTypography-root MuiTypography-subheader2 MuiTypography-noWrap css-18phtf6">
@@ -1435,6 +1520,393 @@ const toggleAccordion = (type) => {
                                 </div>
                             
                             </div>
+                            <div class="MuiBox-root css-13o7eu2 show-on-mobile" v-show="issOpen">
+                                  <div class="MuiBox-root css-0">
+                                      <hr class="MuiDivider-root MuiDivider-fullWidth css-1301pmg">
+                                      <div class="MuiBox-root css-1qo1gdh">
+                                        <div class="MuiBox-root css-111boms">
+                                            <a class="MuiTypography-root MuiTypography-description MuiLink-root MuiLink-underlineNone css-ekhp5c" href="/reserve-overview/?underlyingAsset=0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c&amp;marketName=proto_bnb_v3">
+                                              <span class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeMedium css-188b5or" aria-hidden="true"><img src="https://app.aave.com/icons/tokens/btc.svg" width="100%" height="100%" alt="btc icon"></span>
+                                              <div class="MuiBox-root css-1isemmb">
+                                                  <h4 class="MuiTypography-root MuiTypography-h4 css-cg4wfg">BTCB Token</h4>
+                                                  <div class="MuiBox-root css-70qvj9">
+                                                    <p class="MuiTypography-root MuiTypography-subheader2 css-mtelhg">BTCB</p>
+                                                  </div>
+                                              </div>
+                                            </a>
+                                        </div>
+                                        <div class="MuiBox-root css-xrt28o">
+                                            <div class="MuiTypography-root MuiTypography-description css-181zdd">Available to borrow</div>
+                                            <div class="MuiBox-root css-qfdd9t">
+                                              <div class="MuiBox-root css-17m7cz6">
+                                                  <p class="MuiTypography-root MuiTypography-secondary14 MuiTypography-noWrap css-dlrh6v">0</p>
+                                              </div>
+                                            </div>
+                                        </div>
+                                        <div class="MuiBox-root css-xrt28o">
+                                            <div class="MuiTypography-root MuiTypography-description css-181zdd">
+                                              <div class="MuiBox-root css-70qvj9">
+                                                  <p class="MuiTypography-root MuiTypography-description css-1nkijli">APY, variable</p>
+                                                  <div class="MuiBox-root css-ulme3a">
+                                                    <button class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1osfq0k" tabindex="0" type="button">
+                                                        <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-jmow5f" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
+                                                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                                                              <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                                          </svg>
+                                                        </svg>
+                                                        <span class="MuiTouchRipple-root css-w0pj6f"></span>
+                                                    </button>
+                                                  </div>
+                                              </div>
+                                            </div>
+                                            <div class="MuiBox-root css-19el3v">
+                                              <div class="MuiBox-root css-k008qs">
+                                                  <p class="MuiTypography-root MuiTypography-secondary14 MuiTypography-noWrap css-uefm4v" data-cy="apy">0.26<span class="MuiTypography-root MuiTypography-secondary14 css-d8aql2">%</span></p>
+                                              </div>
+                                              <div class="MuiBox-root css-rnjm1y"></div>
+                                            </div>
+                                        </div>
+                                        <div class="MuiBox-root css-16rgc74"><button class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-fullWidth css-23aapr" tabindex="-1" type="button" disabled="">Borrow</button><a class="MuiTypography-root MuiTypography-description MuiLink-root MuiLink-underlineNone MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-fullWidth MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-fullWidth css-1haiorh" tabindex="0" href="/reserve-overview/?underlyingAsset=0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c&amp;marketName=proto_bnb_v3">Details<span class="MuiTouchRipple-root css-w0pj6f"></span></a></div>
+                                      </div>
+                                  </div>
+                                  <div class="MuiBox-root css-0">
+                                      <hr class="MuiDivider-root MuiDivider-fullWidth css-1301pmg">
+                                      <div class="MuiBox-root css-1qo1gdh">
+                                        <div class="MuiBox-root css-111boms">
+                                            <a class="MuiTypography-root MuiTypography-description MuiLink-root MuiLink-underlineNone css-ekhp5c" href="/reserve-overview/?underlyingAsset=0x55d398326f99059ff775485246999027b3197955&amp;marketName=proto_bnb_v3">
+                                              <span class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeMedium css-188b5or" aria-hidden="true"><img src="https://app.aave.com/icons/tokens/usdt.svg" width="100%" height="100%" alt="USDT icon"></span>
+                                              <div class="MuiBox-root css-1isemmb">
+                                                  <h4 class="MuiTypography-root MuiTypography-h4 css-cg4wfg">Tether</h4>
+                                                  <div class="MuiBox-root css-70qvj9">
+                                                    <p class="MuiTypography-root MuiTypography-subheader2 css-mtelhg">USDT</p>
+                                                  </div>
+                                              </div>
+                                            </a>
+                                        </div>
+                                        <div class="MuiBox-root css-xrt28o">
+                                            <div class="MuiTypography-root MuiTypography-description css-181zdd">Available to borrow</div>
+                                            <div class="MuiBox-root css-qfdd9t">
+                                              <div class="MuiBox-root css-17m7cz6">
+                                                  <p class="MuiTypography-root MuiTypography-secondary14 MuiTypography-noWrap css-dlrh6v">0</p>
+                                              </div>
+                                            </div>
+                                        </div>
+                                        <div class="MuiBox-root css-xrt28o">
+                                            <div class="MuiTypography-root MuiTypography-description css-181zdd">
+                                              <div class="MuiBox-root css-70qvj9">
+                                                  <p class="MuiTypography-root MuiTypography-description css-1nkijli">APY, variable</p>
+                                                  <div class="MuiBox-root css-ulme3a">
+                                                    <button class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1osfq0k" tabindex="0" type="button">
+                                                        <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-jmow5f" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
+                                                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                                                              <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                                          </svg>
+                                                        </svg>
+                                                        <span class="MuiTouchRipple-root css-w0pj6f"></span>
+                                                    </button>
+                                                  </div>
+                                              </div>
+                                            </div>
+                                            <div class="MuiBox-root css-19el3v">
+                                              <div class="MuiBox-root css-k008qs">
+                                                  <p class="MuiTypography-root MuiTypography-secondary14 MuiTypography-noWrap css-uefm4v" data-cy="apy">7.11<span class="MuiTypography-root MuiTypography-secondary14 css-d8aql2">%</span></p>
+                                              </div>
+                                              <div class="MuiBox-root css-rnjm1y"></div>
+                                            </div>
+                                        </div>
+                                        <div class="MuiBox-root css-16rgc74"><button class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-fullWidth css-23aapr" tabindex="-1" type="button" disabled="">Borrow</button><a class="MuiTypography-root MuiTypography-description MuiLink-root MuiLink-underlineNone MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-fullWidth MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-fullWidth css-1haiorh" tabindex="0" href="/reserve-overview/?underlyingAsset=0x55d398326f99059ff775485246999027b3197955&amp;marketName=proto_bnb_v3">Details<span class="MuiTouchRipple-root css-w0pj6f"></span></a></div>
+                                      </div>
+                                  </div>
+                                  <div class="MuiBox-root css-0">
+                                      <hr class="MuiDivider-root MuiDivider-fullWidth css-1301pmg">
+                                      <div class="MuiBox-root css-1qo1gdh">
+                                        <div class="MuiBox-root css-111boms">
+                                            <a class="MuiTypography-root MuiTypography-description MuiLink-root MuiLink-underlineNone css-ekhp5c" href="/reserve-overview/?underlyingAsset=0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c&amp;marketName=proto_bnb_v3">
+                                              <span class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeMedium css-188b5or" aria-hidden="true"><img src="https://app.aave.com/icons/tokens/bnb.svg" width="100%" height="100%" alt="BNB icon"></span>
+                                              <div class="MuiBox-root css-1isemmb">
+                                                  <h4 class="MuiTypography-root MuiTypography-h4 css-cg4wfg">BNB</h4>
+                                                  <div class="MuiBox-root css-70qvj9">
+                                                    <p class="MuiTypography-root MuiTypography-subheader2 css-mtelhg">BNB</p>
+                                                  </div>
+                                              </div>
+                                            </a>
+                                        </div>
+                                        <div class="MuiBox-root css-xrt28o">
+                                            <div class="MuiTypography-root MuiTypography-description css-181zdd">Available to borrow</div>
+                                            <div class="MuiBox-root css-qfdd9t">
+                                              <div class="MuiBox-root css-17m7cz6">
+                                                  <p class="MuiTypography-root MuiTypography-secondary14 MuiTypography-noWrap css-dlrh6v">0</p>
+                                              </div>
+                                            </div>
+                                        </div>
+                                        <div class="MuiBox-root css-xrt28o">
+                                            <div class="MuiTypography-root MuiTypography-description css-181zdd">
+                                              <div class="MuiBox-root css-70qvj9">
+                                                  <p class="MuiTypography-root MuiTypography-description css-1nkijli">APY, variable</p>
+                                                  <div class="MuiBox-root css-ulme3a">
+                                                    <button class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1osfq0k" tabindex="0" type="button">
+                                                        <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-jmow5f" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
+                                                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                                                              <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                                          </svg>
+                                                        </svg>
+                                                        <span class="MuiTouchRipple-root css-w0pj6f"></span>
+                                                    </button>
+                                                  </div>
+                                              </div>
+                                            </div>
+                                            <div class="MuiBox-root css-19el3v">
+                                              <div class="MuiBox-root css-k008qs">
+                                                  <p class="MuiTypography-root MuiTypography-secondary14 MuiTypography-noWrap css-uefm4v" data-cy="apy">2.18<span class="MuiTypography-root MuiTypography-secondary14 css-d8aql2">%</span></p>
+                                              </div>
+                                              <div class="MuiBox-root css-rnjm1y"></div>
+                                            </div>
+                                        </div>
+                                        <div class="MuiBox-root css-16rgc74"><button class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-fullWidth css-23aapr" tabindex="-1" type="button" disabled="">Borrow</button><a class="MuiTypography-root MuiTypography-description MuiLink-root MuiLink-underlineNone MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-fullWidth MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-fullWidth css-1haiorh" tabindex="0" href="/reserve-overview/?underlyingAsset=0xbb4cdb9cbd36b01bd1cbaebf2de08d9173bc095c&amp;marketName=proto_bnb_v3">Details<span class="MuiTouchRipple-root css-w0pj6f"></span></a></div>
+                                      </div>
+                                  </div>
+                                  <div class="MuiBox-root css-0">
+                                      <hr class="MuiDivider-root MuiDivider-fullWidth css-1301pmg">
+                                      <div class="MuiBox-root css-1qo1gdh">
+                                        <div class="MuiBox-root css-111boms">
+                                            <a class="MuiTypography-root MuiTypography-description MuiLink-root MuiLink-underlineNone css-ekhp5c" href="/reserve-overview/?underlyingAsset=0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d&amp;marketName=proto_bnb_v3">
+                                              <span class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeMedium css-188b5or" aria-hidden="true"><img src="https://app.aave.com/icons/tokens/usdc.svg" width="100%" height="100%" alt="USDC icon"></span>
+                                              <div class="MuiBox-root css-1isemmb">
+                                                  <h4 class="MuiTypography-root MuiTypography-h4 css-cg4wfg">USD Coin</h4>
+                                                  <div class="MuiBox-root css-70qvj9">
+                                                    <p class="MuiTypography-root MuiTypography-subheader2 css-mtelhg">USDC</p>
+                                                  </div>
+                                              </div>
+                                            </a>
+                                        </div>
+                                        <div class="MuiBox-root css-xrt28o">
+                                            <div class="MuiTypography-root MuiTypography-description css-181zdd">Available to borrow</div>
+                                            <div class="MuiBox-root css-qfdd9t">
+                                              <div class="MuiBox-root css-17m7cz6">
+                                                  <p class="MuiTypography-root MuiTypography-secondary14 MuiTypography-noWrap css-dlrh6v">0</p>
+                                              </div>
+                                            </div>
+                                        </div>
+                                        <div class="MuiBox-root css-xrt28o">
+                                            <div class="MuiTypography-root MuiTypography-description css-181zdd">
+                                              <div class="MuiBox-root css-70qvj9">
+                                                  <p class="MuiTypography-root MuiTypography-description css-1nkijli">APY, variable</p>
+                                                  <div class="MuiBox-root css-ulme3a">
+                                                    <button class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1osfq0k" tabindex="0" type="button">
+                                                        <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-jmow5f" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
+                                                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                                                              <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                                          </svg>
+                                                        </svg>
+                                                        <span class="MuiTouchRipple-root css-w0pj6f"></span>
+                                                    </button>
+                                                  </div>
+                                              </div>
+                                            </div>
+                                            <div class="MuiBox-root css-19el3v">
+                                              <div class="MuiBox-root css-k008qs">
+                                                  <p class="MuiTypography-root MuiTypography-secondary14 MuiTypography-noWrap css-uefm4v" data-cy="apy">7.16<span class="MuiTypography-root MuiTypography-secondary14 css-d8aql2">%</span></p>
+                                              </div>
+                                              <div class="MuiBox-root css-rnjm1y"></div>
+                                            </div>
+                                        </div>
+                                        <div class="MuiBox-root css-16rgc74"><button class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-fullWidth css-23aapr" tabindex="-1" type="button" disabled="">Borrow</button><a class="MuiTypography-root MuiTypography-description MuiLink-root MuiLink-underlineNone MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-fullWidth MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-fullWidth css-1haiorh" tabindex="0" href="/reserve-overview/?underlyingAsset=0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d&amp;marketName=proto_bnb_v3">Details<span class="MuiTouchRipple-root css-w0pj6f"></span></a></div>
+                                      </div>
+                                  </div>
+                                  <div class="MuiBox-root css-0">
+                                      <hr class="MuiDivider-root MuiDivider-fullWidth css-1301pmg">
+                                      <div class="MuiBox-root css-1qo1gdh">
+                                        <div class="MuiBox-root css-111boms">
+                                            <a class="MuiTypography-root MuiTypography-description MuiLink-root MuiLink-underlineNone css-ekhp5c" href="/reserve-overview/?underlyingAsset=0x2170ed0880ac9a755fd29b2688956bd959f933f8&amp;marketName=proto_bnb_v3">
+                                              <span class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeMedium css-188b5or" aria-hidden="true"><img src="https://app.aave.com/icons/tokens/eth.svg" width="100%" height="100%" alt="ETH icon"></span>
+                                              <div class="MuiBox-root css-1isemmb">
+                                                  <h4 class="MuiTypography-root MuiTypography-h4 css-cg4wfg">Ethereum</h4>
+                                                  <div class="MuiBox-root css-70qvj9">
+                                                    <p class="MuiTypography-root MuiTypography-subheader2 css-mtelhg">ETH</p>
+                                                  </div>
+                                              </div>
+                                            </a>
+                                        </div>
+                                        <div class="MuiBox-root css-xrt28o">
+                                            <div class="MuiTypography-root MuiTypography-description css-181zdd">Available to borrow</div>
+                                            <div class="MuiBox-root css-qfdd9t">
+                                              <div class="MuiBox-root css-17m7cz6">
+                                                  <p class="MuiTypography-root MuiTypography-secondary14 MuiTypography-noWrap css-dlrh6v">0</p>
+                                              </div>
+                                            </div>
+                                        </div>
+                                        <div class="MuiBox-root css-xrt28o">
+                                            <div class="MuiTypography-root MuiTypography-description css-181zdd">
+                                              <div class="MuiBox-root css-70qvj9">
+                                                  <p class="MuiTypography-root MuiTypography-description css-1nkijli">APY, variable</p>
+                                                  <div class="MuiBox-root css-ulme3a">
+                                                    <button class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1osfq0k" tabindex="0" type="button">
+                                                        <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-jmow5f" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
+                                                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                                                              <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                                          </svg>
+                                                        </svg>
+                                                        <span class="MuiTouchRipple-root css-w0pj6f"></span>
+                                                    </button>
+                                                  </div>
+                                              </div>
+                                            </div>
+                                            <div class="MuiBox-root css-19el3v">
+                                              <div class="MuiBox-root css-k008qs">
+                                                  <p class="MuiTypography-root MuiTypography-secondary14 MuiTypography-noWrap css-uefm4v" data-cy="apy">1.11<span class="MuiTypography-root MuiTypography-secondary14 css-d8aql2">%</span></p>
+                                              </div>
+                                              <div class="MuiBox-root css-rnjm1y"></div>
+                                            </div>
+                                        </div>
+                                        <div class="MuiBox-root css-16rgc74"><button class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-fullWidth css-23aapr" tabindex="-1" type="button" disabled="">Borrow</button><a class="MuiTypography-root MuiTypography-description MuiLink-root MuiLink-underlineNone MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-fullWidth MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-fullWidth css-1haiorh" tabindex="0" href="/reserve-overview/?underlyingAsset=0x2170ed0880ac9a755fd29b2688956bd959f933f8&amp;marketName=proto_bnb_v3">Details<span class="MuiTouchRipple-root css-w0pj6f"></span></a></div>
+                                      </div>
+                                  </div>
+                                  <div class="MuiBox-root css-0">
+                                      <hr class="MuiDivider-root MuiDivider-fullWidth css-1301pmg">
+                                      <div class="MuiBox-root css-1qo1gdh">
+                                        <div class="MuiBox-root css-111boms">
+                                            <a class="MuiTypography-root MuiTypography-description MuiLink-root MuiLink-underlineNone css-ekhp5c" href="/reserve-overview/?underlyingAsset=0xc5f0f7b66764f6ec8c8dff7ba683102295e16409&amp;marketName=proto_bnb_v3">
+                                              <span class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeMedium css-188b5or" aria-hidden="true"><img src="https://app.aave.com/icons/tokens/fdusd.svg" width="100%" height="100%" alt="FDUSD icon"></span>
+                                              <div class="MuiBox-root css-1isemmb">
+                                                  <h4 class="MuiTypography-root MuiTypography-h4 css-cg4wfg">First Digital USD</h4>
+                                                  <div class="MuiBox-root css-70qvj9">
+                                                    <p class="MuiTypography-root MuiTypography-subheader2 css-mtelhg">FDUSD</p>
+                                                  </div>
+                                              </div>
+                                            </a>
+                                        </div>
+                                        <div class="MuiBox-root css-xrt28o">
+                                            <div class="MuiTypography-root MuiTypography-description css-181zdd">Available to borrow</div>
+                                            <div class="MuiBox-root css-qfdd9t">
+                                              <div class="MuiBox-root css-17m7cz6">
+                                                  <p class="MuiTypography-root MuiTypography-secondary14 MuiTypography-noWrap css-dlrh6v">0</p>
+                                              </div>
+                                            </div>
+                                        </div>
+                                        <div class="MuiBox-root css-xrt28o">
+                                            <div class="MuiTypography-root MuiTypography-description css-181zdd">
+                                              <div class="MuiBox-root css-70qvj9">
+                                                  <p class="MuiTypography-root MuiTypography-description css-1nkijli">APY, variable</p>
+                                                  <div class="MuiBox-root css-ulme3a">
+                                                    <button class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1osfq0k" tabindex="0" type="button">
+                                                        <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-jmow5f" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
+                                                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                                                              <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                                          </svg>
+                                                        </svg>
+                                                        <span class="MuiTouchRipple-root css-w0pj6f"></span>
+                                                    </button>
+                                                  </div>
+                                              </div>
+                                            </div>
+                                            <div class="MuiBox-root css-19el3v">
+                                              <div class="MuiBox-root css-k008qs">
+                                                  <p class="MuiTypography-root MuiTypography-secondary14 MuiTypography-noWrap css-uefm4v" data-cy="apy">6.91<span class="MuiTypography-root MuiTypography-secondary14 css-d8aql2">%</span></p>
+                                              </div>
+                                              <div class="MuiBox-root css-rnjm1y"></div>
+                                            </div>
+                                        </div>
+                                        <div class="MuiBox-root css-16rgc74"><button class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-fullWidth css-23aapr" tabindex="-1" type="button" disabled="">Borrow</button><a class="MuiTypography-root MuiTypography-description MuiLink-root MuiLink-underlineNone MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-fullWidth MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-fullWidth css-1haiorh" tabindex="0" href="/reserve-overview/?underlyingAsset=0xc5f0f7b66764f6ec8c8dff7ba683102295e16409&amp;marketName=proto_bnb_v3">Details<span class="MuiTouchRipple-root css-w0pj6f"></span></a></div>
+                                      </div>
+                                  </div>
+                                  <div class="MuiBox-root css-0">
+                                      <hr class="MuiDivider-root MuiDivider-fullWidth css-1301pmg">
+                                      <div class="MuiBox-root css-1qo1gdh">
+                                        <div class="MuiBox-root css-111boms">
+                                            <a class="MuiTypography-root MuiTypography-description MuiLink-root MuiLink-underlineNone css-ekhp5c" href="/reserve-overview/?underlyingAsset=0x26c5e01524d2e6280a48f2c50ff6de7e52e9611c&amp;marketName=proto_bnb_v3">
+                                              <span class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeMedium css-188b5or" aria-hidden="true"><img src="https://app.aave.com/icons/tokens/wsteth.svg" width="100%" height="100%" alt="WSTETH icon"></span>
+                                              <div class="MuiBox-root css-1isemmb">
+                                                  <h4 class="MuiTypography-root MuiTypography-h4 css-cg4wfg">Wrapped liquid staked Ether 2.0</h4>
+                                                  <div class="MuiBox-root css-70qvj9">
+                                                    <p class="MuiTypography-root MuiTypography-subheader2 css-mtelhg">wstETH</p>
+                                                  </div>
+                                              </div>
+                                            </a>
+                                        </div>
+                                        <div class="MuiBox-root css-xrt28o">
+                                            <div class="MuiTypography-root MuiTypography-description css-181zdd">Available to borrow</div>
+                                            <div class="MuiBox-root css-qfdd9t">
+                                              <div class="MuiBox-root css-17m7cz6">
+                                                  <p class="MuiTypography-root MuiTypography-secondary14 MuiTypography-noWrap css-dlrh6v">0</p>
+                                              </div>
+                                            </div>
+                                        </div>
+                                        <div class="MuiBox-root css-xrt28o">
+                                            <div class="MuiTypography-root MuiTypography-description css-181zdd">
+                                              <div class="MuiBox-root css-70qvj9">
+                                                  <p class="MuiTypography-root MuiTypography-description css-1nkijli">APY, variable</p>
+                                                  <div class="MuiBox-root css-ulme3a">
+                                                    <button class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1osfq0k" tabindex="0" type="button">
+                                                        <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-jmow5f" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
+                                                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                                                              <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                                          </svg>
+                                                        </svg>
+                                                        <span class="MuiTouchRipple-root css-w0pj6f"></span>
+                                                    </button>
+                                                  </div>
+                                              </div>
+                                            </div>
+                                            <div class="MuiBox-root css-19el3v">
+                                              <div class="MuiBox-root css-k008qs">
+                                                  <p class="MuiTypography-root MuiTypography-secondary14 MuiTypography-noWrap css-uefm4v" data-cy="apy">0.76<span class="MuiTypography-root MuiTypography-secondary14 css-d8aql2">%</span></p>
+                                              </div>
+                                              <div class="MuiBox-root css-rnjm1y"></div>
+                                            </div>
+                                        </div>
+                                        <div class="MuiBox-root css-16rgc74"><button class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-fullWidth css-23aapr" tabindex="-1" type="button" disabled="">Borrow</button><a class="MuiTypography-root MuiTypography-description MuiLink-root MuiLink-underlineNone MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-fullWidth MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-fullWidth css-1haiorh" tabindex="0" href="/reserve-overview/?underlyingAsset=0x26c5e01524d2e6280a48f2c50ff6de7e52e9611c&amp;marketName=proto_bnb_v3">Details<span class="MuiTouchRipple-root css-w0pj6f"></span></a></div>
+                                      </div>
+                                  </div>
+                                  <div class="MuiBox-root css-0">
+                                      <hr class="MuiDivider-root MuiDivider-fullWidth css-1301pmg">
+                                      <div class="MuiBox-root css-1qo1gdh">
+                                        <div class="MuiBox-root css-111boms">
+                                            <a class="MuiTypography-root MuiTypography-description MuiLink-root MuiLink-underlineNone css-ekhp5c" href="/reserve-overview/?underlyingAsset=0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82&amp;marketName=proto_bnb_v3">
+                                              <span class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeMedium css-188b5or" aria-hidden="true"><img src="https://app.aave.com/icons/tokens/cake.svg" width="100%" height="100%" alt="CAKE icon"></span>
+                                              <div class="MuiBox-root css-1isemmb">
+                                                  <h4 class="MuiTypography-root MuiTypography-h4 css-cg4wfg">PancakeSwap Token</h4>
+                                                  <div class="MuiBox-root css-70qvj9">
+                                                    <p class="MuiTypography-root MuiTypography-subheader2 css-mtelhg">Cake</p>
+                                                  </div>
+                                              </div>
+                                            </a>
+                                        </div>
+                                        <div class="MuiBox-root css-xrt28o">
+                                            <div class="MuiTypography-root MuiTypography-description css-181zdd">Available to borrow</div>
+                                            <div class="MuiBox-root css-qfdd9t">
+                                              <div class="MuiBox-root css-17m7cz6">
+                                                  <p class="MuiTypography-root MuiTypography-secondary14 MuiTypography-noWrap css-dlrh6v">0</p>
+                                              </div>
+                                            </div>
+                                        </div>
+                                        <div class="MuiBox-root css-xrt28o">
+                                            <div class="MuiTypography-root MuiTypography-description css-181zdd">
+                                              <div class="MuiBox-root css-70qvj9">
+                                                  <p class="MuiTypography-root MuiTypography-description css-1nkijli">APY, variable</p>
+                                                  <div class="MuiBox-root css-ulme3a">
+                                                    <button class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-1osfq0k" tabindex="0" type="button">
+                                                        <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-jmow5f" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
+                                                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                                                              <path stroke-linecap="round" stroke-linejoin="round" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                                          </svg>
+                                                        </svg>
+                                                        <span class="MuiTouchRipple-root css-w0pj6f"></span>
+                                                    </button>
+                                                  </div>
+                                              </div>
+                                            </div>
+                                            <div class="MuiBox-root css-19el3v">
+                                              <div class="MuiBox-root css-k008qs">
+                                                  <p class="MuiTypography-root MuiTypography-secondary14 MuiTypography-noWrap css-uefm4v" data-cy="apy">2.74<span class="MuiTypography-root MuiTypography-secondary14 css-d8aql2">%</span></p>
+                                              </div>
+                                              <div class="MuiBox-root css-rnjm1y"></div>
+                                            </div>
+                                        </div>
+                                        <div class="MuiBox-root css-16rgc74"><button class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-fullWidth Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-fullWidth css-23aapr" tabindex="-1" type="button" disabled="">Borrow</button><a class="MuiTypography-root MuiTypography-description MuiLink-root MuiLink-underlineNone MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-fullWidth MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-fullWidth css-1haiorh" tabindex="0" href="/reserve-overview/?underlyingAsset=0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82&amp;marketName=proto_bnb_v3">Details<span class="MuiTouchRipple-root css-w0pj6f"></span></a></div>
+                                      </div>
+                                  </div>
+                            </div>
+
                       </div>
 
                 </div>
@@ -1460,8 +1932,7 @@ body { margin: 0px; color: rgb(241, 241, 243); background: rgb(27, 32, 48); }
 body::backdrop { background-color: rgb(27, 32, 48); }
 body { font-family: Inter, Arial; font-weight: 400; font-size: 0.875rem; min-width: 375px; }
 body > div:first-of-type { min-height: 100vh; display: flex; flex-direction: column; }
-.show-on-desktop {}
-.hide-on-desktop {}
+
 @media (min-width: 720px) {
   .show-on-mobile {
     display: none !important;
@@ -1546,6 +2017,11 @@ body > div:first-of-type { min-height: 100vh; display: flex; flex-direction: col
   padding: 10px;
   border-radius: 5px;
   z-index: 1000;
+}
+@media (min-width: 0px) {
+  .dropdown-menu {
+    left: 10px; 
+  }
 }
 
 .dropdown-list {
@@ -3403,7 +3879,7 @@ label[data-shrink="false"] + .MuiInputBase-formControl .css-8crlfm:focus::placeh
   .css-duo07e { display: flex; -moz-box-pack: center; justify-content: center; margin-bottom: 12px; }
 }
 @media (min-width: 640px) {
-  .css-duo07e { -moz-box-pack: start; justify-content: flex-start; margin-bottom: 16px; }
+  .css-duo07e { -moz-box-pack: start; justify-content: flex-start; margin-bottom: 16px; display: none; }
 }
 @media (min-width: 1280px) {
   .css-duo07e { display: none; }
@@ -3503,8 +3979,11 @@ label[data-shrink="false"] + .MuiInputBase-formControl .css-8crlfm:focus::placeh
 100% { opacity: 1; }
 }
 .css-1wbia9h { position: relative; width: calc(50% - 8px); }
-@media (min-width: 0px) {
-  .css-1wbia9h { display: none; }
+// @media (min-width: 0px) {
+//   .css-1wbia9h { display: none; }
+// }
+@media (max-width: 720px) {
+  .css-1wbia9h { display: block; width:100%;}
 }
 @media (min-width: 720px) {
   .css-1wbia9h { display: block; }
@@ -5258,7 +5737,7 @@ label[data-shrink="false"] + .MuiInputBase-formControl .css-1dyf9qo:focus::place
   .css-duo07e { display: flex; -moz-box-pack: center; justify-content: center; margin-bottom: 12px; }
 }
 @media (min-width: 640px) {
-  .css-duo07e { -moz-box-pack: start; justify-content: flex-start; margin-bottom: 16px; }
+  .css-duo07e { display: none; -moz-box-pack: start; justify-content: flex-start; margin-bottom: 16px; }
 }
 @media (min-width: 1280px) {
   .css-duo07e { display: none; }
