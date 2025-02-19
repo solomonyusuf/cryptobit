@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue';
 
-const isfOpen = ref(true);
+const isfOpen = ref(false);
 
 const toggleAccordion = (type) => {
   isfOpen.value = !isfOpen.value;
