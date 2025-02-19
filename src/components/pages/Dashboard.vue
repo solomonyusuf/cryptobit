@@ -1924,6 +1924,7 @@ const toggleElement = (param) => {
  <style lang="scss" scoped>
  html { box-sizing: border-box; }
 *, ::before, ::after { box-sizing: inherit; }
+
 strong, b { font-weight: 700; }
 body { margin: 0px; color: rgb(241, 241, 243); background: rgb(27, 32, 48); }
 @media print {
@@ -6198,6 +6199,6 @@ label[data-shrink="false"] + .MuiInputBase-formControl .css-1dyf9qo:focus::place
 .css-1g4jcti.Mui-disabled { box-shadow: none; }
 .css-1g4jcti:hover, .css-1g4jcti.Mui-focusVisible { background: linear-gradient(248.86deg, rgb(182, 80, 158) 10.51%, rgb(46, 186, 198) 93.41%); opacity: 0.9; }
 .css-6zxo4b { user-select: none; display: inline-block; fill: currentcolor; flex-shrink: 0; transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1); font-size: 1.5rem; color: rgb(255, 167, 38); width: 15px; height: 15px; border-radius: 50%; background: rgb(56, 61, 81); }
-body { --wcm-z-index: 1300; }
-
+body { --wcm-z-index: 1300;  }
+ 
 </style>

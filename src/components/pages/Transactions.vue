@@ -2,9 +2,13 @@
 import { ref } from 'vue';
 
 const isfOpen = ref(false);
+const ispOpen = ref(false);
 
 const toggleAccordion = (type) => {
   isfOpen.value = !isfOpen.value;
+}
+const togglePop = () => {
+  ispOpen.value = !ispOpen.value;
 }
 
   </script>
@@ -12,7 +16,7 @@ const toggleAccordion = (type) => {
 
 <template>
 
-<div class="MuiBox-root css-b95f0i" style="background:#1b2030;">
+<div id="__next" class="MuiBox-root css-b95f0i" style="background:#1b2030;">
    <div class="MuiBox-root css-1e6kcma">
       <div class="MuiContainer-root MuiContainer-maxWidthLg css-ycl373">
          <div class="MuiBox-root css-nkvznt">
@@ -193,7 +197,7 @@ const toggleAccordion = (type) => {
                <div class="MuiBox-root css-2tja52">
                   <div class="MuiBox-root css-vxcmzt">
                      <div class="MuiBox-root css-0">
-                        <button class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-disableElevation css-pmwx2x" tabindex="0" type="button">
+                        <button @click="togglePop" class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-disableElevation css-pmwx2x" tabindex="0" type="button">
                            <div class="MuiBox-root css-1mervjy">
                               <svg class="MuiSvgIcon-root MuiSvgIcon-colorPrimary MuiSvgIcon-fontSizeMedium css-114k0zz" focusable="false" aria-hidden="true" viewBox="0 0 24 24" height="9" width="9">
                                  <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-10dohqv" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="SortIcon">
@@ -204,6 +208,51 @@ const toggleAccordion = (type) => {
                            </div>
                            <span class="MuiTouchRipple-root css-w0pj6f"></span>
                         </button>
+                        <div v-if="ispOpen" class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation8 MuiPopover-paper MuiMenu-paper MuiMenu-paper css-kaigmj" style="opacity: 1; transform: none; transition: opacity 301ms cubic-bezier(0.4, 0, 0.2, 1), transform 200ms cubic-bezier(0.4, 0, 0.2, 1); top: 112px; left: 10px; transform-origin: 0px 114.367px 0px;" tabindex="-1">
+                            <ul class="MuiList-root MuiList-padding MuiMenu-list css-rl9mto" role="menu" tabindex="-1">
+                                <li @click="togglePop" class="MuiButtonBase-root MuiMenuItem-root MuiMenuItem-gutters MuiMenuItem-root MuiMenuItem-gutters css-g9op21" tabindex="0" role="menuitem">
+                                  <p class="MuiTypography-root MuiTypography-subheader1 css-1uinmim">All transactions</p>
+                                  <span class="MuiTouchRipple-root css-w0pj6f"></span>
+                                </li>
+                                <hr class="MuiDivider-root MuiDivider-fullWidth css-16kt215">
+                                <div class="MuiBox-root css-ws5wme">
+                                  <li @click="togglePop" class="MuiButtonBase-root MuiMenuItem-root MuiMenuItem-gutters MuiMenuItem-root MuiMenuItem-gutters css-xamjs3" tabindex="-1" role="menuitem">
+                                      <p class="MuiTypography-root MuiTypography-subheader1 css-1uinmim">Supply</p>
+                                      <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-26dwcd" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
+                                        <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-10dohqv" focusable="false" aria-hidden="true" viewBox="0 0 24 24" data-testid="CheckIcon">
+                                            <path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"></path>
+                                        </svg>
+                                      </svg>
+                                      <span class="MuiTouchRipple-root css-w0pj6f"></span>
+                                  </li>
+                                  <li @click="togglePop" class="MuiButtonBase-root MuiMenuItem-root MuiMenuItem-gutters MuiMenuItem-root MuiMenuItem-gutters css-g9op21" tabindex="-1" role="menuitem">
+                                      <p class="MuiTypography-root MuiTypography-subheader1 css-1uinmim">Borrow</p>
+                                      <span class="MuiTouchRipple-root css-w0pj6f"></span>
+                                  </li>
+                                  <li @click="togglePop" class="MuiButtonBase-root MuiMenuItem-root MuiMenuItem-gutters MuiMenuItem-root MuiMenuItem-gutters css-g9op21" tabindex="-1" role="menuitem">
+                                      <p class="MuiTypography-root MuiTypography-subheader1 css-1uinmim">Withdraw</p>
+                                      <span class="MuiTouchRipple-root css-w0pj6f"></span>
+                                  </li>
+                                  <li @click="togglePop" class="MuiButtonBase-root MuiMenuItem-root MuiMenuItem-gutters MuiMenuItem-root MuiMenuItem-gutters css-g9op21" tabindex="-1" role="menuitem">
+                                      <p class="MuiTypography-root MuiTypography-subheader1 css-1uinmim">Repay</p>
+                                      <span class="MuiTouchRipple-root css-w0pj6f"></span>
+                                  </li>
+                                  <li @click="togglePop" class="MuiButtonBase-root MuiMenuItem-root MuiMenuItem-gutters MuiMenuItem-root MuiMenuItem-gutters css-g9op21" tabindex="-1" role="menuitem">
+                                      <p class="MuiTypography-root MuiTypography-subheader1 css-1uinmim">Rate change</p>
+                                      <span class="MuiTouchRipple-root css-w0pj6f"></span>
+                                  </li>
+                                  <li @click="togglePop" class="MuiButtonBase-root MuiMenuItem-root MuiMenuItem-gutters MuiMenuItem-root MuiMenuItem-gutters css-g9op21" tabindex="-1" role="menuitem">
+                                      <p class="MuiTypography-root MuiTypography-subheader1 css-1uinmim">Collateral change</p>
+                                      <span class="MuiTouchRipple-root css-w0pj6f"></span>
+                                  </li>
+                                  <li @click="togglePop" class="MuiButtonBase-root MuiMenuItem-root MuiMenuItem-gutters MuiMenuItem-root MuiMenuItem-gutters css-g9op21" tabindex="-1" role="menuitem">
+                                      <p class="MuiTypography-root MuiTypography-subheader1 css-1uinmim">Liquidation</p>
+                                      <span class="MuiTouchRipple-root css-w0pj6f"></span>
+                                  </li>
+                                </div>
+                            </ul>
+                        </div>
+
                      </div>
                      <div class="MuiBox-root css-c6rw7y">
                         <div class="MuiBox-root css-14aub4a">
@@ -456,6 +505,121 @@ body { font-family: Inter, Arial; font-weight: 400; font-size: 0.875rem; min-wid
 body > div:first-of-type { min-height: 100vh; display: flex; flex-direction: column; }
 
 
+.css-kaigmj {
+  background-color: rgb(41, 46, 65);
+  color: rgb(241, 241, 243);
+  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  background-image: none;
+  position: absolute;
+  overflow: hidden auto;
+  min-width: 16px;
+  min-height: 16px;
+  max-width: calc(100% - 32px);
+  outline: 0px;
+  width: 280px;
+  max-height: 300px;
+  margin-top: 4px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 2px, rgba(0, 0, 0, 0.1) 0px 2px 10px;
+  border-radius: 4px;
+}
+@media (min-width: 760px) {
+  .css-g9op21 {
+    min-height: auto;
+  }
+}
+.css-g9op21 {
+  background-color: #292e41;
+  outline: 0px;
+  border: 0px;
+  margin: 0px;
+  border-radius: 0px;
+  cursor: pointer;
+  user-select: none;
+  vertical-align: middle;
+  appearance: none;
+  color: inherit;
+  -moz-box-align: center;
+  align-items: center;
+  position: relative;
+  text-decoration: none;
+  min-height: 48px;
+  box-sizing: border-box;
+  white-space: nowrap;
+  padding: 12px 16px;
+  display: flex;
+  -moz-box-pack: justify;
+  justify-content: space-between;
+}
+.css-rl9mto .MuiMenuItem-root + .MuiDivider-root, .css-rl9mto .MuiDivider-root {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+.css-g9op21 + .MuiDivider-root {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+.css-16kt215 {
+  margin: 4px 0px 0px;
+    margin-top: 4px;
+    margin-bottom: 0px;
+  flex-shrink: 0;
+  border-width: 0px 0px thin;
+  border-style: solid;
+  border-color: rgba(235, 235, 239, 0.08);
+}
+.css-ws5wme {
+  overflow-y: scroll;
+  max-height: 200px;
+  scrollbar-width: none;
+
+}
+@media (min-width: 760px) {
+  .css-xamjs3 {
+    min-height: auto;
+  }
+}
+.css-xamjs3 {
+  outline: 0px;
+  border: 0px;
+  margin: 0px;
+  border-radius: 0px;
+  cursor: pointer;
+  user-select: none;
+  vertical-align: middle;
+  appearance: none;
+  color: inherit;
+  -moz-box-align: center;
+  align-items: center;
+  position: relative;
+  text-decoration: none;
+  min-height: 48px;
+  box-sizing: border-box;
+  white-space: nowrap;
+  padding: 12px 16px;
+  background: rgb(56, 61, 81);
+  display: flex;
+  -moz-box-pack: justify;
+  justify-content: space-between;
+}
+.css-1uinmim {
+  margin: 0px;
+  font-family: Inter, Arial;
+  font-weight: 600;
+  letter-spacing: 0.009375rem;
+  line-height: 1.25rem;
+  font-size: 0.875rem;
+  color: rgb(241, 241, 243);
+}
+.css-26dwcd {
+  user-select: none;
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  fill: currentcolor;
+  flex-shrink: 0;
+  transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 16px;
+}
 .dropdown-menu {
   position: absolute;
   top: 30px;

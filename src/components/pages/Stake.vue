@@ -76,9 +76,9 @@
                         </h3>
                         <p class="MuiTypography-root MuiTypography-caption css-1fzsl0k">Total staked: 
                         <p class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1g4nbks">2.88M</p>
-                        (
+                        
                         <p class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1g4nbks"><span class="MuiTypography-root MuiTypography-caption css-1eqowsx">$</span>751.48M</p>
-                        )</p>
+                        </p>
                      </div>
                   </div>
                   <div class="MuiBox-root css-1x1u297">
@@ -103,9 +103,9 @@
                               </div>
                               <p class="MuiTypography-root MuiTypography-caption css-1k0qfa2">Total staked 
                               <p class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1g4nbks">2.88M</p>
-                              (
+                              
                               <p class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1g4nbks"><span class="MuiTypography-root MuiTypography-caption css-1eqowsx">$</span>751.48M</p>
-                              )</p>
+                              </p>
                            </div>
                         </div>
                         <div class="MuiBox-root css-0"></div>
@@ -214,9 +214,9 @@
                         </h3>
                         <p class="MuiTypography-root MuiTypography-caption css-1fzsl0k">Total staked: 
                         <p class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1g4nbks">135.38M</p>
-                        (
+                        
                         <p class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1g4nbks"><span class="MuiTypography-root MuiTypography-caption css-1eqowsx">$</span>135.38M</p>
-                        )</p>
+                        </p>
                      </div>
                   </div>
                   <div class="MuiBox-root css-1x1u297">
@@ -241,9 +241,9 @@
                               </div>
                               <p class="MuiTypography-root MuiTypography-caption css-1k0qfa2">Total staked 
                               <p class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1g4nbks">135.38M</p>
-                              (
+                              
                               <p class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1g4nbks"><span class="MuiTypography-root MuiTypography-caption css-1eqowsx">$</span>135.38M</p>
-                              )</p>
+                              </p>
                            </div>
                         </div>
                         <div class="MuiBox-root css-0"></div>
@@ -343,9 +343,9 @@
                         </h3>
                         <p class="MuiTypography-root MuiTypography-caption css-1fzsl0k">Total staked: 
                         <p class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1g4nbks">483.47K</p>
-                        (
+                        
                         <p class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1g4nbks"><span class="MuiTypography-root MuiTypography-caption css-1eqowsx">$</span>173.77M</p>
-                        )</p>
+                        </p>
                      </div>
                      <div class="MuiBox-root css-1qhmto6">
                         <div>
@@ -378,11 +378,11 @@
                                     </div>
                                  </div>
                               </div>
-                              <p class="MuiTypography-root MuiTypography-caption css-1k0qfa2">Total staked 
+                              <div class="MuiTypography-root MuiTypography-caption css-1k0qfa2">Total staked 
                               <p class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1g4nbks">483.47K</p>
                               
-                              <p class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1g4nbks"><span class="MuiTypography-root MuiTypography-caption css-1eqowsx">($</span>173.77M)</p>
-                              </p>
+                              <p class="MuiTypography-root MuiTypography-caption MuiTypography-noWrap css-1g4nbks"><span class="MuiTypography-root MuiTypography-caption css-1eqowsx">$</span>173.77M</p>
+                              </div>
                            </div>
                         </div>
                         <div class="MuiBox-root css-186mupc">
