@@ -11,11 +11,13 @@ import Dashboard from './components/pages/Dashboard.vue';
 import Governance from './components/pages/Governance.vue';
 import Stake from './components/pages/Stake.vue';
 import Transactions from './components/pages/Transactions.vue';
+import StakeDetails from './components/pages/StakeDetails.vue';
 
 const router = createRouter({
   history: createWebHashHistory(), // Use hash mode
   routes: [
     { path: '/', name: 'Table4', component: TableList },
+    { path: '/stake-detail', name: 'StakeDetails', component: StakeDetails },
     { path: '/list', name: 'Experiment', component: Experiment },
     { path: '/chart', name: 'Pair', component: ChartView },
     { path: '/login', name: 'Login', component: Login },
