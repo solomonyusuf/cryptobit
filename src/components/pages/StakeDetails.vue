@@ -1,5 +1,6 @@
 <script setup>
 import {ref} from "vue";
+import Navmenu from './Navmenu.vue';
 
 const isPopupOpen = ref(false);
 
@@ -32,6 +33,7 @@ const toggleElement = (param) => {
 
 </script>
 <template>
+     <Navmenu/>
     <div class="MuiBox-root css-b95f0i">
    <div class="MuiBox-root css-1e6kcma">
       <div class="MuiContainer-root MuiContainer-maxWidthLg css-ycl373">
