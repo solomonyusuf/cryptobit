@@ -2,9 +2,11 @@
 import {ref} from "vue";
 
 const isSettingOpen = ref(false);
+
 const props = defineProps({
     onClick : {type:Function, default : null}
 });
+
 const openSetting = () => {
   isSettingOpen.value = !isSettingOpen.value;
 };
