@@ -1,12 +1,8 @@
 <script setup>
 import {ref} from "vue";
-const isABPOpen = ref(false);
+
 const isSettingOpen = ref(false);
 
-
-const openABP = () => {
-  isABPOpen.value = !isABPOpen.value;
-};
 const openSetting = () => {
   isSettingOpen.value = !isSettingOpen.value;
 };
@@ -125,7 +121,7 @@ const openSetting = () => {
     </div>
     <div class="MuiBox-root css-13sh4vi"><button class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeLarge MuiButton-containedSizeLarge MuiButton-colorPrimary MuiButton-disableElevation Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeLarge MuiButton-containedSizeLarge MuiButton-colorPrimary MuiButton-disableElevation css-1mtrz2h" tabindex="-1" type="button" disabled="" data-cy="actionButton">Switch</button></div>
     <div class="MuiBox-root css-1030i43">
-        <button @click="openPopup" class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-zuuj4o" type="button">
+        <button  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-zuuj4o" type="button">
           <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-fp6q1h" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>

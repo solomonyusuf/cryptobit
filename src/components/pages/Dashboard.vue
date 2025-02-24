@@ -354,21 +354,16 @@ const openPopup = () => {
                                   <button @click="openPopup"  class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation css-uhikff" tabindex="0" type="button" id="supply-extra-button" aria-haspopup="true">...<span class="MuiTouchRipple-root css-w0pj6f"></span></button>
                                   <div v-if="isPopupOpen" class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation8 MuiPopover-paper MuiMenu-paper MuiMenu-paper css-1hxfo15 popup">
                                         <ul class="MuiList-root MuiList-padding MuiMenu-list css-us9i99" role="menu" tabindex="-1" aria-labelledby="supply-extra-button">
-                                            <li @click="toggleAccordion('switch')" class="MuiButtonBase-root MuiMenuItem-root MuiMenuItem-gutters MuiMenuItem-root MuiMenuItem-gutters css-1xosv7" tabindex="0" role="menuitem">
-                                              <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-g7go18" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
+                                            <li  class="MuiButtonBase-root MuiMenuItem-root MuiMenuItem-gutters MuiMenuItem-root MuiMenuItem-gutters css-1xosv7" tabindex="0" role="menuitem">
+                                              <svg @click="toggleAccordion('switch')" class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-g7go18" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
                                                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
                                                     <path stroke-linecap="round" stroke-linejoin="round" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path>
                                                   </svg>
                                               </svg>
-                                              <div class="MuiListItemText-root css-1bff9c9"><span class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-12sut97">Switch</span></div>
+                                              <div @click="toggleAccordion('switch')" class="MuiListItemText-root css-1bff9c9"><span class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-12sut97">Switch</span></div>
                                               <span class="MuiTouchRipple-root css-w0pj6f"></span>
-                                              
-                                              <div v-if="isswOpen" class="MuiBackdrop-root MuiModal-backdrop overlay">
-  
-                                                <Switch class="popup" />
-
-                                              </div>
-                                           
+                               
+                                                <Switch v-if="isswOpen" />
                                             </li>
                                             <a class="MuiTypography-root MuiTypography-description MuiLink-root MuiLink-underlineNone MuiButtonBase-root MuiMenuItem-root MuiMenuItem-gutters MuiMenuItem-root MuiMenuItem-gutters css-1mazm13" tabindex="-1" 
                                             href="#/supply-detail">
@@ -536,7 +531,36 @@ const openPopup = () => {
                                       </div>
                                   </div>
                                 </div>
-                                <div class="MuiBox-root css-1xwkwbj"><button class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation css-moyn3y" tabindex="-1" type="button" >Supply</button><button class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation css-uhikff" tabindex="0" type="button" id="supply-extra-button" aria-haspopup="true">...<span class="MuiTouchRipple-root css-w0pj6f"></span></button></div>
+                                <div class="MuiBox-root css-1xwkwbj">
+                                  <button class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation css-moyn3y" tabindex="-1" type="button" >Supply</button>
+                                  <button @click="openPopup"  class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation css-uhikff" tabindex="0" type="button" id="supply-extra-button" aria-haspopup="true">...<span class="MuiTouchRipple-root css-w0pj6f"></span></button>
+                                  <div v-if="isPopupOpen" class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation8 MuiPopover-paper MuiMenu-paper MuiMenu-paper css-1hxfo15 popup">
+                                        <ul class="MuiList-root MuiList-padding MuiMenu-list css-us9i99" role="menu" tabindex="-1" aria-labelledby="supply-extra-button">
+                                            <li  class="MuiButtonBase-root MuiMenuItem-root MuiMenuItem-gutters MuiMenuItem-root MuiMenuItem-gutters css-1xosv7" tabindex="0" role="menuitem">
+                                              <svg @click="toggleAccordion('switch')" class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-g7go18" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
+                                                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path>
+                                                  </svg>
+                                              </svg>
+                                              <div @click="toggleAccordion('switch')" class="MuiListItemText-root css-1bff9c9"><span class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-12sut97">Switch</span></div>
+                                              <span class="MuiTouchRipple-root css-w0pj6f"></span>
+                               
+                                                <Switch v-if="isswOpen" />
+                                            </li>
+                                            <a class="MuiTypography-root MuiTypography-description MuiLink-root MuiLink-underlineNone MuiButtonBase-root MuiMenuItem-root MuiMenuItem-gutters MuiMenuItem-root MuiMenuItem-gutters css-1mazm13" tabindex="-1" 
+                                            href="#/supply-detail">
+                                              <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-g7go18" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
+                                                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                                    <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"></path>
+                                                    <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"></path>
+                                                  </svg>
+                                              </svg>
+                                              <div class="MuiListItemText-root css-1bff9c9"><span class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-12sut97">Details</span></div>
+                                              <span class="MuiTouchRipple-root css-w0pj6f"></span>
+                                            </a>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                             <div class="MuiBox-root css-1qm0evb" data-cy="dashboardSupplyListItem_FRAX">
                                 <div class="MuiBox-root css-15czs8k">
@@ -571,8 +595,35 @@ const openPopup = () => {
                                       </svg>
                                   </div>
                                 </div>
-                                <div class="MuiBox-root css-1xwkwbj"><button class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation css-moyn3y" tabindex="-1" type="button" >Supply</button><button class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation css-uhikff" tabindex="0" type="button" id="supply-extra-button" aria-haspopup="true">...<span class="MuiTouchRipple-root css-w0pj6f"></span></button></div>
-                            </div>
+                                <div class="MuiBox-root css-1xwkwbj"><button class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation css-moyn3y" tabindex="-1" type="button" >Supply</button>
+                                  <button @click="openPopup"  class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation css-uhikff" tabindex="0" type="button" id="supply-extra-button" aria-haspopup="true">...<span class="MuiTouchRipple-root css-w0pj6f"></span></button>
+                                  <div v-if="isPopupOpen" class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation8 MuiPopover-paper MuiMenu-paper MuiMenu-paper css-1hxfo15 popup">
+                                        <ul class="MuiList-root MuiList-padding MuiMenu-list css-us9i99" role="menu" tabindex="-1" aria-labelledby="supply-extra-button">
+                                            <li  class="MuiButtonBase-root MuiMenuItem-root MuiMenuItem-gutters MuiMenuItem-root MuiMenuItem-gutters css-1xosv7" tabindex="0" role="menuitem">
+                                              <svg @click="toggleAccordion('switch')" class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-g7go18" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
+                                                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path>
+                                                  </svg>
+                                              </svg>
+                                              <div @click="toggleAccordion('switch')" class="MuiListItemText-root css-1bff9c9"><span class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-12sut97">Switch</span></div>
+                                              <span class="MuiTouchRipple-root css-w0pj6f"></span>
+                               
+                                                <Switch v-if="isswOpen" />
+                                            </li>
+                                            <a class="MuiTypography-root MuiTypography-description MuiLink-root MuiLink-underlineNone MuiButtonBase-root MuiMenuItem-root MuiMenuItem-gutters MuiMenuItem-root MuiMenuItem-gutters css-1mazm13" tabindex="-1" 
+                                            href="#/supply-detail">
+                                              <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-g7go18" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
+                                                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                                    <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"></path>
+                                                    <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"></path>
+                                                  </svg>
+                                              </svg>
+                                              <div class="MuiListItemText-root css-1bff9c9"><span class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-12sut97">Details</span></div>
+                                              <span class="MuiTouchRipple-root css-w0pj6f"></span>
+                                            </a>
+                                        </ul>
+                                    </div>
+                                </div>
                             <div class="MuiBox-root css-1qm0evb" data-cy="dashboardSupplyListItem_SNX">
                                 <div class="MuiBox-root css-15czs8k">
                                   <a class="MuiTypography-root MuiTypography-description MuiTypography-noWrap MuiLink-root MuiLink-underlineNone css-17910yg" href="/reserve-overview/?underlyingAsset=0xc011a73ee8576fb46f5e1c5751ca3b9fe0af2a6f&amp;marketName=proto_mainnet_v3">
@@ -717,8 +768,36 @@ const openPopup = () => {
                                       <p class="MuiTypography-root MuiTypography-main14 css-zj82os">—</p>
                                   </div>
                                 </div>
-                                <div class="MuiBox-root css-1xwkwbj"><button class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation css-moyn3y" tabindex="-1" type="button" >Supply</button><button class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation css-uhikff" tabindex="0" type="button" id="supply-extra-button" aria-haspopup="true">...<span class="MuiTouchRipple-root css-w0pj6f"></span></button></div>
-                            </div>
+                                <div class="MuiBox-root css-1xwkwbj"><button class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation css-moyn3y" tabindex="-1" type="button" >Supply</button>
+                                  <button @click="openPopup"  class="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation css-uhikff" tabindex="0" type="button" id="supply-extra-button" aria-haspopup="true">...<span class="MuiTouchRipple-root css-w0pj6f"></span></button>
+                                  <div v-if="isPopupOpen" class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation8 MuiPopover-paper MuiMenu-paper MuiMenu-paper css-1hxfo15 popup">
+                                        <ul class="MuiList-root MuiList-padding MuiMenu-list css-us9i99" role="menu" tabindex="-1" aria-labelledby="supply-extra-button">
+                                            <li  class="MuiButtonBase-root MuiMenuItem-root MuiMenuItem-gutters MuiMenuItem-root MuiMenuItem-gutters css-1xosv7" tabindex="0" role="menuitem">
+                                              <svg @click="toggleAccordion('switch')" class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-g7go18" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
+                                                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path>
+                                                  </svg>
+                                              </svg>
+                                              <div @click="toggleAccordion('switch')" class="MuiListItemText-root css-1bff9c9"><span class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-12sut97">Switch</span></div>
+                                              <span class="MuiTouchRipple-root css-w0pj6f"></span>
+                               
+                                                <Switch v-if="isswOpen" />
+                                            </li>
+                                            <a class="MuiTypography-root MuiTypography-description MuiLink-root MuiLink-underlineNone MuiButtonBase-root MuiMenuItem-root MuiMenuItem-gutters MuiMenuItem-root MuiMenuItem-gutters css-1mazm13" tabindex="-1" 
+                                            href="#/supply-detail">
+                                              <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-g7go18" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
+                                                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                                                    <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"></path>
+                                                    <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"></path>
+                                                  </svg>
+                                              </svg>
+                                              <div class="MuiListItemText-root css-1bff9c9"><span class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-12sut97">Details</span></div>
+                                              <span class="MuiTouchRipple-root css-w0pj6f"></span>
+                                            </a>
+                                        </ul>
+                                    </div>
+                            
+                                </div>
                             <div class="MuiBox-root css-1qm0evb" data-cy="dashboardSupplyListItem_LUSD">
                                 <div class="MuiBox-root css-15czs8k">
                                   <a class="MuiTypography-root MuiTypography-description MuiTypography-noWrap MuiLink-root MuiLink-underlineNone css-17910yg" href="/reserve-overview/?underlyingAsset=0x5f98805a4e8be255a32880fdec7f6728c6568ba0&amp;marketName=proto_mainnet_v3">
@@ -5117,6 +5196,12 @@ body > div:first-of-type { min-height: 100vh; display: flex; flex-direction: col
 }
 @media (min-width: 640px) {
   .css-kp1w4j { padding: 8px 20px; }
+}
+.css-8crlfm:focus{
+  outline:0px;
+  border-color:transparent;
+
+
 }
 .css-142agrv { line-height: 0; margin-right: 12px; transition: 0.3s; }
 .css-142agrv:hover { opacity: 0.7; }
