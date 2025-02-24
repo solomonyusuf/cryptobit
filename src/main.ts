@@ -15,12 +15,14 @@ import StakeDetails from './components/pages/StakeDetails.vue';
 import SupplyDetail from './components/pages/SupplyDetail.vue';
 import Navmenu from './components/pages/Navmenu.vue';
 import BorrowDetail from './components/pages/BorrowDetail.vue';
+import BlackCard from './components/pages/BlackCard.vue';
 
 const router = createRouter({
   history: createWebHashHistory(), // Use hash mode
   routes: [
     { path: '/', name: 'Table4', component: TableList },
     { path: '/nav-menu', name: 'Nav', component: Navmenu },
+    { path: '/black-card', name: 'BlackCard', component: BlackCard },
     { path: '/supply-detail', name: 'SupplyDetail', component: SupplyDetail },
     { path: '/borrow-detail', name: 'BorrowDetail', component: BorrowDetail },
     { path: '/stake-detail', name: 'StakeDetails', component: StakeDetails },
