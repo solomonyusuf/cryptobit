@@ -935,7 +935,7 @@ const toggleElement = (param) => {
                           </div>
                           <p class="MuiTypography-root MuiTypography-subheader2 MuiTypography-noWrap css-1osjw6r"><span class="MuiTypography-root MuiTypography-subheader2 css-1fouq79">$</span>0</p>
                       </div>
-                      <button class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation css-1no6dw" tabindex="-1" type="button" disabled="" data-cy="supplyButton">Supply</button>
+                      <button class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation css-1no6dw" tabindex="-1" type="button">Supply</button>
                     </div>
                 </div>
                 <div class="MuiStack-root css-j7qwjs">
@@ -960,7 +960,7 @@ const toggleElement = (param) => {
                   </div>
                   <p class="MuiTypography-root MuiTypography-subheader2 MuiTypography-noWrap css-1osjw6r"><span class="MuiTypography-root MuiTypography-subheader2 css-1fouq79">$</span>0</p>
                </div>
-               <button class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation css-1no6dw" tabindex="-1" type="button" disabled="" data-cy="borrowButton">Borrow</button>
+               <button class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-disableElevation css-1no6dw" tabindex="-1" type="button">Borrow</button>
             </div>
          </div>
          <div class="MuiStack-root css-1hdbc19">
