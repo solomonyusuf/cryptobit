@@ -50,6 +50,12 @@ const isPopupOpen = ref(false);
 
 const openPopup = () => {
   isPopupOpen.value = !isPopupOpen.value;
+  console.log('popup clicked');
+};
+
+const closePopup = (message) => {
+  openPopup();
+  console.log('popup closed');
 };
 
 
@@ -363,7 +369,7 @@ const openPopup = () => {
                                               <div @click="toggleAccordion('switch')" class="MuiListItemText-root css-1bff9c9"><span class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-12sut97">Switch</span></div>
                                               <span class="MuiTouchRipple-root css-w0pj6f"></span>
                                
-                                                <Switch v-if="isswOpen" :onClick="openPopup"/>
+                                                <Switch v-if="isswOpen" @closeEvent="closePopup"/>
                                             </li>
                                             <a class="MuiTypography-root MuiTypography-description MuiLink-root MuiLink-underlineNone MuiButtonBase-root MuiMenuItem-root MuiMenuItem-gutters MuiMenuItem-root MuiMenuItem-gutters css-1mazm13" tabindex="-1" 
                                             href="#/supply-detail">
@@ -545,7 +551,7 @@ const openPopup = () => {
                                               <div @click="toggleAccordion('switch')" class="MuiListItemText-root css-1bff9c9"><span class="MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-12sut97">Switch</span></div>
                                               <span class="MuiTouchRipple-root css-w0pj6f"></span>
                                
-                                                <Switch v-if="isswOpen" :onClick="openPopup" />
+                                                <Switch v-if="isswOpen" @closeEvent="closePopup" />
                                             </li>
                                             <a class="MuiTypography-root MuiTypography-description MuiLink-root MuiLink-underlineNone MuiButtonBase-root MuiMenuItem-root MuiMenuItem-gutters MuiMenuItem-root MuiMenuItem-gutters css-1mazm13" tabindex="-1" 
                                             href="#/supply-detail">

@@ -1,15 +1,20 @@
 <script setup>
 import {ref} from "vue";
+import { defineEmits } from 'vue';
+
+const emit = defineEmits(['closeEvent']);
 
 const isSettingOpen = ref(false);
 
-const props = defineProps({
-    onClick : {type:Function, default : null}
-});
+const close = ()=>{
+    emit('closeEvent', 'none');
+}
 
 const openSetting = () => {
   isSettingOpen.value = !isSettingOpen.value;
 };
+
+
 </script>
 <template>
    <div class="MuiBackdrop-root MuiModal-backdrop overlay">
@@ -83,7 +88,7 @@ const openSetting = () => {
         <div class="MuiBox-root css-153ektk">
           <div class="MuiBox-root css-17m7cz6">
               <div class="MuiInputBase-root MuiInputBase-colorPrimary css-5vjblz"><input placeholder="0.00" aria-label="amount input" style="font-size: 21px; padding: 0px; height: 28px; text-overflow: ellipsis; white-space: nowrap; overflow: hidden;" class="MuiInputBase-input css-8crlfm" type="text" value="" inputmode="numeric"></div>
-              <button @click="onClick" class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-disableElevation css-51wjav" tabindex="0" type="button" data-cy="assetSelect">
+              <button  class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-disableElevation MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-disableElevation css-51wjav" tabindex="0" type="button">
                 <span class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeMedium css-1apci2" aria-hidden="true">
                       <img src="https://app.aave.com/icons/tokens/usdt.svg" width="100%" height="100%" alt="ETH icon">
                 </span>
@@ -125,7 +130,7 @@ const openSetting = () => {
     </div>
     <div class="MuiBox-root css-13sh4vi"><button class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeLarge MuiButton-containedSizeLarge MuiButton-colorPrimary MuiButton-disableElevation Mui-disabled MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeLarge MuiButton-containedSizeLarge MuiButton-colorPrimary MuiButton-disableElevation css-1mtrz2h" tabindex="-1" type="button" disabled="" data-cy="actionButton">Switch</button></div>
     <div class="MuiBox-root css-1030i43">
-        <button @click="openPopup" class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-zuuj4o" type="button">
+        <button @click="close" class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-zuuj4o" type="button">
           <svg class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-fp6q1h" focusable="false" aria-hidden="true" viewBox="0 0 24 24">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
