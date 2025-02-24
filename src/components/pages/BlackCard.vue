@@ -48,7 +48,7 @@
             margin:10px;
             width: 350px;
             border: 1px solid #121212f1;
-            border-radius: 0.5rem;
+            border-radius:0px;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
             padding: 1rem;
             background-color: #121212f1;
