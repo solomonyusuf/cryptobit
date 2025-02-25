@@ -22,11 +22,13 @@
         }
         .card-title {
             font-weight: bold;
+            color:#c5c5c5;
             font-size: 1.25rem;
             margin: 0;
         }
         .card-text {
             text-align: left;
+            color:#707271;
             width: 100%;
         }
         .btn-gray {
@@ -46,9 +48,10 @@
         }
         .card {
             margin:10px;
+            color:#707271;
             width: 350px;
             border: 1px solid #121212f1;
-            border-radius:0px;
+            border-radius:2px;
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
             padding: 1rem;
             background-color: #121212f1;
@@ -63,7 +66,7 @@
             top: 0;
             left: 0;
             width: 30%;
-            height: 3px;
+            height: 1px;
             background-color: green;
             border-top-left-radius: 0.5rem;
         }

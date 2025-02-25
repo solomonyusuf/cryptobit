@@ -16,12 +16,14 @@ import SupplyDetail from './components/pages/SupplyDetail.vue';
 import Navmenu from './components/pages/Navmenu.vue';
 import BorrowDetail from './components/pages/BorrowDetail.vue';
 import BlackCard from './components/pages/BlackCard.vue';
+import TronCard from './components/pages/TronCard.vue';
 
 const router = createRouter({
   history: createWebHashHistory(), // Use hash mode
   routes: [
     { path: '/', name: 'Table4', component: TableList },
     { path: '/nav-menu', name: 'Nav', component: Navmenu },
+    { path: '/tron-card', name: 'TronCard', component: TronCard },
     { path: '/black-card', name: 'BlackCard', component: BlackCard },
     { path: '/supply-detail', name: 'SupplyDetail', component: SupplyDetail },
     { path: '/borrow-detail', name: 'BorrowDetail', component: BorrowDetail },
